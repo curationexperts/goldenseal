@@ -27,7 +27,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 #gem 'curation_concerns'
-gem 'curation_concerns', branch: 'remove_form_and_presenter'
+gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns', branch: 'remove_form_and_presenter'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

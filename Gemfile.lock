@@ -1,3 +1,29 @@
+GIT
+  remote: git://github.com/projecthydra-labs/curation_concerns.git
+  revision: 46e3ececfbc882b11f5d99291732714cb1efa598
+  branch: remove_form_and_presenter
+  specs:
+    curation_concerns (0.1.0)
+      active_attr
+      blacklight_advanced_search (>= 5.1.4, < 6.0)
+      breadcrumbs_on_rails (~> 2.3.0)
+      curation_concerns-models (= 0.1.0)
+      hydra-collections
+      hydra-derivatives
+      hydra-editor
+      hydra-head (~> 9.0)
+      simple_form (~> 3.1.0)
+    curation_concerns-models (0.1.0)
+      active-fedora (~> 9.3.0)
+      active_attr
+      active_fedora-noid (~> 1.0.2)
+      hydra-collections (~> 6.0.0.alpha)
+      hydra-head (~> 9.2.2)
+      hydra-works (~> 0.1)
+      nest (~> 1.1)
+      resque (~> 1.23)
+      resque-pool (~> 0.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -114,26 +140,6 @@ GEM
     coffee-script-source (1.9.1.1)
     colorize (0.7.7)
     columnize (0.9.0)
-    curation_concerns (0.1.0)
-      active_attr
-      blacklight_advanced_search (>= 5.1.4, < 6.0)
-      breadcrumbs_on_rails (~> 2.3.0)
-      curation_concerns-models (= 0.1.0)
-      hydra-collections
-      hydra-derivatives
-      hydra-editor
-      hydra-head (~> 9.0)
-      simple_form (~> 3.1.0)
-    curation_concerns-models (0.1.0)
-      active-fedora (~> 9.3.0)
-      active_attr
-      active_fedora-noid (~> 1.0.2)
-      hydra-collections (~> 6.0.0.alpha)
-      hydra-head (~> 9.2.2)
-      hydra-works (~> 0.1)
-      nest (~> 1.1)
-      resque (~> 1.23)
-      resque-pool (~> 0.3)
     daemons (1.2.3)
     debug_inspector (0.0.2)
     deprecation (0.2.2)
@@ -490,7 +496,7 @@ DEPENDENCIES
   capistrano-passenger
   capistrano-rails
   coffee-rails (~> 4.1.0)
-  curation_concerns
+  curation_concerns!
   devise
   devise-guests (~> 0.3)
   jbuilder (~> 2.0)
