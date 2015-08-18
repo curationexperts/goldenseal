@@ -4,3 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 
 Rails.application.load_tasks
+Jettywrapper.hydra_jetty_version = "v8.4.0" if defined? Jettywrapper
