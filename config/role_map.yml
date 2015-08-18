@@ -17,3 +17,9 @@ test:
   patron:
     - patron1@example.com
     - leland_himself@example.com
+production:
+  archivist:
+    - alicia@curationexperts.com
+  admin_policy_object_editor:
+    - alicia@curationexperts.com
+
