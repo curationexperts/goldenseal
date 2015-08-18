@@ -12,10 +12,16 @@ Dir.chdir APP_ROOT do
   system "gem install bundler --conservative"
   system "bundle check || bundle install"
 
-  # puts "\n== Copying sample files =="
-  # unless File.exist?("config/database.yml")
-  #   system "cp config/database.yml.sample config/database.yml"
-  # end
+  puts "\n== Copying sample files =="
+  unless File.exist?("config/database.yml")
+    system "cp config/database.yml.template config/database.yml"
+    system "cp config/secrets.yml.template config/secrets.yml"
+    system "cp config/blacklight.yml.template config/blacklight.yml"
+    system "cp config/fedora.yml.template config/fedora.yml"
+    system "cp config/solr.yml.template config/solr.yml"
+    system "cp config/redis.yml.template config/redis.yml"
+    system "cp config/resque-pool.yml.template config/resque-pool.yml"
+  end
 
   puts "\n== Preparing database =="
   system "bin/rake db:setup"
@@ -26,4 +32,5 @@ Dir.chdir APP_ROOT do
 
   puts "\n== Restarting application server =="
   system "touch tmp/restart.txt"
+
 end
