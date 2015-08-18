@@ -16,3 +16,12 @@
 !/log/.keep
 /tmp
 /jetty
+
+config/secrets.yml
+config/blacklight.yml
+config/database.yml
+config/fedora.yml
+config/solr.yml
+config/redis.yml
+config/resque-pool.yml
+
