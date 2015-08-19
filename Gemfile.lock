@@ -1,7 +1,6 @@
 GIT
   remote: git://github.com/projecthydra-labs/curation_concerns.git
-  revision: b326ca12bb8a77f27196bad44497cb46d39d7679
-  branch: fix_thumbnails
+  revision: 6cd47b5173305e37ba7563850c3deaea09b60f45
   specs:
     curation_concerns (0.1.0)
       active_attr

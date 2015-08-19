@@ -28,11 +28,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 #gem 'curation_concerns'
 #
-# https://github.com/projecthydra-labs/curation_concerns/pull/165
-gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns', branch: 'fix_thumbnails'
-# https://github.com/projecthydra-labs/hydra-pcdm/pull/176
+gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns'
 gem 'hydra-pcdm', github: 'projecthydra-labs/hydra-pcdm'
-# https://github.com/projecthydra-labs/hydra-works/pull/191
 gem 'hydra-works', github: 'projecthydra-labs/hydra-works'
 
 # Use ActiveModel has_secure_password
