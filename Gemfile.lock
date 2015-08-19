@@ -26,8 +26,7 @@ GIT
 
 GIT
   remote: git://github.com/projecthydra-labs/hydra-pcdm.git
-  revision: 574461e16c1e15d91574bcb29e4e6bda5d0d202f
-  branch: namespace_vocabs
+  revision: 7580ca762f41f3220b4510d2f4fa0bf5c11200e1
   specs:
     hydra-pcdm (0.1.0)
       activefedora-aggregation (~> 0.4)
@@ -35,8 +34,7 @@ GIT
 
 GIT
   remote: git://github.com/projecthydra-labs/hydra-works.git
-  revision: 52c17b4e4f3f9c3a0caa128db7a3223a49e4ca8d
-  branch: namespace_vocabs
+  revision: 627bff35f0f0397ca26f8fff3ad9e7061df48aad
   specs:
     hydra-works (0.1.0)
       active-fedora (~> 9.2)
@@ -134,8 +132,7 @@ GEM
       sass (>= 3.3.0)
     breadcrumbs_on_rails (2.3.1)
     builder (3.2.2)
-    byebug (5.0.0)
-      columnize (= 0.9.0)
+    byebug (6.0.0)
     cancancan (1.12.0)
     capistrano (3.4.0)
       i18n
@@ -159,7 +156,6 @@ GEM
       execjs
     coffee-script-source (1.9.1.1)
     colorize (0.7.7)
-    columnize (0.9.0)
     daemons (1.2.3)
     debug_inspector (0.0.2)
     deprecation (0.2.2)
@@ -460,7 +456,7 @@ GEM
       net-http-persistent (~> 2.9)
       rdf (~> 1.1)
     spring (1.3.6)
-    sprockets (3.3.1)
+    sprockets (3.3.2)
       rack (~> 1.0)
     sprockets-rails (2.3.2)
       actionpack (>= 3.0)

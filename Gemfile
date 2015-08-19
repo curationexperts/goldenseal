@@ -27,14 +27,13 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 #gem 'curation_concerns'
+#
 # https://github.com/projecthydra-labs/curation_concerns/pull/165
 gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns', branch: 'fix_thumbnails'
-
 # https://github.com/projecthydra-labs/hydra-pcdm/pull/176
-gem 'hydra-pcdm', github: 'projecthydra-labs/hydra-pcdm', branch: 'namespace_vocabs'
-
-#https://github.com/projecthydra-labs/hydra-works/pull/191
-gem 'hydra-works', github: 'projecthydra-labs/hydra-works', branch: 'namespace_vocabs'
+gem 'hydra-pcdm', github: 'projecthydra-labs/hydra-pcdm'
+# https://github.com/projecthydra-labs/hydra-works/pull/191
+gem 'hydra-works', github: 'projecthydra-labs/hydra-works'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
