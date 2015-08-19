@@ -1,6 +1,7 @@
 GIT
   remote: git://github.com/projecthydra-labs/curation_concerns.git
-  revision: 8959af1ad23143f34c751b5d456a18c69250a345
+  revision: b326ca12bb8a77f27196bad44497cb46d39d7679
+  branch: fix_thumbnails
   specs:
     curation_concerns (0.1.0)
       active_attr
@@ -22,6 +23,26 @@ GIT
       nest (~> 1.1)
       resque (~> 1.23)
       resque-pool (~> 0.3)
+
+GIT
+  remote: git://github.com/projecthydra-labs/hydra-pcdm.git
+  revision: 574461e16c1e15d91574bcb29e4e6bda5d0d202f
+  branch: namespace_vocabs
+  specs:
+    hydra-pcdm (0.1.0)
+      activefedora-aggregation (~> 0.4)
+      mime-types (>= 1)
+
+GIT
+  remote: git://github.com/projecthydra-labs/hydra-works.git
+  revision: 52c17b4e4f3f9c3a0caa128db7a3223a49e4ca8d
+  branch: namespace_vocabs
+  specs:
+    hydra-works (0.1.0)
+      active-fedora (~> 9.2)
+      activefedora-aggregation (~> 0.4)
+      hydra-derivatives (~> 2.0)
+      hydra-pcdm (~> 0.1)
 
 GEM
   remote: https://rubygems.org/
@@ -204,14 +225,6 @@ GEM
       hydra-access-controls (= 9.2.2)
       hydra-core (= 9.2.2)
       rails (>= 3.2.6)
-    hydra-pcdm (0.1.0)
-      activefedora-aggregation (~> 0.4)
-      mime-types (>= 1)
-    hydra-works (0.1.0)
-      active-fedora (~> 9.2)
-      activefedora-aggregation (~> 0.4)
-      hydra-derivatives (~> 2.0)
-      hydra-pcdm (~> 0.1)
     i18n (0.7.0)
     jbuilder (2.3.1)
       activesupport (>= 3.0.0, < 5)
@@ -498,6 +511,8 @@ DEPENDENCIES
   curation_concerns!
   devise
   devise-guests (~> 0.3)
+  hydra-pcdm!
+  hydra-works!
   jbuilder (~> 2.0)
   jettywrapper
   jquery-rails
