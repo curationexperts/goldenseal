@@ -25,13 +25,22 @@ set :linked_files, fetch(:linked_files, []).push('config/blacklight.yml', 'confi
 # Default value for linked_dirs is []
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
 
+# settings for resque-pool restart
+set :resque_stderr_log, "#{shared_path}/log/resque-pool.stderr.log"
+set :resque_stdout_log, "#{shared_path}/log/resque-pool.stdout.log"
+set :resque_kill_signal, "QUIT"
+
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
+require "resque"
+
 namespace :deploy do
+
+before :restart, "resque:pool:stop"
 
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
@@ -41,5 +50,7 @@ namespace :deploy do
       # end
     end
   end
+
+after :clear_cache, "resque:pool:start"
 
 end
