@@ -1,6 +1,7 @@
 GIT
   remote: git://github.com/projecthydra-labs/curation_concerns.git
-  revision: 6cd47b5173305e37ba7563850c3deaea09b60f45
+  revision: 55861913eebd2e86972c2057e075fb793548b96e
+  branch: allow_file_to_be_missing
   specs:
     curation_concerns (0.1.0)
       active_attr
