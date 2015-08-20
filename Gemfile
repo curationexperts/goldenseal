@@ -26,9 +26,7 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-#gem 'curation_concerns'
-#
-gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns', branch: 'allow_file_to_be_missing'
+gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns', ref: '88caf608ac69c0cf6fe4be0269809886653325fa'
 gem 'hydra-pcdm', github: 'projecthydra-labs/hydra-pcdm'
 gem 'hydra-works', github: 'projecthydra-labs/hydra-works'
 
