@@ -1,6 +1,7 @@
 GIT
   remote: git://github.com/projecthydra-labs/curation_concerns.git
-  revision: 9c282c415e904765e862bd953f6b25e3052f46e3
+  revision: 6b410b6d05afb9105da3df20bd8f62c368c160ac
+  branch: store_derivatives_on_disk
   specs:
     curation_concerns (0.1.0)
       active_attr

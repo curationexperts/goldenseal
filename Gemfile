@@ -27,7 +27,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # https://github.com/projecthydra-labs/curation_concerns/pull/184
-gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns'
+gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns', branch: 'store_derivatives_on_disk'
 gem 'hydra-pcdm', github: 'projecthydra-labs/hydra-pcdm'
 gem 'hydra-works', github: 'projecthydra-labs/hydra-works'
 

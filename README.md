@@ -11,6 +11,10 @@
 bin/setup
 ```
 
+### Config:
+
+* Configure ```config/initializers/curation_concerns.rb```
+
 ## Job monitoring
 
 ```
