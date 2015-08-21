@@ -97,7 +97,7 @@ CurationConcerns.config do |config|
   # config.persistent_hostpath = 'http://localhost/files/'
 
   # Location on local file system where derivatives will be stored.
-  config.derivatives_path = '/opt/goldenseal/derivatives' if Rails.production?
+  config.derivatives_path = '/opt/goldenseal/derivatives' if Rails.env.production?
 
   # If you have ffmpeg installed and want to transcode audio and video uncomment this line
   config.enable_ffmpeg = true
