@@ -9,9 +9,6 @@ Riiif::Image.file_resolver.id_to_uri = lambda do |id|
   end
 end
 
-
-credentials = ActiveFedora.fedora_config.credentials
-Riiif::Image.file_resolver.basic_auth_credentials = [credentials.fetch(:user), credentials.fetch(:password)]
+Riiif::Image.file_resolver.basic_auth_credentials = [ActiveFedora.fedora.user, ActiveFedora.fedora.password]
 
 Riiif::Engine.config.cache_duration_in_days = 365
-
