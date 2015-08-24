@@ -26,10 +26,12 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-# https://github.com/projecthydra-labs/curation_concerns/pull/184
-gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns', branch: 'store_derivatives_on_disk'
+# https://github.com/projecthydra-labs/curation_concerns/pull/196
+gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns', branch: 'media_display'
 gem 'hydra-pcdm', github: 'projecthydra-labs/hydra-pcdm'
 gem 'hydra-works', github: 'projecthydra-labs/hydra-works'
+gem 'riiif', '0.1.0'
+gem 'openseadragon', '0.2.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

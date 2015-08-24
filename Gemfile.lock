@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/projecthydra-labs/curation_concerns.git
-  revision: ea90fa42ac2e7daece55ece3711a855a5ec1eb2d
-  branch: store_derivatives_on_disk
+  revision: 96c00c1a1f07abce7dfa463930f484d409fcb1ce
+  branch: media_display
   specs:
     curation_concerns (0.1.0)
       active_attr
@@ -299,6 +299,8 @@ GEM
       activesupport
       nokogiri (>= 1.4.2)
       solrizer (~> 3.3)
+    openseadragon (0.2.0)
+      rails (> 3.2.0)
     orm_adapter (0.5.0)
     parslet (1.7.0)
       blankslate (>= 2.0, <= 4.0)
@@ -400,6 +402,8 @@ GEM
       rake
       resque (~> 1.22)
       trollop (~> 2.0)
+    riiif (0.1.0)
+      rails (> 3.2.0)
     rsolr (1.0.12)
       builder (>= 2.1.2)
     rspec-core (3.3.2)
@@ -512,8 +516,10 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jettywrapper
   jquery-rails
+  openseadragon (= 0.2.0)
   pg
   rails (= 4.2.4.rc1)
+  riiif (= 0.1.0)
   rsolr (~> 1.0.6)
   rspec-rails
   sass-rails (~> 5.0)

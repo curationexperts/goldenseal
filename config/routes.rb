@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
   mount Hydra::Collections::Engine => '/'
   mount CurationConcerns::Engine, at: '/'
+  iiif_for 'riiif/image', at: '/image-service'
   curation_concerns_collections
   curation_concerns_basic_routes
   curation_concerns_embargo_management

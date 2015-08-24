@@ -1,0 +1,3 @@
+  <%= openseadragon_picture_tag main_app.info_path(generic_file.id) %>
+  <%= link_to "Download 640-pixel-wide jpg", image_path(generic_file.id, size: '640,'), { target:"_new", title:"Download 640-pixel-wide jpg"}%><br>
+  <%= link_to "Download the full-sized image", image_path(generic_file.id, size: 'full'), { target:"_new", title:"Download the full-sized image"} %>
