@@ -32,6 +32,7 @@ gem 'hydra-pcdm', github: 'projecthydra-labs/hydra-pcdm'
 gem 'hydra-works', github: 'projecthydra-labs/hydra-works'
 gem 'riiif', '0.1.0'
 gem 'openseadragon', '0.2.0'
+gem 'angularjs-rails', '~> 1.4.4'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

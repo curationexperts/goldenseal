@@ -1,0 +1,12 @@
+<% if work.tei? %>
+  <%= render 'tei_viewer' %>
+
+  <script>
+    var tei = <%= raw(JSON.generate work.tei_as_json) %>
+  </script>
+  <tei-viewer ng-controller="TeiViewer">
+  </tei-viewer>
+<% else %>
+  <%= render 'curation_concerns/base/representative_media', work: work %>
+<% end %>
+

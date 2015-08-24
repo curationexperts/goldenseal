@@ -1,4 +1,6 @@
 CurationConcerns.configure do |config|
+  # Injected via `rails g curation_concerns:work Text`
+  config.register_curation_concern :text
 
   # Injected via `rails g curation_concerns:work Document`
   config.register_curation_concern :audio

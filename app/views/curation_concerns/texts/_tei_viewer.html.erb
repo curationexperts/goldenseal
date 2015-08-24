@@ -1,0 +1,25 @@
+<script type="text/ng-template" id="tei_viewer.html">
+  <form role="form" class="form-inline">
+      <div class="row">
+          <label for="page-number">Page: </label>
+          <input type="text" size="3" ng-model="formNumber" id="page-number" ng-model="currentPage" class="form-control" ng-blur="textUpdated()">
+          <button class="btn btn-default" ng-click="previousPage()"><i class="glyphicon glyphicon-step-backward"></i><span class="sr-only">Previous Page</span></button>
+          <button class="btn btn-default" ng-click="nextPage()"><i class="glyphicon glyphicon-step-forward"></i><span class="sr-only">Next Page</span></button>
+
+          <label for="display" id="display-label">Display: </label>
+          <select name="display" class="form-control" ng-model="display">
+            <option value="both">Images and Text</option>
+            <option value="images">Only Images</option>
+          </select>
+      </div>
+  </form>
+  <div id="tei-container" class="row">
+    <ol id="pages" class="{{display}}">
+      <li ng-repeat="page in pages" class="page">
+        <div ng-bind-html="to_trusted(page.image)" class="image"></div>
+        <div ng-bind-html="to_trusted(page.html)" class="text"></div>
+      </li>
+    </ol>
+  </div>
+</script>
+

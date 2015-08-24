@@ -15,5 +15,6 @@
 //= require turbolinks//
 // Required by Blacklight
 //= require blacklight/blacklight
-
-//= require_tree .
+//= require openseadragon
+//= require angular
+//= require tei_viewer

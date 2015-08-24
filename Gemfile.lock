@@ -107,6 +107,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.3.8)
+    angularjs-rails (1.4.4)
     arel (6.0.3)
     autoprefixer-rails (5.2.1.2)
       execjs
@@ -502,6 +503,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  angularjs-rails (~> 1.4.4)
   byebug
   capistrano
   capistrano-bundler

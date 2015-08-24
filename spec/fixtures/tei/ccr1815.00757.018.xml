@@ -1,0 +1,2047 @@
+<?xml version="1.0" encoding="UTF-8"?><teiCorpus xml:id="ccr1815.00757.018" xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Title</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+        <caseDesc xmlns="http://digital.wustl.edu/ns/lxt/1.0">
+            <caseTitle>Louis Tayon v. Etienne Malbeuf</caseTitle>
+            <date type="filing" when="1805-03-05">March 05, 1805</date>
+            <date type="term" when="1805-03">March Term 1805</date>
+            <party role="plaintiff">Tayon, Louis</party>
+            <party role="defendant">Malbeuf, Etienne</party>
+            <causeAction type="civil">Trespass</causeAction>
+            <caseNo>18</caseNo>
+            <court type="state">St. Louis County Court</court>  
+            <clerk>Leia, Mannel</clerk> 
+            <clerk>Leduc, M.P.</clerk> 
+            <sheriff/>  
+            <sheriff type="deputy"/>   
+            <judge/>
+            <attorney for="plaintiff">Easton</attorney>
+            <attorney for="plaintiff">Lucas</attorney>
+            <attorney for="defendant"/>
+            <disposition stage="pre-trial">Unknown</disposition>
+            <relatedCase/>
+        </caseDesc> 
+      </profileDesc>
+      <revisionDesc>
+         <change when="2011-07-11">MK deciphered vendor's unclear tags through entire document</change>
+         <change when="2011-07-11">MK proofread and corrected transcription errors through entire document</change>    
+         <change when="2011-07-08">MK deciphered vendor's unclear tags through line 150</change>
+         <change when="2011-07-08">MK proofread and corrected transcription errors through line 150</change>    
+         <change when="2011-07-01">MK deciphered vendor's unclear tags through line 108</change>
+         <change when="2011-07-01">MK proofread and corrected transcription errors through line 108</change>    
+         <change when="2011-07-20">MP added legal description</change>
+         <change when="2011-10-26">KT removed comment tags, etc.</change>
+         <change when="2012-05-04">CM performed final review of legal encoding</change>
+         <change when="2012-05-31">APJ checked vertical and horizontal rends</change>
+      </revisionDesc>
+
+
+   
+
+
+   </teiHeader>
+
+
+
+
+   <TEI>
+      <teiHeader>
+         <fileDesc>
+            <titleStmt>
+               <title>Complaint</title>
+            </titleStmt>
+            <publicationStmt>
+               <p>This electronic document is published as part of the St Louis Circuit
+                    Court historical records project.</p>
+            </publicationStmt>
+            <sourceDesc>
+               <p>The original document is part of the Missouri State Archives St Louis Circuit
+                    Court collection.</p>
+            </sourceDesc>
+         </fileDesc>
+         <profileDesc>
+            <legalDocDesc xmlns="http://digital.wustl.edu/ns/lxt/1.0">                
+               <legalDoc genre="civil" stagelit="pre-trial" type="complaint" when="1815-10-01"> </legalDoc>
+               <legalTitle>Complaint</legalTitle>        
+               <author role="attorney">Easton</author>         
+               <author role="attorney">Lucas</author>         
+               <court>St. Louis County Court</court>
+            </legalDocDesc>
+         </profileDesc>
+      </teiHeader>
+      <text>
+         <body rend="handwritten">
+            
+
+    
+
+            <div1 legalFunction="Complaint" rend="horizontal"><pb facs="0757_001.jp2" n="001"/>
+               <opener rend="bracketed">
+                  <dateline>Territory of <unclear rend="written" unit="chars">
+                        <supplied> <placeName><choice><reg>Missouri</reg><orig>Missouri</orig></choice></placeName>,</supplied>
+                     </unclear>
+                     <lb/> St Louis <unclear rend="written" unit="chars">
+                        <supplied> County,</supplied>
+                     </unclear>
+                  </dateline>
+                  <lb/> 
+                  <unclear rend="written" unit="chars"/>
+                  <dateline>In the Circuit Court of the term<lb/> of <date when="1815-10">October One Thousand eight<lb/> hundred and fifteen</date>
+                  </dateline>
+               </opener>
+               <p>Louis <unclear rend="written" unit="chars">
+                     <supplied> <persName><choice><reg>Taylor</reg><orig>Taylor</orig></choice></persName>,</supplied>
+                  </unclear> plaintiff <unclear rend="written" unit="chars">
+                     <supplied> complains,</supplied>
+                  </unclear> of <unclear rend="written" unit="chars"/> 
+                  <lb/> defendant of a <unclear rend="written" unit="chars">
+                     <supplied> plea,</supplied>
+                  </unclear> of <unclear rend="written" unit="chars">
+                     <supplied> trespass,</supplied>
+                  </unclear> on the case for that<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> whereas,</supplied>
+                  </unclear> the said defendant on the <date when="1810-01-01">first day of January<lb/> one thousand eight hundred and ten</date> at the town of St.<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> Charkes,</supplied>
+                  </unclear> in the then <unclear rend="written" unit="chars">
+                     <supplied> district,</supplied>
+                  </unclear> of st <unclear rend="written" unit="chars">
+                     <supplied> Charles,</supplied>
+                  </unclear> and <unclear rend="written" unit="chars">
+                     <supplied> territory,</supplied>
+                  </unclear>
+                  <lb/> of <unclear rend="written" unit="chars">
+                     <supplied> <placeName><choice><reg>Louisiana</reg><orig>Louisiana</orig></choice></placeName>,</supplied>
+                  </unclear> to wit at the town of <placeName><choice><reg>St Louis</reg><orig>St Louis</orig></choice></placeName> in the Coun-<lb/>ty of <placeName><choice><reg>St Louis</reg><orig>St. Louis</orig></choice></placeName>, and <unclear rend="written" unit="chars">
+                     <supplied> within,</supplied>
+                  </unclear> the <unclear rend="written" unit="chars">
+                     <supplied> jurisdiction,</supplied>
+                  </unclear> of this <unclear rend="written" unit="chars">
+                     <supplied> court,</supplied>
+                  </unclear>
+                  <lb/> was <unclear rend="written" unit="chars">
+                     <supplied> indebted,</supplied>
+                  </unclear> to the said <unclear rend="written" unit="chars">
+                     <supplied> plaintiff,</supplied>
+                  </unclear> in the <unclear rend="written" unit="chars">
+                     <supplied> sum,</supplied>
+                  </unclear> of <unclear rend="written" unit="chars">
+                     <supplied> ninety,</supplied>
+                  </unclear>
+                  <lb/> five dollars and eighty five <unclear rend="written" unit="chars">
+                     <supplied> cents correct money,</supplied>
+                  </unclear> of the<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> <placeName><choice><reg>United States</reg><orig>United</orig></choice></placeName>,</supplied>
+                  </unclear> <placeName><choice><reg>United States</reg><orig>States</orig></choice></placeName> for <unclear rend="written" unit="chars">
+                     <supplied> 
+                        <sic> divers,</sic>
+                     </supplied>
+                  </unclear> goods <unclear rend="written" unit="chars">
+                     <supplied> &amp; chattels,</supplied>
+                  </unclear> was <unclear rend="written" unit="chars"/> and<lb/> 
+                  <unclear rend="written" unit="chars"/> by the said peaintiff before that <unclear rend="written" unit="chars"/>
+                  <supplied> time,</supplied>
+                  <lb/> sold and <unclear rend="written" unit="chars">
+                     <supplied> delivered,</supplied>
+                  </unclear> to the said <unclear rend="written" unit="chars">
+                     <supplied> defendant,</supplied>
+                  </unclear> at his<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> special,</supplied>
+                  </unclear> instance and request and being so <unclear rend="written" unit="chars">
+                     <supplied> indebted,</supplied>
+                  </unclear>
+                  <lb/> he the said defendant in <unclear rend="written" unit="chars"/> thereof<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> afterwards to wit,</supplied>
+                  </unclear> on the <unclear rend="written" unit="chars">
+                     <supplied> same day,</supplied>
+                  </unclear> and year <unclear rend="written" unit="chars">
+                     <supplied> afore,</supplied>
+                  </unclear>
+                  <lb/> said at the town of <placeName><choice><reg>St Charles</reg><orig>St</orig></choice></placeName> <unclear rend="written" unit="chars">
+                     <supplied> <placeName><choice><reg>St Charles</reg><orig>Charles</orig></choice></placeName>,</supplied>
+                  </unclear> aforesaid to <unclear rend="written" unit="chars">
+                     <supplied> wit,</supplied>
+                  </unclear> at<lb/> the <unclear rend="written" unit="chars">
+                     <supplied> town and county,</supplied>
+                  </unclear> of <placeName><choice><reg>St Louis</reg><orig>St. Louis</orig></choice></placeName> <unclear rend="written" unit="chars">
+                     <supplied> aforesaid,</supplied>
+                  </unclear> and <unclear rend="written" unit="chars">
+                     <supplied> within,</supplied>
+                  </unclear> 
+                  <lb/> the <unclear rend="written" unit="chars">
+                     <supplied> jurisdiction,</supplied>
+                  </unclear> aforesaid, <unclear rend="written" unit="chars">
+                     <supplied> undertook and faithfully,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> promised,</supplied>
+                  </unclear> the said plaintiff to pay <unclear rend="written" unit="chars">
+                     <supplied> him,</supplied>
+                  </unclear> the said <unclear rend="written" unit="chars">
+                     <supplied> sum,</supplied>
+                  </unclear>
+                  <lb/> of Ninety five <unclear rend="written" unit="chars">
+                     <supplied> dollars,</supplied>
+                  </unclear> and eighty five <unclear rend="written" unit="chars">
+                     <supplied> cents,</supplied>
+                  </unclear> when<lb/> he <unclear rend="written" unit="chars">
+                     <supplied> should be,</supplied>
+                  </unclear> thereto <unclear rend="written" unit="chars">
+                     <supplied> afterwrds,</supplied>
+                  </unclear> requested<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> and whereas afterwards to,</supplied>
+                  </unclear> wit on the same day and<lb/> year aforesaid at the town of <unclear rend="written" unit="chars">
+                     <supplied> <placeName><choice><reg>St Charles</reg><orig>St Charles</orig></choice></placeName>,</supplied>
+                  </unclear> in the then<lb/> district of <unclear rend="written" unit="chars">
+                     <supplied> <placeName><choice><reg>St Charles</reg><orig>St</orig></choice></placeName>,</supplied>
+                  </unclear> <placeName><choice><reg>St Charles</reg><orig>Charles</orig></choice></placeName> aforesaid <unclear rend="written" unit="chars"/> to wit at the town of<lb/> <placeName><choice><reg>St Louis</reg><orig>St. Louis</orig></choice></placeName> in the <unclear rend="written" unit="chars">
+                     <supplied> <placeName><choice><reg>County of St Louis</reg><orig>County</orig></choice></placeName>,</supplied>
+                  </unclear> <placeName><choice><reg>County of St Louis</reg><orig>of St. Louis</orig></choice></placeName> aforesaid and within<lb/> the <unclear rend="written" unit="chars">
+                     <supplied> jurisdiction,</supplied>
+                  </unclear> of this court, in <unclear rend="written" unit="chars">
+                     <supplied> consideration,</supplied>
+                  </unclear> that<lb/> the said <unclear rend="written" unit="chars">
+                     <supplied> plaintiff,</supplied>
+                  </unclear> at the <unclear rend="written" unit="chars"/> request of the said<lb/> defendant had <unclear rend="written" unit="chars">
+                     <supplied> before,</supplied>
+                  </unclear> that <unclear rend="written" unit="chars">
+                     <supplied> time,</supplied>
+                  </unclear> sold <unclear rend="written" unit="chars">
+                     <supplied> &amp; delivered,</supplied>
+                  </unclear>
+                  <lb/> to the said defendant <unclear rend="written" unit="chars">
+                     <supplied> divers,</supplied>
+                  </unclear> other goods <unclear rend="written" unit="chars">
+                     <supplied> &amp; chattels,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars"/> and <unclear rend="written" unit="chars"/> the said defendant<lb/> then and then undertook and faithfully <unclear rend="written" unit="chars">
+                     <supplied> promised,</supplied>
+                  </unclear> the<lb/> said plaintiff to pay <unclear rend="written" unit="chars">
+                     <supplied> him,</supplied>
+                  </unclear> so much money as he<lb/> therefore <unclear rend="written" unit="chars">
+                     <supplied> reasonably deserved,</supplied>
+                  </unclear> to have and the said<lb/> plaintiff <unclear rend="written" unit="chars"/> that he <unclear rend="written" unit="chars">
+                     <supplied> there,</supplied>
+                  </unclear> for <unclear rend="written" unit="chars">
+                     <supplied> reasonably deserved,</supplied>
+                  </unclear>
+                  <lb/> to have of the said defendant other <unclear rend="written" unit="chars">
+                     <supplied> ninety,</supplied>
+                  </unclear> five<lb/>
+               </p>
+            </div1>
+         </body>
+      </text>
+   </TEI> 
+   <TEI>
+      <teiHeader>
+         <fileDesc>
+            <titleStmt>
+               <title/>
+            </titleStmt>
+            <publicationStmt>
+               <p>This electronic document is published as part of the St Louis Circuit
+                    Court historical records project.</p>
+            </publicationStmt>
+            <sourceDesc>
+               <p>The original document is part of the Missouri State Archives St Louis Circuit
+                    Court collection.</p>
+            </sourceDesc>
+         </fileDesc>
+         <profileDesc/>
+      </teiHeader>
+      <text>
+         <body rend="handwritten">    
+                
+            <div1 rend="horizontal"><pb facs="0757_002.jp2" n="002"/>
+               <p>dollars <unclear rend="written" unit="chars">
+                     <supplied> and,</supplied>
+                  </unclear> eighty five <unclear rend="written" unit="chars">
+                     <supplied> cents,</supplied>
+                  </unclear> like <unclear rend="written" unit="chars">
+                     <supplied> money,</supplied>
+                  </unclear> at the<lb/> town of <unclear rend="written" unit="chars">
+                     <supplied> <placeName><choice><reg>St Charles</reg><orig>St Charles</orig></choice></placeName>,</supplied>
+                  </unclear> in the <unclear rend="written" unit="chars">
+                     <supplied> district,</supplied>
+                  </unclear> of <unclear rend="written" unit="chars">
+                     <supplied> <placeName><choice><reg>St Charles</reg><orig>St Charles</orig></choice></placeName>,</supplied>
+                  </unclear> afore<lb/>said <unclear rend="written" unit="chars">
+                     <supplied> to wit,</supplied>
+                  </unclear> at the town and <unclear rend="written" unit="chars">
+                     <supplied> <placeName><choice><reg>County of St Louis</reg><orig>County</orig></choice></placeName>,</supplied>
+                  </unclear> <placeName><choice><reg>County of St Louis</reg><orig>of St Louis</orig></choice></placeName> <unclear rend="written" unit="chars">
+                     <supplied> aforesaid,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> aforesaid,</supplied>
+                  </unclear> and within the <unclear rend="written" unit="chars">
+                     <supplied> jurisdiction,</supplied>
+                  </unclear> aforesaid, where<lb/> of the said defendant had <unclear rend="written" unit="chars">
+                     <supplied> notice afterwards,</supplied>
+                  </unclear> to <unclear rend="written" unit="chars">
+                     <supplied> wit,</supplied>
+                  </unclear>
+                  <lb/> on the same day and year aforesaid. <unclear rend="written" unit="chars">
+                     <supplied> And whereas,</supplied>
+                  </unclear>
+                  <lb/> the said defendant afterwards to <unclear rend="written" unit="chars">
+                     <supplied> wit,</supplied>
+                  </unclear> on the same day<lb/> and year <unclear rend="written" unit="chars">
+                     <supplied> aforesaid,</supplied>
+                  </unclear> at the town of <unclear rend="written" unit="chars">
+                     <supplied> <placeName><choice><reg>St Charles</reg><orig>St Charles</orig></choice></placeName>,</supplied>
+                  </unclear> in the<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> district,</supplied>
+                  </unclear> of <unclear rend="written" unit="chars">
+                     <supplied> <placeName><choice><reg>St Charles</reg><orig>St Charles</orig></choice></placeName> aforesaid,</supplied>
+                  </unclear> to wit at the town and<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> <placeName><choice><reg>County of St Louis</reg><orig>County</orig></choice></placeName>,</supplied>
+                  </unclear> <placeName><choice><reg>County of St Louis</reg><orig>of St Louis</orig></choice></placeName> <unclear rend="written" unit="chars"/> together with<lb/> the said plaintiff of and <unclear rend="written" unit="chars"/>
+                  <lb/> of money from the said defendant to the said plaintiff<lb/> due and <unclear rend="written" unit="chars">
+                     <supplied> owing,</supplied>
+                  </unclear> and then <unclear rend="written" unit="chars"/> and <unclear rend="written" unit="chars">
+                     <supplied> unpaid,</supplied>
+                  </unclear>, and<lb/> upon that account the said defendant was found to<lb/> 
+                  <unclear rend="written" unit="chars"/> to the said plaintiff in<lb/> other <unclear rend="written" unit="chars">
+                     <supplied> nintey,</supplied>
+                  </unclear> five dollars and eighty five <unclear rend="written" unit="chars">
+                     <supplied> cents,</supplied>
+                  </unclear> of<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> like lawful money and being so found in arrears and indebted,</supplied>
+                  </unclear> he the said defendant in <unclear rend="written" unit="chars">
+                     <supplied> consideration,</supplied>
+                  </unclear>
+                  <lb/> therefore, <unclear rend="written" unit="chars">
+                     <supplied> afterwards,</supplied>
+                  </unclear> to wit on the same day and<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> year aforesaid,</supplied>
+                  </unclear> at the <unclear rend="written" unit="chars">
+                     <supplied> town and district,</supplied>
+                  </unclear> of <unclear rend="written" unit="chars">
+                     <supplied> <placeName><choice><reg>St Charles</reg><orig>St Charles</orig></choice></placeName>,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> aforesaid,</supplied>
+                  </unclear> to wit at the <unclear rend="written" unit="chars">
+                     <supplied> town,</supplied>
+                  </unclear> and <unclear rend="written" unit="chars">
+                     <supplied> <placeName><choice><reg>County of St Louis</reg><orig>County</orig></choice></placeName>,</supplied>
+                  </unclear> <placeName><choice><reg>County of St Louis</reg><orig>of St Louis</orig></choice></placeName><lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> aforesaid undertook,</supplied>
+                  </unclear> and faithfully <unclear rend="written" unit="chars">
+                     <supplied> promised,</supplied>
+                  </unclear> the<lb/> said plaintiff to pay him the said last mentioned<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> sum,</supplied>
+                  </unclear> of <unclear rend="written" unit="chars">
+                     <supplied> money,</supplied>
+                  </unclear> when he should <unclear rend="written" unit="chars">
+                     <supplied> thereunto,</supplied>
+                  </unclear>
+                  <lb/> afterwards <unclear rend="written" unit="chars">
+                     <supplied> requested,</supplied>
+                  </unclear>. And whereas afterwards to <unclear rend="written" unit="chars">
+                     <supplied> wit,</supplied>
+                  </unclear>
+                  <lb/> on the same day and year <unclear rend="written" unit="chars">
+                     <supplied> aforesaid,</supplied>
+                  </unclear> at the town and<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> district,</supplied>
+                  </unclear> of <placeName><choice><reg>St Charles</reg><orig>St. Charles</orig></choice></placeName> <unclear rend="written" unit="chars">
+                     <supplied> aforesaid,</supplied>
+                  </unclear> to wit at the town and<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> <placeName><choice><reg>County of St Louis</reg><orig>County</orig></choice></placeName>,</supplied>
+                  </unclear> <placeName><choice><reg>County of St Louis</reg><orig>of St. Louis</orig></choice></placeName> <unclear rend="written" unit="chars">
+                     <supplied> aforesaid,</supplied>
+                  </unclear> in consideration that<lb/> the said plaintiff at the like <unclear rend="written" unit="chars">
+                     <supplied> request,</supplied>
+                  </unclear> of the said<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> defendant,</supplied>
+                  </unclear> before the time <unclear rend="written" unit="chars"/>
+                  <lb/> for the said defendant meat <unclear rend="written" unit="chars"/> washing and<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> lodging,</supplied>
+                  </unclear> and other <unclear rend="written" unit="chars"/> he <unclear rend="written" unit="chars">
+                     <supplied> the,</supplied>
+                  </unclear> said defendant <unclear rend="written" unit="chars">
+                     <supplied> then &amp; there,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> undertook &amp;,</supplied>
+                  </unclear> faithfully <unclear rend="written" unit="chars">
+                     <supplied> promised,</supplied>
+                  </unclear> the said plaintiff to pay him<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> so,</supplied>
+                  </unclear> much money as he therefor reasonably <unclear rend="written" unit="chars">
+                     <supplied> deserved,</supplied>
+                  </unclear> to have <unclear rend="written" unit="chars">
+                     <supplied> where,</supplied>
+                  </unclear>
+                  <lb/> he the said defendant should be <unclear rend="written" unit="chars">
+                     <supplied> thereto,</supplied>
+                  </unclear> afterwards requested<lb/> and the said plaintiff <unclear rend="written" unit="chars"/> that he <unclear rend="written" unit="chars">
+                     <supplied> therefore,</supplied>
+                  </unclear> reasonably <unclear rend="written" unit="chars">
+                     <supplied> deserved,</supplied>
+                  </unclear>
+                  <lb/> to have of the said defendant twenty five dollars of<lb/> like lawful money at the town and district of <placeName><choice><reg>St Charles</reg><orig>St Charles</orig></choice></placeName><lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> aforesaid,</supplied>
+                  </unclear> to wit at the town and <unclear rend="written" unit="chars">
+                     <supplied> county,</supplied>
+                  </unclear> of <placeName><choice><reg>St Louis</reg><orig>St. Louis</orig></choice></placeName> <unclear rend="written" unit="chars">
+                     <supplied> aforesaid,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> within,</supplied>
+                  </unclear> the <unclear rend="written" unit="chars">
+                     <supplied> jurisdiction aforesaid,</supplied>
+                  </unclear>, when of the <unclear rend="written" unit="chars"/> afterwards to wit <unclear rend="written" unit="chars">
+                     <supplied> on,</supplied>
+                  </unclear>
+                  <lb/> same day and year <unclear rend="written" unit="chars">
+                     <supplied> aforesaid then,</supplied>
+                  </unclear> had <unclear rend="written" unit="chars">
+                     <supplied> notice,</supplied>
+                  </unclear>
+               </p>
+            </div1>
+         </body>
+      </text>
+   </TEI>
+   <TEI>
+      <teiHeader>
+         <fileDesc>
+            <titleStmt>
+               <title/>
+            </titleStmt>
+            <publicationStmt>
+               <p>This electronic document is published as part of the St Louis Circuit
+                    Court historical records project.</p>
+            </publicationStmt>
+            <sourceDesc>
+               <p>The original document is part of the Missouri State Archives St Louis Circuit
+                    Court collection.</p>
+            </sourceDesc>
+         </fileDesc>
+         <profileDesc/>
+      </teiHeader>
+      <text>
+         <body rend="handwritten">
+            
+            <div1 rend="horizontal"><pb facs="0757_003.jp2" n="003"/>
+               <p>And whereas the said defendant was <unclear rend="written" unit="chars">
+                     <supplied> indebted,</supplied>
+                  </unclear> to the said<lb/> plaintiff in twenty dollars of like lawful money for the<lb/> use and <unclear rend="written" unit="chars"/> of a certain <unclear rend="written" unit="chars">
+                     <supplied> room,</supplied>
+                  </unclear> and <unclear rend="written" unit="chars">
+                     <supplied> apartment,</supplied>
+                  </unclear>
+                  <lb/> to wit one room in, and <unclear rend="written" unit="chars">
+                     <supplied> part,</supplied>
+                  </unclear> and <unclear rend="written" unit="chars"/> of, a certain <unclear rend="written" unit="chars"/> of the said plaintiff, situate in the<lb/> Town and <unclear rend="written" unit="chars">
+                     <supplied> district,</supplied>
+                  </unclear> of <unclear rend="written" unit="chars">
+                     <supplied> <placeName><choice><reg>St Charles</reg><orig>St</orig></choice></placeName>,</supplied>
+                  </unclear>. <placeName><choice><reg>St Charles</reg><orig>Charles</orig></choice></placeName> aforesaid to wit in the<lb/> Town and county of <placeName><choice><reg>St Louis</reg><orig>St. Louis</orig></choice></placeName> <unclear rend="written" unit="chars">
+                     <supplied> aforesaid,</supplied>
+                  </unclear>, and within the <unclear rend="written" unit="chars">
+                     <supplied> jurisdic,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> tion aforesaid,</supplied>
+                  </unclear> by him the said defendant, and at his<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> request,</supplied>
+                  </unclear> and by the <unclear rend="written" unit="chars">
+                     <supplied> permission,</supplied>
+                  </unclear> of the said plaintiff for<lb/> a long time to wit for the space of <unclear rend="written" unit="chars">
+                     <supplied> three months before,</supplied>
+                  </unclear> then<lb/> 
+                  <unclear rend="written" unit="chars"/> had held, used, <unclear rend="written" unit="chars"/> and <unclear rend="written" unit="chars"/>
+                  <lb/> and being <unclear rend="written" unit="chars">
+                     <supplied> so indebted he,</supplied>
+                  </unclear> the said defendant in conside-<lb/>ration then of, afterwards to wit on the same day <unclear rend="written" unit="chars">
+                     <supplied> &amp; year,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> aforesaid,</supplied>
+                  </unclear> at the town and <unclear rend="written" unit="chars">
+                     <supplied> district,</supplied>
+                  </unclear> of <unclear rend="written" unit="chars">
+                     <supplied> <placeName><choice><reg>St Charles</reg><orig>St</orig></choice></placeName>,</supplied>
+                  </unclear> <placeName><choice><reg>St Charles</reg><orig>Charles</orig></choice></placeName> <unclear rend="written" unit="chars">
+                     <supplied> aforesaid,</supplied>
+                  </unclear>
+                  <lb/> to wit at the town and <unclear rend="written" unit="chars">
+                     <supplied> county,</supplied>
+                  </unclear> of <unclear rend="written" unit="chars">
+                     <supplied> <placeName><choice><reg>St Louis</reg><orig>St</orig></choice></placeName>,</supplied>
+                  </unclear> <placeName><choice><reg>St Louis</reg><orig>Louis</orig></choice></placeName> aforesaid and within<lb/> the <unclear rend="written" unit="chars">
+                     <supplied> jurisdiction aforesaid,</supplied>
+                  </unclear> undertook and then <unclear rend="written" unit="chars">
+                     <supplied> there,</supplied>
+                  </unclear> faithfully<lb/> promised the said plaintiff to pay him the said sum of<lb/> money when he <unclear rend="written" unit="chars">
+                     <supplied> should be,</supplied>
+                  </unclear> thereto afterwards <unclear rend="written" unit="chars">
+                     <supplied> requested,</supplied>
+                  </unclear>
+               </p>
+               <p>And whereas in consideration that the said plaintiff <unclear rend="written" unit="chars"/> the like<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> requested,</supplied>
+                  </unclear> the said defendant had <unclear rend="written" unit="chars">
+                     <supplied> before,</supplied>
+                  </unclear> that <unclear rend="written" unit="chars">
+                     <supplied> time permitted,</supplied>
+                  </unclear>
+                  <lb/> the said defendant <unclear rend="written" unit="chars"/>
+                  <lb/> 
+                  <unclear rend="written" unit="chars"/> a certain <unclear rend="written" unit="chars">
+                     <supplied> other,</supplied>
+                  </unclear> room and apartment to wit one other<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> room,</supplied>
+                  </unclear> in, and <unclear rend="written" unit="chars">
+                     <supplied> part,</supplied>
+                  </unclear> and <unclear rend="written" unit="chars">
+                     <supplied> parcel,</supplied>
+                  </unclear> of a certain <unclear rend="written" unit="chars"/> of the said plaintiff situate in the town and <unclear rend="written" unit="chars">
+                     <supplied> district,</supplied>
+                  </unclear>
+                  <lb/> of <unclear rend="written" unit="chars">
+                     <supplied> <placeName><choice><reg>St Charles</reg><orig>St</orig></choice></placeName>,</supplied>
+                  </unclear> <placeName><choice><reg>St Charles</reg><orig>Charles</orig></choice></placeName> <unclear rend="written" unit="chars">
+                     <supplied> aforesaid,</supplied>
+                  </unclear> to wit in the town and <placeName><choice><reg>County of St Louis</reg><orig>County of</orig></choice></placeName> <unclear rend="written" unit="chars">
+                     <supplied> <placeName><choice><reg>County of St Louis</reg><orig>St</orig></choice></placeName>,</supplied>
+                  </unclear> <placeName><choice><reg>County of St Louis</reg><orig>Louis</orig></choice></placeName><lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> aforesaid,</supplied>
+                  </unclear> and within the <unclear rend="written" unit="chars">
+                     <supplied> jurisdiction aforesaid,</supplied>
+                  </unclear> and that the<lb/> said defendant according to that <unclear rend="written" unit="chars"/> had <unclear rend="written" unit="chars"/> used<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> occupied possessed and,</supplied>
+                  </unclear> enjoyed the same for a long time to wit<lb/> for the space of five month before then <unclear rend="written" unit="chars"/> he the said<lb/> defendant then <unclear rend="written" unit="chars">
+                     <supplied> undertook,</supplied>
+                  </unclear> and faithfully <unclear rend="written" unit="chars">
+                     <supplied> promised,</supplied>
+                  </unclear>
+                  <lb/> the said plaintiff to pay him so much money as <unclear rend="written" unit="chars">
+                     <supplied> he therefor,</supplied>
+                  </unclear>
+                  <lb/> reasonably deserved to <unclear rend="written" unit="chars"/> when he <unclear rend="written" unit="chars"/> to <unclear rend="written" unit="chars">
+                     <supplied> requested,</supplied>
+                  </unclear> and the said plaintiff <unclear rend="written" unit="chars"/> that he<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> therefore reasonably deserved,</supplied>
+                  </unclear> to have of the said defendant<lb/> other twenty dollars of <unclear rend="written" unit="chars">
+                     <supplied> like,</supplied>
+                  </unclear> lawful money — at the town<lb/> and district of <unclear rend="written" unit="chars">
+                     <supplied> <placeName><choice><reg>St Charles</reg><orig>St</orig></choice></placeName>,</supplied>
+                  </unclear> <placeName><choice><reg>St Charles</reg><orig>Charles</orig></choice></placeName> <unclear rend="written" unit="chars">
+                     <supplied> aforesaid,</supplied>
+                  </unclear> to wit at the town <unclear rend="written" unit="chars">
+                     <supplied> and,</supplied>
+                  </unclear>
+                  <lb/> county of <unclear rend="written" unit="chars">
+                     <supplied> <placeName><choice><reg>St Louis</reg><orig>St</orig></choice></placeName>,</supplied>
+                  </unclear> <placeName><choice><reg>St Louis</reg><orig>Louis</orig></choice></placeName> aforesaid and within the <unclear rend="written" unit="chars">
+                     <supplied> jurisdiction aforesaid,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> when,</supplied>
+                  </unclear> of the said defendant afterwards to wit on the same<lb/> day and <unclear rend="written" unit="chars">
+                     <supplied> year aforesaid,</supplied>
+                  </unclear> there had notice</p>
+               <p>And whereas the said defendant afterwards <unclear rend="written" unit="chars"/> to wit on the<lb/>
+               </p>
+            </div1>
+         </body>
+      </text>
+   </TEI> 
+   <TEI>
+      <teiHeader>
+         <fileDesc>
+            <titleStmt>
+               <title/>
+            </titleStmt>
+            <publicationStmt>
+               <p>This electronic document is published as part of the St Louis Circuit
+                    Court historical records project.</p>
+            </publicationStmt>
+            <sourceDesc>
+               <p>The original document is part of the Missouri State Archives St Louis Circuit
+                    Court collection.</p>
+            </sourceDesc>
+         </fileDesc>
+         <profileDesc/>
+      </teiHeader>
+      <text>
+         <body rend="handwritten">    
+                
+            <div1 rend="horizontal"><pb facs="0757_004.jp2" n="004"/>    
+               <p>same day and year aforesaid at the <unclear rend="written" unit="chars">
+                     <supplied> town and district of <placeName><choice><reg>St Charles</reg><orig>St</orig></choice></placeName>,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> <placeName><choice><reg>St Charles</reg><orig>Charles</orig></choice></placeName> aforesaid to wit,</supplied>
+                  </unclear> at the <unclear rend="written" unit="chars">
+                     <supplied> town and <placeName><choice><reg>County of St Louis</reg><orig>County</orig></choice></placeName>,</supplied>
+                  </unclear> <placeName><choice><reg>County of St Louis</reg><orig>of St. Louis</orig></choice></placeName><lb/> aforesaid and <unclear rend="written" unit="chars">
+                     <supplied> within,</supplied>
+                  </unclear> the <unclear rend="written" unit="chars">
+                     <supplied> jurisdiction,</supplied>
+                  </unclear> aforesaid <unclear rend="written" unit="chars">
+                     <supplied> was indebted,</supplied>
+                  </unclear>
+                  <lb/> to the said plaintiff in other <unclear rend="written" unit="chars">
+                     <supplied> ninety,</supplied>
+                  </unclear>
+                  <lb/> five <unclear rend="written" unit="chars">
+                     <supplied> dollars eighty five cents of like,</supplied>
+                  </unclear> money, for <unclear rend="written" unit="chars">
+                     <supplied> money,</supplied>
+                  </unclear> by the said plaintiff<lb/> before that <unclear rend="written" unit="chars">
+                     <supplied> time,</supplied>
+                  </unclear> said out <unclear rend="written" unit="chars"/> and paid to <unclear rend="written" unit="chars">
+                     <supplied> for,</supplied>
+                  </unclear> the<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> use,</supplied>
+                  </unclear> of the said <unclear rend="written" unit="chars">
+                     <supplied> defendant,</supplied>
+                  </unclear> at his <unclear rend="written" unit="chars">
+                     <supplied> special instance,</supplied>
+                  </unclear> and<lb/> request and for other money by the said plaintiff before that<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> time lent,</supplied>
+                  </unclear> and <unclear rend="written" unit="chars">
+                     <supplied> advanced,</supplied>
+                  </unclear> to the said <unclear rend="written" unit="chars">
+                     <supplied> defendant,</supplied>
+                  </unclear> at his like<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> request,</supplied>
+                  </unclear> and for other money by the said defendant before that<lb/> 
+                  <unclear rend="written" unit="chars"/> and for <unclear rend="written" unit="chars"/> of <unclear rend="written" unit="chars">
+                     <supplied> the said plaintiff,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> and being so indebted,</supplied>
+                  </unclear> he the said <unclear rend="written" unit="chars">
+                     <supplied> defendant,</supplied>
+                  </unclear> in <unclear rend="written" unit="chars">
+                     <supplied> consideration,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> afterwords to wit,</supplied>
+                  </unclear> on the same day and year aforesaid<lb/> at the <unclear rend="written" unit="chars">
+                     <supplied> town and district,</supplied>
+                  </unclear> <placeName><choice><reg>St Charles</reg><orig>St</orig></choice></placeName>. <unclear rend="written" unit="chars">
+                     <supplied> <placeName><choice><reg>St Charles</reg><orig>Charles</orig></choice></placeName>,</supplied>
+                  </unclear> aforesaid to <unclear rend="written" unit="chars">
+                     <supplied> wit,</supplied>
+                  </unclear> at the<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> town and county of,</supplied>
+                  </unclear> <placeName><choice><reg>St Louis</reg><orig>St. Louis</orig></choice></placeName> aforesaid and within the <unclear rend="written" unit="chars">
+                     <supplied> jurisdiction,</supplied>
+                  </unclear>
+                  <lb/> aforesaid <unclear rend="written" unit="chars">
+                     <supplied> undertook,</supplied>
+                  </unclear> and there and then faithfully <unclear rend="written" unit="chars">
+                     <supplied> promised,</supplied>
+                  </unclear>
+                  <lb/> the said plaintiff to pay him the said <unclear rend="written" unit="chars">
+                     <supplied> last,</supplied>
+                  </unclear> mentioned <unclear rend="written" unit="chars">
+                     <supplied> sum,</supplied>
+                  </unclear> of money when he should be <unclear rend="written" unit="chars">
+                     <supplied> then to afterwards requested,</supplied>
+                  </unclear>
+                  <lb/> yet <unclear rend="written" unit="chars">
+                     <supplied> the,</supplied>
+                  </unclear> said <unclear rend="written" unit="chars">
+                     <supplied> defendant,</supplied>
+                  </unclear> although <unclear rend="written" unit="chars">
+                     <supplied> often reminded,</supplied>
+                  </unclear> hath<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> not,</supplied>
+                  </unclear> yet paid the said <unclear rend="written" unit="chars"/> any part<lb/> 
+                  <unclear rend="written" unit="chars"/> pay the same <unclear rend="written" unit="chars"/>
+                  <lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> part thereof.</supplied>
+                  </unclear> to the said <unclear rend="written" unit="chars">
+                     <supplied> plaintiff hath hitherto wholly refused,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> amd stoll doth refuse,</supplied>
+                  </unclear> to the said plaintiff his damage<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> one,</supplied>
+                  </unclear> hundred and <unclear rend="written" unit="chars">
+                     <supplied> twety,</supplied>
+                  </unclear> five dollars and therefore he<lb/> brings his <unclear rend="written" unit="chars">
+                     <supplied> suit,</supplied>
+                  </unclear>
+               </p>
+               <closer>
+                  <signed>
+                     <unclear rend="written" unit="chars">
+                        <supplied> <persName><choice><reg>Easton</reg><orig>Easton</orig></choice></persName>,</supplied>
+                     </unclear> and <unclear rend="written" unit="chars">
+                        <supplied> <persName><choice><reg>Lucas</reg><orig>Lucas</orig></choice></persName>,</supplied>
+                     </unclear>
+                     <lb/> p. q.</signed>
+               </closer>
+            </div1>
+            <div1 rend="horizontal"><pb facs="0757_004.jp2" n="004"/>
+               <opener rend="bracketed">
+                  <dateline>
+                     <unclear rend="written" unit="chars">
+                        <supplied> Territory,</supplied>
+                     </unclear> of <unclear rend="written" unit="chars">
+                        <supplied> <placeName><choice><reg>Missouri</reg><orig>Missouri</orig></choice></placeName>,</supplied>
+                     </unclear>
+                     <lb/> 
+                     <unclear rend="written" unit="chars">
+                        <supplied> <placeName><choice><reg>County of St Louis Louis</reg><orig>County</orig></choice></placeName>,</supplied>
+                     </unclear> <placeName><choice><reg>County of St Louis Louis</reg><orig>of St Louis</orig></choice></placeName><lb/> 
+                     <unclear rend="written" unit="chars"/>
+                  </dateline>
+               </opener>
+               <p><placeName><choice><reg>County of St Louis Louis</reg><orig>Louis</orig></choice></placeName> <unclear rend="written" unit="chars"/> the plaintiff in the <unclear rend="written" unit="chars">
+                     <supplied> foregoing declaration maketh oath,</supplied>
+                  </unclear> and saith that <unclear rend="written" unit="chars"/>
+                  <lb/> 
+                  <unclear rend="written" unit="chars"/> in the above <unclear rend="written" unit="chars">
+                     <supplied> declaration,</supplied>
+                  </unclear> is <unclear rend="written" unit="chars">
+                     <supplied> justly,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> indebted to him the sum of twenty five dollars,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> twenty five cents,</supplied>
+                  </unclear> for <unclear rend="written" unit="chars"/> and <unclear rend="written" unit="chars"/> accounts<lb/> one that he <unclear rend="written" unit="chars">
+                     <supplied> verily believes,</supplied>
+                  </unclear> he <unclear rend="written" unit="chars"/> he said <unclear rend="written" unit="chars"/>
+                  <lb/> said <unclear rend="written" unit="chars">
+                     <supplied> defendant ought to,</supplied>
+                  </unclear> be held to <unclear rend="written" unit="chars"/> in the<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> sum,</supplied>
+                  </unclear> of one hundred and <unclear rend="written" unit="chars">
+                     <supplied> twenty,</supplied>
+                  </unclear> five dollars, in<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> order,</supplied>
+                  </unclear> to <unclear rend="written" unit="chars">
+                     <supplied> secure said debt and costs,</supplied>
+                  </unclear> of <unclear rend="written" unit="chars">
+                     <supplied> suit,</supplied>
+                  </unclear> —</p>
+               <closer>
+                  <dateline>
+                     <unclear rend="written" unit="chars">
+                        <supplied> sworn,</supplied>
+                     </unclear> to <unclear rend="strikethrough" unit="chars"/> 
+                     <unclear rend="written" unit="chars">
+                        <supplied> before,</supplied>
+                     </unclear> me<lb/> 
+                     <unclear rend="written" unit="chars">
+                        <supplied> the Judge,</supplied>
+                     </unclear> 
+                     <unclear rend="strikethrough" unit="chars"/> 
+                     <unclear rend="written" unit="chars">
+                        <supplied> of,</supplied>
+                     </unclear> the <unclear rend="written" unit="chars">
+                        <supplied> Circuit court,</supplied>
+                     </unclear> of the <unclear rend="written" unit="chars"/>
+                     <lb/> 
+                     <unclear rend="written" unit="chars">
+                        <supplied> <placeName><choice><reg>County of St Louis</reg><orig>County</orig></choice></placeName>,</supplied>
+                     </unclear> <placeName><choice><reg>County of St Louis</reg><orig>of St Louis</orig></choice></placeName> <unclear rend="written" unit="chars"/> 
+                     <date when="1815-08-02">2nd day of <abbr>Aug</abbr> 1815</date>.</dateline>
+                  <signed>
+                     <unclear rend="written" unit="chars"/>
+                  </signed>
+                  <signed>
+                     <unclear rend="written" unit="chars"/>
+                  </signed>
+               </closer>
+            </div1>
+         </body>
+      </text>
+   </TEI>
+   <TEI>
+      <teiHeader>
+         <fileDesc>
+            <titleStmt>
+               <title>Summons</title>
+            </titleStmt>
+            <publicationStmt>
+               <p>This electronic document is published as part of the St Louis Circuit
+                    Court historical records project.</p>
+            </publicationStmt>
+            <sourceDesc>
+               <p>The original document is part of the Missouri State Archives St Louis Circuit
+                    Court collection.</p>
+            </sourceDesc>
+         </fileDesc>
+         <profileDesc>
+            <legalDocDesc xmlns="http://digital.wustl.edu/ns/lxt/1.0">                
+               <legalDoc genre="civil" stagelit="pre-trial" type="" when="1815-08-02"> </legalDoc>
+               <legalTitle>Summons</legalTitle>        
+               <author role=""/>         
+               <court>St. Louis County Court</court>
+            </legalDocDesc>
+         </profileDesc>
+      </teiHeader>
+      <text>
+         <body rend="handwritten">
+            
+
+    
+
+            <div1 legalFunction="Summons" rend="horizontal"><pb facs="0757_005.jp2" n="005"/>
+               <opener>
+                  <abbr>No</abbr> 18. <dateline><orgName><choice><reg>Circuit Court</reg><orig>St Louis Circuit</orig></choice></orgName><lb/> <orgName><choice><reg>Circuit Court</reg><orig>Court</orig></choice></orgName> <date when="1815-10">October Term 1815</date>
+                  </dateline>
+               </opener>
+               <head>Louis <unclear rend="written" unit="chars">
+                     <supplied> <persName><choice><reg>Tayon</reg><orig>Tayon</orig></choice></persName>,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <abbr>vs.</abbr>
+                  <lb/> Extence <unclear rend="written" unit="chars"/>
+               </head>
+               <p>This is an action on the<lb/> case. let a <unclear rend="written" unit="chars"/> and<lb/> 
+                  <unclear rend="written" unit="chars"/> in a<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> plea,</supplied>
+                  </unclear> of <unclear rend="written" unit="chars">
+                     <supplied> trespass on the,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars"/> and <unclear rend="written" unit="chars"/>
+                  <lb/> for $ 125 <unclear rend="written" unit="chars"/> to<lb/> the Plaintiff <unclear rend="written" unit="chars"/>
+               </p>
+               <p>
+                  <unclear rend="written" unit="chars"/>
+               </p>
+               <p>Let the <unclear rend="written" unit="chars">
+                     <supplied> Sheriff,</supplied>
+                  </unclear> take <unclear rend="written" unit="chars">
+                     <supplied> bail,</supplied>
+                  </unclear>
+                  <lb/> in the <unclear rend="written" unit="chars">
+                     <supplied> sum,</supplied>
+                  </unclear> of one <unclear rend="written" unit="chars">
+                     <supplied> hun,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> dred,</supplied>
+                  </unclear> dollars <date when="1815-08-02">2 <abbr>augt</abbr>
+                     <lb/> 1815</date>.</p>
+               <closer>
+                  <signed>
+                     <unclear rend="written" unit="chars"/>
+                  </signed>
+                  <lb/> 
+                  <unclear rend="written" unit="chars"/>
+                  <lb/> 
+                  <unclear rend="written" unit="chars"/> by<lb/> 
+                  <signed>
+                     <unclear rend="written" unit="chars"/> u. <unclear rend="written" unit="chars"/>
+                  </signed>
+               </closer>
+            </div1>
+            <div1 legalFunction="Certificate of Filing" rend="horizontal"><pb facs="0757_005.jp2" n="005"/>
+               <p>filed <date when="1815-08-02">2nd August 1815</date>
+               </p>
+               <closer>
+                  <signed>
+                     <unclear rend="written" unit="chars"/>
+                  </signed>
+               </closer>
+            </div1>
+            <div1 legalFunction="Certificate of Execution" rend="vertical"><pb facs="0757_005.jp2" n="005"/>
+               <p>
+                  <unclear rend="written" unit="chars">
+                     <supplied> Executed,</supplied>
+                  </unclear> this <unclear rend="written" unit="chars">
+                     <supplied> writ,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <date when="1815-08-02">2nd August 1815</date>, <unclear rend="written" unit="chars">
+                     <supplied> served this writ by reading the,</supplied>
+                  </unclear>
+                  <lb/> same and <unclear rend="written" unit="chars">
+                     <supplied> declaration,</supplied>
+                  </unclear> to the<lb/> Defendant <unclear rend="written" unit="chars"/>
+               </p>
+               <closer>
+                  <signed>
+                     <unclear rend="written" unit="chars"/>
+                  </signed>
+                  <unclear rend="written" unit="chars"/> Bond $1.50
+</closer>
+            </div1>
+            
+            <div1 legalFunction="Certificate of Filing" rend="vertical"><pb facs="0757_006.jp2" n="006"/>  
+               <p>town of s'Louis <unclear rend="written" unit="chars">
+                     <supplied> aforesaid,</supplied>
+                  </unclear> then second day of <unclear rend="written" unit="chars"/> of <unclear rend="written" unit="chars"/>
+                  <lb/> the year of our Lord one thousand eight hundred<lb/> and sixteen and of our <unclear rend="written" unit="chars">
+                     <supplied> Independence,</supplied>
+                  </unclear> the <unclear rend="written" unit="chars">
+                     <supplied> fortieth,</supplied>
+                  </unclear>
+               </p>
+               <figure rend="seal"/>
+               <closer>
+                  <signed>
+                     <unclear rend="written" unit="chars">
+                        <supplied> U P Ledue clk SL Ct,</supplied>
+                     </unclear>
+                  </signed>
+               </closer>
+            </div1>
+         </body>
+      </text>
+   </TEI>
+   <TEI>
+      <teiHeader>
+         <fileDesc>
+            <titleStmt>
+               <title>Answer</title>
+            </titleStmt>
+            <publicationStmt>
+               <p>This electronic document is published as part of the St Louis Circuit
+                    Court historical records project.</p>
+            </publicationStmt>
+            <sourceDesc>
+               <p>The original document is part of the Missouri State Archives St Louis Circuit
+                    Court collection.</p>
+            </sourceDesc>
+         </fileDesc>
+         <profileDesc>
+            <legalDocDesc xmlns="http://digital.wustl.edu/ns/lxt/1.0">                
+               <legalDoc genre="civil" stagelit="pre-trial" type="answer" when="1815-10-10"> </legalDoc>
+               <legalTitle>Answer</legalTitle>        
+               <author role="attorney"/>         
+               <court>St. Louis County Court</court>
+            </legalDocDesc>
+         </profileDesc>
+      </teiHeader>
+      <text>
+         <body rend="handwritten">
+            
+
+    
+
+            <div1 legalFunction="Answer" rend="horizontal"><pb facs="0757_007.jp2" n="007"/>
+               <head rend="bracketed">
+                  <unclear rend="written" unit="chars">
+                     <supplied> Etrian Malbough,</supplied>
+                  </unclear>
+                  <lb/> ver<lb/> Louis <unclear rend="written" unit="chars">
+                     <supplied> <persName><choice><reg>Tayon</reg><orig>Tayon</orig></choice></persName>,</supplied>
+                  </unclear>
+               </head>
+               <opener>
+                  <dateline>In the <unclear rend="written" unit="chars">
+                        <supplied> circuit court,</supplied>
+                     </unclear> Slouis. <unclear rend="written" unit="chars">
+                        <supplied> county,</supplied>
+                     </unclear>
+                     <lb/> 
+                     <date when="1815-10">October Term 1815</date>
+                  </dateline>
+               </opener>
+               <p>
+                  <unclear rend="written" unit="chars">
+                     <supplied> And,</supplied>
+                  </unclear> the said <unclear rend="written" unit="chars">
+                     <supplied> defendant,</supplied>
+                  </unclear> by <unclear rend="written" unit="chars">
+                     <supplied> his attorney comes,</supplied>
+                  </unclear>
+                  <lb/> and <unclear rend="written" unit="chars">
+                     <supplied> defends,</supplied>
+                  </unclear> the <unclear rend="written" unit="chars">
+                     <supplied> charge of the wrong   injury,</supplied>
+                  </unclear> where <unclear rend="written" unit="chars"/>
+                  <lb/> he <unclear rend="written" unit="chars"/> and <unclear rend="written" unit="chars"/> in <unclear rend="written" unit="chars"/> in the<lb/> said <unclear rend="written" unit="chars">
+                     <supplied> plaintiff,</supplied>
+                  </unclear> in his said <unclear rend="written" unit="chars">
+                     <supplied> declaration hath alleged,</supplied>
+                  </unclear> and of<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> this,</supplied>
+                  </unclear> he <unclear rend="written" unit="chars">
+                     <supplied> puts,</supplied>
+                  </unclear> himself <unclear rend="written" unit="chars">
+                     <supplied> on,</supplied>
+                  </unclear> the <unclear rend="written" unit="chars">
+                     <supplied> court,</supplied>
+                  </unclear>.</p>
+               <closer>
+                  <signed>
+                     <unclear rend="written" unit="chars"/>
+                  </signed>
+               </closer>
+            </div1>
+            <div1 rend="horizontal"><pb facs="0757_007.jp2" n="007"/>
+               <p>
+                  <unclear rend="written" unit="chars">
+                     <supplied> for further plea,</supplied>
+                  </unclear> in this <unclear rend="written" unit="chars">
+                     <supplied> behalf,</supplied>
+                  </unclear> the <unclear rend="written" unit="chars">
+                     <supplied> said defendant says,</supplied>
+                  </unclear>
+                  <lb/> the <unclear rend="written" unit="chars">
+                     <supplied> said plaintiff,</supplied>
+                  </unclear> of <unclear rend="written" unit="chars">
+                     <supplied> having   maintaining,</supplied>
+                  </unclear> his <unclear rend="written" unit="chars">
+                     <supplied> his,</supplied>
+                  </unclear> said <unclear rend="written" unit="chars"/>
+                  <lb/> 
+                  <unclear rend="written" unit="chars"/> against him <unclear rend="written" unit="chars">
+                     <supplied> ought,</supplied>
+                  </unclear> to be barred <unclear rend="written" unit="chars">
+                     <supplied>   precluded because,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars"/> that be <unclear rend="written" unit="chars"/> upon himself and <unclear rend="written" unit="chars">
+                     <supplied> promise,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars"/> and <unclear rend="written" unit="chars"/> of the <unclear rend="written" unit="chars">
+                     <supplied> plaintiffs,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars"/> in this <unclear rend="written" unit="chars">
+                     <supplied> case to wit within five years next before,</supplied>
+                  </unclear>
+                  <lb/> the <unclear rend="written" unit="chars"/> in the <unclear rend="written" unit="chars">
+                     <supplied> year,</supplied>
+                  </unclear> one <unclear rend="written" unit="chars">
+                     <supplied> eight,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> hundred and fifteen,</supplied>
+                  </unclear>, and this <unclear rend="written" unit="chars">
+                     <supplied> he is ready to verify   prove,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars"/> costs.</p>
+               <closer>
+                  <signed>
+                     <unclear rend="written" unit="chars"/>
+                  </signed>
+               </closer>
+            </div1>
+            <div1 rend="horizontal"><pb facs="0757_007.jp2" n="007"/>
+               <p>
+                  <unclear rend="written" unit="chars"/> In <unclear rend="written" unit="chars"/> in this <unclear rend="written" unit="chars">
+                     <supplied> behalf the said defendant,</supplied>
+                  </unclear>
+                  <lb/> saith <unclear rend="written" unit="chars"/> of having <unclear rend="written" unit="chars">
+                     <supplied>   maintaining,</supplied>
+                  </unclear>
+                  <lb/> his said <unclear rend="written" unit="chars">
+                     <supplied> action,</supplied>
+                  </unclear> thereof <unclear rend="written" unit="chars">
+                     <supplied> against her ought,</supplied>
+                  </unclear> to be barred<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied>   precluded because,</supplied>
+                  </unclear> he says that he <unclear rend="written" unit="chars">
+                     <supplied> did,</supplied>
+                  </unclear> at the <unclear rend="written" unit="chars">
+                     <supplied> county,</supplied>
+                  </unclear>
+                  <lb/> aforesaid, on the <unclear rend="written" unit="chars"/> day of <unclear rend="written" unit="chars"/> one <unclear rend="written" unit="chars">
+                     <supplied> thousand,</supplied>
+                  </unclear>
+                  <lb/>
+               </p>
+            </div1>
+         </body>
+      </text>
+   </TEI> 
+   <TEI>
+      <teiHeader>
+         <fileDesc>
+            <titleStmt>
+               <title/>
+            </titleStmt>
+            <publicationStmt>
+               <p>This electronic document is published as part of the St Louis Circuit
+                    Court historical records project.</p>
+            </publicationStmt>
+            <sourceDesc>
+               <p>The original document is part of the Missouri State Archives St Louis Circuit
+                    Court collection.</p>
+            </sourceDesc>
+         </fileDesc>
+         <profileDesc/>
+      </teiHeader>
+      <text>
+         <body rend="handwritten">    
+                
+            <div1 rend="horizontal"><pb facs="0757_008.jp2" n="008"/>   
+               <p>eight hundred   fifteen, will truly pay <unclear rend="written" unit="chars">
+                     <supplied>   satisfy,</supplied>
+                  </unclear> to the said<lb/> plaintiff the said term of many <unclear rend="written" unit="chars"/> ya and this he<lb/> is ready <unclear rend="written" unit="chars">
+                     <supplied> to verify  ,</supplied>
+                  </unclear> prove <unclear rend="written" unit="chars">
+                     <supplied> wherefore,</supplied>
+                  </unclear> he prays judg<lb/> ment this into</p>
+               <closer>
+                  <signed>
+                     <unclear rend="written" unit="chars"/>
+                  </signed>
+               </closer>
+            </div1>
+            <div1 rend="horizontal"><pb facs="0757_008.jp2" n="008"/>
+               <p>
+                  <unclear rend="written" unit="chars"/> the plaintiff will <unclear rend="written" unit="chars"/> 
+                  <lb/> law of <unclear rend="written" unit="chars"/> of this <unclear rend="written" unit="chars">
+                     <supplied> territory,</supplied>
+                  </unclear> the said defendant<lb/> will claim as an affect the sum of thirty dollars<lb/> one <unclear rend="written" unit="chars"/>, and <unclear rend="written" unit="chars"/> lue <unclear rend="written" unit="chars"/> by this said defend<lb/>-<unclear rend="written" unit="chars">
+                     <supplied> ant,</supplied>
+                  </unclear>   delivered to said plaintiff as his <unclear rend="written" unit="chars"/> the<lb/> sum of sixty dollars, you the <unclear rend="written" unit="chars"/>
+                  <lb/> line for the span of three years. <unclear rend="chars" unit="chars"/>
+                  <lb/> of the plaintiff and the sum of twenty <unclear rend="written" unit="chars">
+                     <supplied> dollars,</supplied>
+                  </unclear> you<lb/> 
+                  <unclear rend="written" unit="chars"/> goods wares <unclear rend="written" unit="chars">
+                     <supplied>   merchandize,</supplied>
+                  </unclear> and <unclear rend="written" unit="chars"/> unto<lb/> him the said plaintiff by said defendant as his <unclear rend="written" unit="chars"/>
+                  <lb/> 
+                  <unclear rend="written" unit="chars"/> and also another sum of sixty<lb/> dollars for his work labour   service to the<lb/> said defendant <unclear rend="written" unit="chars"/> then him <unclear rend="written" unit="chars"/> her <unclear rend="written" unit="chars"/> performed<lb/> for the plaintiff,</p>
+               <closer>
+                  <signed>
+                     <unclear rend="written" unit="chars"/>
+                  </signed>
+               </closer>
+            </div1>
+         </body>
+      </text>
+   </TEI>
+   <TEI>
+      <teiHeader>
+         <fileDesc>
+            <titleStmt>
+               <title/>
+            </titleStmt>
+            <publicationStmt>
+               <p>This electronic document is published as part of the St Louis Circuit
+                    Court historical records project.</p>
+            </publicationStmt>
+            <sourceDesc>
+               <p>The original document is part of the Missouri State Archives St Louis Circuit
+                    Court collection.</p>
+            </sourceDesc>
+         </fileDesc>
+         <profileDesc/>
+      </teiHeader>
+      <text>
+         <body rend="handwritten">
+            
+            <div1 legalFunction="Certificate of Filing" rend="horizontal"><pb facs="0757_009.jp2" n="009"/>  
+               <head rend="bracketed">
+                  <unclear rend="written" unit="chars">
+                     <supplied> Etrien</supplied>
+                  </unclear> Malbough<lb/> 
+                  <unclear rend="written" unit="chars"/>
+                  <lb/> Louis <unclear rend="written" unit="chars">
+                     <supplied> <persName><choice><reg>Tayon</reg><orig>Tayon</orig></choice></persName>,</supplied>
+                  </unclear>
+               </head>
+               <p>
+                  <unclear rend="written" unit="chars"/>
+               </p>
+               <closer>
+                  <unclear rend="written" unit="chars">
+                     <supplied> Filed,</supplied>
+                  </unclear> 
+                  <date when="1815-10-10">
+                     <abbr>Oct</abbr> 10th 1815</date>
+                  <lb/>
+                  <signed>
+                     <unclear rend="written" unit="chars"/>
+                  </signed>
+               </closer>
+            </div1>
+         </body>
+      </text>
+   </TEI>
+   <TEI>
+      <teiHeader>
+         <fileDesc>
+            <titleStmt>
+               <title>Amended Complaint</title>
+            </titleStmt>
+            <publicationStmt>
+               <p>This electronic document is published as part of the St Louis Circuit
+                    Court historical records project.</p>
+            </publicationStmt>
+            <sourceDesc>
+               <p>The original document is part of the Missouri State Archives St Louis Circuit
+                    Court collection.</p>
+            </sourceDesc>
+         </fileDesc>
+         <profileDesc>
+            <legalDocDesc xmlns="http://digital.wustl.edu/ns/lxt/1.0">                
+               <legalDoc genre="civil" stagelit="trial" type="complaint" when="1816-05"> </legalDoc>
+               <legalTitle>Amended Complaint</legalTitle>        
+               <author role="attorney"/>         
+               <court>St. Louis County Court</court>
+            </legalDocDesc>
+         </profileDesc>
+      </teiHeader>
+      <text>
+         <body rend="handwritten">
+            
+
+    
+
+            <div1 legalFunction="Amended Complaint" rend="horizontal"><pb facs="0757_010.jp2" n="010"/>
+               <head rend="bracketed">
+                  <unclear rend="written" unit="chars">
+                     <supplied> Louis <persName><choice><reg>Tayon</reg><orig>Tayon</orig></choice></persName>,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars"/>
+                  <lb/> 
+                  <unclear rend="written" unit="chars"/>
+               </head>
+               <opener>
+                  <dateline>In the <unclear rend="written" unit="chars">
+                        <supplied> <orgName><choice><reg>Circuit Court</reg><orig>Circuit Court</orig></choice></orgName>,</supplied>
+                     </unclear>
+                     <lb/> 
+                     <unclear rend="written" unit="chars">
+                        <supplied> St Louis County,</supplied>
+                     </unclear>
+                     <lb/> 
+                     <date when="1816-05">may term 1816</date>
+                  </dateline>
+               </opener>
+               <p>And for <unclear rend="written" unit="chars">
+                     <supplied> 
+                        <sic>suplication</sic>,</supplied>
+                  </unclear> to the first<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> plea,</supplied>
+                  </unclear> of the <unclear rend="written" unit="chars">
+                     <supplied> defendant above,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> pleaded,</supplied>
+                  </unclear> the <unclear rend="written" unit="chars">
+                     <supplied> plaintiff saith,</supplied>
+                  </unclear>
+                  <lb/> he <unclear rend="written" unit="chars">
+                     <supplied> doth,</supplied>
+                  </unclear> the like</p>
+               <closer>
+                  <signed>
+                     <unclear rend="written" unit="chars"/>
+                  </signed>
+               </closer>
+            </div1>
+            <div1 rend="horizontal"><pb facs="0757_010.jp2" n="010"/>
+               <p>And for <unclear rend="written" unit="chars">
+                     <supplied> 
+                        <sic>suplication</sic>,</supplied>
+                  </unclear> to the <unclear rend="written" unit="chars">
+                     <supplied> second,</supplied>
+                  </unclear>
+                  <lb/> plea of the <unclear rend="written" unit="chars">
+                     <supplied> defendant above,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> pleaded,</supplied>
+                  </unclear> the said <unclear rend="written" unit="chars">
+                     <supplied> plaintiff,</supplied>
+                  </unclear> saith<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> be aught not,</supplied>
+                  </unclear> to <unclear rend="written" unit="chars">
+                     <supplied> be barred,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> precluded from having,</supplied>
+                  </unclear>
+                  <lb/> and <unclear rend="written" unit="chars">
+                     <supplied> maintaining his action,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> therof against,</supplied>
+                  </unclear> him the <unclear rend="written" unit="chars">
+                     <supplied> defendant,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> because,</supplied>
+                  </unclear> he <unclear rend="written" unit="chars">
+                     <supplied> saith,</supplied>
+                  </unclear> that he did<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied>approve,</supplied>
+                  </unclear> and <unclear rend="written" unit="chars">
+                     <supplied> promise   undertake,</supplied>
+                  </unclear>
+                  <lb/> upon <unclear rend="written" unit="chars">
+                     <supplied> himself,</supplied>
+                  </unclear> (<unclear rend="written" unit="chars">
+                     <supplied> in manner,</supplied>
+                  </unclear> and<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> form,</supplied>
+                  </unclear> as in the <unclear rend="written" unit="chars">
+                     <supplied> declaration,</supplied>
+                  </unclear> as<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> sanctioned) within five years,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars"/> the oath of <unclear rend="written" unit="chars">
+                     <supplied> the plaintiff writ,</supplied>
+                  </unclear> in this case<lb/> and <unclear rend="written" unit="chars">
+                     <supplied> this he prays,</supplied>
+                  </unclear> may be <unclear rend="written" unit="chars"/>
+                  <lb/> of lay the <unclear rend="written" unit="chars"/>
+               </p>
+               <p>and <unclear rend="written" unit="chars"/> to <unclear rend="written" unit="chars"/>
+                  <lb/> 
+                  <unclear rend="written" unit="chars"/> 
+                  <abbr>P.</abbr>9</p>
+               <p>and for <unclear rend="written" unit="chars">
+                     <supplied> 
+                        <sic>suplication</sic>,</supplied>
+                  </unclear> to the <unclear rend="written" unit="chars">
+                     <supplied> third,</supplied>
+                  </unclear>
+                  <lb/> plea of the <unclear rend="written" unit="chars">
+                     <supplied> defendant above,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> pleaded the,</supplied>
+                  </unclear> said <unclear rend="written" unit="chars">
+                     <supplied> plaintiff,</supplied>
+                  </unclear> saith that he aught<lb/> not to be <unclear rend="written" unit="chars">
+                     <supplied> barred,</supplied>
+                  </unclear> and <unclear rend="written" unit="chars">
+                     <supplied> precluded,</supplied>
+                  </unclear>
+                  <lb/>
+               </p>
+            </div1>
+         </body>
+      </text>
+   </TEI> 
+   <TEI>
+      <teiHeader>
+         <fileDesc>
+            <titleStmt>
+               <title/>
+            </titleStmt>
+            <publicationStmt>
+               <p>This electronic document is published as part of the St Louis Circuit
+                    Court historical records project.</p>
+            </publicationStmt>
+            <sourceDesc>
+               <p>The original document is part of the Missouri State Archives St Louis Circuit
+                    Court collection.</p>
+            </sourceDesc>
+         </fileDesc>
+         <profileDesc/>
+      </teiHeader>
+      <text>
+         <body rend="handwritten">    
+                
+            <div1 rend="horizontal"><pb facs="0757_011.jp2" n="011"/>    
+               <p>from having or <unclear rend="written" unit="chars">
+                     <supplied> maintaining,</supplied>
+                  </unclear>
+                  <lb/> his <unclear rend="written" unit="chars">
+                     <supplied> action thereof against,</supplied>
+                  </unclear> him<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> said defendant,</supplied>
+                  </unclear> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> because,</supplied>
+                  </unclear> he<lb/> saith that the said <unclear rend="written" unit="chars">
+                     <supplied> defendant,</supplied>
+                  </unclear>
+                  <lb/> did <unclear rend="written" unit="chars">
+                     <supplied> not will,</supplied>
+                  </unclear> and <unclear rend="written" unit="chars"/> by pay <unclear rend="written" unit="chars"/>
+                  <lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> satisfy,</supplied>
+                  </unclear> the plainteff the said <unclear rend="written" unit="chars">
+                     <supplied> sums,</supplied>
+                  </unclear>
+                  <lb/> of <unclear rend="written" unit="chars">
+                     <supplied> money,</supplied>
+                  </unclear> in the <unclear rend="written" unit="chars">
+                     <supplied> declaration in,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> sued,</supplied>
+                  </unclear> for, as the <unclear rend="written" unit="chars">
+                     <supplied> defendant,</supplied>
+                  </unclear> in<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> his,</supplied>
+                  </unclear> said <unclear rend="written" unit="chars">
+                     <supplied> third plea,</supplied>
+                  </unclear> has <unclear rend="written" unit="chars">
+                     <supplied> alledged,</supplied>
+                  </unclear>
+                  <lb/> and this he <unclear rend="written" unit="chars">
+                     <supplied> prays,</supplied>
+                  </unclear> may be <unclear rend="written" unit="chars"/> the<lb/> 
+                  <unclear rend="written" unit="chars"/>
+                  <lb/> 
+                  <abbr>P.</abbr>9</p>
+               <closer>
+                  <unclear rend="written" unit="chars"/>
+                  <signed>
+                     <unclear rend="written" unit="chars"/>
+                  </signed>
+               </closer>
+            </div1>
+            <div1 legalFunction="Certificate of Filing" rend="horizontal"><pb facs="0757_011.jp2" n="011"/> 
+               <head rend="bracketed">Louis <unclear rend="written" unit="chars">
+                     <supplied> <persName><choice><reg>Tayon</reg><orig>Tayon</orig></choice></persName>,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars"/>
+                  <lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> Etienne <persName><choice><reg>Malbeuf</reg><orig>Malbeuf</orig></choice></persName>,</supplied>
+                  </unclear>
+               </head>
+               <p>
+                  <unclear rend="written" unit="chars"/>
+               </p>
+               <closer>
+                  <unclear rend="written" unit="chars">
+                     <supplied> filed,</supplied>
+                  </unclear> 
+                  <date when="1816-05-08">8th - May 1816</date>
+                  <signed>
+                     <unclear rend="written" unit="chars"/>
+                  </signed>
+               </closer>
+            </div1>
+         </body>
+      </text>
+   </TEI>
+   <TEI>
+      <teiHeader>
+         <fileDesc>
+            <titleStmt>
+               <title>Bonding Agreement</title>
+            </titleStmt>
+            <publicationStmt>
+               <p>This electronic document is published as part of the St Louis Circuit
+                    Court historical records project.</p>
+            </publicationStmt>
+            <sourceDesc>
+               <p>The original document is part of the Missouri State Archives St Louis Circuit
+                    Court collection.</p>
+            </sourceDesc>
+         </fileDesc>
+         <profileDesc>
+            <legalDocDesc xmlns="http://digital.wustl.edu/ns/lxt/1.0">                
+               <legalDoc genre="civil" stagelit="trial" type="memorandum" when="1815-08-02"> </legalDoc>
+               <legalTitle>Bonding Agreement</legalTitle>        
+               <author role="clerk">Leia, Mannel</author>         
+               <court>St. Louis County Court</court>
+            </legalDocDesc>
+         </profileDesc>
+      </teiHeader>
+      <text>
+         <body rend="combo">
+            
+
+    
+
+            <div1 legalFunction="Bonding Agreement" rend="horizontal printed-form"><pb facs="0757_012.jp2" n="012"/>
+               <p>Know all men by these presents, That we <seg rend="form-fill-in">
+                     <unclear rend="written" unit="chars">
+                        <supplied> Etienne,</supplied>
+                     </unclear> <persName><choice><reg>Malbeuf</reg><orig>Malbeuf</orig></choice></persName><lb/> and <unclear rend="written" unit="chars">
+                        <supplied> <persName><choice><reg>Manuel Lisa</reg><orig>Manuel Lisa</orig></choice></persName>,</supplied>
+                     </unclear>
+                  </seg> are held and firmly<lb/> bound unto <persName><choice><reg>John W Thompson</reg><orig>John W. Thompson</orig></choice></persName>, sheriff of the county of <placeName><choice><reg>St Louis</reg><orig>St. Louis</orig></choice></placeName>, his assigns or successors<lb/> in office, in the sum of <seg rend="form-fill-in">
+                     <unclear rend="written" unit="chars">
+                        <supplied> one hundred,</supplied>
+                     </unclear> dollars <unclear rend="written" unit="chars"/>
+                  </seg>
+                  <lb/> currency of the <placeName><choice><reg>United States</reg><orig>United States</orig></choice></placeName>, to which payment well and truely to be made, we bind our-<lb/>selves and each of us by <seg rend="form-fill-in">
+                     <unclear rend="written" unit="chars">
+                        <supplied> himself,</supplied>
+                     </unclear>
+                  </seg> our and each of our heirs, executors, administrators and<lb/> assigns, firmly by these presents. Sealed with our seals and dated this <date when="1815-08-02">
+                     <seg rend="form-fill-in">2d</seg> day of<lb/> 
+                     <seg rend="form-fill-in">August</seg> in the year of our Lord one thousand eight hundred and <seg rend="form-fill-in">fifteen</seg>
+                  </date>
+               </p>
+               <p>The condition of the above obligation is such, That if the above bound <seg rend="form-fill-in">
+                     <unclear rend="written" unit="chars">
+                        <supplied> Etienne,</supplied>
+                     </unclear>
+                     <lb/> 
+                     <unclear rend="written" unit="chars">
+                        <supplied> Maulbouf</supplied>
+                     </unclear>
+                  </seg> shall appear at the <seg rend="form-fill-in">
+                     <unclear rend="written" unit="chars">
+                        <supplied> next circuit court,</supplied>
+                     </unclear>
+                  </seg> to be held at the town of <placeName><choice><reg>St Louis</reg><orig>St. Louis</orig></choice></placeName>, on the<lb/> 
+                  <seg rend="form-fill-in">
+                     <unclear rend="written" unit="chars">
+                        <supplied> second mon,</supplied>
+                     </unclear>day <unclear rend="written" unit="chars">
+                        <supplied> in october,</supplied>
+                     </unclear>
+                  </seg> next to answer unto <seg rend="form-fill-in">
+                     <unclear rend="written" unit="chars">
+                        <supplied> Louis <persName><choice><reg>Tayon</reg><orig>Tayon</orig></choice></persName> in,</supplied>
+                     </unclear>
+                     <lb/> a plea of <unclear rend="written" unit="chars">
+                        <supplied> trespass,</supplied>
+                     </unclear> on the <unclear rend="written" unit="chars">
+                        <supplied> Case,</supplied>
+                     </unclear> to the <unclear rend="written" unit="chars">
+                        <supplied> damage of the said Louis <persName><choice><reg>Tayon</reg><orig>Tayon</orig></choice></persName>,</supplied>
+                     </unclear>
+                     <lb/> One <unclear rend="written" unit="chars">
+                        <supplied> hundred twenty,</supplied>
+                     </unclear> five <unclear rend="written" unit="chars">
+                        <supplied> dollars,</supplied>
+                     </unclear>
+                  </seg>
+                  <lb/> and if judgment be given against <seg rend="form-fill-in">him</seg> at that or any subsequent term of said court, that<lb/> the said <seg rend="form-fill-in">
+                     <unclear rend="written" unit="chars">
+                        <supplied> Etienne <persName><choice><reg>Malbeuf</reg><orig>Malbeuf</orig></choice></persName>,</supplied>
+                     </unclear>
+                  </seg> will pay the<lb/> aforesaid and costs, or the amount of the condemnation of the court, or surren-<lb/>der <seg rend="form-fill-in">
+                     <unclear rend="written" unit="chars">
+                        <supplied> myself,</supplied>
+                     </unclear>
+                  </seg> in execution thereof, or that the said <seg rend="form-fill-in">
+                     <unclear rend="written" unit="chars">
+                        <supplied> <persName><choice><reg>Manuel Lisa</reg><orig>Manuel</orig></choice></persName>,</supplied>
+                     </unclear> <persName><choice><reg>Manuel Lisa</reg><orig>Lisa</orig></choice></persName></seg>
+                  <lb/> will do it for <seg rend="form-fill-in">him</seg>; then the above obligation to be void, else to remain in full force and<lb/> virtue in law.</p>
+               <closer>Signed sealed and delivered<lb/> in the presence of<lb/>
+                  <unclear rend="written" unit="chars">
+                     <supplied> Etienne,</supplied>
+                  </unclear> his <signed>X</signed> mark <unclear rend="written" unit="chars">
+                     <supplied> Maulbout,</supplied>
+                  </unclear> 
+                  <figure rend="seal"/>
+                  <lb/> 
+                  <signed>Mannel Leia</signed>
+                  <figure rend="seal"/>
+               </closer>
+            </div1>
+         </body>
+      </text>
+   </TEI>
+   <TEI>
+      <teiHeader>
+         <fileDesc>
+            <titleStmt>
+               <title>Subpoena</title>
+            </titleStmt>
+            <publicationStmt>
+               <p>This electronic document is published as part of the St Louis Circuit
+                    Court historical records project.</p>
+            </publicationStmt>
+            <sourceDesc>
+               <p>The original document is part of the Missouri State Archives St Louis Circuit
+                    Court collection.</p>
+            </sourceDesc>
+         </fileDesc>
+         <profileDesc>
+            <legalDocDesc xmlns="http://digital.wustl.edu/ns/lxt/1.0">                
+               <legalDoc genre="civil" stagelit="trial" type="subpoena" when="1815-11-27"> </legalDoc>
+               <legalTitle>Subpoena</legalTitle>        
+               <author role="clerk">Leduc, M.P.l</author>         
+               <court>St. Louis County Court</court>
+            </legalDocDesc>
+         </profileDesc>
+      </teiHeader>
+      <text>
+         <body rend="combo">
+            
+
+    
+
+            <div1 legalFunction="Subpoena" rend="horizontal printed-form"><pb facs="0757_013.jp2" n="013"/>
+               <opener>
+                  <dateline>Territory Of <placeName><choice><reg>Missouri</reg><orig>Missouri</orig></choice></placeName>, County Of <placeName><choice><reg>St Louis</reg><orig>St</orig></choice></placeName>. <seg rend="form-fill-in"><placeName><choice><reg>St Louis</reg><orig>Louis</orig></choice></placeName></seg> 
+                     <abbr>sct.</abbr>
+                  </dateline>
+                  <lb/> 
+                  <salute>The <placeName><choice><reg>United States</reg><orig>United States</orig></choice></placeName> of <placeName><choice><reg>America</reg><orig>America</orig></choice></placeName> to <seg rend="form-fill-in">Margaret <unclear rend="written" unit="chars">
+                           <supplied> Benoit,</supplied>
+                        </unclear> let Seraphim</seg>
+                     <lb/> Greeting:</salute>
+               </opener>
+               <p>You are hereby commanded<lb/> that setting aside all manner of excuse and delay <seg rend="form-fill-in">you</seg> be and appear in proper<lb/> person before the judge of our circuit court on the <date when="1815-04-20">
+                     <seg rend="form-fill-in">Tenth</seg> day of <seg rend="form-fill-in">April</seg>
+                  </date> 
+                  <seg rend="form-fill-in">
+                     <unclear rend="written" unit="chars">
+                        <supplied> next,</supplied>
+                     </unclear>
+                  </seg>
+                  <lb/> at the town of <placeName><choice><reg>St Louis</reg><orig>St. Louis</orig></choice></placeName>, then there to testify and the truth to say in a certain mat-<lb/>ter of controversy now pending in our said court, wherein <seg rend="form-fill-in">Louis <persName><choice><reg>Tayon</reg><orig>Tayon</orig></choice></persName></seg>
+                  <lb/> is plaintiffs and <seg rend="form-fill-in">
+                     <unclear rend="written" unit="chars">
+                        <supplied> Etienne <persName><choice><reg>Malbeuf</reg><orig>Malbeuf</orig></choice></persName>,</supplied>
+                     </unclear>
+                  </seg> defendant, on the<lb/> part of the <seg rend="form-fill-in">
+                     <unclear rend="written" unit="chars">
+                        <supplied> defendant,</supplied>
+                     </unclear>
+                  </seg> and have you then there this writ.</p>
+               <figure rend="seal"/>
+               <closer>Witness <seg rend="form-fill-in">
+                     <unclear rend="written" unit="chars">
+                        <supplied> <persName><choice><reg>Mary</reg><orig>Mary</orig></choice></persName> <persName><choice><reg>P Leduc</reg><orig>P Leduc</orig></choice></persName> Clerk,</supplied>
+                     </unclear>
+                  </seg>
+                  <lb/> of our court at the town of <placeName><choice><reg>St Louis</reg><orig>St</orig></choice></placeName>. <seg rend="form-fill-in"><placeName><choice><reg>St Louis</reg><orig>Louis</orig></choice></placeName> this</seg> 
+                  <date when="1815-11-27">
+                     <seg rend="form-fill-in">27th</seg> day of<lb/> 
+                     <seg rend="form-fill-in">November</seg> in the year of our Lord, one thousand eight hundred and<lb/> 
+                     <seg rend="form-fill-in">fifteen</seg>
+                  </date> and of the Independence of the <placeName><choice><reg>United States</reg><orig>United States</orig></choice></placeName>, the <seg rend="form-fill-in">
+                     <unclear rend="written" unit="chars">
+                        <supplied> fortieth,</supplied>
+                     </unclear>
+                  </seg>
+                  <lb/>
+                  <signed>
+                     <unclear rend="written" unit="chars"/>
+                  </signed> Clerk of <placeName><choice><reg>St Louis</reg><orig>St. L</orig></choice></placeName>. <abbr>C.</abbr> 
+                  <abbr>C.</abbr>
+               </closer>
+            </div1>
+         </body>
+      </text>
+   </TEI>
+   <TEI>
+      <teiHeader>
+         <fileDesc>
+            <titleStmt>
+               <title/>
+            </titleStmt>
+            <publicationStmt>
+               <p>This electronic document is published as part of the St Louis Circuit
+                    Court historical records project.</p>
+            </publicationStmt>
+            <sourceDesc>
+               <p>The original document is part of the Missouri State Archives St Louis Circuit
+                    Court collection.</p>
+            </sourceDesc>
+         </fileDesc>
+         <profileDesc/>
+      </teiHeader>
+      <text>
+         <body rend="handwritten">    
+            
+            <div1 legalFunction="Certificate of Filing" rend="vertical"><pb facs="0757_014.jp2" n="014"/>  
+               <opener>
+                  <dateline>S'Louis Circuit court<lb/> 
+                     <date when="1816-04">April Term 1816</date>
+                  </dateline>
+               </opener>
+               <head rend="bracketed">Louis <persName><choice><reg>Tayon</reg><orig>Tayon</orig></choice></persName><lb/> 
+                  <abbr>vs</abbr>
+                  <lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> Eteinne <persName><choice><reg>Malbeuf</reg><orig>Malbeuf</orig></choice></persName>,</supplied>
+                  </unclear>
+               </head>
+               <p>
+                  <unclear rend="written" unit="chars"/>
+               </p>
+               <p>
+                  <unclear rend="written" unit="chars"/> for<lb/> Margaret Benoit<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> Seraphim,</supplied>
+                  </unclear>
+                  <lb/> <placeName><choice><reg>St Louis</reg><orig>St Louis</orig></choice></placeName><lb/> 
+                  <date when="1816-04-10">10th April 1816</date>
+               </p>
+               <closer>
+Executed<lb/> 
+                  <signed>
+                     <unclear rend="written" unit="chars"/>
+                  </signed> 
+                  <unclear rend="strikethrough" unit="chars"/>
+                  <lb/> 
+                  <signed>
+                     <unclear rend="written" unit="chars"/>
+                  </signed> 
+                  <unclear rend="strikethrough" unit="chars"/>
+                  <lb/> 
+                  <unclear rend="written" unit="chars"/> -33<lb/> 
+                  <signed>
+                     <unclear rend="written" unit="chars"/>
+                  </signed>
+               </closer>
+            </div1>
+         </body>
+      </text>
+   </TEI>
+   <TEI>
+      <teiHeader>
+         <fileDesc>
+            <titleStmt>
+               <title>Subpoena</title>
+            </titleStmt>
+            <publicationStmt>
+               <p>This electronic document is published as part of the St Louis Circuit
+                    Court historical records project.</p>
+            </publicationStmt>
+            <sourceDesc>
+               <p>The original document is part of the Missouri State Archives St Louis Circuit
+                    Court collection.</p>
+            </sourceDesc>
+         </fileDesc>
+         <profileDesc>
+            <legalDocDesc xmlns="http://digital.wustl.edu/ns/lxt/1.0">                
+               <legalDoc genre="civil" stagelit="trial" type="subpoena" when="1815-04-29"> </legalDoc>
+               <legalTitle>Subpoena</legalTitle>        
+               <author role="clerk">Leduc, M.P.</author>         
+               <court>St. Louis County Court</court>
+            </legalDocDesc>
+         </profileDesc>
+      </teiHeader>
+      <text>
+         <body rend="combo">
+            
+
+    
+
+            <div1 legalFunction="Subpoena" rend="horizontal printed-form"><pb facs="0757_015.jp2" n="015"/>
+               <opener>
+                  <dateline>Territory Of <placeName><choice><reg>Missouri</reg><orig>Missouri</orig></choice></placeName>, County Of St. <abbr>sct.</abbr>
+                  </dateline>
+                  <salute>The <placeName><choice><reg>United States</reg><orig>United States</orig></choice></placeName> of <placeName><choice><reg>America</reg><orig>America</orig></choice></placeName> to <seg rend="form-fill-in">Marguerite Benoit, <unclear rend="written" unit="chars">
+                           <supplied> let Seraphim,</supplied>
+                        </unclear>
+                     </seg>
+                     <lb/> Greeting:</salute>
+               </opener>
+               <p>You are hereby commanded<lb/> that setting aside all manner of excuse and delay <seg rend="form-fill-in">you</seg> be and appear in proper<lb/> person before the judge of our circuit court on the <date when="1816-05-08">
+                     <seg rend="form-fill-in">Eight</seg> day of <seg rend="form-fill-in">may</seg>
+                  </date>
+                  <lb/> at the town of <placeName><choice><reg>St Louis</reg><orig>St</orig></choice></placeName>. <seg rend="form-fill-in"><placeName><choice><reg>St Louis</reg><orig>Louis</orig></choice></placeName></seg>, then there to testify and the tuth to say in a certain mat-<lb/>ter of coatroversy now pending in our said court, wherein <seg rend="form-fill-in">Louis <persName><choice><reg>Tayon</reg><orig>Tayon</orig></choice></persName></seg>
+                  <lb/> is plaintiff and <seg rend="form-fill-in">
+                     <unclear rend="written" unit="chars">
+                        <supplied> Etienne,</supplied>
+                     </unclear> <persName><choice><reg>Malbeuf</reg><orig>Malbeuf</orig></choice></persName></seg> defendant, on the<lb/> part of <seg rend="form-fill-in">plaintiff</seg> and have you then there this writ.</p>
+               <figure rend="seal"/>
+               <closer>Witness <seg rend="form-fill-in">
+                     <unclear rend="written" unit="chars">
+                        <supplied> <persName><choice><reg>Mary</reg><orig>Mary</orig></choice></persName> Philips Leduc Clerk,</supplied>
+                     </unclear>,</seg>
+                  <lb/> of our <seg rend="form-fill-in">said</seg> court at the town of <placeName><choice><reg>St Louis</reg><orig>St</orig></choice></placeName>. <seg rend="form-fill-in"><placeName><choice><reg>St Louis</reg><orig>Louis</orig></choice></placeName> this</seg> 
+                  <date when="1816-04-29">
+                     <seg rend="form-fill-in">29th</seg> day of<lb/> 
+                     <seg rend="form-fill-in">April</seg> in the year of our Lord, one thousand eight hundred and<lb/> 
+                     <seg rend="form-fill-in">sixteen</seg>
+                  </date> and of the Independence of the <placeName><choice><reg>United States</reg><orig>United States</orig></choice></placeName>, the <seg rend="form-fill-in">
+                     <unclear rend="written" unit="chars">
+                        <supplied> fortieth,</supplied>
+                     </unclear>
+                  </seg>
+                  <lb/>
+                  <signed>
+                     <unclear rend="written" unit="chars">
+                        <supplied> M. <persName><choice><reg>P Leduc</reg><orig>P. Leduc</orig></choice></persName>,</supplied>
+                     </unclear>
+                  </signed> Clerk of <placeName><choice><reg>St Louis</reg><orig>St. L</orig></choice></placeName>. <abbr>C.</abbr> 
+                  <abbr>C.</abbr>
+               </closer>
+            </div1>
+         </body>
+      </text>
+   </TEI>
+   <TEI>
+      <teiHeader>
+         <fileDesc>
+            <titleStmt>
+               <title/>
+            </titleStmt>
+            <publicationStmt>
+               <p>This electronic document is published as part of the St Louis Circuit
+                    Court historical records project.</p>
+            </publicationStmt>
+            <sourceDesc>
+               <p>The original document is part of the Missouri State Archives St Louis Circuit
+                    Court collection.</p>
+            </sourceDesc>
+         </fileDesc>
+         <profileDesc/>
+      </teiHeader>
+      <text>
+         <body rend="handwritten">    
+            
+            <div1 legalFunction="Certificate of Execution" rend="vertical"><pb facs="0757_016.jp2" n="016"/>  
+               <opener>
+                  <dateline>
+                     <unclear rend="written" unit="chars">
+                        <supplied> <orgName><choice><reg>Circuit Court</reg><orig>St</orig></choice></orgName>,</supplied>
+                     </unclear> <orgName><choice><reg>Circuit Court</reg><orig>Louis Circuit Court</orig></choice></orgName><lb/> 
+                     <date when="1816-05">May term 1816</date>
+                  </dateline>
+               </opener>
+               <head rend="bracketed">Louis <persName><choice><reg>Tayon</reg><orig>Tayon</orig></choice></persName><lb/> 
+                  <abbr>vs</abbr>
+                  <lb/> Etienne <persName><choice><reg>Malbeuf</reg><orig>Malbeuf</orig></choice></persName>,</head>
+               <p>
+                  <unclear rend="written" unit="chars"/>
+               </p>
+               <p>
+                  <unclear rend="written" unit="chars"/> for<lb/> <persName><choice><reg>Margaret</reg><orig>Margaret</orig></choice></persName> Benit le<lb/> Seraphim,<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> <placeName><choice><reg>St Louis</reg><orig>St</orig></choice></placeName>,</supplied>
+                  </unclear> <placeName><choice><reg>St Louis</reg><orig>Louis</orig></choice></placeName><lb/> 
+                  <date when="1816-05-08">8th-may</date>
+               </p>
+               <closer>
+Executed<lb/> 
+                  <signed>
+                     <unclear rend="written" unit="chars"/>
+                  </signed>
+                  <lb/> 
+                  <signed>
+                     <unclear rend="written" unit="chars"/>
+                  </signed>
+                  <lb/> 
+                  <unclear rend="written" unit="chars"/>
+                  <lb/> 
+                  <signed>Loias for <unclear rend="written" unit="chars"/>
+                  </signed>
+               </closer>
+            </div1>
+         </body>
+      </text>
+   </TEI>
+   <TEI>
+      <teiHeader>
+         <fileDesc>
+            <titleStmt>
+               <title>Summons</title>
+            </titleStmt>
+            <publicationStmt>
+               <p>This electronic document is published as part of the St Louis Circuit
+                    Court historical records project.</p>
+            </publicationStmt>
+            <sourceDesc>
+               <p>The original document is part of the Missouri State Archives St Louis Circuit
+                    Court collection.</p>
+            </sourceDesc>
+         </fileDesc>
+         <profileDesc>
+            <legalDocDesc xmlns="http://digital.wustl.edu/ns/lxt/1.0">                
+               <legalDoc genre="civil" stagelit="trial" type="summons" when="1815-06-17"> </legalDoc>
+               <legalTitle>Summons</legalTitle>        
+               <author role="clerk">Leduc, M.P.</author>         
+               <court>St. Louis County Court</court>
+            </legalDocDesc>
+         </profileDesc>
+      </teiHeader>
+      <text>
+         <body rend="combo">
+            
+
+    
+
+            <div1 legalFunction="Summons" rend="horizontal printed-form"><pb facs="0757_017.jp2" n="017"/>
+               <opener>
+                  <dateline>Territory Of <placeName><choice><reg>Missouri</reg><orig>Missouri</orig></choice></placeName>, County Of <placeName><choice><reg>St Louis</reg><orig>St</orig></choice></placeName> <seg rend="form-fill-in"><placeName><choice><reg>St Louis</reg><orig>Louis</orig></choice></placeName></seg> 
+                     <abbr>sct.</abbr>
+                  </dateline>
+                  <salute>The <placeName><choice><reg>United States</reg><orig>United States</orig></choice></placeName> of <placeName><choice><reg>America</reg><orig>America</orig></choice></placeName> to <seg rend="form-fill-in">The Sheriff of Louis <unclear rend="written" unit="chars"/>
+                     </seg> Greeting.</salute>
+               </opener>
+               <p>You are hereby commanded <seg rend="form-fill-in">to <unclear rend="written" unit="chars">
+                        <supplied> summon,</supplied>
+                     </unclear> Morgant <unclear rend="written" unit="chars">
+                        <supplied> Benoit St Seraphim,</supplied>
+                     </unclear>
+                  </seg>
+                  <lb/> that setting aside all manner of excuse and delay <seg rend="form-fill-in">
+                     <unclear rend="written" unit="chars">
+                        <supplied> she,</supplied>
+                     </unclear>
+                  </seg> be and appear in proper<lb/> person before the judge of our circuit court on the <date when="1816-08-05">
+                     <seg rend="form-fill-in">fifth</seg> day of <seg rend="form-fill-in">August</seg>
+                  </date> 
+                  <seg rend="form-fill-in">next</seg>
+                  <lb/> at the town of <placeName><choice><reg>St Louis</reg><orig>St</orig></choice></placeName>. <seg rend="form-fill-in"><placeName><choice><reg>St Louis</reg><orig>Louis</orig></choice></placeName></seg>, then there to testify and the truth to say in a certain mat-<lb/>ter of controversy now pending in our said court, wherein <seg rend="form-fill-in">Louis <unclear rend="written" unit="chars">
+                        <supplied> <persName><choice><reg>Tayon</reg><orig>Tayon</orig></choice></persName>,</supplied>
+                     </unclear>
+                  </seg>
+                  <lb/> is plaintiff and <seg rend="form-fill-in">
+                     <unclear rend="written" unit="chars">
+                        <supplied> Etienne <persName><choice><reg>Malbeuf</reg><orig>Malbeuf</orig></choice></persName>,</supplied>
+                     </unclear>
+                  </seg> defendant, on the<lb/> part of the <seg rend="form-fill-in">
+                     <unclear rend="written" unit="chars">
+                        <supplied> defendant,</supplied>
+                     </unclear>
+                  </seg> and have you then there this writ.</p>
+               <figure rend="seal"/>
+               <closer>Witness <seg rend="form-fill-in"><persName><choice><reg>Mary</reg><orig>Mary</orig></choice></persName> <persName><choice><reg>P Leduc</reg><orig>P</orig></choice></persName> <unclear rend="written" unit="chars">
+                        <supplied> <persName><choice><reg>P Leduc</reg><orig>Leduc</orig></choice></persName>,</supplied>
+                     </unclear> Clerk</seg>
+                  <lb/> of our court at the town of <placeName><choice><reg>St Louis</reg><orig>St</orig></choice></placeName>. <seg rend="form-fill-in"><placeName><choice><reg>St Louis</reg><orig>Louis</orig></choice></placeName> this</seg> 
+                  <date when="1816-06-17">
+                     <seg rend="form-fill-in">17th</seg> day of<lb/> 
+                     <seg rend="form-fill-in">June</seg> in the year of our Lord, one thousand eight hundred and<lb/> 
+                     <seg rend="form-fill-in">Sixteen</seg>
+                  </date> and of the Independence of the <placeName><choice><reg>United States</reg><orig>United States</orig></choice></placeName>, the <seg rend="form-fill-in">
+                     <unclear rend="written" unit="chars">
+                        <supplied> fortieth,</supplied>
+                     </unclear>
+                  </seg>
+                  <lb/>
+                  <signed>M. P. <unclear rend="written" unit="chars"/>
+                  </signed> Clerk of <placeName><choice><reg>St Louis</reg><orig>St. L</orig></choice></placeName>. <abbr>C.</abbr> 
+                  <abbr>C.</abbr>
+               </closer>
+            </div1>
+         </body>
+      </text>
+   </TEI>
+   <TEI>
+      <teiHeader>
+         <fileDesc>
+            <titleStmt>
+               <title/>
+            </titleStmt>
+            <publicationStmt>
+               <p>This electronic document is published as part of the St Louis Circuit
+                    Court historical records project.</p>
+            </publicationStmt>
+            <sourceDesc>
+               <p>The original document is part of the Missouri State Archives St Louis Circuit
+                    Court collection.</p>
+            </sourceDesc>
+         </fileDesc>
+         <profileDesc/>
+      </teiHeader>
+      <text>
+         <body rend="handwritten">    
+            
+            <div1 legalFunction="Certificate of Execution" rend="vertical"><pb facs="0757_018.jp2" n="018"/>  
+               <opener>
+                  <dateline>Saunt Louis Circuit<lb/> Cour <date when="1816-08">August Term<lb/> 1816</date>
+                  </dateline>
+               </opener>
+               <head>Louis tayon<lb/> 
+                  <abbr>vs</abbr>
+                  <lb/> Etienne <persName><choice><reg>Malbeuf</reg><orig>Malbeuf</orig></choice></persName>,</head>
+               <p>Subp for <unclear rend="written" unit="chars">
+                     <supplied> <persName><choice><reg>Margaret</reg><orig>Margaret</orig></choice></persName>,</supplied>
+                  </unclear>
+                  <lb/> Bunoit St <unclear rend="written" unit="chars">
+                     <supplied> Seraphim,</supplied>
+                  </unclear>
+               </p>
+               <p>on <date when="1816-08-05">5th day of<lb/> august 1816</date>
+               </p>
+               <closer>
+Executed<lb/> 
+                  <signed>Jn. W Thompson shff</signed>
+                  <lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> service,</supplied>
+                  </unclear> 33<lb/> 
+                  <signed>E. Lucas for plff</signed>
+               </closer>
+            </div1>
+         </body>
+      </text>
+   </TEI>
+
+
+</teiCorpus>
