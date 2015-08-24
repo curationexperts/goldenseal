@@ -41,6 +41,10 @@ describe Import::DcXmlParser do
     it 'collects the attributes for the record' do
       expect(subject[:identifier]).to eq ['oai::lew1864.0001.001']
       expect(subject[:title]).to eq ['Title 1', 'Title 2']
+      expect(subject[:source]).to eq ["Der Letzte seines Stammes: Mamsell Philippinens Philipp\n      Fanny Lewald\n      Otto Janke\n      Berlin,Germany\n      1864"]
+      expect(subject[:creator]).to eq ['Fanny Lewald']
+      expect(subject[:publisher]).to eq ['Berlin,Germany: Otto Janke']
+      expect(subject[:description]).to eq ['Description Text']
       expect(subject[:language]).to eq ['German']
     end
   end
@@ -61,7 +65,7 @@ def sample_record_node
   <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
     <dc:title> Title 1 </dc:title>
     <dc:title> Title 2 </dc:title>
-    <dc:source>Der Letzte seines Stammes: Mamsell Philippinens Philipp 
+    <dc:source>Der Letzte seines Stammes: Mamsell Philippinens Philipp
       Fanny Lewald
       Otto Janke
       Berlin,Germany

@@ -34,9 +34,13 @@ module Import
     # Map the name of the field to its xpath in the XML file
     # (from the <record> node).
     def field_map
-      { identifier: './header/identifier',
-        title:      './metadata/oai_dc:dc/dc:title',
-        language:   './metadata/oai_dc:dc/dc:language'
+      { identifier:  './header/identifier',
+        title:       './metadata/oai_dc:dc/dc:title',
+        source:      './metadata/oai_dc:dc/dc:source',
+        creator:     './metadata/oai_dc:dc/dc:creator',
+        publisher:   './metadata/oai_dc:dc/dc:publisher',
+        description: './metadata/oai_dc:dc/dc:description',
+        language:    './metadata/oai_dc:dc/dc:language'
       }
     end
 
