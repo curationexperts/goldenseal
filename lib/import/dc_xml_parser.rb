@@ -26,9 +26,12 @@ module Import
     # Gather the attributes for one record.
     # @param [Nokogiri::XML::Node] The node for a single record in the XML file
     def attributes_for_record(node)
-      field_map.each_with_object({}) do |(field, xpath), attrs|
-        attrs[field] = text_for(xpath, node)
+      attributes = {}
+      field_map.each do |field, xpath|
+        attributes[field] = text_for(xpath, node)
       end
+      attributes[:id] = id(attributes)
+      attributes
     end
 
     # Map the name of the field to its xpath in the XML file
@@ -51,6 +54,12 @@ module Import
       node.xpath(xpath, NAMESPACES).map do |element|
         element.text.strip
       end
+    end
+
+    def id(attributes)
+      ident = Array(attributes[:identifier]).first
+      return nil unless ident
+      ident.gsub('oai::', '')
     end
 
   end

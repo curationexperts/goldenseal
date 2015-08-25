@@ -2,7 +2,7 @@ require 'rails_helper'
 require 'import'
 
 describe Import::DcXmlParser do
-  let(:lew_file) { File.join(fixture_path, 'dlxs', 'lew-dc.xml') }
+  let(:lew_file) { File.join(fixture_path, 'dlxs', 'short-lew-dc.xml') }
 
   describe 'inititialize' do
     subject { described_class.new(lew_file) }
@@ -17,18 +17,7 @@ describe Import::DcXmlParser do
     subject { described_class.new(lew_file).records }
 
     it 'returns attributes for the records' do
-      expect(subject.map{|r| r[:identifier]}).to eq [
-        ['oai::lew1864.0001.001'],
-        ['oai::lew1871.0001.002'],
-        ['oai::lew1873.0001.003'],
-        ['oai::lew1874.0001.004'],
-        ['oai::lew1876.0001.005'],
-        ['oai::lew1877.0001.006'],
-        ['oai::lew1880.0001.007'],
-        ['oai::lew1880.0001.008'],
-        ['oai::lew1888.0001.009'],
-        ['oai::lew1888.0001.010']
-      ]
+      expect(subject.map{|r| r[:id]}).to eq ['lew1873.0001.003', 'lew1880.0001.008']
     end
   end
 
@@ -39,6 +28,7 @@ describe Import::DcXmlParser do
     let(:node) { sample_record_node.root }
 
     it 'collects the attributes for the record' do
+      expect(subject[:id]).to eq 'lew1864.0001.001'
       expect(subject[:identifier]).to eq ['oai::lew1864.0001.001']
       expect(subject[:title]).to eq ['Title 1', 'Title 2']
       expect(subject[:source]).to eq ["Der Letzte seines Stammes: Mamsell Philippinens Philipp\n      Fanny Lewald\n      Otto Janke\n      Berlin,Germany\n      1864"]

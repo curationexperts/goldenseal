@@ -1,0 +1,2 @@
+class InvalidWorkTypeError < StandardError
+end
