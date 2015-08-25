@@ -45,6 +45,7 @@ describe Import::DcXmlParser do
       expect(subject[:creator]).to eq ['Fanny Lewald']
       expect(subject[:publisher]).to eq ['Berlin,Germany: Otto Janke']
       expect(subject[:description]).to eq ['Description Text']
+      expect(subject[:subject]).to eq ['Depressions — 1929 — United States — History.', 'Saint Louis (Mo.) -- Maps.']
       expect(subject[:language]).to eq ['German']
     end
   end
@@ -78,6 +79,8 @@ def sample_record_node
     <dc:identifier>http://digital.wustl.edu/cgi/t/text/text-idx?c=lew;cc=lew;rgn=full%20text;view=toc;idno=lew1864.0001.001</dc:identifier>
     <dc:identifier>http://digital.wustl.edu/l/lew/graphics/lew-thumb.gif</dc:identifier>
     <dc:language>German</dc:language>
+    <dc:subject>Depressions — 1929 — United States — History.</dc:subject>
+    <dc:subject>Saint Louis (Mo.) -- Maps.</dc:subject>
     <dc:rights>work is in the public domain</dc:rights>
   </oai_dc:dc>
 </metadata>

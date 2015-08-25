@@ -40,6 +40,7 @@ module Import
         creator:     './metadata/oai_dc:dc/dc:creator',
         publisher:   './metadata/oai_dc:dc/dc:publisher',
         description: './metadata/oai_dc:dc/dc:description',
+        subject:     './metadata/oai_dc:dc/dc:subject',
         language:    './metadata/oai_dc:dc/dc:language'
       }
     end
