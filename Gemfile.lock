@@ -1,23 +1,7 @@
 GIT
-  remote: git://github.com/projecthydra-labs/hydra-pcdm.git
-  revision: fc196e3cabd7c4f005c37b799dad3b83296fc3e8
-  specs:
-    hydra-pcdm (0.1.0)
-      activefedora-aggregation (~> 0.4)
-      mime-types (>= 1)
-
-GIT
-  remote: git://github.com/projecthydra-labs/hydra-works.git
-  revision: dc0bfd08eb2454ef11f3907607a4ad963f6294ec
-  specs:
-    hydra-works (0.1.0)
-      active-fedora (~> 9.2)
-      activefedora-aggregation (~> 0.4)
-      hydra-derivatives (~> 2.0)
-      hydra-pcdm (~> 0.1)
-
-PATH
-  remote: ../curation_concerns
+  remote: git://github.com/projecthydra-labs/curation_concerns.git
+  revision: 9b70647d00a55be91665cb649bb4eb657da2a082
+  branch: presenters
   specs:
     curation_concerns (0.1.0)
       active_attr
@@ -39,6 +23,24 @@ PATH
       nest (~> 1.1)
       resque (~> 1.23)
       resque-pool (~> 0.3)
+
+GIT
+  remote: git://github.com/projecthydra-labs/hydra-pcdm.git
+  revision: fc196e3cabd7c4f005c37b799dad3b83296fc3e8
+  specs:
+    hydra-pcdm (0.1.0)
+      activefedora-aggregation (~> 0.4)
+      mime-types (>= 1)
+
+GIT
+  remote: git://github.com/projecthydra-labs/hydra-works.git
+  revision: dc0bfd08eb2454ef11f3907607a4ad963f6294ec
+  specs:
+    hydra-works (0.1.0)
+      active-fedora (~> 9.2)
+      activefedora-aggregation (~> 0.4)
+      hydra-derivatives (~> 2.0)
+      hydra-pcdm (~> 0.1)
 
 GEM
   remote: https://rubygems.org/
