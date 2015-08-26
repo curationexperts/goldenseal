@@ -1,0 +1,58 @@
+<records>
+
+<record>
+  <header>
+    <identifier>oai::lew1873.0001.003</identifier>
+    <setSpec>lew</setSpec>
+  </header>
+
+  <metadata>
+    <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+      <dc:title>Die Erlöserin.</dc:title>
+      <dc:source>Die Erlöserin
+        Fanny Lewald
+        Otto Janke
+        Berlin, Germany
+        1873
+      </dc:source>
+      <dc:creator>Fanny Lewald</dc:creator>
+      <dc:publisher>Berlin, Germany: Otto Janke</dc:publisher>
+      <dc:date>1873</dc:date>
+      <dc:description>This collection presents digitized page images from ten of Fanny Lewald’s novels. Lewald (1811-1889) was a popular and prolific writer of novels, novellas, short stories, travelogues, letters, political essays, and other works. The digitized collection broadens access to this important author’s work and makes her writing available to readers and scholars all over the world. </dc:description>
+      <dc:identifier>http://digital.wustl.edu/cgi/t/text/text-idx?c=lew;cc=lew;rgn=full%20text;view=toc;idno=lew1873.0001.003</dc:identifier>
+      <dc:identifier>http://digital.wustl.edu/l/lew/graphics/lew-thumb.gif</dc:identifier>
+      <dc:language>German</dc:language>
+      <dc:rights>work is in the public domain</dc:rights>
+
+    </oai_dc:dc>
+  </metadata>
+</record>
+
+<record>
+  <header>
+    <identifier>oai::lew1880.0001.008</identifier>
+    <setSpec>lew</setSpec>
+  </header>
+
+  <metadata>
+    <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+      <dc:title>Reisebriefe aus Deutschland, Italien und Frankreich (1877, 1878)</dc:title>
+      <dc:source>Reisebriefeaus Deutschland, Italien und Frankreich (1877, 1878)
+        Fanny Lewald
+        Otto Janke
+        Berlin, Germany
+        1880
+      </dc:source>
+      <dc:creator>Fanny Lewald</dc:creator>
+      <dc:publisher>Berlin, Germany: Otto Janke</dc:publisher>
+      <dc:date>1880</dc:date>
+      <dc:description>This collection presents digitized page images from ten of Fanny Lewald’s novels. Lewald (1811-1889) was a popular and prolific writer of novels, novellas, short stories, travelogues, letters, political essays, and other works. The digitized collection broadens access to this important author’s work and makes her writing available to readers and scholars all over the world. </dc:description>
+      <dc:identifier>http://digital.wustl.edu/cgi/t/text/text-idx?c=lew;cc=lew;rgn=full%20text;view=toc;idno=lew1880.0001.008</dc:identifier>
+      <dc:identifier>http://digital.wustl.edu/l/lew/graphics/lew-thumb.gif</dc:identifier>
+      <dc:language>German</dc:language>
+      <dc:rights>work is in the public domain</dc:rights>
+    </oai_dc:dc>
+  </metadata>
+</record>
+
+</records>
