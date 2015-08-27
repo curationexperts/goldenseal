@@ -1,4 +1,4 @@
-class TextIndexer < ActiveFedora::IndexingService
+class TextIndexer < CurationConcerns::GenericWorkIndexingService
   TEI_JSON = 'tei_json_ss'
 
   def generate_solr_document

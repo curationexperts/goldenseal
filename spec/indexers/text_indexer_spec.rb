@@ -17,11 +17,16 @@ describe TextIndexer do
     let(:json) { { pages: ['1', '2'] } }
     before do
       allow(text).to receive(:tei).and_return(double)
+      allow(text).to receive(:member_ids).and_return(['23', '24'])
       allow(indexer).to receive(:tei_as_json).and_return(json)
     end
 
     it "has tei json" do
       expect(subject.fetch('tei_json_ss')).to eq "{\"pages\":[\"1\",\"2\"]}"
+    end
+
+    it "has generic_file_ids" do
+      expect(subject.fetch('generic_file_ids_ssim')).to eq ['23', '24']
     end
   end
 
