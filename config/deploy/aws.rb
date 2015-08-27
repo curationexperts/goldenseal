@@ -1,5 +1,6 @@
 set :stage, :aws
 set :rails_env, 'production'
+set :branch, ENV['BRANCH'] || 'master'
 server 'wustl.curationexperts.com', user: 'deploy', roles: [:web, :app, :db, :resque_pool]
 
 # server-based syntax
