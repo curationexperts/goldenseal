@@ -6,12 +6,17 @@ describe TextIndexer do
     Text.find('ccr1815.00757.018').destroy(eradicate: true) if Text.exists?('ccr1815.00757.018')
   end
 
-  let(:text) { Text.new(id: 'ccr1815.00757.018') }
+  let(:text) do
+    Text.new(id: 'ccr1815.00757.018', title: ['test text']) do |t|
+      t.apply_depositor_metadata('jcoyne')
+    end
+  end
 
   describe "#generate_solr_document" do
     subject { indexer.generate_solr_document }
     let(:json) { { pages: ['1', '2'] } }
     before do
+      allow(text).to receive(:tei).and_return(double)
       allow(indexer).to receive(:tei_as_json).and_return(json)
     end
 
@@ -26,7 +31,14 @@ describe TextIndexer do
     let(:file) { '/tei/ccr1815.00757.018.xml' }
 
     before do
-      text.add_file(File.open(fixture_path + file).read, path: 'tei')
+      generic_file = GenericFile.new do |gf|
+        gf.apply_depositor_metadata('jcoyne')
+      end
+      text.members << generic_file
+      text.save!
+      Hydra::Works::AddFileToGenericFile.call(generic_file, File.open(fixture_path + file), :original_file)
+      # It's important that we set TEI afterwards, so that the file is directly contained by the work.
+      text.update tei: generic_file
     end
 
     context "without a titlePage with an image" do
