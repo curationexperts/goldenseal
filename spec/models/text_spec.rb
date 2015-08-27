@@ -27,7 +27,7 @@ describe Text do
       let(:record) { double(original_name: 'anoabo00-00001.jp2', read: 'some bytes', size: 10) }
       before do
         document.save(validate: false)
-        conn.add(id: '1j92g7448', has_model_ssim: ['GenericFile'], generic_work_ids_ssim: [document.id], title_sim: ['anoabo00-00001.jp2'])
+        conn.add(id: '1j92g7448', has_model_ssim: ['GenericFile'], generic_work_ids_ssim: [document.id], label_ssi: 'anoabo00-00001.jp2')
         conn.commit
 
       end

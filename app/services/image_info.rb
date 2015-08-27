@@ -7,7 +7,7 @@ class ImageInfo
 
   def dimensions
     doc = fetch(@id).first['response']['docs'].first
-    { height: doc['height_isi'], width: doc['width_isi'] }
+    { height: doc['height_is'], width: doc['width_is'] }
   end
 
   def search_builder_class

@@ -3,7 +3,7 @@ require 'rails_helper'
 describe ImageInfo do
   let(:conn) { ActiveFedora::SolrService.instance.conn }
   before do
-    conn.add id: "1j92g7448", "height_isi": 1754, "width_isi": 2338
+    conn.add id: "1j92g7448", "height_is": 1754, "width_is": 2338
     conn.commit
   end
 

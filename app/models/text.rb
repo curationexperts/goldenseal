@@ -17,7 +17,7 @@ class Text < ActiveFedora::Base
   # Given a filename that appears in the TEI, return the id for the
   # corresponding GenericFile that has the page image
   def id_for_filename(filename)
-    query = "_query_:\"{!raw f=has_model_ssim}GenericFile\" AND _query_:\"{!raw f=generic_work_ids_ssim}#{id}\" AND _query_:\"{!raw f=title_sim}#{filename}\""
+    query = "_query_:\"{!raw f=has_model_ssim}GenericFile\" AND _query_:\"{!raw f=generic_work_ids_ssim}#{id}\" AND _query_:\"{!raw f=label_ssi}#{filename}\""
     result = ActiveFedora::SolrService.query(query).first
     result && result.fetch('id')
   end
