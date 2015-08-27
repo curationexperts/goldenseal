@@ -1,7 +1,6 @@
 GIT
   remote: git://github.com/projecthydra-labs/curation_concerns.git
-  revision: 9b70647d00a55be91665cb649bb4eb657da2a082
-  branch: presenters
+  revision: 9b49d4d66ed53ea71164ffd225cc907eeaa7e580
   specs:
     curation_concerns (0.1.0)
       active_attr
@@ -109,7 +108,7 @@ GEM
     addressable (2.3.8)
     angularjs-rails (1.4.4)
     arel (6.0.3)
-    autoprefixer-rails (5.2.1.2)
+    autoprefixer-rails (5.2.1.3)
       execjs
       json
     bcp47 (0.3.3)
@@ -305,7 +304,7 @@ GEM
     openseadragon (0.2.0)
       rails (> 3.2.0)
     orm_adapter (0.5.0)
-    parslet (1.7.0)
+    parslet (1.7.1)
       blankslate (>= 2.0, <= 4.0)
     pg (0.18.2)
     rack (1.6.4)
