@@ -2,7 +2,7 @@
   <%= render 'tei_viewer' %>
 
   <script>
-    var tei = <%= raw(JSON.generate work.tei_as_json) %>
+    var tei = <%= raw(work.tei_as_json) %>;
   </script>
   <tei-viewer ng-controller="TeiViewer">
   </tei-viewer>

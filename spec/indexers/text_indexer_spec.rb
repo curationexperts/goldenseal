@@ -10,13 +10,13 @@ describe TextIndexer do
 
   describe "#generate_solr_document" do
     subject { indexer.generate_solr_document }
-    let(:json) { double }
+    let(:json) { { pages: ['1', '2'] } }
     before do
       allow(indexer).to receive(:tei_as_json).and_return(json)
     end
 
     it "has tei json" do
-      expect(subject.fetch('tei_json_ss')).to eq json
+      expect(subject.fetch('tei_json_ss')).to eq "{\"pages\":[\"1\",\"2\"]}"
     end
   end
 

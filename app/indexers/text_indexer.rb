@@ -3,7 +3,7 @@ class TextIndexer < ActiveFedora::IndexingService
 
   def generate_solr_document
     super do |solr_doc|
-      solr_doc[TEI_JSON] = tei_as_json
+      solr_doc[TEI_JSON] = JSON.generate(tei_as_json)
     end
   end
 
