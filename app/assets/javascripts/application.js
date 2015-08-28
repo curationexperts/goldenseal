@@ -12,9 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks//
-// Required by Blacklight
+//= require turbolinks
 //= require blacklight/blacklight
+//= require curation_concerns/application
 //= require openseadragon
 //= require angular
 //= require tei_viewer
