@@ -518,6 +518,7 @@ DEPENDENCIES
   openseadragon (= 0.2.0)
   pg
   rails (= 4.2.4)
+  resque
   riiif (= 0.1.0)
   rsolr (~> 1.0.6)
   rspec-rails

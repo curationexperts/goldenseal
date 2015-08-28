@@ -28,6 +28,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns'
 
+gem 'resque'
 gem 'hydra-pcdm', github: 'projecthydra-labs/hydra-pcdm'
 gem 'hydra-works', github: 'projecthydra-labs/hydra-works'
 gem 'riiif', '0.1.0'
