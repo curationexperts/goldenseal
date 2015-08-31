@@ -27,6 +27,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns'
+# hydra-file_characterization 0.3.1+
+gem 'hydra-file_characterization', github: 'projecthydra/hydra-file_characterization'
 
 gem 'resque'
 gem 'hydra-pcdm', github: 'projecthydra-labs/hydra-pcdm'
