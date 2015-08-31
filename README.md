@@ -6,6 +6,7 @@
 ### Prerequisites:
 
 * Fits (0.6.2) http://projects.iq.harvard.edu/files/fits/files/fits-0.6.2.zip
+* redis
 
 ```
 bin/setup
