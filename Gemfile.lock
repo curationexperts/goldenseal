@@ -41,13 +41,6 @@ GIT
       hydra-derivatives (~> 2.0)
       hydra-pcdm (~> 0.1)
 
-GIT
-  remote: git://github.com/projecthydra/hydra-file_characterization.git
-  revision: d90fbc80b16c6425e2877811c5c64bf72c014393
-  specs:
-    hydra-file_characterization (0.3.1)
-      activesupport (>= 3.0.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -224,6 +217,8 @@ GEM
       cancancan (~> 1.8)
       rails (~> 4.1)
       simple_form (~> 3.1.0)
+    hydra-file_characterization (0.3.2)
+      activesupport (>= 3.0.0)
     hydra-head (9.2.2)
       hydra-access-controls (= 9.2.2)
       hydra-core (= 9.2.2)
@@ -515,7 +510,6 @@ DEPENDENCIES
   devise
   devise-guests (~> 0.3)
   factory_girl_rails
-  hydra-file_characterization!
   hydra-pcdm!
   hydra-works!
   jbuilder (~> 2.0)
