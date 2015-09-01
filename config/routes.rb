@@ -1,13 +1,16 @@
 Rails.application.routes.draw do
-  root to: "catalog#index"
+
   blacklight_for :catalog
   devise_for :users
   mount Hydra::Collections::Engine => '/'
   mount CurationConcerns::Engine, at: '/'
+  resources :welcome, only: :index
+  root to: "welcome#index"
   iiif_for 'riiif/image', at: '/image-service'
   curation_concerns_collections
   curation_concerns_basic_routes
   curation_concerns_embargo_management
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
