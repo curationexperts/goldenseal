@@ -1,5 +1,14 @@
 class CatalogController < ApplicationController
   include CurationConcerns::CatalogController
+
+  def self.uploaded_field
+    'system_create_dtsi'
+  end
+
+  def self.modified_field
+    'system_modified_dtsi'
+  end
+
   configure_blacklight do |config|
     config.search_builder_class = CurationConcerns::SearchBuilder
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
@@ -47,9 +56,8 @@ class CatalogController < ApplicationController
     config.add_index_field solr_name('publisher', :stored_searchable)
     config.add_index_field solr_name('based_near', :stored_searchable)
     config.add_index_field solr_name('language', :stored_searchable)
-    config.add_index_field solr_name('date_uploaded', :stored_sortable)
-    config.add_index_field solr_name('date_modified', :stored_sortable)
-    config.add_index_field solr_name('date_created', :stored_searchable)
+    config.add_index_field uploaded_field, helper_method: :formatted_system_create, label: 'Created'
+    config.add_index_field modified_field, helper_method: :formatted_system_modified, label: 'Modified'
     config.add_index_field solr_name('rights', :stored_searchable)
     config.add_index_field solr_name('human_readable_type', :stored_searchable)
     config.add_index_field solr_name('format', :stored_searchable)
@@ -223,13 +231,14 @@ class CatalogController < ApplicationController
     # except in the relevancy case).
     # label is key, solr field is value
     config.add_sort_field "score desc, #{uploaded_field} desc", label: "relevance \u25BC"
-    config.add_sort_field "#{uploaded_field} desc", label: "date uploaded \u25BC"
-    config.add_sort_field "#{uploaded_field} asc", label: "date uploaded \u25B2"
-    config.add_sort_field "#{modified_field} desc", label: "date modified \u25BC"
-    config.add_sort_field "#{modified_field} asc", label: "date modified \u25B2"
+    config.add_sort_field "#{uploaded_field} desc", label: "time created \u25BC"
+    config.add_sort_field "#{uploaded_field} asc", label: "time created \u25B2"
+    config.add_sort_field "#{modified_field} desc", label: "time modified \u25BC"
+    config.add_sort_field "#{modified_field} asc", label: "time modified \u25B2"
 
     # If there are more than this many search results, no spelling ("did you
     # mean") suggestion is offered.
     config.spell_max = 5
   end
+
 end
