@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/projecthydra-labs/curation_concerns.git
-  revision: 715cf6cef916baab1b17b706cc0bc39111fc92ee
-  ref: 715cf6ce
+  revision: 48dd062dc101867307fc3c010f2193a1bb3640a2
+  ref: 48dd062
   specs:
     curation_concerns (0.1.0)
       active_attr
