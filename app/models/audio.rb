@@ -4,4 +4,8 @@ class Audio < ActiveFedora::Base
   include ::CurationConcerns::GenericWorkBehavior
   include ::CurationConcerns::BasicMetadata
   validates_presence_of :title,  message: 'Your work must have a title.'
+
+  def self.indexer
+    BaseWorkIndexer
+  end
 end

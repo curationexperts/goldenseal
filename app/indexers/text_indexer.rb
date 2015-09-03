@@ -4,6 +4,7 @@ class TextIndexer < CurationConcerns::GenericWorkIndexingService
   def generate_solr_document
     super do |solr_doc|
       solr_doc[TEI_JSON] = JSON.generate(tei_as_json) if object.tei
+      solr_doc['rights_label_ss'] = CurationConcerns.config.cc_licenses.key(object.rights.first)
     end
   end
 
