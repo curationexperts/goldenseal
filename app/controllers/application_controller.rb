@@ -3,12 +3,12 @@ class ApplicationController < ActionController::Base
     render :text => exception, :status => 500
   end
   helper Openseadragon::OpenseadragonHelper
-  # Adds a few additional behaviors into the application controller 
+  # Adds a few additional behaviors into the application controller
   include Blacklight::Controller
 
   # Adds CurationConcerns behaviors to the application controller.
-  include CurationConcerns::ApplicationControllerBehavior
   include Hydra::Controller::ControllerBehavior
+  include CurationConcerns::ApplicationControllerBehavior
   include CurationConcerns::ThemedLayoutController
   with_themed_layout '1_column'
 
