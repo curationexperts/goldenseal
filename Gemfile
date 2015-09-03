@@ -26,11 +26,12 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns', ref: 'a2bb10261'
+gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns', ref: 'c367813'
 
 gem 'resque'
-gem 'hydra-pcdm', github: 'projecthydra-labs/hydra-pcdm'
-gem 'hydra-works', github: 'projecthydra-labs/hydra-works'
+gem 'hydra-pcdm', github: 'projecthydra-labs/hydra-pcdm', ref: '274f5e0'
+gem 'hydra-works', github: 'projecthydra-labs/hydra-works', ref: '4f67b56403'
+gem 'hydra-collections', github: 'projecthydra/hydra-collections', ref: 'd7864f33'
 gem 'riiif', '0.1.0'
 gem 'openseadragon', '0.2.0'
 gem 'angularjs-rails', '~> 1.4.4'
