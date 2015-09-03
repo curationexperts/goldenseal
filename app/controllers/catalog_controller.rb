@@ -24,7 +24,8 @@ class CatalogController < ApplicationController
 
     config.index.thumbnail_field = 'thumbnail_path_ss'
     config.index.partials.delete(:thumbnail) # we render this inside _index_default.html.erb
-    config.index.partials += [:action_menu]
+    # TODO Re-add this when https://github.com/projecthydra-labs/curation_concerns/pull/272 is merged
+    #config.index.partials += [:action_menu]
 
     # solr field configuration for document/show views
     # config.show.title_field = solr_name("title", :stored_searchable)
