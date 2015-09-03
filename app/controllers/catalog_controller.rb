@@ -1,14 +1,6 @@
 class CatalogController < ApplicationController
   include CurationConcerns::CatalogController
 
-  def self.uploaded_field
-    'system_create_dtsi'
-  end
-
-  def self.modified_field
-    'system_modified_dtsi'
-  end
-
   configure_blacklight do |config|
     config.search_builder_class = CurationConcerns::SearchBuilder
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
@@ -58,8 +50,8 @@ class CatalogController < ApplicationController
     config.add_index_field solr_name('publisher', :stored_searchable)
     config.add_index_field solr_name('based_near', :stored_searchable)
     config.add_index_field solr_name('language', :stored_searchable)
-    config.add_index_field uploaded_field, helper_method: :formatted_time, label: 'Created'
-    config.add_index_field modified_field, helper_method: :formatted_time, label: 'Modified'
+    config.add_index_field uploaded_field, helper_method: :formatted_time, label: 'Date Uploaded'
+    config.add_index_field modified_field, helper_method: :formatted_time, label: 'Date Modified'
     config.add_index_field solr_name('rights', :stored_searchable)
     config.add_index_field solr_name('human_readable_type', :stored_searchable)
     config.add_index_field solr_name('format', :stored_searchable)
