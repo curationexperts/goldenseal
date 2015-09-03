@@ -167,6 +167,9 @@ GEM
       warden (~> 1.2.3)
     devise-guests (0.3.3)
       devise
+    devise_ldap_authenticatable (0.8.5)
+      devise (>= 3.4.1)
+      net-ldap (>= 0.6.0, <= 0.11)
     diff-lcs (1.2.5)
     ebnf (0.3.9)
       rdf (~> 1.1)
@@ -287,6 +290,7 @@ GEM
     nest (1.1.2)
       redis
     net-http-persistent (2.9.4)
+    net-ldap (0.11)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.2)
@@ -510,6 +514,7 @@ DEPENDENCIES
   curation_concerns!
   devise
   devise-guests (~> 0.3)
+  devise_ldap_authenticatable
   factory_girl_rails
   hydra-pcdm!
   hydra-works!

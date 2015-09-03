@@ -21,6 +21,7 @@ Dir.chdir APP_ROOT do
     system "cp config/solr.yml.template config/solr.yml"
     system "cp config/redis.yml.template config/redis.yml"
     system "cp config/resque-pool.yml.template config/resque-pool.yml"
+    system "cp config/ldap.yml.template config/ldap.yml"
   end
 
   puts "\n== Preparing database =="
