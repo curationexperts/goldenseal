@@ -1,10 +1,9 @@
 GIT
   remote: git://github.com/projecthydra-labs/curation_concerns.git
-  revision: c367813865125e99955b45ac864518a815d3bada
-  ref: c367813
+  revision: b79bd9ee71f239f142def636224c454df6d2ceb2
+  ref: b79bd9e
   specs:
     curation_concerns (0.1.0)
-      active_attr
       blacklight_advanced_search (>= 5.1.4, < 6.0)
       breadcrumbs_on_rails (~> 2.3.0)
       curation_concerns-models (= 0.1.0)
@@ -12,6 +11,7 @@ GIT
       hydra-derivatives
       hydra-editor
       hydra-head (~> 9.0)
+      jquery-ui-rails
       simple_form (~> 3.1.0)
     curation_concerns-models (0.1.0)
       active-fedora (~> 9.3.0)
@@ -249,6 +249,8 @@ GEM
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
+    jquery-ui-rails (5.0.5)
+      railties (>= 3.2.16)
     json (1.8.3)
     json-ld (1.1.9)
       rdf (~> 1.1, >= 1.1.7)
