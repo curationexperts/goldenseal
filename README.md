@@ -5,7 +5,7 @@
 
 ### Prerequisites:
 
-* Fits (0.6.2) http://projects.iq.harvard.edu/files/fits/files/fits-0.6.2.zip
+* Goldenseal relies on [hydra-derivatives](https://github.com/projecthydra/hydra-derivatives) for derivative processing and needs the [required dependencies](https://github.com/projecthydra/hydra-derivatives#dependencies) installed
 * redis
 
 ```
