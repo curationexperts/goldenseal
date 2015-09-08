@@ -30,7 +30,7 @@ gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns', ref: 'a9
 
 gem 'resque'
 gem 'hydra-pcdm', github: 'projecthydra-labs/hydra-pcdm', ref: '274f5e0'
-gem 'hydra-works', github: 'projecthydra-labs/hydra-works', ref: '4f67b56403'
+gem 'hydra-works', github: 'projecthydra-labs/hydra-works', ref: 'bf57c69'
 gem 'hydra-collections', github: 'projecthydra/hydra-collections', ref: 'd7864f33'
 gem 'riiif', '0.1.0'
 gem 'openseadragon', '0.2.0'
