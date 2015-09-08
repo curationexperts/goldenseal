@@ -25,3 +25,7 @@ en:
       fields:
         show:
           description: 'Description'
+  simple_form:
+    hints:
+      defaults:
+        files: ''
