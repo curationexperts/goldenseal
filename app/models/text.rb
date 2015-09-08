@@ -1,18 +1,9 @@
 class Text < ActiveFedora::Base
-  include ::CurationConcerns::GenericWorkBehavior
-  include ::CurationConcerns::BasicMetadata
+  include CurationConcerns::GenericWorkBehavior
+  include CurationConcerns::BasicMetadata
   validates_presence_of :title,  message: 'Your work must have a title.'
-  belongs_to :tei, predicate: ::RDF::URI('http://opaquenamespace.org/ns/hasEncodedText'), class_name: 'GenericFile'
 
-  before_save :assign_default_tei
-
-  # if tei isn't set and there are generic_files, then set the first one
-  def assign_default_tei
-    unless tei_id || generic_file_ids.empty?
-      self.tei_id = generic_file_ids.first
-    end
-  end
-
+  include WithTEI
 
   # Given a filename that appears in the TEI, return the id for the
   # corresponding GenericFile that has the page image

@@ -5,6 +5,8 @@ class Video < ActiveFedora::Base
   include ::CurationConcerns::BasicMetadata
   validates_presence_of :title,  message: 'Your work must have a title.'
 
+  include WithTEI
+
   def self.indexer
     BaseWorkIndexer
   end

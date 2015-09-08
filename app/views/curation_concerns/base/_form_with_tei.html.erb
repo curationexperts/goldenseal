@@ -1,0 +1,20 @@
+<% # TODO: After https://github.com/projecthydra-labs/curation_concerns/pull/306 is merged, drop the curation_concern stuff %>
+<%= render "form_files_and_links", curation_concern: curation_concern, f: f %>
+
+<%= render "form_representative_image", curation_concern: curation_concern, f: f %>
+<%= render "form_tei", f: f %>
+
+<div class="row with-headroom">
+  <div class="col-md-12">
+    <%= render "form_permission", curation_concern: curation_concern, f: f %>
+  </div>
+</div>
+
+<% # TODO: Also drop this wrapper after projecthydra-labs/curation_concerns#306 is merged %>
+<div class="row with-headroom">
+  <div class="col-md-12">
+    <%= render "form_rights", curation_concern: curation_concern, f: f %>
+  </div>
+</div>
+
+
