@@ -5,7 +5,7 @@ class TEIConverter
     @source = source
   end
 
-  def to_json
+  def as_json
     # First parsing will just mark up page breaks
     doc2 = intermediate()
 

@@ -3,14 +3,23 @@ class TextIndexer < CurationConcerns::GenericWorkIndexingService
 
   def generate_solr_document
     super do |solr_doc|
-      solr_doc[TEI_JSON] = JSON.generate(tei_as_json) if object.tei
+      solr_doc[TEI_JSON] = tei_to_json if object.tei
       solr_doc['rights_label_ss'] = CurationConcerns.config.cc_licenses.key(object.rights.first)
     end
   end
 
+  def tei_to_json
+    as_json = tei_as_json
+    return unless as_json
+    JSON.generate(as_json)
+  end
+
+
   def tei_as_json
     # OPTIMIZE: this could be indexed on the GenericFile which
     # so that every index call wouldn't have to load the tei file.
-    TEIConverter.new(object.tei.original_file.content, object).to_json
+    tei = object.tei.original_file.try(:content)
+    return unless tei
+    TEIConverter.new(tei, object).as_json
   end
 end
