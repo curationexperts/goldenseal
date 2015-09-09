@@ -2,11 +2,9 @@
   <div class="row with-headroom">
     <div class="col-md-12">
       <fieldset id="representative-image">
-        <legend>
-          Assign a TEI
-        </legend>
+        <legend> Assign a TEI </legend>
         <p>Select the transcript of this <%= curation_concern.human_readable_type %>.</p>
-        <%= f.select(:tei_id, curation_concern.generic_files.map { |file| [file.title.first, file.id] }, {}, { class: 'form-control' } ) %>
+        <%= f.select(:tei_id, tei_select_options(curation_concern), {}, { class: 'form-control' } ) %>
       </fieldset>
     </div>
   </div>
