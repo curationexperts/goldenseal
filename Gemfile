@@ -59,6 +59,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'jettywrapper'
   gem 'factory_girl_rails'
+  gem 'capybara'
 end
 
 gem 'rsolr', '~> 1.0.6'

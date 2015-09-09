@@ -1,8 +1,16 @@
 class CatalogController < ApplicationController
   include CurationConcerns::CatalogController
 
+  def self.search_config
+    super.merge('qf' => %w( title_tesim
+                            contributor_tesim
+                            description_tesim
+                            id ))
+  end
+
   configure_blacklight do |config|
     config.search_builder_class = CurationConcerns::SearchBuilder
+
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
     config.default_solr_params = {
       qf: search_config['qf'],
@@ -72,15 +80,7 @@ class CatalogController < ApplicationController
     # This one uses all the defaults set by the solr request handler. Which
     # solr request handler? The one set in config[:default_solr_parameters][:qt],
     # since we aren't specifying it otherwise.
-    config.add_search_field('all_fields', label: 'All Fields', include_in_advanced_search: false) do |field|
-      title_name = solr_name('title', :stored_searchable, type: :string)
-      label_name = solr_name('title', :stored_searchable, type: :string)
-      contributor_name = solr_name('contributor', :stored_searchable, type: :string)
-      field.solr_parameters = {
-        qf: "#{title_name} #{label_name} file_format_tesim #{contributor_name}",
-        pf: "#{title_name}"
-      }
-    end
+    config.add_search_field('all_fields', label: 'All Fields', include_in_advanced_search: false)
 
     # Now we see how to over-ride Solr request handler defaults, in this
     # case for a BL "search field", which is really a dismax aggregate
