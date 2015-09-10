@@ -9,7 +9,6 @@ class BaseWorkIndexer < CurationConcerns::GenericWorkIndexingService
 
   private
 
-    # TODO duplice from BaseWorkIndexer
     def rights_labels
       object.rights.map { |r| RightsService.label(r) }
     end
