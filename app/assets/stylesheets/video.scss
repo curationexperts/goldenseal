@@ -1,0 +1,46 @@
+.able-vidcap-container {
+  .able-captions {
+    // I'd like to `display: none`, but it has display: block on the element;
+    left: -9999px;
+  }
+}
+
+.able-player {
+
+
+  // Re-add inner padding and border in Firefox 4+.
+  // this gets removed by bootstrap/normalize
+  // But if its' removed, then outlines (on hover) are too big.
+
+  button::-moz-focus-inner,
+  input::-moz-focus-inner {
+    border: 3px;
+    padding: 3px;
+  }
+
+  * {
+    box-sizing: content-box;
+  }
+  .able-controller {
+    button.able-button-handler-captions {
+      display: none;
+    }
+
+    button.able-button-handler-slower {
+      display: none;
+    }
+    button.able-button-handler-faster {
+      display: none;
+    }
+    span.icon-pipe {
+      display: none;
+    }
+  }
+
+  .able-status-bar {
+    .able-speed {
+      display: none;
+    }
+  }
+}
+

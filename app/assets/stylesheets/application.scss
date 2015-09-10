@@ -10,6 +10,8 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require ableplayer
+ *= require ableplayer-transcript
  *= require_self
  */
 
@@ -17,3 +19,4 @@
 @import 'curation_concerns/curation_concerns';
 @import 'openseadragon/openseadragon';
 @import 'tei_viewer';
+@import 'video';
