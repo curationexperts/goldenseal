@@ -5,4 +5,5 @@
   <%= f.input :source,     as: :multi_value, input_html: { class: 'form-control' } %>
   <%= f.input :language,   as: :multi_value, input_html: { class: 'form-control' } %>
   <%= f.input :identifier, as: :multi_value, input_html: { class: 'form-control' } %>
+  <%= f.input :date_issued, wrapper: :inline, input_html: { value: f.object.date_issued, class: 'datepicker' } %>
 </fieldset>

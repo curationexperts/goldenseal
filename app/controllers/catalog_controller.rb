@@ -58,6 +58,7 @@ class CatalogController < ApplicationController
     config.add_index_field solr_name('language', :stored_searchable)
     config.add_index_field uploaded_field, helper_method: :formatted_time, label: 'Date Uploaded'
     config.add_index_field modified_field, helper_method: :formatted_time, label: 'Date Modified'
+    config.add_index_field 'date_issued_dtsi', helper_method: :formatted_time, label: 'Date Issued'
     config.add_index_field 'rights_label_ss', label: 'Content License'
     config.add_index_field solr_name('human_readable_type', :stored_searchable)
     config.add_index_field solr_name('format', :stored_searchable)

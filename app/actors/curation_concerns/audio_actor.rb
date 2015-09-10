@@ -3,5 +3,6 @@
 module CurationConcerns
   class AudioActor < CurationConcerns::BaseActor
     include ::CurationConcerns::WorkActorBehavior
+    include CommonActorBehavior
   end
 end

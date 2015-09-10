@@ -7,4 +7,8 @@ module DisplayFields
     solr_document['identifier_tesim']
   end
 
+  def date_issued
+    solr_document['date_issued_dtsi']
+  end
+
 end
