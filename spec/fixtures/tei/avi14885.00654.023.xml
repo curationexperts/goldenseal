@@ -1,0 +1,1141 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<TEI xml:id="avi14885.00654.023">  
+<!--  HEADER 
+  --> 
+<teiHeader>
+<fileDesc>
+<titleStmt>
+<!--  add name of person being interviewed 
+  --> 
+<title>
+  Interview with 
+  <hi rend="bold">Lorenzo Avila</hi> 
+  </title>
+  <title type="gmd">[electronic resource]</title> 
+<!--  add date of transcription 
+  --> 
+<respStmt>
+<resp>
+  Creation of machine-readable version (transcriptions of formal taped interviews): 
+  <date when="2014-06-03">June 3, 2014</date> 
+  </resp>
+  <name>The Film and Media Archive at Washington University Libraries</name> 
+  </respStmt>
+<respStmt>
+<resp>
+  Conversion to TEI-conformant markup: 
+  <date /> 
+  </resp>
+  <name>Digital Library Services at Washington University Libraries</name> 
+  </respStmt>
+  </titleStmt>
+  <extent /> 
+<publicationStmt>
+<!--  add file name per predetermined file naming conventions 
+  --> 
+  <idno type="DLS">avi14885.00654.023</idno> 
+  <publisher>Washington University in St. Louis</publisher> 
+  <distributor>Washington University Libraries</distributor> 
+  <authority>Special Collections and Archives, Film and Media Archive</authority> 
+  <pubPlace>St. Louis, Missouri</pubPlace> 
+<address>
+  <addrLine>One Brookings Drive</addrLine> 
+  <addrLine>Campus Box 1061</addrLine> 
+  <addrLine>St. Louis MO 63130</addrLine> 
+  </address>
+<!--  add MAVIS Interview Record Number 
+  --> 
+  <idno type="MAVIS Interview Record">654</idno> 
+<availability status="free">
+  <p>Material is free to use for research purposes only. If researcher intends to use transcripts for publication, please contact Washington University’s Film and Media Archive for permission to republish. Please use preferred citation given in the transcript.</p> 
+  <p>© Copyright Washington University Libraries 2014</p> 
+  </availability>
+  <date when="2014">2014</date> 
+  </publicationStmt>
+<sourceDesc>
+<recordingStmt>
+<!--  add "video" | "audio" as appropriate 
+  --> 
+<recording type="video" dur="TIME_process">
+<!--  change recording company or production team as appropriate 
+  --> 
+<respStmt>
+  <resp>Recording by</resp> 
+  <name>Blackside, Inc.</name> 
+  </respStmt>
+<!--    
+<respStmt>
+  <resp>Production Team</resp> 
+  <name>B</name> 
+  </respStmt>
+-->  
+<!--  edit equipment information and date of recording as appropriate 
+  --> 
+<equipment>
+  <p>Interviews were filmed on 16mm with audio recorded simultaneously on ¼ inch audio tape.</p> 
+  </equipment>
+  <date when="1994-05-17">May 17, 1994</date> 
+<broadcast>
+<!--  add xml:id in the format of "mMAVIS#" 
+  --> 
+<!--  change interview information as appropriate 
+  --> 
+<bibl xml:id="m654">
+<title>
+  Interview with 
+  <hi rend="bold">Lorenzo Avila</hi>  
+  </title>
+  <editor>Blackside, Inc. edited the filmed interviews for broadcast. Interviews were transcribed directly (unedited) from the digitized video files.</editor> 
+<respStmt>
+  <resp>Interviewer:</resp> 
+
+  <persName n="" key="n">
+
+  </persName>
+  </respStmt>
+<respStmt>
+  <resp>interviewee</resp> 
+  <persName n="Avila, Lorenzo" key="n2453-1">Lorenzo Avila</persName> 
+  </respStmt>
+  <series>Interview gathered as part of America's War on Poverty.</series> 
+  <note>This interview recorded as formal filmed interview.</note> 
+  </bibl>
+  </broadcast>
+  </recording>
+  </recordingStmt>
+  </sourceDesc>
+  </fileDesc>
+
+<encodingDesc>
+<projectDesc>
+  <p>
+    This collection consists of 85 transcriptions of selected interviews filmed by Blackside, Inc. for America's War on Poverty documentary series that premiered January 16, 1995 on PBS. The transcripts are retrospective accounts of events that took place after President Lyndon Johnson chose to focus on poverty by declaring an "unconditional war on poverty," and launched a series of initiatives designed to end poverty forever, not through welfare or job creation, but by expanding opportunities for the poor through education and training.  
+  </p> 
+</projectDesc>
+<editorialDecl n="3">
+  <p>
+      Washington University Film &amp; Media Archive created the transcriptions from digitized videos of the interviews filmed by Blackside, Inc. and supervised the editing using Oxygen XML Developer. Grammatical errors made by speaker were left alone.
+  </p> 
+  <p>
+      Although these files represent transcriptions of speech, they have been encoded with the Tag Set for Drama, instead of Transcriptions of Speech.
+  </p> 
+  <p>
+      The rationale for this decision was that the more formal character of the interview had a structure closer to the drama than the speech tag set, and for ease of delivery of XML.
+  </p> 
+  </editorialDecl>
+<classDecl>
+<!--  ANY SUBJ HEADING CLASSIFICATION SYSTEMS DECLARED HERE 
+  --> 
+<taxonomy xml:id="lcsh">
+<bibl>
+  <title>Library of Congress Subject Headings,</title> 
+  <edition>21st edition, 1998</edition> 
+  </bibl>
+  </taxonomy>
+  </classDecl>
+  </encodingDesc>
+<!--  Edit date and language as appropriate 
+  --> 
+<profileDesc>
+<creation>
+  <date when="1994-05-17">May 17, 1994</date> 
+  </creation>
+<langUsage>
+  <language ident="eng">English</language> 
+  </langUsage>
+<textDesc n="formal interview">
+  <channel mode="s">formal taped interview</channel> 
+  <constitution type="single" /> 
+  <derivation type="traditional">for America's War on Poverty</derivation> 
+  <domain type="public" /> 
+  <factuality type="mixed" /> 
+  <interaction type="complete" active="plural" passive="world" /> 
+  <preparedness type="none" /> 
+  <purpose type="inform" /> 
+  </textDesc>
+<!--  biographical info on interviewer and interviewee 
+  --> 
+<!--  note, 1 = male, 2 = female 
+  --> 
+<particDesc>
+<listPerson>
+  <person sex="" xml:id="p" n="">
+  
+<p>
+<ref target="">
+<!--  INTERVIEWER_BIO 
+  --> 
+  </ref>
+  </p>
+  </person>
+  <person sex="1" xml:id="p2453-1" n="Lorenzo Avila">
+<p>
+<ref target="">
+<!--  INTERVIEWEE_BIO 
+  --> 
+  </ref>
+  </p>
+  </person>
+  </listPerson>
+  </particDesc>
+<!--  groups information which describes the nature or topic of a text in terms of a standard classification scheme, thesaurus, etc. <catRef><classCode><keywords> 
+  --> 
+<!--  add informal keywords under fma scheme, add lcsh keywords under lcsh
+  --> 
+<!--  remove inapplicable terms
+  --> 
+<textClass>
+    <keywords scheme="fma">
+        <term>Avila, Lorenzo</term>
+        <term>War on Poverty</term>
+      <term> Order of Friars Minor</term>
+      <term>Stockton, CA</term>
+      <term>Chavez, Cesar</term>
+        <term></term>
+      <term>Stockton, CA</term>
+      <term>Sacramento-San Joaquin River Delta</term>
+      <term>California Rural Legal Assistance</term>
+      <term>California</term>
+      <term>Mexico</term>
+      <term>Kennedy, Robert</term>
+      <term>Linden, CA</term>
+      <term> Tracy, CA</term>
+      <term> Gilroy, CA</term>
+      <term>Winters, CA</term>
+      <term>Westley, CA</term>
+      <term> California Rural Legal Assistance</term>
+    </keywords>
+    <keywords scheme="lcsh">
+        <term>Social movements — United States — History — 20th century.</term>
+        <term>Poor -- United States.</term>
+        <term>Economic assistance, Domestic -- United States.</term>
+        <term>United States -- Social policy.</term>
+        <term>United States -- Politics and government -- 1963-1969.</term>
+        <term>Johnson, Lyndon B. (Lyndon Baines), 1908-1973.</term>
+        <term>United States -- Politics and government -- 1963-1969.</term>
+        <term>Johnson, Lyndon B. (Lyndon Baines), 1908-1973 -- Political and social views.</term>
+        <term>Poverty -- Government policy -- United States -- History.</term>
+        <term>United States -- Economic policy.</term>
+        <term>Poverty -- United States.</term>
+        <term>United States — Politics and government — 20th century.</term>
+        <term>United States — Social conditions — 20th century.</term>
+        <term>Political culture — United States — History — 20th century.</term>
+        <term>United States — Economic conditions — 20th century.</term>
+        <term>Oral history — United States.</term>
+        <term>Interviews — United States.</term>
+        <term>America's War on Poverty (Television program).</term>
+        <term>Hampton, Henry, 1940-1998.</term>
+        <term>Blackside, Inc.</term>
+      <term>Villa, Pancho, 1878-1923</term>
+    </keywords>
+</textClass>
+</profileDesc>
+    
+<!--  If changes are made to a file, add date and initials of person making change and describe change made
+  --> 
+<revisionDesc>
+  <change when="2014-06-10" who="AC">added instructions</change> 
+  <change when="2014-06-10" who="AC">added subjects and text of transcript</change> 
+  <change when="" who="" /> 
+  <change when="" who="" /> 
+  </revisionDesc>
+  </teiHeader>
+<!--  TRANSCRIPTION STARTS HERE
+  --> 
+  <text xml:id="avi14885.00654.023">
+<front>
+<!--  TRANSCRIPT HEADER HERE, AS FRONT MATTER 
+  --> 
+<!--  Edit as appropriate 
+  --> 
+<titlePage>
+<docTitle>
+<titlePart type="main">
+  Interview with 
+<hi rend="bold">
+  <name>Lorenzo Avila</name> 
+  </hi>
+  </titlePart>
+  </docTitle>
+<byline>
+Interviewer: 
+  
+  <!--  
+  <lb /> 
+  Production Team: B   -->
+  </byline>
+  -->
+<docImprint>
+<docDate>
+  Interview Date: 
+  <date when="1994-05-17">May 17, 1994</date> 
+  </docDate>
+<pubPlace>
+<!--  Interview Place: someCity, someState 
+  --> 
+  </pubPlace>
+  <rs type="media">Camera Rolls: 404:19-404:21</rs> 
+  <rs type="media">Sound Rolls: 404:10</rs> 
+  </docImprint>
+<!--  contains a formal statement authorizing the publication of a work 
+  --> 
+<imprimatur>
+  Interview gathered as part of 
+  <hi rend="italics-bold">America's War on Poverty</hi> 
+  . 
+  <lb /> 
+  Produced by Blackside, Inc. 
+  <lb /> 
+  Housed at the Washington University Film and Media Archive, Henry Hampton Collection. 
+  </imprimatur>
+  </titlePage>
+<div1 type="editorial">
+  <head>Editorial Notes:</head> 
+<!--  Edit Preferred citation as appropriate 
+  --> 
+<p>
+  <hi rend="bold">Preferred citation:</hi> 
+  <lb /> 
+  Interview with 
+<hi rend="bold">
+  <name>Lorenzo Avila</name> 
+  </hi>
+  , conducted by Blackside, Inc. on May 17, 1994, for 
+  <hi rend="italics">America's War on Poverty</hi> 
+  . Washington University Libraries, Film and Media Archive, Henry Hampton Collection. 
+  </p>
+<p>
+  These transcripts contain material that did not appear in the final program. Only text appearing in 
+<hi rend="italic">
+  <hi rend="bold">bold italics</hi> 
+  </hi>
+  was used in the final version of 
+  <hi rend="italics">America's War on Poverty.</hi> 
+  </p>
+  </div1>
+  </front>
+<body>
+<div1 type="section">
+  <head>INTERVIEW</head> 
+<div2 type="tech">
+  <head /> 
+  <incident>
+    <desc>
+      [camera roll 404:19]
+    </desc>
+  </incident>
+  <incident>
+    <desc>
+      [sound roll 404:10]
+    </desc>
+  </incident>
+  <incident>
+    <desc>
+      [slate]
+    </desc>
+  </incident>
+  </div2>
+
+  <div2 type="question" n="1" data-timecodebegin="00:00:00:34" data-timecodeend="00:00:02:35">
+  <head>QUESTION 1</head> 
+  
+  <sp>
+    <speaker n="interviewer">INTERVIEWER:</speaker> 
+    <p>
+      OK.
+    </p> 
+  </sp>
+  <sp>
+  <speaker n="interviewee">LORENZO AVILA:</speaker> 
+  <p>
+    In the late '60s, I was working in a Franciscan parish in Stockton, St. Mary's. It was a skidrow and farm labor and, bogs-tracked, mostly black settlement, parish. The CRLA [California Rural Legal Assistance] attorneys were starting to reconnoiteur around for-
+  </p> 
+  </sp>
+ 
+<sp>
+  <speaker n="interviewer">INTERVIEWER:</speaker> 
+  <p>
+    I'm going to interrupt. Could you tell us if you were a priest?
+  </p> 
+  </sp>
+<!--  note example of encoding sounds, like a cough or sneeze 
+  --> 
+<sp>
+  <speaker n="interviewee">LORENZO AVILA:</speaker> 
+<p>
+  Yes, yes, yes, OK, all right, sure.
+  </p>
+  </sp>
+<sp>
+  <speaker n="interviewer">INTERVIEWER:</speaker> 
+  All right, start again. 
+  </sp>
+    <sp>
+      <speaker n="interviewee">LORENZO AVILA:</speaker> 
+      <p>
+        When CRLA was looking around for community resources, I was a priest at the parish of St. Mary's in Stockton, which is a very poor urban parish, with a lot of farm-workers and a lot of outlying areas that we served. For example, the Bracero camps of the past period had, you know, many Mexican guys that would come to church services that we would conduct for them. Father Mark Day and I—Mark, of course, later joined Cesar Chavez full-time—we had a card-file of Bracero camps and how to find them—and some of them were very hard to find because the rural roads, out in the Delta, for example, you have to cross ferries, and not all these things are sign-posted, or even known about to outsiders. So, anyway, it was a very vital resource to have that card-file, and they wanted me to help them learn where the Bracero camps were, and that's the way I met, I believe, first Ralph Segura. It was in the fall of, I guess '67, that he came to Stockton, and just ran into me by accident, after some months of having known what the, what the card file was about. And I told him that just that day, by coincidence, I had been out picking tomatoes in a large farm near Tracy, with my little sister, who was underage, and very healthy, but she wasn't—
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        I'm going to ask you to hold for a second. Can we cut please?
+      </p> 
+    </sp>
+    <incident>
+      <desc>
+        [cut]
+      </desc>
+    </incident>
+</div2>
+ 
+  <div2 type="question" n="2" data-timecodebegin="00:00:02:36" data-timecodeend="00:00:03:27">
+<head>QUESTION 2</head> 
+    <incident>
+      <desc>
+        [slate marker visible on screen]
+      </desc>
+    </incident>
+<sp>
+  <speaker n="interviewee">LORENZO AVILA:</speaker> 
+    <p>
+      At that time, I was a Franciscan priest in the parish of St. Mary's in Stockton, which was responsible for a lot of the farmland around Stockton. And Father Mark Day and I were special pastors, as it were, of the farm-labor population—people mostly from Mexico, many of whom lived in outlying areas, in, in camps and barracks, and what were called Bracero camps, farm-worker camps. We had church services, Mass for these workers, and maps of how to find these places, so the CRLA people were really delighted by this. I got to know them a little bit, thought it was quite an interesting program. And late that fall, Ralph Segura and I happened into each other right when he was work --
+    </p>
+</sp>    
+<sp>
+   <speaker n="interviewer">INTERVIEWER:</speaker> 
+    <p>
+      OK, OK, that's good. Let's cut there.
+    </p>
+</sp>
+    <incident>
+      <desc>
+        [cut]
+      </desc>
+    </incident>
+</div2>    
+  <div2 type="question" n="3" data-timecodebegin="00:00:03:28" data-timecodeend="00:00:04:19">  
+  <head>QUESTION 3</head> 
+   <incident>
+     <desc>
+       [slate marker visible on screen]
+     </desc>
+   </incident>
+  <sp>
+    <speaker n="interviewee">LORENZO AVILA:</speaker> 
+    <p>   
+      The way I first got to know the CRLA program was because I was approached as a possible resource for the CRLA attorneys. I was working as a Franciscan priest in St. Mary's parish, Stockton, and that parish has a large part of responsibility for the farmworkers all over the San Joaquin County area. Most of these workers were Spanish-speaking, from Mexico, and they required Masses in Spanish, and Father Mark Day and I would go out to these very remote little places that you wouldn't think were settlements. We know the route, we knew the roads to the places, we knew, names of people in charge of the farm-labor camps, and that sort of thing. So CRLA was really glad to get that information.
+    </p>
+  </sp>  
+  <sp>
+    <speaker n="interviewer">INTERVIEWER:</speaker> 
+    <p>
+      OK. Please do not look at the camera. I think you were looking at the camera.
+    </p>
+  </sp>
+    <incident>
+      <desc>
+        [cut]
+      </desc>
+    </incident>
+  </div2>
+  <div2 type="question" n="5" data-timecodebegin="00:00:04:20" data-timecodeend="00:00:04:45">
+  <head>QUESTION 5</head>   
+    <incident>
+      <desc>
+        [slate marker visible on screen]
+      </desc>
+    </incident>
+<sp>
+  <speaker n="interviewer">INTERVIEWER:</speaker> 
+   <p>
+     Yeah, OK, what did they need to know from you?
+  </p>
+  </sp>
+<sp>
+    <speaker n="interviewee">LORENZO AVILA:</speaker> 
+  <p>
+    The CRLA attorneys didn't really know Stockton very well. They knew farm-work, and had a goal, but they didn't know particular community information like locale of the settlements, the leaders, the people who could be trusted, and, and that sort of thing, and it was a natural relationship there, between the attorneys and people like Mark and myself.
+  </p> 
+  </sp>
+  </div2>
+  <div2 type="question" n="6" data-timecodebegin="00:00:04:46" data-timecodeend="00:00:05:39">
+    <head>QUESTION 6</head> 
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        So why did they need to hire you?
+      </p>
+    </sp>
+    <sp>
+        <speaker n="interviewee">LORENZO AVILA:</speaker> 
+      <p>
+        Oh, they didn't. The hiring came as an afterthought after the first Bracero program, Bracero investigation, took place. I think they had a lot of natural volunteer assistance from church people, a lot of places...
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        No, the question is, why, what did you do for them, what did they need from you, why-
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER #2:</speaker> 
+      <p>
+        What information did you provide, did they need you to provide?
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewee">LORENZO AVILA:</speaker> 
+      <p>
+        Hmm.
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        You have to do this investigation in the fields for them.
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewee">LORENZO AVILA:</speaker> 
+      <p>
+        Right.
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        OK. So tell us about that. Why did they need to—why did they need your help. What did they need to know?     
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewee">LORENZO AVILA:</speaker> 
+      <p>
+        Well, I knew the particular farms around Stockton. Many large tomato farms, for example, I knew, because of the work with the parishioners—
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        OK, I'm sorry, let's cut for a second.   
+      </p>
+    </sp>
+    <incident>
+      <desc>
+        [cut]
+      </desc>
+    </incident>
+  </div2>
+  
+  <div2 type="question" n="7" data-timecodebegin="00:00:05:40" data-timecodeend="00:00:06:57">
+    <head>QUESTION 7</head> 
+    <incident>
+      <desc>
+        [slate marker visible on screen]
+      </desc>
+    </incident>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        OK.
+      </p>
+    </sp>
+    <sp>
+        <speaker n="interviewee">LORENZO AVILA:</speaker> 
+      <p>
+        The farmers, large farmers, particularly, in Stockton area, had the plan of bringing additional workers from Mexico who were more easily controlled, and by scheduling, and by age, and so forth—those were called braceros, usually young men who were very hard workers and didn't need maintenance, family lives, or even need, didn't need to be around in the winter-time, and so forth. The workers—the growers, rather—had the approval of the government to bring in these workers, if they, the growers, that is, met certain conditions for how they were treating the local workers. And so CRLA was concerned that the conditions were being violated, and that the workers from Mexico were being added on to this labor force, causing harm for everybody. As a matter of fact, it was very easy for me to say that the conditions were being violated because of the everyday reality of the fields. Supposedly—this was a big surprise to me—supposedly the farmers were supposed to have toilets if they were to earn right [sic] to use Mexican, additional bracero workers, and there were no toilets in the field. There were no protections for the children working in the field, for the women, against indignity and excessive lifting—that was part of the California law, then, that women couldn't lift more than twenty-five pounds.
+      </p> 
+    </sp>
+  </div2>
+
+  <div2 type="question" n="8" data-timecodebegin="00:00:06:58" data-timecodeend="00:00:08:29">
+    <head>QUESTION 8</head> 
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        But tell us, tell us how you went about this investigation.
+      </p>
+    </sp>
+    <sp>
+        <speaker n="interviewee">LORENZO AVILA:</speaker> 
+      <p>
+        It was kind of by accident that it started, because I had been picking tomatoes, just to show my—
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        No, I mean, what specifically did you do? How—
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewee">LORENZO AVILA:</speaker> 
+      <p>
+        Under CRLA's direction?
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        Yes, exactly.    
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewee">LORENZO AVILA:</speaker> 
+      <p>
+        Yes. More of the same: take the community workers from the various offices that were quickly assembled and brought to Stockton, take them out on the labor buses that left—
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        Could you start that as a complete sentence? "The first thing that I did was, I got these workers and took them out on the bus."
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewee">LORENZO AVILA:</speaker> 
+      <p>
+        Yes. Well, the first thing was to get additional people, principally the CRLA community workers, to go out with me, or in my direction, on farm-work jobs, usually in the buses—large school-type buses, old rackety [sic], you know, broken-down school buses that were used for farm-work. And those would go out to these farm sites, and carry out work. And we tried to place our people, our witnesses, at the particular growers. This was not always very easy, because you had to know which farm labor contractor was working for a particular grower, which farm labor contractor uses colored buses and names that were on the sides, but sometimes they would sub-contract; and so we had to chase around to find work going on that we could observe and document was violating the conditions set forth by the government.
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        So, you told us before you got up at four a.m., and you sort of went out as a stooge—
+      </p>
+    </sp>
+    <incident>
+      <desc>
+        [camera cuts out]
+      </desc>
+    </incident>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        —employee. Did you do this yourself?
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewee">LORENZO AVILA:</speaker> 
+      <p>
+        Yes, oh yes.
+      </p> 
+    </sp>
+    <p>
+      [production discussion]
+    </p>
+    <incident>
+      <desc>
+        [cut]
+      </desc>
+    </incident>
+  </div2>
+ 
+  <div2 type="question" n="9" data-timecodebegin="00:00:08:30" data-timecodeend="00:00:09:48">
+    <head>QUESTION 9</head> 
+    <incident>
+      <desc>
+        [slate marker visible on screen]
+      </desc>
+    </incident>
+    <incident>
+      <desc>
+        [changing to camera roll 404:20]
+      </desc>
+    </incident>
+    <incident>
+      <desc>
+        [sound roll 404:10]
+      </desc>
+    </incident>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        OK.   
+      </p>
+    </sp>
+    <sp>
+        <speaker n="interviewee">LORENZO AVILA:</speaker> 
+      <p>
+        One of the ways we tried to help the attorneys was—
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        Could you start one more time?
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewee">LORENZO AVILA:</speaker> 
+      <p>
+        Sure. 
+        <cit>
+          <q>
+            <hi rend="italic">
+              <hi rend="bold">
+          One of the ways we tried to help the attorneys in the documentation of the practices in the farms that would disqualify the use of braceros, was, to try to take pictures of the existing situations, the lack of clean drinking water, the lack of toilets, the lack of safeguarding for children if the parents are working in the fields in any kind of dangerous or unhealthy situation. And this was really easy to do, except it would cause, since it was a very novel thing to have a camera in a, farm-work field, caused a lot of, you know, vigilance on the part of the labor contractor, the, local people who, you know, who knew that we were up to something strange.
+              </hi>
+            </hi>
+          </q>
+          <bibl/>
+        </cit>
+        <note target="n1" n="1">[1]</note>
+        <note xml:id="n1" n="1">[1] America's War on Poverty; Episode 404:56</note> 
+        I don't think that we were ever in danger, but we surely did attract a retinue of, of pick-up trucks with guns hanging in the back window and such, when we were looking around for particular tomato harvesting. operations that we wanted to be vulnerable. 'Cause we would, we knew these growers were seeking to use braceros, and we knew that if they were using the industry standard, they were violating the rights of the workers.
+      </p> 
+    </sp>
+  </div2>
+  
+  <div2 type="question" n="10" data-timecodebegin="00:00:09:49" data-timecodeend="00:00:11:18">
+    <head>QUESTION 10</head> 
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        Why was it important to end the Bracero program?
+      </p>
+    </sp>
+    <sp>
+        <speaker n="interviewee">LORENZO AVILA:</speaker> 
+      <p>
+        Well, because it was—
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        Could you start that as a sentence?     
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewee">LORENZO AVILA:</speaker> 
+      <p>
+        Yes. It was really important, in this view, to curtail the Bracero program, because it brought in so much [sic] extra benefits to the growers, without a corresponding bargaining increase or strength of the workers. These, Mexican guys, you remember, came in under contract for a fixed period, and they weren't supposed to come back. This was not part of the, the view of the workers or the United States government, to bring them in so they could then come back later. This was to bring them in so they could be shipped back, unless they came back as braceros another time. And this was the ultimate disposable worker. You know, a tractor you had to feed in the winter-time, you have to shelter it, you have to maintain it. Braceros? No, you know? They went home, they didn't have any responsibility—I don't know, there were some sorts of fringe benefits that I think the American government negotiated in the 40s, during the early, heavy use of braceros, but, the problem for the workers, local workers, was that 
+        <cit>
+          <q>
+            <hi rend="italic">
+              <hi rend="bold">
+          these braceros were very dedicated workers, had nothing else on their minds, and they gave the, wage structure kind of a bottomless character for the local workers. The, local workers could not support a family, take care of United States expenses on the wages that braceros were paid, and happily took. 
+              </hi>
+            </hi>
+          </q>
+          <bibl/>
+        </cit>
+        <note target="n2" n="2">[2]</note>
+        <note xml:id="n2" n="2">[2] America's War on Poverty; Episode 404:54</note> 
+      </p> 
+    </sp>
+  </div2>
+
+  <div2 type="question" n="11" data-timecodebegin="00:00:11:19" data-timecodeend="00:00:12:32">
+    <head>QUESTION 11</head> 
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        Let's say I'm somebody who's really unfamiliar with California, and this whole scene. Help me understand how bad conditions were, and, and, and were the growers really deliberately committing, sort of, fraud—
+      </p>
+    </sp>
+    <sp>
+        <speaker n="interviewee">LORENZO AVILA:</speaker> 
+      <p>
+        Hmm.
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+       —I think you said
+        <gap reason="unintelligible">
+          <desc> [unintelligible]</desc>
+        </gap>
+       that effect, by pretending that these conditions were better than they were?    
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewee">LORENZO AVILA:</speaker> 
+      <p>
+        It was easy for growers to cite average wages that were really quite high, and maybe could be earned by some superstar pickers, but usually when they were talking about twenty dollars an hour, or even a respectable, ten dollars an hour, they're talking about multiple people working on one Social Security number; this was a practice that was well-known. It worked to the advantage of the growers in some cases, because their paperwork and their legal, trail was obscured, and also, it seemed to help some workers. They didn't really want their children to be recorded as working, so the children would work on the parent's Social Security number. That was a problem. I think the conditions were well-known to be, difficult, quite without any fraud on the part of the growers. Bobby Kennedy came out, I think it was in '67, to the little community of Linden, in San Joaquin County—
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        OK, I'm going to stop, just—
+      </p>
+    </sp>
+    <incident>
+      <desc>
+        [cut]
+      </desc>
+    </incident>
+  </div2>
+
+  <div2 type="question" n="12" data-timecodebegin="00:00:12:33" data-timecodeend="00:00:14:18">
+    <head>QUESTION 12</head> 
+    <incident>
+      <desc>
+        [slate marker visible on screen]
+      </desc>
+    </incident>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        OK.         
+      </p>
+    </sp>
+    <sp>
+        <speaker n="interviewee">LORENZO AVILA:</speaker> 
+      <p>
+        In the Franciscan parish of St. Mary's, I was one of a class of newly-graduated priests, under the guidance of Father Alan McCoy, who was extremely, social in his vision of religion, and very, very much a man of the people, and of the farmworkers in San Joaquin County. And he had been on the radio saying something which we later saw, of, the abuses by growers of the local workers. For example, St. Mary's has a park in front of it where a lot of winos would hang out in the warm afternoons, and they would sleep there. They would work in the morning and sleep in front of St. Mary's, and often, Father Alan mentioned on this talk-show once, on the radio, I think it was K-JOY, in Stockton, that the growers would take these winos out in these school-buses—
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        OK, we need it more from your personal experience. You, as a result of going out into this research, doing this for yourself, you saw things that led you to believe—
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewee">LORENZO AVILA:</speaker> 
+      <p>
+        Yes.
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        Can you do that?  
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewee">LORENZO AVILA:</speaker> 
+      <p>
+        Yes. Well, I also saw, the growers using the winos and other less-motivated American resident farm-workers as evidence that only braceros could do the job. The, the winos were cited in, in publicity from the growers, they were often, kinda stage-managed into a camera range for, some of the problems in the growers' perspective about how hard it is to earn a buck in, in farming. This was, it was abusive of the many hard-working, many Mexican, resident workers, and also, of course, it suited the, growers' intention of bringing in only the most controllable workers—that is, the braceros.       
+      </p> 
+    </sp>
+  </div2>
+
+  <div2 type="question" n="13" data-timecodebegin="00:00:14:19" data-timecodeend="00:00:15:11">
+    <head>QUESTION 13</head> 
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        OK. How was CRLA going to use the information that you gave them?
+      </p>
+    </sp>
+    <sp>
+        <speaker n="interviewee">LORENZO AVILA:</speaker> 
+      <p>
+        Mostly by doc—CRLA was hoping to use my knowledge and other's, other people's, by formal declarations. We would write up our, things we had witnessed during the farm-work day in declarations, with the help of the attorneys, at night. I had never written a declaration before, except to declare myself permanently poor, and owning no property, because I was, you know, joining the Franciscans. That was as legal as life had been for me, and it was a great thing to see declarations, stating common sense reality, actually get taken, and delivered somewhere, and used. Commonplace, well-understood things were not spoken of so clearly, and not common knowledge [sic], I guess, at least in the court system, and the legal system.
+      </p> 
+    </sp>
+  </div2>
+ 
+  <div2 type="question" n="14" data-timecodebegin="00:00:15:12" data-timecodeend="00:00:15:49"> 
+    <head>QUESTION 14</head> 
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        How did it feel to be useful in this way?
+      </p>
+    </sp>
+    <sp>
+        <speaker n="interviewee">LORENZO AVILA:</speaker> 
+      <p>
+        It was really exhilarating. It was a great opportunity for me to feel better about my religious role, and also feel better about, the common good, the public method of, of solving problems. The attorneys were really dedicated. They put in a lot of hard work. They were good examples to the farm-workers, and I think there's a natural blend of hard-working, ethical farm-workers, and very, very visionary lawyers.
+      </p> 
+    </sp>
+  </div2>
+  
+  <div2 type="question" n="15" data-timecodebegin="00:00:15:50" data-timecodeend="00:00:16:00">
+    <head>QUESTION 15</head> 
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        Well, tell us more about the impression these lawyers made on you.
+      </p>
+    </sp>
+    <sp>
+        <speaker n="interviewee">LORENZO AVILA:</speaker> 
+      <p>
+        Um...
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        You know what, I think we got that. Let's cut.    
+      </p>
+    </sp>
+    <incident>
+      <desc>
+        [cut]
+      </desc>
+    </incident>
+  </div2>
+  
+  <div2 type="question" n="16" data-timecodebegin="00:00:16:01" data-timecodeend="00:00:16:36">
+    <head>QUESTION 16</head> 
+    <incident>
+      <desc>
+        [slate marker visible on screen]
+      </desc>
+    </incident>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        —how was CRLA going to use this information?
+      </p>
+    </sp>
+    <sp>
+        <speaker n="interviewee">LORENZO AVILA:</speaker> 
+      <p>
+        CRLA had sued the Department of Labor for having allowed the growers, improperly, to sign up for the Bracero Program—additional forty thousand workers, I think—and the declarations we filed, and various reports, were used to give rise to an injunction. I think it was a federal judge who declared the Department of Labor out of compliance with its own rules, and suspended the Bracero Program.
+      </p> 
+    </sp>
+  </div2>
+  
+  <div2 type="question" n="17" data-timecodebegin="00:00:16:37" data-timecodeend="00:00:17:28">
+    <head>QUESTION 17</head> 
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        OK, good. The community worker concept, that's the next question. What, what was behind that idea?
+      </p>
+    </sp>
+    <sp>
+        <speaker n="interviewee">LORENZO AVILA:</speaker> 
+      <p>
+        The community workers were partners of the lawyers. The attorneys for the CRLA program were usually very highly-educated, young people from—many from Ivy League Schools, many from out of California—who simply didn't know the local way of doing things, and had no connections, had no language skills in the farm-worker life experience, and, needed, needed these local partners, needed what we call now 'paralegals,' right, to give them information, to teach them how to get out into the community. I think it was a natural partnership, certainly necessary.
+      </p> 
+    </sp>
+  </div2>
+ 
+  <div2 type="question" n="18" data-timecodebegin="00:00:17:29" data-timecodeend="00:00:18:05"> 
+    <head>QUESTION 18</head> 
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        What were some of the specific things that they did for the lawyers?    
+      </p>
+    </sp>
+    <sp>
+        <speaker n="interviewee">LORENZO AVILA:</speaker> 
+      <p>
+        Lots, the community workers did lots and lots of translating, did lots of explaining to the farm-workers, and many people at that level—cannery workers, not so well-educated people—how to fill out forms. Many times simple business that didn't require a lawyer was beyond these folks because of the English, or because of the, jargon of agency forms, and community workers could often solve many, many problems by simply encouraging people, giving them a little time, a little literacy training, and things like that.
+      </p> 
+    </sp>
+  </div2>
+  
+  <div2 type="question" n="19" data-timecodebegin="00:00:18:06" data-timecodeend="00:00:18:55">
+    <head>QUESTION 19</head> 
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        You told us there was some tension, sometimes, between the community workers and the lawyers. Could you tell us about that?
+      </p>
+    </sp>
+    <sp>
+        <speaker n="interviewee">LORENZO AVILA:</speaker> 
+      <p>
+        There were lots of tensions between community workers and lawyers because, the farm-work problems had been so long-standing. There was, some resistance, in some of the communities, to belief [sic] that any team, even, of, of good young lawyers could make a difference. Certain amount of cynicism, apathy, has to be overcome. Sometimes community leaders, actually, didn't want someone to come in and take their turf, or be the leaders too much, displacing them. So, attorneys needed, in order to fit in and do a good job, they needed to learn the local community structure, and the community workers had to help them see this.
+      </p> 
+    </sp>
+  </div2>
+  
+  <div2 type="question" n="20" data-timecodebegin="00:00:18:56" data-timecodeend="00:00:19:30">
+    <head>QUESTION 20</head> 
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        Was there some, sometimes some sort of class tension between the lawyers and the community workers?
+      </p>
+    </sp>
+    <sp>
+        <speaker n="interviewee">LORENZO AVILA:</speaker> 
+      <p>
+        Well, class and status connection, conflict, existed a lot between community workers and lawyers, and that's one of the reasons why Mickey Bennett and Jim Lorenz and other early CRLA administrators tried to change the community workers' situation by giving—
+      </p> 
+    </sp>
+    <incident>
+      <desc>
+        [camera cuts]
+      </desc>
+    </incident>
+    <sp>
+      <speaker n="interviewee">LORENZO AVILA:</speaker> 
+      <p>
+        —them, kind of a union of their own, giving them a part of the program that was not a lawyer's part.
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        OK, we're going to have to hold off here.
+      </p>
+    </sp>
+    <p>
+      [production discussion]
+    </p>
+    <incident>
+      <desc>
+        [cut]
+      </desc>
+    </incident>
+  </div2>
+  <div2 type="question" n="21" data-timecodebegin="00:00:19:31" data-timecodeend="00:00:20:44">
+    <head>QUESTION 21</head> 
+    <incident>
+      <desc>
+        [slate marker visible on screen]
+      </desc>
+    </incident>
+    <incident>
+      <desc>
+        [changing to camera roll 404:21]
+      </desc>
+    </incident>
+    <incident>
+      <desc>
+        [sound roll 404:10]
+      </desc>
+    </incident>
+<speaker n="interviewer">INTERVIEWER:</speaker> 
+      <sp>
+      <p>
+        OK. 
+      </p>
+    </sp>
+    <sp>
+        <speaker n="interviewee">LORENZO AVILA:</speaker> 
+      <p>
+        One thing that the community workers did which was indispensable for the lawyers in the CRLA program, was, often to aid the young attorneys get acclimatized to a community [sic]. I think that Gilroy office stood out in this way. A little dusty town with not much happening except farm-work, and lot [sic] of old-time Mexican-American leaders. One of them, a guy who said he'd ridden with Pancho Villa, Antonio del Buono—Italian last name, but very Mexican guy, an old, very formal, very loveable guy—he was a community worker, and I think he was sort of a grandfather image to many of these lawyers, and certainly was an able public speaker and leader in the Gilroy community, so he made things very much easier. He would take them around, introduce them, These are my boys, and, and it got off to a very good start there. Others [sic] offices were different. They had many more attorneys with their own strong views, and because of their case agenda, sometimes they would look for little bits of information. This was a very, valid approach, but it's not the same as going into the community, learning the issues, and letting something rise from the grassroots.
+      </p> 
+    </sp>
+  </div2>
+ 
+  <div2 type="question" n="22" data-timecodebegin="00:00:20:45" data-timecodeend="00:00:22:43"> 
+    <head>QUESTION 22</head> 
+    <sp>
+<speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        And yet sometimes there were tensions. You mentioned [Miles? Pineida]. Could you represent some, what that tension was about? 
+      </p>
+    </sp>
+    <sp>
+        <speaker n="interviewee">LORENZO AVILA:</speaker> 
+      <p>
+        The community workers felt that the spotlight was always on the attorneys. The attorneys were filing these important briefs, going on camera at the local news, and such, and they didn't see the credit going—they didn't have, maybe, in all cases, the vision of the attorneys of how to use publicity, and how this is part of the whole necessary change. Sometimes the community workers wanted a greater sense of solidarity among each other, and there was only one or two in any one CRLA office. Naturally attorneys confer a lot. Well, the community workers wanted to confer a lot, and generate their own consciousness base and their own power base. And this was something that developed over time. 
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        OK. Could you- let's cut.   
+      </p>
+    </sp>
+    <incident>
+      <desc>
+        [cut]
+      </desc>
+    </incident>
+  </div2>
+  
+  <div2 type="question" n="23" data-timecodebegin="00:00:22:44" data-timecodeend="00:00:26:24">
+    <head>QUESTION 23</head> 
+    <incident>
+      <desc>
+        [slate marker visible on screen]
+      </desc>
+    </incident>
+    <sp>
+        <speaker n="interviewee">LORENZO AVILA:</speaker> 
+      <p>
+        When I was first, working with CRLA—I was not a CRLA employee—I didn't know much about the relationship between the Farm-Workers Organizing Committee and CRLA, didn't really know—they were two new entities anyway. The following year, when I was working for CRLA, I learned that we were to be very careful about contacting Cesar's people, and generally didn't. We were very careful not to be involved with that, because there were a lot of people around California watching us like hawks, to try to violate, try to detect CRLA violating the conditions of its anti-poverty funding. So, in '67, '69, I don't think there was much contact between those two groups, certainly not between the leaders. There were some people, like Mark Day, who worked vigorously for both.
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        OK, great. Let's cut please.
+      </p>
+    </sp>
+    <incident>
+      <desc>
+        [cut]
+      </desc>
+    </incident>
+    <incident>
+      <desc>
+        [slate marker visible on screen]
+      </desc>
+    </incident>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        -appeal to you about CRLA's approach-     
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewee">LORENZO AVILA:</speaker> 
+      <p>
+        A lot. Yeah.
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        OK.
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewee">LORENZO AVILA:</speaker> 
+      <p>
+        I learned from CRLA a lot of what I had not previously learned about, just plain good governance and democracy, because the theme emphasized so much in CRLA is, give these farm-workers a stake through informed consent, through knowledge of what is the law, and what it, it not only should be, but it is. And since literacy was a problem, since education's a problem, whether the law was proposed or real made very little difference to most workers. And therefore, to even tell them, you have rights, you don't have to change anything to have these rights—this was, this was big news to a lot of farm-worker advocates—lot of, sort of, self-appointed social workers, like myself, and it made for a burst of energy which, I think, is still with us, I hope so, in many ways, about trying to make the system work.
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        OK, cut.
+      </p>
+    </sp>
+    <incident>
+      <desc>
+        [cut]
+      </desc>
+    </incident>
+    <incident>
+      <desc>
+        [slate marker visible on screen]
+      </desc>
+    </incident>
+    <sp>
+      <speaker n="interviewee">LORENZO AVILA:</speaker> 
+      <p>
+        I met up with CRLA first in Stockton, California, where I was a, kind of a, just-out-of-seminary assistant pastor in St. Mary's parish. St. Mary's had a large part of southern Stockton, a lot of poor people, and a lot of the outlying area in parish [sic], especially out in the farming areas, where Mexican workers lived in little settlements, in barracks and so forth. And they were located in hard-to-find places, and so we had at the St. Mary's rectory, a card-file of how to get to these various places to have Mass for the workers. And Father Mark Day and I would do the circuit of places and have services, and, and, do what we could to help on quick visits. I was introduced to CRLA through some other, I think anti-poverty type people, and gave them a look at this card-file, and they were really quite delighted, and then they took copies of much of it, and then I didn't hear from them for some time. But a few months later, the first of the bracero investigations took place, and we were very active.
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        OK, cut.      
+      </p>
+    </sp>
+  </div2>
+  <p>
+    [end of interview]
+  </p>
+  <p>
+    Copyright 2014 Washington University Libraries
+  </p>
+</div1>
+</body>
+</text>
+</TEI>
+
+
+
+
+
