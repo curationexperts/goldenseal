@@ -13,6 +13,12 @@ class ApplicationController < ActionController::Base
   with_themed_layout '1_column'
 
 
+  # FIXME: move to curation_concerns#325
+  rescue_from ActiveFedora::ObjectNotFoundError do |_exception|
+    render file: "#{Rails.root}/public/404.html", format: :html, status: :not_found, layout: false
+  end
+
+
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
