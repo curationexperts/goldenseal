@@ -61,7 +61,6 @@ class CatalogController < ApplicationController
     config.add_index_field 'rights_label_ss', label: 'Content License'
     config.add_index_field solr_name('human_readable_type', :stored_searchable)
     config.add_index_field solr_name('format', :stored_searchable)
-    config.add_index_field solr_name('identifier', :stored_searchable)
 
     # "fielded" search configuration. Used by pulldown among other places.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields

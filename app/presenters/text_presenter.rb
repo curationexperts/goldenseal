@@ -1,4 +1,6 @@
 class TextPresenter < CurationConcerns::GenericWorkShowPresenter
+  include DisplayFields
+
   def tei?
     solr_document.key?(TextIndexer::TEI_JSON)
   end

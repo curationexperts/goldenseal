@@ -4,4 +4,8 @@
 class CurationConcerns::AudiosController < ApplicationController
   include CurationConcerns::CurationConcernController
   set_curation_concern_type Audio
+
+  def show_presenter
+    WorkShowPresenter
+  end
 end
