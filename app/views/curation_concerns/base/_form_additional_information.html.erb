@@ -1,15 +1,16 @@
 <fieldset class="optional prompt">
   <legend>Additional Information</legend>
-  <%= f.input :subject,           as: :multi_value, input_html: { class: 'form-control' } %>
-  <%= f.input :publisher,         as: :multi_value, input_html: { class: 'form-control' } %>
-  <%= f.input :editor,            as: :multi_value, input_html: { class: 'form-control' } %>
-  <%= f.input :sponsor,           as: :multi_value, input_html: { class: 'form-control' } %>
-  <%= f.input :funder,            as: :multi_value, input_html: { class: 'form-control' } %>
-  <%= f.input :researcher,        as: :multi_value, input_html: { class: 'form-control' } %>
-  <%= f.input :source,            as: :multi_value, input_html: { class: 'form-control' } %>
-  <%= f.input :language,          as: :multi_value, input_html: { class: 'form-control' } %>
-  <%= f.input :identifier,        as: :multi_value, input_html: { class: 'form-control' } %>
-  <%= f.input :note,              as: :multi_value, input_html: { class: 'form-control' } %>
-  <%= f.input :publication_place, as: :multi_value, input_html: { class: 'form-control' } %>
+  <%= f.input :subject,              as: :multi_value, input_html: { class: 'form-control' } %>
+  <%= f.input :publisher,            as: :multi_value, input_html: { class: 'form-control' } %>
+  <%= f.input :editor,               as: :multi_value, input_html: { class: 'form-control' } %>
+  <%= f.input :sponsor,              as: :multi_value, input_html: { class: 'form-control' } %>
+  <%= f.input :funder,               as: :multi_value, input_html: { class: 'form-control' } %>
+  <%= f.input :researcher,           as: :multi_value, input_html: { class: 'form-control' } %>
+  <%= f.input :source,               as: :multi_value, input_html: { class: 'form-control' } %>
+  <%= f.input :language,             as: :multi_value, input_html: { class: 'form-control' } %>
+  <%= f.input :identifier,           as: :multi_value, input_html: { class: 'form-control' } %>
+  <%= f.input :note,                 as: :multi_value, input_html: { class: 'form-control' } %>
+  <%= f.input :description_standard, as: :multi_value, input_html: { class: 'form-control' } %>
+  <%= f.input :publication_place,    as: :multi_value, input_html: { class: 'form-control' } %>
   <%= f.input :date_issued, wrapper: :inline, input_html: { value: f.object.date_issued, class: 'datepicker' } %>
 </fieldset>

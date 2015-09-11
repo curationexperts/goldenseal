@@ -15,6 +15,10 @@ module DisplayFields
     solr_document['note_tesim']
   end
 
+  def description_standard
+    solr_document['description_standard_ssim']
+  end
+
   def publication_place
     solr_document['publication_place_tesim']
   end

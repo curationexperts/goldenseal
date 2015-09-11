@@ -15,6 +15,10 @@ module Metadata
       index.as :stored_searchable
     end
 
+    property :description_standard, predicate: ::RDF::Vocab::MODS.recordDescriptionStandard do |index|
+      index.as :symbol
+    end
+
     property :editor, predicate: ::RDF::Vocab::MARCRelators.edt do |index|
       index.as :stored_searchable
     end
