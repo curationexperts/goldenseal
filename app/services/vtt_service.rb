@@ -2,7 +2,7 @@ module VTTService
   # Convert a TEI transcript into WebVTT
   # @param [String] tei_xml the TEI to be converted
   def self.create(tei_xml)
-    stylesheet.transform(Nokogiri::XML(tei_xml)).to_s
+    stylesheet.apply_to(Nokogiri::XML(tei_xml)).to_s
   end
 
   def self.stylesheet
