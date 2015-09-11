@@ -6,6 +6,10 @@ module Metadata
       index.type :date
       index.as :stored_sortable
     end
+
+    property :note, predicate: ::RDF::Vocab::MODS.note do |index|
+      index.as :stored_searchable
+    end
   end
 
 end

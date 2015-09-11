@@ -11,4 +11,8 @@ module DisplayFields
     solr_document['date_issued_dtsi']
   end
 
+  def note
+    solr_document['note_tesim']
+  end
+
 end
