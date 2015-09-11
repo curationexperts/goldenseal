@@ -10,5 +10,5 @@ describe VTTService do
        "\n" \
        "\n" \
        "00:00:33.000 --> 00:06:01.000\n" \
-       "<v INTERVIEWER:>All right Mr. Addonizio." }
+       "<v INTERVIEWER:> All right Mr. Addonizio." }
 end
