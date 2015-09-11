@@ -22,7 +22,7 @@ lang: en
 <xsl:apply-templates />
   </xsl:template>
 
-  <xsl:template match="tei:sp/tei:speaker">&lt;v <xsl:value-of select="text()"/>&gt;</xsl:template>
+  <xsl:template match="tei:sp/tei:speaker">&lt;v <xsl:value-of select="text()"/>&gt; </xsl:template>
 
   <xsl:template match="tei:sp/tei:p">
       <xsl:call-template name="string-trim">
