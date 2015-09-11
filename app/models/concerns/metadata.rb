@@ -10,6 +10,10 @@ module Metadata
     property :note, predicate: ::RDF::Vocab::MODS.note do |index|
       index.as :stored_searchable
     end
+
+    property :publication_place, predicate: ::RDF::Vocab::MARCRelators.pup do |index|
+      index.as :stored_searchable
+    end
   end
 
 end

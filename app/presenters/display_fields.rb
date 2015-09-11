@@ -15,4 +15,8 @@ module DisplayFields
     solr_document['note_tesim']
   end
 
+  def publication_place
+    solr_document['publication_place_tesim']
+  end
+
 end
