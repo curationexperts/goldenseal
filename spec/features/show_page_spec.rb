@@ -6,6 +6,7 @@ describe 'Visit the show page for a record:' do
                  extent: ['25 pages'],
                  date_issued: DateTime.parse('2015-01-02'),
                  identifier: ['ident 123'],
+                 series: ['ser AAA'],
                  publication_place: ['NYC'],
                  editor: ['editor'],
                  sponsor: ['Company XYZ'],
@@ -23,6 +24,7 @@ describe 'Visit the show page for a record:' do
     expect(page).to have_content(attrs[:note].first)
     expect(page).to have_content('2015-01-02')
     expect(page).to have_content(attrs[:identifier].first)
+    expect(page).to have_content(attrs[:series].first)
     expect(page).to have_content(attrs[:publication_place].first)
     expect(page).to have_content(attrs[:editor].first)
     expect(page).to have_content(attrs[:sponsor].first)

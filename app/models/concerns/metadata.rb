@@ -11,6 +11,10 @@ module Metadata
       index.as :symbol
     end
 
+    property :series, predicate: ::RDF::URI('http://opaquenamespace.org/ns/seriesName') do |index|
+      index.as :symbol
+    end
+
     property :note, predicate: ::RDF::Vocab::MODS.note do |index|
       index.as :stored_searchable
     end

@@ -7,6 +7,10 @@ module DisplayFields
     solr_document['identifier_tesim']
   end
 
+  def series
+    solr_document['series_ssim']
+  end
+
   def date_issued
     solr_document['date_issued_dtsi']
   end
