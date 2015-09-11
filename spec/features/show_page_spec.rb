@@ -8,6 +8,7 @@ describe 'Visit the show page for a record:' do
                  publication_place: ['NYC'],
                  editor: ['editor'],
                  sponsor: ['Company XYZ'],
+                 funder: ['Fund Person 1'],
   }}
 
   let(:image) { create(:image, :public, attrs) }
@@ -22,5 +23,6 @@ describe 'Visit the show page for a record:' do
     expect(page).to have_content(attrs[:publication_place].first)
     expect(page).to have_content(attrs[:editor].first)
     expect(page).to have_content(attrs[:sponsor].first)
+    expect(page).to have_content(attrs[:funder].first)
   end
 end

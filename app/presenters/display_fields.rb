@@ -27,4 +27,8 @@ module DisplayFields
     solr_document['sponsor_tesim']
   end
 
+  def funder
+    solr_document['funder_tesim']
+  end
+
 end
