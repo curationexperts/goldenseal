@@ -14,14 +14,12 @@ describe 'Searching the catalog:' do
     let!(:blue_contrib) { create(:image, :public, non_blue_fields.merge(contributor: ['John Blue'])) }
     let!(:blue_desc) { create(:image, :public, non_blue_fields.merge(description: ['yellow and blue make green'])) }
     let!(:blue_id) { create(:image, :public, non_blue_fields.merge(id: 'blue')) }
+    let!(:blue_sub) { create(:image, :public, non_blue_fields.merge(subject: ['blue'])) }
 
     it 'the search results show all the matches' do
-      # Make sure test is set up correctly
-      expect(Image.count).to eq 5
-
       # Catalog page should show all objects
       visit catalog_index_path
-      expect(page).to have_selector('#documents .document', count: 5)
+      expect(page).to have_selector('#documents .document', count: 6)
 
       # Search for "blue"
       fill_in 'q', with: 'blue'
@@ -35,8 +33,9 @@ describe 'Searching the catalog:' do
       expect(page).to have_link(blue_contrib.title.first, href: curation_concerns_image_path(blue_contrib))
       expect(page).to have_link(blue_desc.title.first, href: curation_concerns_image_path(blue_desc))
       expect(page).to have_link(blue_id.title.first, href: curation_concerns_image_path(blue_id))
+      expect(page).to have_link(blue_sub.title.first, href: curation_concerns_image_path(blue_sub))
 
-      expect(page).to have_selector('#documents .document', count: 4)
+      expect(page).to have_selector('#documents .document', count: 5)
     end
   end
 

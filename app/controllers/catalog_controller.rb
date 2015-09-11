@@ -5,6 +5,7 @@ class CatalogController < ApplicationController
     super.merge('qf' => %w( title_tesim
                             contributor_tesim
                             description_tesim
+                            subject_tesim
                             id ))
   end
 
