@@ -19,4 +19,8 @@ module DisplayFields
     solr_document['publication_place_tesim']
   end
 
+  def editor
+    solr_document['editor_tesim']
+  end
+
 end

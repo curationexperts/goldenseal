@@ -14,6 +14,10 @@ module Metadata
     property :publication_place, predicate: ::RDF::Vocab::MARCRelators.pup do |index|
       index.as :stored_searchable
     end
+
+    property :editor, predicate: ::RDF::Vocab::MARCRelators.edt do |index|
+      index.as :stored_searchable
+    end
   end
 
 end
