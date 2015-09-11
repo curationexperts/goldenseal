@@ -9,6 +9,7 @@ describe 'Visit the show page for a record:' do
                  editor: ['editor'],
                  sponsor: ['Company XYZ'],
                  funder: ['Fund Person 1'],
+                 researcher: ['Some research team'],
   }}
 
   let(:image) { create(:image, :public, attrs) }
@@ -24,5 +25,6 @@ describe 'Visit the show page for a record:' do
     expect(page).to have_content(attrs[:editor].first)
     expect(page).to have_content(attrs[:sponsor].first)
     expect(page).to have_content(attrs[:funder].first)
+    expect(page).to have_content(attrs[:researcher].first)
   end
 end

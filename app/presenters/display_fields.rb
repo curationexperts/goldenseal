@@ -31,4 +31,7 @@ module DisplayFields
     solr_document['funder_tesim']
   end
 
+  def researcher
+    solr_document['researcher_tesim']
+  end
 end

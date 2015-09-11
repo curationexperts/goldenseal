@@ -26,6 +26,10 @@ module Metadata
     property :funder, predicate: ::RDF::Vocab::MARCRelators.fnd do |index|
       index.as :stored_searchable
     end
+
+    property :researcher, predicate: ::RDF::Vocab::MARCRelators.res do |index|
+      index.as :stored_searchable
+    end
   end
 
 end
