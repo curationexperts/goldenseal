@@ -18,6 +18,10 @@ module Metadata
     property :editor, predicate: ::RDF::Vocab::MARCRelators.edt do |index|
       index.as :stored_searchable
     end
+
+    property :sponsor, predicate: ::RDF::Vocab::MARCRelators.spn do |index|
+      index.as :stored_searchable
+    end
   end
 
 end

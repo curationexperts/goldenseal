@@ -23,4 +23,8 @@ module DisplayFields
     solr_document['editor_tesim']
   end
 
+  def sponsor
+    solr_document['sponsor_tesim']
+  end
+
 end

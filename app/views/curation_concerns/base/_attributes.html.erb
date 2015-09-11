@@ -8,7 +8,8 @@
     <%= @presenter.attribute_to_html(:subject, catalog_search_link: true) %>
     <%= @presenter.attribute_to_html(:creator, catalog_search_link: true ) %>
     <%= @presenter.attribute_to_html(:contributor, label: 'Contributors', catalog_search_link: true) %>
-    <%= @presenter.attribute_to_html(:editor, label: 'Editor') %>
+    <%= @presenter.attribute_to_html(:editor) %>
+    <%= @presenter.attribute_to_html(:sponsor) %>
     <%= @presenter.attribute_to_html(:publisher) %>
     <%= @presenter.attribute_to_html(:language) %>
     <%= @presenter.attribute_to_html(:identifier) %>
