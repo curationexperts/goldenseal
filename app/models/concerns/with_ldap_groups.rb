@@ -20,6 +20,21 @@ module WithLdapGroups
     end
   end
 
+  # we're overriding the method provided by devise-ldap in order to
+  # query 'group' instead of 'uniqueMember'
+  # see https://github.com/cschiewek/devise_ldap_authenticatable/issues/189
+  def ldap_groups
+    connection = Devise::LDAP::Adapter.ldap_connect(login_with)
+    admin_ldap = Devise::LDAP::Connection.admin
+    dn = connection.dn
+
+    DeviseLdapAuthenticatable::Logger.send("MY uniq Getting groups for #{dn}")
+    filter = Net::LDAP::Filter.eq("member", dn)
+
+    group_base = connection.instance_variable_get(:@group_base)
+    admin_ldap.search(filter: filter, base: group_base).collect(&:dn)
+  end
+
   private
 
     def cached_groups(&block)
