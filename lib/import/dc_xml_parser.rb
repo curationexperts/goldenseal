@@ -1,6 +1,8 @@
 module Import
   class DcXmlParser
 
+    # Parse XML files that were exported from DLXS to find the Dublin Core metadata.
+
     NAMESPACES = {
       'dc' => "http://purl.org/dc/elements/1.1/",
       'oai_dc' => "http://www.openarchives.org/OAI/2.0/oai_dc/"
