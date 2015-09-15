@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" ?> 
-<TEI xml:id="avi14885.00654.023" xmlns="http://www.tei-c.org/ns/1.0">  
+<?xml version="1.0" encoding="UTF-8" ?>
+<TEI xml:id="avi14885.00654.023" xmlns="http://www.tei-c.org/ns/1.0">
 <!--  HEADER 
   --> 
 <teiHeader>
@@ -336,7 +336,7 @@ Interviewer:
   </incident>
   </div2>
 
-  <div2 type="question" n="1" data-timecodebegin="00:00:00:34" data-timecodeend="00:00:02:35">
+  <div2 type="question" n="1" data-timecodebegin="00:00:34:00" data-timecodeend="00:02:35:00">
   <head>QUESTION 1</head> 
   
   <sp>
@@ -389,7 +389,7 @@ Interviewer:
     </incident>
 </div2>
  
-  <div2 type="question" n="2" data-timecodebegin="00:00:02:36" data-timecodeend="00:00:03:27">
+  <div2 type="question" n="2" data-timecodebegin="00:02:36:00" data-timecodeend="00:03:27:00">
 <head>QUESTION 2</head> 
     <incident>
       <desc>
@@ -414,7 +414,7 @@ Interviewer:
       </desc>
     </incident>
 </div2>    
-  <div2 type="question" n="3" data-timecodebegin="00:00:03:28" data-timecodeend="00:00:04:19">  
+  <div2 type="question" n="3" data-timecodebegin="00:03:28:00" data-timecodeend="00:04:19:00">  
   <head>QUESTION 3</head> 
    <incident>
      <desc>
@@ -439,7 +439,7 @@ Interviewer:
       </desc>
     </incident>
   </div2>
-  <div2 type="question" n="5" data-timecodebegin="00:00:04:20" data-timecodeend="00:00:04:45">
+  <div2 type="question" n="5" data-timecodebegin="00:04:20:00" data-timecodeend="00:04:45:00">
   <head>QUESTION 5</head>   
     <incident>
       <desc>
@@ -459,7 +459,7 @@ Interviewer:
   </p> 
   </sp>
   </div2>
-  <div2 type="question" n="6" data-timecodebegin="00:00:04:46" data-timecodeend="00:00:05:39">
+  <div2 type="question" n="6" data-timecodebegin="00:04:46:00" data-timecodeend="00:05:39:00">
     <head>QUESTION 6</head> 
     <sp>
       <speaker n="interviewer">INTERVIEWER:</speaker> 
@@ -528,7 +528,7 @@ Interviewer:
     </incident>
   </div2>
   
-  <div2 type="question" n="7" data-timecodebegin="00:00:05:40" data-timecodeend="00:00:06:57">
+  <div2 type="question" n="7" data-timecodebegin="00:05:40:00" data-timecodeend="00:06:57:00">
     <head>QUESTION 7</head> 
     <incident>
       <desc>
@@ -549,7 +549,7 @@ Interviewer:
     </sp>
   </div2>
 
-  <div2 type="question" n="8" data-timecodebegin="00:00:06:58" data-timecodeend="00:00:08:29">
+  <div2 type="question" n="8" data-timecodebegin="00:06:58:00" data-timecodeend="00:08:29:00">
     <head>QUESTION 8</head> 
     <sp>
       <speaker n="interviewer">INTERVIEWER:</speaker> 
@@ -632,7 +632,7 @@ Interviewer:
     </incident>
   </div2>
  
-  <div2 type="question" n="9" data-timecodebegin="00:00:08:30" data-timecodeend="00:00:09:48">
+  <div2 type="question" n="9" data-timecodebegin="00:08:30:00" data-timecodeend="00:09:48:00">
     <head>QUESTION 9</head> 
     <incident>
       <desc>
@@ -688,7 +688,7 @@ Interviewer:
     </sp>
   </div2>
   
-  <div2 type="question" n="10" data-timecodebegin="00:00:09:49" data-timecodeend="00:00:11:18">
+  <div2 type="question" n="10" data-timecodebegin="00:09:49:00" data-timecodeend="00:11:18:00">
     <head>QUESTION 10</head> 
     <sp>
       <speaker n="interviewer">INTERVIEWER:</speaker> 
@@ -728,7 +728,7 @@ Interviewer:
     </sp>
   </div2>
 
-  <div2 type="question" n="11" data-timecodebegin="00:00:11:19" data-timecodeend="00:00:12:32">
+  <div2 type="question" n="11" data-timecodebegin="00:11:19:00" data-timecodeend="00:12:32:00">
     <head>QUESTION 11</head> 
     <sp>
       <speaker n="interviewer">INTERVIEWER:</speaker> 
@@ -771,7 +771,7 @@ Interviewer:
     </incident>
   </div2>
 
-  <div2 type="question" n="12" data-timecodebegin="00:00:12:33" data-timecodeend="00:00:14:18">
+  <div2 type="question" n="12" data-timecodebegin="00:12:33:00" data-timecodeend="00:14:18:00">
     <head>QUESTION 12</head> 
     <incident>
       <desc>
@@ -816,7 +816,7 @@ Interviewer:
     </sp>
   </div2>
 
-  <div2 type="question" n="13" data-timecodebegin="00:00:14:19" data-timecodeend="00:00:15:11">
+  <div2 type="question" n="13" data-timecodebegin="00:14:19:00" data-timecodeend="00:15:11:00">
     <head>QUESTION 13</head> 
     <sp>
       <speaker n="interviewer">INTERVIEWER:</speaker> 
@@ -832,7 +832,7 @@ Interviewer:
     </sp>
   </div2>
  
-  <div2 type="question" n="14" data-timecodebegin="00:00:15:12" data-timecodeend="00:00:15:49"> 
+  <div2 type="question" n="14" data-timecodebegin="00:15:12:00" data-timecodeend="00:15:49:00"> 
     <head>QUESTION 14</head> 
     <sp>
       <speaker n="interviewer">INTERVIEWER:</speaker> 
@@ -848,7 +848,7 @@ Interviewer:
     </sp>
   </div2>
   
-  <div2 type="question" n="15" data-timecodebegin="00:00:15:50" data-timecodeend="00:00:16:00">
+  <div2 type="question" n="15" data-timecodebegin="00:15:50:00" data-timecodeend="00:16:00:00">
     <head>QUESTION 15</head> 
     <sp>
       <speaker n="interviewer">INTERVIEWER:</speaker> 
@@ -875,7 +875,7 @@ Interviewer:
     </incident>
   </div2>
   
-  <div2 type="question" n="16" data-timecodebegin="00:00:16:01" data-timecodeend="00:00:16:36">
+  <div2 type="question" n="16" data-timecodebegin="00:16:01:00" data-timecodeend="00:16:36:00">
     <head>QUESTION 16</head> 
     <incident>
       <desc>
@@ -896,7 +896,7 @@ Interviewer:
     </sp>
   </div2>
   
-  <div2 type="question" n="17" data-timecodebegin="00:00:16:37" data-timecodeend="00:00:17:28">
+  <div2 type="question" n="17" data-timecodebegin="00:16:37:00" data-timecodeend="00:17:28:00">
     <head>QUESTION 17</head> 
     <sp>
       <speaker n="interviewer">INTERVIEWER:</speaker> 
@@ -912,7 +912,7 @@ Interviewer:
     </sp>
   </div2>
  
-  <div2 type="question" n="18" data-timecodebegin="00:00:17:29" data-timecodeend="00:00:18:05"> 
+  <div2 type="question" n="18" data-timecodebegin="00:17:29:00" data-timecodeend="00:18:05:00"> 
     <head>QUESTION 18</head> 
     <sp>
       <speaker n="interviewer">INTERVIEWER:</speaker> 
@@ -928,7 +928,7 @@ Interviewer:
     </sp>
   </div2>
   
-  <div2 type="question" n="19" data-timecodebegin="00:00:18:06" data-timecodeend="00:00:18:55">
+  <div2 type="question" n="19" data-timecodebegin="00:18:06:00" data-timecodeend="00:18:55:00">
     <head>QUESTION 19</head> 
     <sp>
       <speaker n="interviewer">INTERVIEWER:</speaker> 
@@ -944,7 +944,7 @@ Interviewer:
     </sp>
   </div2>
   
-  <div2 type="question" n="20" data-timecodebegin="00:00:18:56" data-timecodeend="00:00:19:30">
+  <div2 type="question" n="20" data-timecodebegin="00:18:56:00" data-timecodeend="00:19:30:00">
     <head>QUESTION 20</head> 
     <sp>
       <speaker n="interviewer">INTERVIEWER:</speaker> 
@@ -984,7 +984,7 @@ Interviewer:
       </desc>
     </incident>
   </div2>
-  <div2 type="question" n="21" data-timecodebegin="00:00:19:31" data-timecodeend="00:00:20:44">
+  <div2 type="question" n="21" data-timecodebegin="00:19:31:00" data-timecodeend="00:20:44:00">
     <head>QUESTION 21</head> 
     <incident>
       <desc>
@@ -1015,7 +1015,7 @@ Interviewer:
     </sp>
   </div2>
  
-  <div2 type="question" n="22" data-timecodebegin="00:00:20:45" data-timecodeend="00:00:22:43"> 
+  <div2 type="question" n="22" data-timecodebegin="00:20:45:00" data-timecodeend="00:22:43:00"> 
     <head>QUESTION 22</head> 
     <sp>
 <speaker n="interviewer">INTERVIEWER:</speaker> 
@@ -1042,7 +1042,7 @@ Interviewer:
     </incident>
   </div2>
   
-  <div2 type="question" n="23" data-timecodebegin="00:00:22:44" data-timecodeend="00:00:26:24">
+  <div2 type="question" n="23" data-timecodebegin="00:22:44:00" data-timecodeend="00:26:24:00">
     <head>QUESTION 23</head> 
     <incident>
       <desc>

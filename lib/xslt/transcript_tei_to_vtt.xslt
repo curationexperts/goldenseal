@@ -18,7 +18,7 @@ lang: en
     <xsl:text>
 
 </xsl:text>
-    <xsl:value-of select="substring(./@data-timecodebegin, 4)" />.000 --&gt; <xsl:value-of select="substring(./@data-timecodeend, 4)" />.000
+    <xsl:value-of select="substring(./@data-timecodebegin, 0, 9)" />.000 --&gt; <xsl:value-of select="substring(./@data-timecodeend, 0, 9)" />.000
 <xsl:apply-templates />
   </xsl:template>
 
