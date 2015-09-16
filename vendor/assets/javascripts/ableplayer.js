@@ -26,7 +26,7 @@
 "use strict";
 
 (function ($) {
-  $(document).ready(function () {
+  Blacklight.onLoad(function () {
     $('video, audio').each(function (index, element) {
       if ($(element).data('able-player') !== undefined) {
         new AblePlayer($(this),$(element));
@@ -203,7 +203,6 @@
     var thisObj = this;
     $.when(this.getTranslationText()).then(
       function () { 
-        console.log("Promise returned");
         if (thisObj.countProperties(thisObj.tt) > 50) { 
           // close enough to ensure that most text variables are populated 
           thisObj.setup();

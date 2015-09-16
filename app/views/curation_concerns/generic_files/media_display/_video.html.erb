@@ -1,5 +1,5 @@
   <div id="player" class="col-md-6">
-    <video width="480" height="360" preload="auto"  data-able-player data-transcript-div="transcript" data-use-transcript-button="false" data-debug="true" data-translation-path="/" data-include-transcript="true">
+    <video width="480" height="360" preload="auto"  data-able-player data-transcript-div="transcript" data-use-transcript-button="false" data-translation-path="/" data-include-transcript="true">
       <source src="<%= main_app.download_path(generic_file, file: 'webm') %>" type="video/webm" />
       <source src="<%= main_app.download_path(generic_file, file: 'mp4') %>" type="video/mp4" />
       <% if defined? transcript_id %>
