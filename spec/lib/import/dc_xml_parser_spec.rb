@@ -4,7 +4,7 @@ require 'import'
 describe Import::DcXmlParser do
   let(:lew_file) { File.join(fixture_path, 'dlxs', 'short-lew-dc.xml') }
 
-  describe 'inititialize' do
+  describe 'initialize' do
     subject { described_class.new(lew_file) }
 
     it 'sets the file' do

@@ -1,5 +1,8 @@
 module Import
   extend ActiveSupport::Autoload
-  autoload :Importer
+  autoload :FileWithName
   autoload :DcXmlParser
+  autoload :TextTeiParser
+  autoload :Importer
+  autoload :TextImporter
 end
