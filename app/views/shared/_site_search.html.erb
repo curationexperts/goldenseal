@@ -1,0 +1,17 @@
+<%= form_tag main_app.catalog_index_path, method: :get, class: "navbar-form" do %>
+  <fieldset>
+    <legend class="accessible-hidden">Search <%=t('curation_concerns.product_name')%></legend>
+
+    <label for="search_field" class="sr-only"><%= t('blacklight.search.form.search_field.label') %></label>
+    <%= select_tag(:search_field, options_for_select(search_fields, h(params[:search_field])), title: t('blacklight.search.form.search_field.title'), class: "search_field form-control") %>
+    <span class="sr-only"><%= t('blacklight.search.form.search_field.post_label') %></span>
+
+    <%= label_tag :catalog_search, t('curation_concerns.search.form.q.label'), :class => "accessible-hidden" %>
+    <%= render_hash_as_hidden_fields(params_for_search().except(:q, :search_field, :qt, :page, :utf8)) %>
+    <%= text_field_tag(:q, params[:q], class: "q search-query form-control", id: "catalog_search",
+                       placeholder: t('curation_concerns.search.form.q.placeholder'), tabindex: "1", type: "search") %>
+                      <button type="submit" class="search-submit btn btn-primary" id="keyword-search-submit" tabindex="2">
+      <i class="glyphicon glyphicon-search icon-white"></i><span class="accessible-hidden">Search</span>
+    </button>
+  </fieldset>
+<% end %>

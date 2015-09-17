@@ -89,6 +89,7 @@ class CatalogController < ApplicationController
     # creator, title, description, publisher, date_created,
     # subject, language, resource_type, format, identifier, based_near,
     config.add_search_field('contributor') do |field|
+      field.include_in_simple_select = false
       # solr_parameters hash are sent to Solr as ordinary url query params.
 
       # :solr_local_parameters will be sent using Solr LocalParams
@@ -96,14 +97,6 @@ class CatalogController < ApplicationController
       # Solr parameter de-referencing like $title_qf.
       # See: http://wiki.apache.org/solr/LocalParams
       solr_name = solr_name('contributor', :stored_searchable, type: :string)
-      field.solr_local_parameters = {
-        qf: solr_name,
-        pf: solr_name
-      }
-    end
-
-    config.add_search_field('creator') do |field|
-      solr_name = solr_name('creator', :stored_searchable, type: :string)
       field.solr_local_parameters = {
         qf: solr_name,
         pf: solr_name
@@ -118,8 +111,16 @@ class CatalogController < ApplicationController
       }
     end
 
+    config.add_search_field('creator') do |field|
+      solr_name = solr_name('creator', :stored_searchable, type: :string)
+      field.solr_local_parameters = {
+        qf: solr_name,
+        pf: solr_name
+      }
+    end
+
     config.add_search_field('description') do |field|
-      field.label = 'Abstract or Summary'
+      field.label = 'Description'
       solr_name = solr_name('description', :stored_searchable, type: :string)
       field.solr_local_parameters = {
         qf: solr_name,
@@ -128,6 +129,7 @@ class CatalogController < ApplicationController
     end
 
     config.add_search_field('publisher') do |field|
+      field.include_in_simple_select = false
       solr_name = solr_name('publisher', :stored_searchable, type: :string)
       field.solr_local_parameters = {
         qf: solr_name,
@@ -136,40 +138,8 @@ class CatalogController < ApplicationController
     end
 
     config.add_search_field('date_created') do |field|
+      field.include_in_simple_select = false
       solr_name = solr_name('created', :stored_searchable, type: :string)
-      field.solr_local_parameters = {
-        qf: solr_name,
-        pf: solr_name
-      }
-    end
-
-    config.add_search_field('subject') do |field|
-      solr_name = solr_name('subject', :stored_searchable, type: :string)
-      field.solr_local_parameters = {
-        qf: solr_name,
-        pf: solr_name
-      }
-    end
-
-    config.add_search_field('language') do |field|
-      solr_name = solr_name('language', :stored_searchable, type: :string)
-      field.solr_local_parameters = {
-        qf: solr_name,
-        pf: solr_name
-      }
-    end
-
-    config.add_search_field('human_readable_type') do |field|
-      solr_name = solr_name('human_readable_type', :stored_searchable, type: :string)
-      field.solr_local_parameters = {
-        qf: solr_name,
-        pf: solr_name
-      }
-    end
-
-    config.add_search_field('format') do |field|
-      field.include_in_advanced_search = false
-      solr_name = solr_name('format', :stored_searchable, type: :string)
       field.solr_local_parameters = {
         qf: solr_name,
         pf: solr_name
@@ -185,7 +155,44 @@ class CatalogController < ApplicationController
       }
     end
 
+    config.add_search_field('subject') do |field|
+      solr_name = solr_name('subject', :stored_searchable, type: :string)
+      field.solr_local_parameters = {
+        qf: solr_name,
+        pf: solr_name
+      }
+    end
+
+    config.add_search_field('language') do |field|
+      field.include_in_simple_select = false
+      solr_name = solr_name('language', :stored_searchable, type: :string)
+      field.solr_local_parameters = {
+        qf: solr_name,
+        pf: solr_name
+      }
+    end
+
+    config.add_search_field('human_readable_type') do |field|
+      field.include_in_simple_select = false
+      solr_name = solr_name('human_readable_type', :stored_searchable, type: :string)
+      field.solr_local_parameters = {
+        qf: solr_name,
+        pf: solr_name
+      }
+    end
+
+    config.add_search_field('format') do |field|
+      field.include_in_simple_select = false
+      field.include_in_advanced_search = false
+      solr_name = solr_name('format', :stored_searchable, type: :string)
+      field.solr_local_parameters = {
+        qf: solr_name,
+        pf: solr_name
+      }
+    end
+
     config.add_search_field('based_near') do |field|
+      field.include_in_simple_select = false
       field.label = 'Location'
       solr_name = solr_name('based_near', :stored_searchable, type: :string)
       field.solr_local_parameters = {
@@ -195,6 +202,7 @@ class CatalogController < ApplicationController
     end
 
     config.add_search_field('tag') do |field|
+      field.include_in_simple_select = false
       solr_name = solr_name('tag', :stored_searchable, type: :string)
       field.solr_local_parameters = {
         qf: solr_name,
@@ -203,6 +211,7 @@ class CatalogController < ApplicationController
     end
 
     config.add_search_field('depositor') do |field|
+      field.include_in_simple_select = false
       solr_name = solr_name('depositor', :stored_searchable, type: :string)
       field.solr_local_parameters = {
         qf: solr_name,
@@ -211,6 +220,7 @@ class CatalogController < ApplicationController
     end
 
     config.add_search_field('rights') do |field|
+      field.include_in_simple_select = false
       solr_name = solr_name('rights', :stored_searchable, type: :string)
       field.solr_local_parameters = {
         qf: solr_name,
