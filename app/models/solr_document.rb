@@ -1,28 +1,66 @@
 # -*- encoding : utf-8 -*-
-class SolrDocument 
+class SolrDocument
 
   include Blacklight::Solr::Document
   # Adds CurationConcerns behaviors to the SolrDocument.
   include CurationConcerns::SolrDocumentBehavior
-
-
-  # self.unique_key = 'id'
-  
-  # Email uses the semantic field mappings below to generate the body of an email.
-  SolrDocument.use_extension( Blacklight::Document::Email )
-  
-  # SMS uses the semantic field mappings below to generate the body of an SMS email.
-  SolrDocument.use_extension( Blacklight::Document::Sms )
-
-  # DublinCore uses the semantic field mappings below to assemble an OAI-compliant Dublin Core document
-  # Semantic mappings of solr stored fields. Fields may be multi or
-  # single valued. See Blacklight::Document::SemanticFields#field_semantics
-  # and Blacklight::Document::SemanticFields#to_semantic_values
-  # Recommendation: Use field names from Dublin Core
-  use_extension( Blacklight::Document::DublinCore)    
-
-
-  # Do content negotiation for AF models. 
+  # Do content negotiation for AF models.
 
   use_extension( Hydra::ContentNegotiation )
+
+  def height
+    self['height_is']
+  end
+
+  def width
+    self['width_is']
+  end
+
+  def identifier
+    self['identifier_tesim']
+  end
+
+  def series
+    self['series_ssim']
+  end
+
+  def date_issued
+    self['date_issued_dtsi']
+  end
+
+  def note
+    self['note_tesim']
+  end
+
+  def extent
+    self['extent_ssim']
+  end
+
+  def description_standard
+    self['description_standard_ssim']
+  end
+
+  def publication_place
+    self['publication_place_tesim']
+  end
+
+  def editor
+    self['editor_tesim']
+  end
+
+  def sponsor
+    self['sponsor_tesim']
+  end
+
+  def funder
+    self['funder_tesim']
+  end
+
+  def researcher
+    self['researcher_tesim']
+  end
+
+  def filename
+    self['label_ssi']
+  end
 end

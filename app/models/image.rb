@@ -8,6 +8,6 @@ class Image < ActiveFedora::Base
   validates_presence_of :title,  message: 'Your work must have a title.'
 
   def self.indexer
-    BaseWorkIndexer
+    ImageIndexer
   end
 end

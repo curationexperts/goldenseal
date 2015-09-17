@@ -100,7 +100,7 @@ GEM
     active_fedora-noid (1.0.2)
       active-fedora (~> 9.0)
       noid (~> 0.7)
-    activefedora-aggregation (0.4.0)
+    activefedora-aggregation (0.4.1)
       active-fedora
       activesupport
       rdf-vocab (~> 0.8.1)
@@ -543,6 +543,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activefedora-aggregation (~> 0.4.1)
   angularjs-rails (~> 1.4.4)
   byebug
   capistrano
