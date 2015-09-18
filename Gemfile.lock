@@ -58,8 +58,8 @@ GIT
 
 GIT
   remote: git://github.com/projecthydra/hydra-editor.git
-  revision: 772a2d1f499d03095351a74605e81cee4c933976
-  ref: 772a2d1
+  revision: 04f24d5070c34093ba319dde908f2993439da4a7
+  ref: 04f24d5
   specs:
     hydra-editor (1.0.4)
       active-fedora (>= 9.0.0)
