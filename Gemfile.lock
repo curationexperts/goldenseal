@@ -57,6 +57,19 @@ GIT
       hydra-works (~> 0.1)
 
 GIT
+  remote: git://github.com/projecthydra/hydra-derivatives.git
+  revision: 2d82c983e40434e7ca5a80b1cbbedad704873439
+  ref: 2d82c98
+  specs:
+    hydra-derivatives (2.0.0)
+      active-fedora (~> 9.0)
+      activesupport (~> 4.0)
+      deprecation
+      hydra-file_characterization (~> 0.3)
+      mime-types (< 3)
+      mini_magick (>= 3.2, < 5)
+
+GIT
   remote: git://github.com/projecthydra/hydra-editor.git
   revision: 04f24d5070c34093ba319dde908f2993439da4a7
   ref: 04f24d5
@@ -241,13 +254,6 @@ GEM
       hydra-access-controls (= 9.2.2)
       jettywrapper (>= 2.0.0)
       rails (~> 4.0)
-    hydra-derivatives (2.0.0)
-      active-fedora (~> 9.0)
-      activesupport (~> 4.0)
-      deprecation
-      hydra-file_characterization (~> 0.3)
-      mime-types (< 3)
-      mini_magick (>= 3.2, < 5)
     hydra-file_characterization (0.3.2)
       activesupport (>= 3.0.0)
     hydra-head (9.2.2)
@@ -310,7 +316,7 @@ GEM
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     mime-types (2.6.1)
-    mini_magick (4.3.1)
+    mini_magick (4.3.3)
     mini_portile (0.6.2)
     minitest (5.8.0)
     mono_logger (1.1.0)
@@ -564,6 +570,7 @@ DEPENDENCIES
   devise_ldap_authenticatable
   factory_girl_rails
   hydra-collections!
+  hydra-derivatives!
   hydra-editor!
   hydra-pcdm!
   hydra-works!
