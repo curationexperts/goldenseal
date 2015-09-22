@@ -58,8 +58,8 @@ GIT
 
 GIT
   remote: git://github.com/projecthydra/hydra-derivatives.git
-  revision: 2d82c983e40434e7ca5a80b1cbbedad704873439
-  ref: 2d82c98
+  revision: c9fc494748d63fb07c3a4e9da7b3333561808ec8
+  ref: c9fc494
   specs:
     hydra-derivatives (2.0.0)
       active-fedora (~> 9.0)
