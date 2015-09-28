@@ -47,6 +47,17 @@ GIT
       rails (~> 4.1)
       simple_form (~> 3.1.0)
 
+GIT
+  remote: git://github.com/projecthydra/ldp.git
+  revision: 3b462f6398b701ca1b5a4db124f11aa496688323
+  ref: 3b462f6
+  specs:
+    ldp (0.4.0)
+      faraday
+      http_logger
+      linkeddata (>= 1.1)
+      slop
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -264,11 +275,6 @@ GEM
     kaminari (0.16.3)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
-    ldp (0.4.0)
-      faraday
-      http_logger
-      linkeddata (>= 1.1)
-      slop
     libv8 (3.16.14.11)
     link_header (0.0.8)
     linkeddata (1.1.11)
@@ -407,7 +413,7 @@ GEM
       rdf-turtle (~> 1.1, >= 1.1.7)
     rdf-trix (1.1.0)
       rdf (>= 1.1)
-    rdf-turtle (1.1.7)
+    rdf-turtle (1.1.8)
       ebnf (~> 0.3, >= 0.3.6)
       rdf (~> 1.1, >= 1.1.10)
     rdf-vocab (0.8.5)
@@ -560,10 +566,10 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jettywrapper
   jquery-rails
+  ldp!
   openseadragon (= 0.2.0)
   pg
   rails (= 4.2.4)
-  rdf-turtle (= 1.1.7)
   resque
   riiif (= 0.1.0)
   rsolr (~> 1.0.6)
