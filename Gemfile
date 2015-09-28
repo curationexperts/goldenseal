@@ -35,7 +35,7 @@ gem 'hydra-collections', github: 'projecthydra/hydra-collections', ref: 'd7864f3
 gem 'hydra-editor', github: 'projecthydra/hydra-editor', ref: '04f24d5'
 gem 'hydra-derivatives', github: 'projecthydra/hydra-derivatives', ref: 'c9fc494'
 gem 'activefedora-aggregation', '~> 0.4.1'
-gem 'active-fedora', github: 'projecthydra/active_fedora', ref: '50dffb9'
+gem 'active-fedora', '~> 9.4.2'
 gem 'riiif', '0.1.0'
 gem 'openseadragon', '0.2.0'
 gem 'angularjs-rails', '~> 1.4.4'
