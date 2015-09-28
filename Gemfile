@@ -26,12 +26,12 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns', ref: '89780fa'
+gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns', ref: '00a6209'
 
 gem 'resque'
-gem 'hydra-pcdm', github: 'projecthydra-labs/hydra-pcdm', ref: '274f5e0'
-gem 'hydra-works', github: 'projecthydra-labs/hydra-works', ref: 'bf57c69'
-gem 'hydra-collections', github: 'projecthydra/hydra-collections', ref: 'd7864f33'
+gem 'hydra-pcdm', '~> 0.2.0'
+gem 'hydra-works', '~> 0.2.0'
+gem 'hydra-collections', '~> 6.0.0.rc1'
 gem 'hydra-editor', github: 'projecthydra/hydra-editor', ref: '04f24d5'
 gem 'hydra-derivatives', github: 'projecthydra/hydra-derivatives', ref: 'c9fc494'
 gem 'activefedora-aggregation', '~> 0.4.1'

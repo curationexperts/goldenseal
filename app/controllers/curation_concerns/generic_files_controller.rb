@@ -19,11 +19,5 @@ module CurationConcerns
           raise ActiveFedora::ObjectNotFoundError
         end
       end
-
-      # TODO we can remove this when projecthydra-labs/curation_concerns#323 is merged.
-      def generic_file_params
-        params.require(:generic_file).permit(
-          :visibility_during_embargo, :embargo_release_date, :visibility_after_embargo, :visibility_during_lease, :lease_expiration_date, :visibility_after_lease, :visibility, title: [])
-      end
   end
 end

@@ -24,7 +24,7 @@ describe WorkShowPresenter do
   end
 
   describe "mime_type" do
-    let(:attributes) { { 'mime_type_tesim' => ['image/jp2'] } }
+    let(:attributes) { { 'mime_type_ssi' => 'image/jp2' } }
     subject { presenter.mime_type }
     it { is_expected.to eq 'image/jp2' }
   end
