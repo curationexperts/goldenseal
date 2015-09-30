@@ -32,14 +32,17 @@ gem 'resque'
 gem 'hydra-pcdm', '~> 0.2.0'
 gem 'hydra-works', '~> 0.2.0'
 gem 'hydra-collections', '~> 6.0.0.rc1'
-gem 'hydra-editor', github: 'projecthydra/hydra-editor', ref: '04f24d5'
+# https://github.com/projecthydra/hydra-editor/pull/98
+gem 'hydra-editor', github: 'projecthydra/hydra-editor', ref: '5deff2d'
+# https://github.com/projecthydra/hydra-head/pull/285
+gem 'hydra-head', github: 'projecthydra/hydra-head', ref: '86e513d'
 gem 'hydra-derivatives', github: 'projecthydra/hydra-derivatives', ref: 'c9fc494'
 gem 'activefedora-aggregation', '~> 0.4.1'
-gem 'active-fedora', '~> 9.4.2'
+gem 'active-fedora', '~> 9.4.3'
 gem 'riiif', '0.1.0'
 gem 'openseadragon', '0.2.0'
 gem 'angularjs-rails', '~> 1.4.4'
-gem 'ldp', github: 'projecthydra/ldp', ref: '3b462f6'
+gem 'ldp', '~> 0.4.1'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

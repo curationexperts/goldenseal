@@ -38,8 +38,8 @@ GIT
 
 GIT
   remote: git://github.com/projecthydra/hydra-editor.git
-  revision: 04f24d5070c34093ba319dde908f2993439da4a7
-  ref: 04f24d5
+  revision: 5deff2df324ed1424324ec6b3b694a085308172d
+  ref: 5deff2d
   specs:
     hydra-editor (1.0.4)
       active-fedora (>= 9.0.0)
@@ -48,15 +48,26 @@ GIT
       simple_form (~> 3.1.0)
 
 GIT
-  remote: git://github.com/projecthydra/ldp.git
-  revision: 3b462f6398b701ca1b5a4db124f11aa496688323
-  ref: 3b462f6
+  remote: git://github.com/projecthydra/hydra-head.git
+  revision: 86e513de614e4d403adfa3095a78df1ff86e9c21
+  ref: 86e513d
   specs:
-    ldp (0.4.0)
-      faraday
-      http_logger
-      linkeddata (>= 1.1)
-      slop
+    hydra-access-controls (9.2.2)
+      active-fedora (~> 9.0)
+      activesupport (~> 4.0)
+      blacklight (~> 5.10)
+      cancancan (~> 1.8)
+      deprecation (~> 0.1)
+      sass-rails
+    hydra-core (9.2.2)
+      active-fedora (~> 9.1)
+      hydra-access-controls (= 9.2.2)
+      jettywrapper (>= 2.0.0)
+      rails (~> 4.0)
+    hydra-head (9.2.2)
+      hydra-access-controls (= 9.2.2)
+      hydra-core (= 9.2.2)
+      rails (>= 3.2.6)
 
 GEM
   remote: https://rubygems.org/
@@ -80,7 +91,7 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
-    active-fedora (9.4.2)
+    active-fedora (9.4.3)
       active-triples (~> 0.7.1)
       activesupport (>= 4.1.0)
       deprecation
@@ -223,29 +234,13 @@ GEM
     http-cookie (1.0.2)
       domain_name (~> 0.5)
     http_logger (0.5.1)
-    hydra-access-controls (9.2.2)
-      active-fedora (~> 9.0)
-      activesupport (~> 4.0)
-      blacklight (~> 5.10)
-      cancancan (~> 1.8)
-      deprecation (~> 0.1)
-      sass-rails
     hydra-collections (6.0.0.rc1)
       blacklight (~> 5.10)
       deprecation (~> 0.1)
       hydra-head (~> 9.1)
       hydra-works (~> 0.2)
-    hydra-core (9.2.2)
-      active-fedora (~> 9.1)
-      hydra-access-controls (= 9.2.2)
-      jettywrapper (>= 2.0.0)
-      rails (~> 4.0)
     hydra-file_characterization (0.3.2)
       activesupport (>= 3.0.0)
-    hydra-head (9.2.2)
-      hydra-access-controls (= 9.2.2)
-      hydra-core (= 9.2.2)
-      rails (>= 3.2.6)
     hydra-pcdm (0.2.0)
       active-fedora (>= 9.4.1)
       activefedora-aggregation (~> 0.4)
@@ -278,6 +273,11 @@ GEM
     kaminari (0.16.3)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
+    ldp (0.4.1)
+      faraday
+      http_logger
+      linkeddata (>= 1.1)
+      slop
     libv8 (3.16.14.11)
     link_header (0.0.8)
     linkeddata (1.1.11)
@@ -408,7 +408,7 @@ GEM
       rdf-turtle (~> 1.1)
       rdf-vocab (~> 0.8)
       rdf-xsd (~> 1.1)
-    rdf-tabular (0.2.0)
+    rdf-tabular (0.2.1)
       addressable (~> 2.3)
       bcp47 (~> 0.3, >= 0.3.3)
       json-ld (~> 1.1)
@@ -557,7 +557,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  active-fedora (~> 9.4.2)
+  active-fedora (~> 9.4.3)
   activefedora-aggregation (~> 0.4.1)
   angularjs-rails (~> 1.4.4)
   byebug
@@ -575,12 +575,13 @@ DEPENDENCIES
   hydra-collections (~> 6.0.0.rc1)
   hydra-derivatives!
   hydra-editor!
+  hydra-head!
   hydra-pcdm (~> 0.2.0)
   hydra-works (~> 0.2.0)
   jbuilder (~> 2.0)
   jettywrapper
   jquery-rails
-  ldp!
+  ldp (~> 0.4.1)
   openseadragon (= 0.2.0)
   pg
   rails (= 4.2.4)
