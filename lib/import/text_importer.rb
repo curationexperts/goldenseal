@@ -84,14 +84,15 @@ module Import
       end
     end
 
-    # TODO: If return value is false, it failed. Record an error message.
-    # TODO: Check gf.errors and record any errors.
     def create_file(record_id, matching_file)
       file = FileWithName.new(matching_file)
       gf = GenericFile.new
       actor = CurationConcerns::GenericFileActor.new(gf, user)
       actor.create_metadata(nil, record_id)
-      actor.create_content(file)
+      fail 'Content creation failed' unless actor.create_content(file)
+
+      gf.errors.each { |k, v| errors << "GF #{k}: #{v}" }
+      fail 'GenericFile had errors' unless gf.errors.blank?
     end
 
     def find_file(file_name, tei)

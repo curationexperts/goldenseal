@@ -187,6 +187,38 @@ describe Import::TextImporter do
     end
   end
 
+  describe '#create_file' do
+    let(:dir) { File.join(fixture_path, 'text_importer', 'dir_with_xml_files') }
+    let(:file) { File.join(dir, 'file1.xml') }
+
+    subject { importer.create_file('123', file) }
+
+    before do
+      allow(CurationConcerns::GenericFileActor).to receive(:new).and_return(actor)
+      allow(GenericFile).to receive(:new).and_return(gf)
+    end
+
+    context 'when the GenericFile has errors' do
+      let(:actor) { double('actor', create_metadata: true, create_content: true) }
+      let(:gf) { double('gf', errors: { base: 'base error', id: 'id error' }) }
+
+      it 'raises an error' do
+        expect { subject }.to raise_error('GenericFile had errors')
+        expect(importer.errors).to include('GF base: base error')
+        expect(importer.errors).to include('GF id: id error')
+      end
+    end
+
+    context 'when the content creation fails' do
+      let(:actor) { double('actor', create_metadata: true, create_content: false) }
+      let(:gf) { double('gf', errors: {}) }
+
+      it 'raises an error' do
+        expect { subject }.to raise_error('Content creation failed')
+      end
+    end
+  end
+
   describe '#run' do
     before { ActiveFedora::Cleaner.clean! }
 
