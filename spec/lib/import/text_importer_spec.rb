@@ -2,14 +2,28 @@ require 'rails_helper'
 require 'import'
 
 describe Import::TextImporter do
-  let(:importer) { described_class.new(dir) }
+  let(:visibility) { nil }
+  let(:importer) { described_class.new(dir, visibility) }
 
   describe 'inititialize' do
     let(:dir) { File.join(fixture_path, 'tei') }
-    subject { described_class.new(dir) }
 
-    it 'sets the TEI directory' do
-      expect(subject.tei_dir).to eq dir
+    context 'when visibility is not given' do
+      subject { described_class.new(dir) }
+
+      it 'sets the TEI directory and default visibility' do
+        expect(subject.tei_dir).to eq dir
+        expect(subject.visibility).to eq Hydra::AccessControls::AccessRight::VISIBILITY_TEXT_VALUE_PRIVATE
+      end
+    end
+
+    context 'when visibility is given' do
+      subject { described_class.new(dir, 'open') }
+
+      it 'sets the TEI directory and visibility' do
+        expect(subject.tei_dir).to eq dir
+        expect(subject.visibility).to eq Hydra::AccessControls::AccessRight::VISIBILITY_TEXT_VALUE_PUBLIC
+      end
     end
   end
 
@@ -224,6 +238,7 @@ describe Import::TextImporter do
 
     context 'when the importer runs successfully' do
       let(:dir) { File.join(fixture_path, 'text_importer', 'sample_import_files') }
+      let(:visibility) { Hydra::AccessControls::AccessRight::VISIBILITY_TEXT_VALUE_PUBLIC }
 
       before do
         # Stub out anything that requires a redis connection,
@@ -240,6 +255,8 @@ describe Import::TextImporter do
 
         record = Text.where('identifier_tesim' => 'lew1864.0001.001').first
         expect(record.tei.label).to eq File.join('lew1864.0001.001.xml')
+        expect(record.visibility).to eq visibility
+        expect(GenericFile.all.map(&:visibility).uniq).to eq [visibility]
 
         # The first TEI file lists 337 files and the other TEI
         # lists 13, for a total of 350 files.  For this test,

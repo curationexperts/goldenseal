@@ -8,11 +8,15 @@ module Import
     # The path to the directory where the TEI files are located
     attr_reader :tei_dir
 
+    # The access rights visibility that will be applied
+    attr_reader :visibility
+
     delegate :errors, :warnings, to: :status
     delegate :successful_imports, :skipped_imports, to: :status
 
-    def initialize(dir)
+    def initialize(dir, visibility=Hydra::AccessControls::AccessRight::VISIBILITY_TEXT_VALUE_PRIVATE)
       @tei_dir = dir
+      @visibility = visibility
     end
 
     def status
@@ -45,7 +49,7 @@ module Import
         # exists in fedora.
         skipped_imports << file_name
       else
-        create_record(attrs.merge(tei: file_name))
+        create_record(attrs.merge(tei: file_name, visibility: visibility))
         successful_imports << file_name
       end
     rescue => e

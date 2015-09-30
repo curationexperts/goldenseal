@@ -55,7 +55,12 @@ QUEUE=* VERBOSE=1 rake resque:work
 * From within the Rails root directory, run the import script:
 
 ```
-script/import_text /path/to/the/dir/with/the/teis
+script/import_text /path/to/the/dir/with/the/teis [open, institution, private]
 ```
 
 Note:  The TEI files must be at the top level of the directory and must have a `.xml` file extension.  The importer will assume that any XML files found in the top-level directory are TEI files, and try to parse them.
+
+Note:  The 2nd argument is visibility.  It can be set to `open`, `institution`, or `private`.  The visibility parameter is optional.  If you don't specify a visibility on the command line, the newly created records will have `private` visibility by default.
+
+Visibility cannot be set to `embargo` or `lease` using this script.  If you want to create a record with an embargo or lease, please import the record with `private` visibility, then edit the record using the UI to set the embargo manually.
+

@@ -1,20 +1,41 @@
 #!/usr/bin/env ruby
-
-dir = ARGV[0]  # Directory where TEI files are located
-
-unless dir
-  $stderr.puts "Usage: #{$PROGRAM_NAME} <path to directory with TEI files>"
-  exit 1
-end
-
-puts "Import Text records using TEI files in: #{dir}"
+# Import Text records using data from TEI files.
 
 puts "Loading environment"
 require File.expand_path('../../config/environment',  __FILE__)
 require 'import'
 
+# Valid selections for access rights.
+# Note: This script doesn't handle the case of lease/embargo.
+def visibility_choices
+  { 'open' => Hydra::AccessControls::AccessRight::VISIBILITY_TEXT_VALUE_PUBLIC,
+    'institution' => Hydra::AccessControls::AccessRight::VISIBILITY_TEXT_VALUE_AUTHENTICATED,
+    'private' => Hydra::AccessControls::AccessRight::VISIBILITY_TEXT_VALUE_PRIVATE }
+end
+
+def print_usage_and_exit
+  $stderr.puts "Usage: #{$PROGRAM_NAME} <path> <visibility>"
+  $stderr.puts "    <path>: The path to the directory where the TEI files are located."
+  $stderr.puts "    <visibility>: The visibility level that the imported records will have.  Valid options are #{visibility_choices.keys.inspect}."
+  exit 1
+end
+
+# Read and validate inputs
+dir = ARGV[0]  # Directory where TEI files are located
+
+# Access rights for the imported records
+vis_input = (ARGV[1] || 'private').downcase
+visibility = visibility_choices.fetch(vis_input, 'private')
+
+unless dir && visibility_choices.include?(vis_input.downcase)
+  print_usage_and_exit
+end
+
+puts "Import Text records using TEI files in: #{dir}"
+puts "Visibility will be: #{vis_input} / #{visibility}"
+
 puts "Starting import"
-importer = Import::TextImporter.new(dir)
+importer = Import::TextImporter.new(dir, visibility)
 importer.run
 
 puts "Printing import results"
