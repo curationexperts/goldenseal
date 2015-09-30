@@ -1,0 +1,864 @@
+<?xml version="1.0" encoding="UTF-8"?><teiCorpus xml:id="ccr1821.00991.008" xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Title</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+        <caseDesc xmlns="http://digital.wustl.edu/ns/lxt/1.0">
+            <caseTitle>Sally Jourdain v. Francis Jourdain et. al.</caseTitle>
+            <date type="filing" when="1817-09-10">September 10, 1817</date>
+            <date type="term" when="1817-09">September Term 1817</date>
+            <party role="plaintiff">Sally, Jourdain</party>
+            <party role="defendant">Jourdain, Francis</party>
+            <party role="defendant">Alexander McNain</party>
+            <party role="defendant">Chouteau, Dubourg Auguste</party>
+            <party role="defendant">Walker, David</party>
+            <party role="defendant">Clark, William</party>
+            <causeAction type="civil">contract</causeAction>
+            <caseNo>177</caseNo>
+            <court type="territorial">St. Louis Circuit Court</court>  
+            <clerk>Gamble, Archibald</clerk> 
+            <clerk/> 
+            <sheriff/>  
+            <sheriff type="deputy"/>   
+            <justiceOfPeace/>
+            <attorney for="plaintiff"/>
+            <attorney for="plaintiff"/>
+            <attorney for="defendant"/>
+            <disposition stage="pre-trial">unknown</disposition>
+            <relatedCase/>
+        </caseDesc> 
+      </profileDesc>
+      <revisionDesc>
+         <change when="2011-07-11">MK deciphered vendor's unclear tags through entire documant</change>
+         <change when="2011-07-11">MK proofread and corrected transcription errors through entire document</change>    
+         <change when="2011-07-01">MK deciphered vendor's unclear tags through line 108</change>
+         <change when="2011-07-01">MK proofread and corrected transcription errors through line 108</change>    
+         <change when="2011-06-29">Mk deciphered vendor's unclear tags through line 29</change>
+         <change when="2011-06-29">MK proofread and corrected transcription errors through line 29</change>    
+         <change when="2011-08-02">MP added legal description</change>
+         <change when="2011-11-01">KT removed comment tags, etc.</change>
+         <change when="2012-06-04">APJ checked vertical and horizontal rends</change>
+      </revisionDesc>
+
+
+   
+
+   </teiHeader>
+
+
+
+   <TEI>
+      <teiHeader>
+         <fileDesc>
+            <titleStmt>
+               <title>Complaint</title>
+            </titleStmt>
+            <publicationStmt>
+               <p>This electronic document is published as part of the St Louis Circuit
+                    Court historical records project.</p>
+            </publicationStmt>
+            <sourceDesc>
+               <p>The original document is part of the Missouri State Archives St Louis Circuit
+                    Court collection.</p>
+            </sourceDesc>
+         </fileDesc>
+         <profileDesc>
+            <legalDocDesc xmlns="http://digital.wustl.edu/ns/lxt/1.0">                
+               <legalDoc genre="civil" stagelit="pre-trial" type="complaint" when="1821-08-02"> </legalDoc>
+               <legalTitle>Complaint</legalTitle>        
+               <author role="attorney"/>         
+               <court>St. Louis Circuit Court</court>
+            </legalDocDesc>
+         </profileDesc>
+      </teiHeader>
+      <text>
+         <body rend="handwritten">
+            
+
+    
+
+            <div1 legalFunction="Complaint" rend="horizontal"><pb facs="0991_001.jp2" n="001"/>
+               <opener>
+                  <salute>To the <abbr>Honobl</abbr> 
+                     <unclear rend="written" unit="chars">
+                        <supplied> <persName><choice><reg>Nathaniel</reg><orig>Nathaniel</orig></choice></persName> Barrby <persName><choice><reg>Tucker</reg><orig>Tucker</orig></choice></persName>,</supplied>
+                     </unclear> Judge</salute>
+                  <lb/> of <dateline>the Circuit court for the county of <placeName><choice><reg>St Louis</reg><orig>St Louis</orig></choice></placeName></dateline>
+               </opener>
+               <p>Your Petitioner <persName><choice><reg>Sally Jourdain</reg><orig>Sally</orig></choice></persName> <unclear rend="written" unit="chars">
+                     <supplied> <persName><choice><reg>Sally Jourdain</reg><orig>Jourdain</orig></choice></persName>,</supplied>
+                  </unclear> alias <unclear rend="written" unit="chars">
+                     <supplied> Labrosse,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> represents,</supplied>
+                  </unclear> to your Honor that on or about the <date when="1804-05-24">24th day of<lb/> May eighteen hundred and four</date> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> she was,</supplied>
+                  </unclear> carefully <unclear rend="written" unit="chars">
+                     <supplied> married,</supplied>
+                  </unclear>
+                  <lb/> to <unclear rend="written" unit="chars">
+                     <supplied> Francis Jourdain,</supplied>
+                  </unclear> alias <unclear rend="written" unit="chars">
+                     <supplied> Labrosse,</supplied>
+                  </unclear> that previously to<lb/> their joining in matrimony to wit on the 23rd day of May <unclear rend="written" unit="chars">
+                     <supplied> eighteen,</supplied>
+                  </unclear>
+                  <lb/> hundred &amp; four your petitioner <unclear rend="written" unit="chars">
+                     <supplied> entered,</supplied>
+                  </unclear> into a <unclear rend="written" unit="chars">
+                     <supplied> certain,</supplied>
+                  </unclear> agreement<lb/> commonly called a <unclear rend="written" unit="chars">
+                     <supplied> marriage,</supplied>
+                  </unclear> contract by which the said<lb/> <persName><choice><reg>Francois Jourdain</reg><orig>Francois Jourdain</orig></choice></persName> &amp; Sally Russel (<unclear rend="written" unit="chars">
+                     <supplied> now,</supplied>
+                  </unclear> <persName><choice><reg>Sally Jourdain</reg><orig>Sally</orig></choice></persName> <unclear rend="written" unit="chars">
+                     <supplied> <persName><choice><reg>Sally Jourdain</reg><orig>Jourdain</orig></choice></persName>,</supplied>
+                  </unclear> alias<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> Labrosse,</supplied>
+                  </unclear>) the future couple <unclear rend="written" unit="chars">
+                     <supplied> engaged,</supplied>
+                  </unclear> and promised one to the<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> other,</supplied>
+                  </unclear> the faith of marriage and to have it celebrated as<lb/> soon as <unclear rend="written" unit="chars">
+                     <supplied> possible,</supplied>
+                  </unclear> or as soon as one should required the other<lb/> the <unclear rend="written" unit="chars">
+                     <supplied> contracting parties,</supplied>
+                  </unclear> agreed to have the <unclear rend="written" unit="chars"/>
+                  <lb/> their properties personal &amp; real, acquired or that they<lb/> might acquire during their joint <unclear rend="written" unit="chars">
+                     <supplied> life,</supplied>
+                  </unclear>, which shall be by<lb/> equal share. Your Petitioner further states that she brought<lb/> into her into matrimony the sum of five hundred &amp; five<lb/> dollars &amp; five seals, (<unclear rend="written" unit="chars">
+                     <supplied> bits,</supplied>
+                  </unclear>) which sum the said <persName><choice><reg>Francois Jourdain</reg><orig>Francois Jourdain</orig></choice></persName><lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> recognized,</supplied>
+                  </unclear> in said marriage contract as a privileged sum.<lb/> The said <persName><choice><reg>Francois Jourdain</reg><orig>Francois</orig></choice></persName> <unclear rend="written" unit="chars">
+                     <supplied> <persName><choice><reg>Francois Jourdain</reg><orig>Jourdain</orig></choice></persName> furthermore,</supplied>
+                  </unclear> by the aforesaid contract<lb/> fixed a <unclear rend="written" unit="chars">
+                     <supplied> jointers,</supplied>
+                  </unclear> on dower of three hundred dollars, to <unclear rend="written" unit="chars"/> &amp;<lb/> to be taken by your petitioner as soon as dowary shall <unclear rend="written" unit="chars"/>
+                  <lb/> takes place upon all the properties of said <persName><choice><reg>Francois Jourdain</reg><orig>Francois Jourdain</orig></choice></persName><lb/> which property shall from <unclear rend="written" unit="chars">
+                     <supplied> now remain,</supplied>
+                  </unclear> affected &amp; mortgaged <unclear rend="written" unit="chars"/>
+                  <lb/> The aforesaid marriage contract further <unclear rend="written" unit="chars">
+                     <supplied> stipulates,</supplied>
+                  </unclear> that the<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> survivor,</supplied>
+                  </unclear> of the aforesaid <unclear rend="written" unit="chars"/> couple should have from the common <unclear rend="written" unit="chars">
+                     <supplied> funds,</supplied>
+                  </unclear>
+                  <lb/> the sum of one hundred dollars <unclear rend="written" unit="chars">
+                     <supplied> without prejudice,</supplied>
+                  </unclear> to the aforesaid<lb/> five hundred &amp; five dollars &amp; <unclear rend="written" unit="chars"/> which was brought by your<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> petitioner,</supplied>
+                  </unclear>
+               </p>
+            </div1>
+         </body>
+      </text>
+   </TEI>
+   <TEI>
+      <teiHeader>
+         <fileDesc>
+            <titleStmt>
+               <title/>
+            </titleStmt>
+            <publicationStmt>
+               <p>This electronic document is published as part of the St Louis Circuit
+                    Court historical records project.</p>
+            </publicationStmt>
+            <sourceDesc>
+               <p>The original document is part of the Missouri State Archives St Louis Circuit
+                    Court collection.</p>
+            </sourceDesc>
+         </fileDesc>
+         <profileDesc/>
+      </teiHeader>
+      <text>
+         <body rend="handwritten">
+            
+            <div1 legalFunction="Complaint part 2" rend="horizontal"><pb facs="0991_002.jp2" n="002"/>    
+               <p>and the said contract also made <unclear rend="written" unit="chars">
+                     <supplied> provision,</supplied>
+                  </unclear> that in case there<lb/> should be no child of the said marriage the survivor of said<lb/> couple should have and enjoy the <unclear rend="written" unit="chars">
+                     <supplied> whole,</supplied>
+                  </unclear> of the <unclear rend="written" unit="chars">
+                     <supplied> property,</supplied>
+                  </unclear> of the<lb/> other.</p>
+               <p>Your petitioner further represents that she <unclear rend="written" unit="chars"/> with the<lb/> said <persName><choice><reg>Francois Jourdain</reg><orig>Francois Jourdain</orig></choice></persName> <unclear rend="written" unit="chars">
+                     <supplied> until the,</supplied>
+                  </unclear> day of eighteen hundred &amp;</p>
+               <p>
+                  <unclear rend="written" unit="chars"/> she applied for and obtained a divorce from the <unclear rend="written" unit="chars">
+                     <supplied> said bonds,</supplied>
+                  </unclear> of <unclear rend="written" unit="chars">
+                     <supplied> matrimony,</supplied>
+                  </unclear>from the said<lb/> <persName><choice><reg>Francois</reg><orig>Francois</orig></choice></persName>, that the said <persName><choice><reg>Francois</reg><orig>Francois</orig></choice></persName> was at that him <unclear rend="written" unit="chars">
+                     <supplied> possessed,</supplied>
+                  </unclear> in his<lb/> own right and that of your petitioner, of a <unclear rend="written" unit="chars">
+                     <supplied> house,</supplied>
+                  </unclear> and <unclear rend="written" unit="chars">
+                     <supplied> lot situate,</supplied>
+                  </unclear>
+                  <lb/> on church street in the town of the <placeName><choice><reg>St Louis</reg><orig>St Louis</orig></choice></placeName> and county aforesaid<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> bounded,</supplied>
+                  </unclear> on the <unclear rend="written" unit="chars">
+                     <supplied> east,</supplied>
+                  </unclear> by said church street <unclear rend="written" unit="chars">
+                     <supplied> south,</supplied>
+                  </unclear> by the<lb/> lot of <persName><choice><reg>Alexander</reg><orig>Alexander</orig></choice></persName> <unclear rend="written" unit="chars">
+                     <supplied> Billisms,</supplied>
+                  </unclear>, North by the lot of <unclear rend="written" unit="chars">
+                     <supplied> Oliver,</supplied>
+                  </unclear> &amp; Smith &amp;<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> West,</supplied>
+                  </unclear> by.</p>
+               <p>The said lot <unclear rend="written" unit="chars">
+                     <supplied> fronts,</supplied>
+                  </unclear> on church street<lb/> about fifty eight <unclear rend="written" unit="chars">
+                     <supplied> feet,</supplied>
+                  </unclear> french <unclear rend="written" unit="chars">
+                     <supplied> measure,</supplied>
+                  </unclear> and <unclear rend="written" unit="chars">
+                     <supplied> sums,</supplied>
+                  </unclear> back about<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> one,</supplied>
+                  </unclear> hundred <unclear rend="written" unit="chars">
+                     <supplied> feet,</supplied>
+                  </unclear>; that subsequent to the last mentioned time<lb/> the aforesaid to wit on the day of <date when="1819-08">August 1819</date> the aforesaid<lb/> lot (before your petition aforesaid of the <unclear rend="written" unit="chars"/>) <unclear rend="written" unit="chars"/>
+                  <lb/> under execution to satisfy a dabt of the said <persName><choice><reg>Francois</reg><orig>Francois</orig></choice></persName> above,<lb/> and was <unclear rend="written" unit="chars"/> to John <unclear rend="written" unit="chars">
+                     <supplied> Mullanphy</supplied>
+                  </unclear>; that the said <unclear rend="written" unit="chars">
+                     <supplied> <persName><choice><reg>Mullanphy</reg><orig>Mullanphy</orig></choice></persName>,</supplied>
+                  </unclear>
+                  <lb/> afterwards to wit on the day of eighteen hundred<lb/> and twenty <unclear rend="written" unit="chars">
+                     <supplied> conveyed,</supplied>
+                  </unclear> the same <unclear rend="written" unit="chars">
+                     <supplied> house,</supplied>
+                  </unclear> &amp; lot to <persName><choice><reg>William</reg><orig>William</orig></choice></persName> Louis<lb/> 
+                  <unclear rend="written" unit="chars"/>. Bishop of Louisianna <unclear rend="written" unit="chars">
+                     <supplied> <persName><choice><reg>August Chouteau</reg><orig>Auguste</orig></choice></persName>,</supplied>
+                  </unclear> <persName><choice><reg>August Chouteau</reg><orig>Choteau</orig></choice></persName>, <unclear rend="written" unit="chars">
+                     <supplied> David,</supplied>
+                  </unclear>
+                  <lb/> &amp; Walker, <persName><choice><reg>William Clark</reg><orig>William Clark</orig></choice></persName> &amp; Alexander M. <unclear rend="written" unit="chars">
+                     <supplied> Main,</supplied>
+                  </unclear> to be<lb/> held by them for certain purposes in the <unclear rend="written" unit="chars">
+                     <supplied> mentioned,</supplied>
+                  </unclear> mentioned. Your<lb/> petitioner further states that the aforesaid <unclear rend="written" unit="chars">
+                     <supplied> Gubourg Choteau Walker,</supplied>
+                  </unclear>, Clark &amp; <unclear rend="written" unit="chars">
+                     <supplied> Mc,</supplied>
+                  </unclear> Main <unclear rend="written" unit="chars"/> now in <unclear rend="written" unit="chars">
+                     <supplied> possession,</supplied>
+                  </unclear> of said house<lb/> and lot <unclear rend="written" unit="chars">
+                     <supplied> have,</supplied>
+                  </unclear> refused &amp; <unclear rend="written" unit="chars">
+                     <supplied> do refuse,</supplied>
+                  </unclear> your petitioner being endowed<lb/> and <unclear rend="written" unit="chars">
+                     <supplied> possessed,</supplied>
+                  </unclear> of said <unclear rend="written" unit="chars">
+                     <supplied> house,</supplied>
+                  </unclear> &amp; lot according to the aforesaid marriage<lb/> contract. Therefore your petitioner <unclear rend="written" unit="chars"/> hopes that your <unclear rend="written" unit="chars">
+                     <supplied> honor,</supplied>
+                  </unclear>
+                  <lb/> will have <unclear rend="written" unit="chars">
+                     <supplied> right,</supplied>
+                  </unclear> &amp; <unclear rend="written" unit="chars">
+                     <supplied> justice,</supplied>
+                  </unclear> done unto her according to the effect<lb/> of the aforesaid contract, to wit that the said <unclear rend="written" unit="chars"/> Choteau<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> Walker</supplied>
+                  </unclear> Clark &amp; Mc. <unclear rend="written" unit="chars"/> be <unclear rend="written" unit="chars">
+                     <supplied> decreed,</supplied>
+                  </unclear> to <unclear rend="written" unit="chars">
+                     <supplied> convey,</supplied>
+                  </unclear> the <unclear rend="written" unit="chars">
+                     <supplied> interest,</supplied>
+                  </unclear> &amp;<lb/> right of half the aforesaid house &amp; lot to your petitioner &amp; that the remaining <unclear rend="written" unit="chars">
+                     <supplied> half,</supplied>
+                  </unclear>
+               </p>
+            </div1>
+         </body>
+      </text>
+   </TEI>
+   <TEI>
+      <teiHeader>
+         <fileDesc>
+            <titleStmt>
+               <title/>
+            </titleStmt>
+            <publicationStmt>
+               <p>This electronic document is published as part of the St Louis Circuit
+                    Court historical records project.</p>
+            </publicationStmt>
+            <sourceDesc>
+               <p>The original document is part of the Missouri State Archives St Louis Circuit
+                    Court collection.</p>
+            </sourceDesc>
+         </fileDesc>
+         <profileDesc>
+            <legalDocDesc xmlns="http://digital.wustl.edu/ns/lxt/1.0">                
+               <legalDoc genre="civil" stagelit="pre-trial" type="summons" when="1821-08-02"> </legalDoc>
+               <legalTitle>Summons</legalTitle>        
+               <author role="clerk">Gamble, Archibald</author>         
+               <court>St. Louis Circuit Court</court>
+            </legalDocDesc>
+         </profileDesc>
+      </teiHeader>
+      <text>
+         <body rend="handwritten">
+            
+            <div1 legalFunction="Complaint part 3" rend="horizontal"><pb facs="0991_003.jp2" n="003"/>
+               <p>be <unclear rend="written" unit="chars">
+                     <supplied> sold,</supplied>
+                  </unclear> to pay your petitioner the said eight hundred <unclear rend="written" unit="chars">
+                     <supplied> and five,</supplied>
+                  </unclear>
+                  <lb/> dollars &amp; five <unclear rend="written" unit="chars">
+                     <supplied> cents,</supplied>
+                  </unclear> mentioned in the aforesaid <unclear rend="written" unit="chars">
+                     <supplied> contract,</supplied>
+                  </unclear> &amp; your<lb/> petitioner <unclear rend="written" unit="chars">
+                     <supplied> will ever,</supplied>
+                  </unclear> pray <unclear rend="written" unit="chars"/>
+               </p>
+               <closer>signed<lb/> 
+                  <signed>
+                     <unclear rend="written" unit="chars"/> &amp; <unclear rend="written" unit="chars"/> for Petitioner</signed>
+               </closer>
+            </div1>
+            <div1 rend="horizontal"><pb facs="0991_003.jp2" n="003"/>
+
+    
+
+               <opener>
+                  <dateline><placeName><choice><reg>County of St Louis</reg><orig>County of St. Louis</orig></choice></placeName> <unclear rend="written" unit="chars"/>
+                  </dateline>
+                  <lb/> 
+                  <dateline>The <placeName><choice><reg>Missouri</reg><orig>State of Missouri</orig></choice></placeName></dateline>
+                  <salute>To the Sheriff of Said County<lb/> Greeting</salute>
+               </opener>
+               <p>We command you to summon <unclear rend="written" unit="chars">
+                     <supplied> Louis,</supplied>
+                  </unclear> <persName><choice><reg>William</reg><orig>William</orig></choice></persName> <unclear rend="written" unit="chars">
+                     <supplied> Dubourg,</supplied>
+                  </unclear> Bishop<lb/> of <placeName><choice><reg>Louisiana</reg><orig>Louisiana</orig></choice></placeName> <unclear rend="written" unit="chars">
+                     <supplied> <persName><choice><reg>August Chouteau</reg><orig>Auguste</orig></choice></persName>,</supplied>
+                  </unclear> <persName><choice><reg>August Chouteau</reg><orig>Chouteau</orig></choice></persName> David Walker <unclear rend="written" unit="chars">
+                     <supplied> Alexander,</supplied>
+                  </unclear> M <unclear rend="written" unit="chars">
+                     <supplied> Main,</supplied>
+                  </unclear> and<lb/> <persName><choice><reg>William Clark</reg><orig>William Clark</orig></choice></persName> that they be and appear before the Judge of our Circuit<lb/> court at the next <unclear rend="written" unit="chars">
+                     <supplied> term,</supplied>
+                  </unclear> thereof to be held at the Town of <placeName><choice><reg>St Louis</reg><orig>St Louis</orig></choice></placeName><lb/> within and for the county of <placeName><choice><reg>St Louis</reg><orig>St. Louis</orig></choice></placeName> <unclear rend="written" unit="chars">
+                     <supplied> on,</supplied>
+                  </unclear> the third monday of<lb/> august <unclear rend="written" unit="chars"/> then and there to answer the <unclear rend="written" unit="chars">
+                     <supplied> petition,</supplied>
+                  </unclear> <persName><choice><reg>Sally Jourdain</reg><orig>Sally</orig></choice></persName> <unclear rend="written" unit="chars">
+                     <supplied> <persName><choice><reg>Sally Jourdain</reg><orig>Jourdain</orig></choice></persName>,</supplied>
+                  </unclear>
+                  <lb/> alias <unclear rend="written" unit="chars">
+                     <supplied> Labross,</supplied>
+                  </unclear> and <unclear rend="written" unit="chars"/> why the right and <unclear rend="written" unit="chars">
+                     <supplied> interest,</supplied>
+                  </unclear> of half<lb/> of the house and lot in the said petition mentioned should not be <unclear rend="written" unit="chars">
+                     <supplied> con,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> veyed,</supplied>
+                  </unclear> to the said petitioner and that the remaining half be sold<lb/> to pay the petitioner the said Eight hundred five dollars &amp; five <unclear rend="written" unit="chars">
+                     <supplied> cents,</supplied>
+                  </unclear>
+                  <lb/> in the contract in the said petition mentioned and have you<lb/> then there this writ</p>
+               <figure rend="seal"/>
+               <closer>
+                  <dateline>Witness <unclear rend="written" unit="chars">
+                        <supplied> <persName><choice><reg>Archibald Gamble</reg><orig>Archibald Gamble</orig></choice></persName>,</supplied>
+                     </unclear> Clerk of<lb/> 
+                     <unclear rend="written" unit="chars">
+                        <supplied> our,</supplied>
+                     </unclear> said Court at office the <date when="1821-08-02">2nd day of<lb/> august 1821</date>
+                  </dateline>
+                  <signed><persName><choice><reg>Archibald Gamble</reg><orig>Archibald</orig></choice></persName> <unclear rend="written" unit="chars">
+                        <supplied> <persName><choice><reg>Archibald Gamble</reg><orig>Gamble</orig></choice></persName>,</supplied>
+                     </unclear> Clerk</signed>
+               </closer>
+            </div1>
+            
+            <div1 legalFunction="Certificate of Filing" rend="vertical"><pb facs="0991_004.jp2" n="004"/>  
+               <opener>
+                  <abbr>No.</abbr> 177</opener>
+               <head rend="bracketed"><persName><choice><reg>Sally</reg><orig>Sally</orig></choice></persName> Jordain (<unclear rend="written" unit="chars">
+                     <supplied> aka Labross,</supplied>
+                  </unclear>)<lb/> 
+                  <unclear rend="written" unit="chars"/>
+                  <lb/> Mc <unclear rend="written" unit="chars">
+                     <supplied> Main,</supplied>
+                  </unclear> Walker Dubourg <unclear rend="written" unit="chars">
+                     <supplied> Clark,</supplied>
+                  </unclear>
+               </head>
+               <p rend="bracketed">Petition</p>
+               <closer>
+                  <unclear rend="written" unit="chars">
+                     <supplied> filed,</supplied>
+                  </unclear> 
+                  <date when="1821-08-02">august 2nd 1821</date>
+                  <signed>
+                     <unclear rend="written" unit="chars">
+                        <supplied> <persName><choice><reg>Archibald Gamble</reg><orig>A Gamble</orig></choice></persName>,</supplied>
+                     </unclear>
+                     <lb/> Clerk</signed>
+               </closer>
+            </div1>
+            <div1 rend="vertical"><pb facs="0991_004.jp2" n="004"/>  
+               <p>
+                  <unclear rend="written" unit="chars"/>
+               </p>
+               <closer>
+                  <signed>
+                     <unclear rend="written" unit="chars"/>
+                  </signed>
+               </closer>
+            </div1>
+            <div1 rend="vertical"><pb facs="0991_004.jp2" n="004"/>
+               <p>
+                  <unclear rend="written" unit="chars"/>
+               </p>
+               <closer>
+                  <signed>
+                     <unclear rend="written" unit="chars"/>
+                  </signed>
+               </closer>
+            </div1>
+            <div1 legalFunction="Certificate of Execution" rend="vertical"><pb facs="0991_004.jp2" n="004"/>
+               <p>
+                  <unclear rend="written" unit="chars"/> this writ on <persName><choice><reg>William Clark</reg><orig>William</orig></choice></persName><lb/> <persName><choice><reg>William Clark</reg><orig>Clark</orig></choice></persName> &amp; <persName><choice><reg>Alexander</reg><orig>Alexander</orig></choice></persName> <unclear rend="written" unit="chars">
+                     <supplied> McMain,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> as will,</supplied>
+                  </unclear> appear from their <unclear rend="written" unit="chars"/>
+                  <lb/>-<unclear rend="written" unit="chars">
+                     <supplied> judgement,</supplied>
+                  </unclear> on the <unclear rend="written" unit="chars"/> of august<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> on Louis,</supplied>
+                  </unclear> <persName><choice><reg>William</reg><orig>William</orig></choice></persName> <unclear rend="written" unit="chars">
+                     <supplied> Dubourg,</supplied>
+                  </unclear> by<lb/> 
+                  <unclear rend="written" unit="chars"/> a copy of the <unclear rend="written" unit="chars">
+                     <supplied> same,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars"/> with <unclear rend="written" unit="chars"/> of the <unclear rend="written" unit="chars"/>
+                  <lb/>-<unclear rend="written" unit="chars"/> this <unclear rend="written" unit="chars"/>
+                  <lb/> 
+                  <unclear rend="written" unit="chars"/> and <unclear rend="written" unit="chars"/>
+                  <lb/> 
+                  <unclear rend="written" unit="chars"/> him the <unclear rend="written" unit="chars"/>
+                  <lb/> 
+                  <unclear rend="written" unit="chars"/> on august <unclear rend="written" unit="chars"/>
+                  <lb/>-<unclear rend="written" unit="chars"/> the same to <unclear rend="written" unit="chars"/>
+                  <lb/> 
+                  <unclear rend="written" unit="chars"/> on <unclear rend="written" unit="chars"/> <persName><choice><reg>Walker</reg><orig>Walker</orig></choice></persName><lb/> 
+                  <unclear rend="written" unit="chars"/>of the <unclear rend="written" unit="chars"/>
+                  <lb/> 
+                  <unclear rend="written" unit="chars"/> to the<lb/> 
+                  <unclear rend="written" unit="chars"/> on <unclear rend="written" unit="chars"/>
+                  <lb/>-<unclear rend="written" unit="chars"/> of <placeName><choice><reg>St Louis</reg><orig>St. Louis</orig></choice></placeName></p>
+               <p>
+                  <unclear rend="written" unit="chars"/>
+               </p>
+            </div1>
+            <div1 rend="vertical"><pb facs="0991_004.jp2" n="004"/>
+               <p>
+                  <table cols="2" rows="3">
+                     <row>
+                        <cell>
+                           <unclear rend="written" unit="chars"/>
+                        </cell> 
+                        <cell>$ <unclear rend="written" unit="chars"/>
+                        </cell>
+                     </row>
+                     <row>
+                        <cell>
+                           <unclear rend="written" unit="chars"/>
+                        </cell> 
+                        <cell>
+                           <unclear rend="written" unit="chars"/>
+                        </cell>
+                     </row>
+                     <row>
+                        <cell/> 
+                        <cell>$ 1.50</cell>
+                     </row>
+                  </table>
+               </p>
+            </div1>
+         </body>
+      </text>
+   </TEI>
+   <TEI>
+      <teiHeader>
+         <fileDesc>
+            <titleStmt>
+               <title>Answer</title>
+            </titleStmt>
+            <publicationStmt>
+               <p>This electronic document is published as part of the St Louis Circuit
+                    Court historical records project.</p>
+            </publicationStmt>
+            <sourceDesc>
+               <p>The original document is part of the Missouri State Archives St Louis Circuit
+                    Court collection.</p>
+            </sourceDesc>
+         </fileDesc>
+         <profileDesc>
+            <legalDocDesc xmlns="http://digital.wustl.edu/ns/lxt/1.0">                
+               <legalDoc genre="civil" stagelit="pre-trial" type="answer" when="1822-02-26"> </legalDoc>
+               <legalTitle>Answer</legalTitle>        
+               <author role="attorney"/>         
+               <court>St. Louis Circuit Court</court>
+            </legalDocDesc>
+         </profileDesc>
+      </teiHeader>
+      <text>
+         <body rend="handwritten">
+            
+
+    
+
+            <div1 legalFunction="Answer" rend="horizontal"><pb facs="0991_005.jp2" n="005"/>
+               <opener>
+                  <dateline>
+                     <unclear rend="written" unit="chars"/> Circuit <date when="1822-02">february term 1822</date>
+                  </dateline>
+               </opener>
+               <p>The <unclear rend="written" unit="chars"/> of <persName><choice><reg>William Clark</reg><orig>William</orig></choice></persName> Louis<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> Dubourg <persName><choice><reg>August Chouteau</reg><orig>Auguste Chouteau</orig></choice></persName> David Walker,</supplied>
+                  </unclear>
+                  <lb/> <persName><choice><reg>William</reg><orig>William</orig></choice></persName> <unclear rend="written" unit="chars">
+                     <supplied> <persName><choice><reg>William Clark</reg><orig>Clark</orig></choice></persName>,</supplied>
+                  </unclear> &amp; <unclear rend="written" unit="chars">
+                     <supplied> Alexander McNain,</supplied>
+                  </unclear> the<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> defendants,</supplied>
+                  </unclear> to a petition of <unclear rend="written" unit="chars">
+                     <supplied> complaint,</supplied>
+                  </unclear> of <unclear rend="written" unit="chars">
+                     <supplied> <persName><choice><reg>Sally</reg><orig>Sally</orig></choice></persName>,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> Joudain alias Labrosse,</supplied>
+                  </unclear>
+               </p>
+               <p>The said <unclear rend="written" unit="chars">
+                     <supplied> defendants,</supplied>
+                  </unclear> by <unclear rend="written" unit="chars">
+                     <supplied> parts,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> taken,</supplied>
+                  </unclear> not <unclear rend="written" unit="chars"/> or <unclear rend="written" unit="chars"/> all or <unclear rend="written" unit="chars">
+                     <supplied> any,</supplied>
+                  </unclear>
+                  <lb/> of the matters or things in the <unclear rend="written" unit="chars">
+                     <supplied> complainants bill,</supplied>
+                  </unclear>
+                  <lb/> of petition of <unclear rend="written" unit="chars"/> to be <unclear rend="written" unit="chars"/>
+                  <lb/> 
+                  <unclear rend="written" unit="chars"/> as the same are then<lb/> and <unclear rend="written" unit="chars"/> for the and <unclear rend="written" unit="chars"/> for <unclear rend="written" unit="chars"/>
+                  <lb/> to the said petitioners bill of petition then<lb/> defendants <unclear rend="written" unit="chars"/> in the and for <unclear rend="written" unit="chars"/> of<lb/> 
+                  <unclear rend="written" unit="chars"/> that it <unclear rend="written" unit="chars"/> of the <unclear rend="written" unit="chars"/>
+                  <lb/> 
+                  <unclear rend="written" unit="chars"/> in <unclear rend="written" unit="chars"/> petition of <unclear rend="written" unit="chars">
+                     <supplied> complaint,</supplied>
+                  </unclear>
+                  <lb/> that she claim <unclear rend="written" unit="chars"/> of the <unclear rend="written" unit="chars"/> in<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> question,</supplied>
+                  </unclear> in the petition <unclear rend="written" unit="chars"/> as a <unclear rend="written" unit="chars"/>
+                  <lb/> 
+                  <unclear rend="written" unit="chars"/> a <unclear rend="written" unit="chars"/> with<lb/> 
+                  <unclear rend="written" unit="chars"/> <persName><choice><reg>Francois</reg><orig>Francois</orig></choice></persName> <unclear rend="written" unit="chars">
+                     <supplied> Jordain,</supplied>
+                  </unclear> alias <unclear rend="written" unit="chars">
+                     <supplied> Labrosse,</supplied>
+                  </unclear> and by <unclear rend="written" unit="chars"/>
+                  <lb/>
+               </p>
+            </div1>
+         </body>
+      </text>
+   </TEI> 
+   <TEI>
+      <teiHeader>
+         <fileDesc>
+            <titleStmt>
+               <title/>
+            </titleStmt>
+            <publicationStmt>
+               <p>This electronic document is published as part of the St Louis Circuit
+                    Court historical records project.</p>
+            </publicationStmt>
+            <sourceDesc>
+               <p>The original document is part of the Missouri State Archives St Louis Circuit
+                    Court collection.</p>
+            </sourceDesc>
+         </fileDesc>
+         <profileDesc/>
+      </teiHeader>
+      <text>
+         <body rend="handwritten">    
+                
+            <div1 legalFunction="Answer, continued" rend="horizontal"><pb facs="0991_006.jp2" n="006"/>    
+               <p>
+                  <unclear rend="written" unit="chars">
+                     <supplied> Marriage,</supplied>
+                  </unclear> with the <unclear rend="written" unit="chars">
+                     <supplied> said,</supplied>
+                  </unclear> <persName><choice><reg>Francois Jourdain</reg><orig>Francois</orig></choice></persName> <unclear rend="written" unit="chars">
+                     <supplied> <persName><choice><reg>Francois Jourdain</reg><orig>Jourdain</orig></choice></persName>,</supplied>
+                  </unclear> alias<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> Labrosse,</supplied>
+                  </unclear> and it does not appear <unclear rend="written" unit="chars">
+                     <supplied> nor,</supplied>
+                  </unclear> is it <unclear rend="written" unit="chars">
+                     <supplied> allowed,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> in,</supplied>
+                  </unclear> the said petitioners bill of petition of <unclear rend="written" unit="chars">
+                     <supplied> complaint,</supplied>
+                  </unclear>
+                  <lb/> that <persName><choice><reg>Francois Jourdain</reg><orig>Francois</orig></choice></persName> <unclear rend="written" unit="chars">
+                     <supplied> <persName><choice><reg>Francois Jourdain</reg><orig>Jourdain</orig></choice></persName>,</supplied>
+                  </unclear> alias <unclear rend="written" unit="chars">
+                     <supplied> Labrosse,</supplied>
+                  </unclear> is <unclear rend="written" unit="chars"/> saw<lb/> 
+                  <unclear rend="written" unit="chars"/> when the saw bill of petition<lb/> was filed and <unclear rend="written" unit="chars"/> if this <unclear rend="written" unit="chars"/> was <unclear rend="written" unit="chars">
+                     <supplied> contained,</supplied>
+                  </unclear> in<lb/> the said bill of petition of <unclear rend="written" unit="chars">
+                     <supplied> complaint,</supplied>
+                  </unclear>, it <unclear rend="written" unit="chars"/>
+                  <lb/> 
+                  <unclear rend="written" unit="chars"/> of the <unclear rend="written" unit="chars"/> own <unclear rend="written" unit="chars">
+                     <supplied> showing,</supplied>
+                  </unclear> in the <unclear rend="written" unit="chars">
+                     <supplied> said,</supplied>
+                  </unclear>
+                  <lb/> bill of petition of complaint that the <unclear rend="written" unit="chars">
+                     <supplied> she claims,</supplied>
+                  </unclear> a<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> portion,</supplied>
+                  </unclear> under <unclear rend="written" unit="chars">
+                     <supplied> marriage,</supplied>
+                  </unclear> contract which is a<lb/> with <unclear rend="written" unit="chars"/> &amp; <unclear rend="written" unit="chars">
+                     <supplied> law.</supplied>
+                  </unclear> on the <unclear rend="written" unit="chars"/> of<lb/> this writ <unclear rend="written" unit="chars">
+                     <supplied> wherefore,</supplied>
+                  </unclear> &amp; for as much as the <unclear rend="written" unit="chars">
+                     <supplied> petitioners,</supplied>
+                  </unclear>
+                  <lb/> was bill of petition of <unclear rend="written" unit="chars">
+                     <supplied> complaint has,</supplied>
+                  </unclear> not an<lb/> 
+                  <unclear rend="written" unit="chars"/> as <unclear rend="written" unit="chars">
+                     <supplied> these,</supplied>
+                  </unclear> defendants an <unclear rend="written" unit="chars"/> any <unclear rend="written" unit="chars">
+                     <supplied> matter,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> sufficient,</supplied>
+                  </unclear> to <unclear rend="written" unit="chars">
+                     <supplied> establish,</supplied>
+                  </unclear> any right or demand<lb/> against the defendants in other of them to <unclear rend="written" unit="chars">
+                     <supplied> draw,</supplied>
+                  </unclear>
+                  <lb/> them into court by petition under an <unclear rend="written" unit="chars"/> in the year 1814 upon the <unclear rend="written" unit="chars"/> at of <unclear rend="written" unit="chars"/>
+               </p>
+               <p>and for further <unclear rend="written" unit="chars"/> of <unclear rend="written" unit="chars"/>
+                  <lb/> defendants county and <unclear rend="written" unit="chars"/> say that it <unclear rend="written" unit="chars"/>
+                  <lb/> by the said petitioners bill of petition of <unclear rend="written" unit="chars">
+                     <supplied> complaint,</supplied>
+                  </unclear>
+                  <lb/> that the <unclear rend="written" unit="chars"/> is <unclear rend="written" unit="chars">
+                     <supplied> indebted,</supplied>
+                  </unclear> against them <unclear rend="written" unit="chars">
+                     <supplied> the defendants.</supplied>
+                  </unclear>
+               </p>
+            </div1>
+         </body>
+      </text>
+   </TEI>
+   <TEI>
+      <teiHeader>
+         <fileDesc>
+            <titleStmt>
+               <title/>
+            </titleStmt>
+            <publicationStmt>
+               <p>This electronic document is published as part of the St Louis Circuit
+                    Court historical records project.</p>
+            </publicationStmt>
+            <sourceDesc>
+               <p>The original document is part of the Missouri State Archives St Louis Circuit
+                    Court collection.</p>
+            </sourceDesc>
+         </fileDesc>
+         <profileDesc/>
+      </teiHeader>
+      <text>
+         <body rend="handwritten">
+            
+            <div1 legalFunction="Answer, continued" rend="horizontal"><pb facs="0991_007.jp2" n="007"/>
+               <p>for <unclear rend="written" unit="chars">
+                     <supplied> several distinct,</supplied>
+                  </unclear> matters and <unclear rend="written" unit="chars">
+                     <supplied> causes,</supplied>
+                  </unclear> that <unclear rend="written" unit="chars"/>
+                  <lb/> so <unclear rend="written" unit="chars">
+                     <supplied> related,</supplied>
+                  </unclear> to <unclear rend="written" unit="chars">
+                     <supplied> or dependence upon each other,</supplied>
+                  </unclear> by<lb/> 
+                  <unclear rend="written" unit="chars"/> of which matters the <unclear rend="written" unit="chars">
+                     <supplied> complainants,</supplied>
+                  </unclear> bill of<lb/> petition is <unclear rend="written" unit="chars"/> out to a <unclear rend="written" unit="chars"/> and<lb/> 
+                  <unclear rend="written" unit="chars"/> defendants <unclear rend="written" unit="chars"/> to <unclear rend="written" unit="chars">
+                     <supplied> make,</supplied>
+                  </unclear> a copy of the<lb/> whole and <unclear rend="written" unit="chars"/> together in <unclear rend="written" unit="chars">
+                     <supplied> one,</supplied>
+                  </unclear>
+                  <lb/> bill of petition in the <unclear rend="written" unit="chars">
+                     <supplied> process,</supplied>
+                  </unclear> of the <unclear rend="written" unit="chars">
+                     <supplied> suit,</supplied>
+                  </unclear>
+                  <lb/> the pleadings, <unclear rend="written" unit="chars">
+                     <supplied> orders,</supplied>
+                  </unclear>, and proceedings will be a <unclear rend="written" unit="chars"/>
+                  <lb/> 
+                  <unclear rend="written" unit="chars"/> &amp; <unclear rend="written" unit="chars"/> and <unclear rend="written" unit="chars">
+                     <supplied> then,</supplied>
+                  </unclear> defendants put to <unclear rend="written" unit="chars"/>
+                  <lb/> all &amp; <unclear rend="written" unit="chars"/> is <unclear rend="written" unit="chars"/>
+                  <lb/> 
+                  <unclear rend="written" unit="chars"/> which <unclear rend="written" unit="chars"/> and <unclear rend="written" unit="chars"/> other <unclear rend="written" unit="chars"/> and<lb/> 
+                  <unclear rend="written" unit="chars"/> in the said <unclear rend="written" unit="chars">
+                     <supplied> petitioners,</supplied>
+                  </unclear> bill of <unclear rend="written" unit="chars">
+                     <supplied> petition,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars"/> of <unclear rend="written" unit="chars">
+                     <supplied> complaint and,</supplied>
+                  </unclear> approving these defendants do<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> deliver,</supplied>
+                  </unclear> to the <unclear rend="written" unit="chars">
+                     <supplied> said,</supplied>
+                  </unclear> petition of <unclear rend="written" unit="chars">
+                     <supplied> complaint,</supplied>
+                  </unclear> and<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> humbly delivered,</supplied>
+                  </unclear> the <unclear rend="written" unit="chars">
+                     <supplied> judgement,</supplied>
+                  </unclear> of this court<lb/> whether they shall be <unclear rend="written" unit="chars"/> to <unclear rend="written" unit="chars"/> any<lb/> 
+                  <unclear rend="written" unit="chars">
+                     <supplied> further,</supplied>
+                  </unclear> or other answer <unclear rend="written" unit="chars">
+                     <supplied> thereunto,</supplied>
+                  </unclear> and <unclear rend="written" unit="chars">
+                     <supplied> humbly,</supplied>
+                  </unclear>
+                  <lb/> 
+                  <unclear rend="written" unit="chars"/> with them <unclear rend="written" unit="chars"/> —</p>
+               <closer>
+                  <signed>
+                     <unclear rend="written" unit="chars"/>
+                     <lb/> 
+                     <unclear rend="written" unit="chars"/>
+                  </signed> —
+<unclear rend="written" unit="chars"/>
+                  <lb/> 
+                  <signed>
+                     <unclear rend="written" unit="chars"/>
+                  </signed>
+               </closer>
+            </div1>
+         </body>
+      </text>
+   </TEI>
+   <TEI>
+      <teiHeader>
+         <fileDesc>
+            <titleStmt>
+               <title/>
+            </titleStmt>
+            <publicationStmt>
+               <p>This electronic document is published as part of the St Louis Circuit
+                    Court historical records project.</p>
+            </publicationStmt>
+            <sourceDesc>
+               <p>The original document is part of the Missouri State Archives St Louis Circuit
+                    Court collection.</p>
+            </sourceDesc>
+         </fileDesc>
+         <profileDesc/>
+      </teiHeader>
+      <text>
+         <body rend="handwritten">    
+            
+            <div1 legalFunction="Certificate of Filing" rend="vertical"><pb facs="0991_008.jp2" n="008"/>  
+               <p>
+                  <unclear rend="written" unit="chars"/>
+                  <lb/> alf <unclear rend="written" unit="chars"/> 
+                  <lb/>
+                  <unclear rend="written" unit="chars"/>
+               </p>
+               <closer>
+filed <date when="1822-02-26">February 26 1822</date>
+                  <lb/>
+                  <signed><persName><choice><reg>Archibald Gamble</reg><orig>A Gamble</orig></choice></persName> Clerk</signed>
+               </closer>
+            </div1>
+         </body>
+      </text>
+   </TEI>
+
+
+</teiCorpus>
