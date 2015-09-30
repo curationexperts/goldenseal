@@ -39,7 +39,7 @@ gem 'active-fedora', '~> 9.4.2'
 gem 'riiif', '0.1.0'
 gem 'openseadragon', '0.2.0'
 gem 'angularjs-rails', '~> 1.4.4'
- gem 'ldp', github: 'projecthydra/ldp', ref: '3b462f6'
+gem 'ldp', github: 'projecthydra/ldp', ref: '3b462f6'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -53,6 +53,7 @@ group :development do
   gem 'capistrano-rails'
   gem 'capistrano-passenger'
   gem 'capistrano-bundler'
+  gem 'rubocop'
 end
 
 group :development, :test do

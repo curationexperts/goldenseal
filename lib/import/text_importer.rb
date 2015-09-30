@@ -1,13 +1,10 @@
 module Import
-
   # The results of running the importer.  Keep track of
   # errors, warnings, successful imports, or skipped imports.
   ImportResults = Struct.new(:errors, :warnings, :successful_imports, :skipped_imports)
 
-
   # Import Text records using data from TEI files.
   class TextImporter
-
     # The path to the directory where the TEI files are located
     attr_reader :tei_dir
 
@@ -30,7 +27,7 @@ module Import
     end
 
     def tei_files
-      raise "Directory not found: #{tei_dir}" unless File.exist?(tei_dir)
+      fail "Directory not found: #{tei_dir}" unless File.exist?(tei_dir)
       @tei_files ||= Dir.glob(File.join(tei_dir, '*.xml'))
     end
 
@@ -58,11 +55,11 @@ module Import
     def record_exists?(attrs)
       ident = attrs[:identifier]
       return false if ident.blank?
-      raise "Unable to determine identifier for record: #{ident}" if ident.count > 1
+      fail "Unable to determine identifier for record: #{ident}" if ident.count > 1
       ident = ident.first
 
       existing_records = ActiveFedora::Base.where("identifier_tesim" => ident)
-      raise "Too many matches found for record: #{ident}" if existing_records.count > 1
+      fail "Too many matches found for record: #{ident}" if existing_records.count > 1
 
       existing_records.count == 1
     end
@@ -72,24 +69,29 @@ module Import
       files = attributes.delete(:files) || []
       files.unshift(tei)
 
-      record = Text.new(attributes) do |r|
+      record = Text.create!(attributes) do |r|
         r.apply_depositor_metadata(user)
       end
-      record.save!
 
+      create_files(record.id, tei, files)
+    end
+
+    def create_files(record_id, tei, files)
       files.each do |file_name|
         matching_file = find_file(file_name, tei)
         next unless matching_file
-
-        file = FileWithName.new(matching_file)
-        gf = GenericFile.new
-        actor = CurationConcerns::GenericFileActor.new(gf, user)
-        actor.create_metadata(nil, record.id)
-        content_status = actor.create_content(file)
-
-        # TODO: If content_status is false, it failed. Record an error message.
-        # TODO: Check gf.errors and record any errors.
+        create_file(record_id, matching_file)
       end
+    end
+
+    # TODO: If return value is false, it failed. Record an error message.
+    # TODO: Check gf.errors and record any errors.
+    def create_file(record_id, matching_file)
+      file = FileWithName.new(matching_file)
+      gf = GenericFile.new
+      actor = CurationConcerns::GenericFileActor.new(gf, user)
+      actor.create_metadata(nil, record_id)
+      actor.create_content(file)
     end
 
     def find_file(file_name, tei)
@@ -112,6 +114,5 @@ module Import
       return @user if @user
       @user = User.create!(Devise.authentication_keys.first => 'system')
     end
-
   end
 end

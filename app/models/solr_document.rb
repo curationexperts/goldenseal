@@ -1,12 +1,11 @@
 # -*- encoding : utf-8 -*-
 class SolrDocument
-
   include Blacklight::Solr::Document
   # Adds CurationConcerns behaviors to the SolrDocument.
   include CurationConcerns::SolrDocumentBehavior
   # Do content negotiation for AF models.
 
-  use_extension( Hydra::ContentNegotiation )
+  use_extension(Hydra::ContentNegotiation)
 
   def height
     self['height_is']

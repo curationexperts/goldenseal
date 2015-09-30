@@ -1,6 +1,5 @@
 module Import
   class DcXmlParser
-
     # Parse XML files that were exported from DLXS to find the Dublin Core metadata.
 
     NAMESPACES = {
@@ -63,6 +62,5 @@ module Import
       return nil unless ident
       ident.gsub('oai::', '')
     end
-
   end
 end

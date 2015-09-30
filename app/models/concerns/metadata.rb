@@ -43,5 +43,4 @@ module Metadata
       index.as :stored_searchable
     end
   end
-
 end

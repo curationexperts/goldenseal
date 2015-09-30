@@ -1,5 +1,4 @@
 CurationConcerns.configure do |config|
-
   config.register_curation_concern :text
   config.register_curation_concern :audio
   config.register_curation_concern :document
@@ -33,7 +32,7 @@ CurationConcerns.configure do |config|
     "Research Paper" => "Research Paper",
     "Software or Program Code" => "Software or Program Code",
     "Video" => "Video",
-    "Other" => "Other",
+    "Other" => "Other"
   }
 
   config.resource_types_to_schema = {
@@ -56,11 +55,11 @@ CurationConcerns.configure do |config|
     "Research Paper" => "http://schema.org/ScholarlyArticle",
     "Software or Program Code" => "http://schema.org/Code",
     "Video" => "http://schema.org/VideoObject",
-    "Other" => "http://schema.org/CreativeWork",
+    "Other" => "http://schema.org/CreativeWork"
   }
 
   config.permission_levels = {
-    "Choose Access"=>"none",
+    "Choose Access" => "none",
     "View/Download" => "read",
     "Edit" => "edit"
   }
@@ -112,9 +111,6 @@ CurationConcerns.configure do |config|
   # Leaving it blank will set the start date to when ever the file was uploaded by
   # NOTE: if you have always sent analytics to GA for downloads and page views leave this commented out
   # config.analytic_start_date = DateTime.new(2014,9,10)
-
-
-
 end
 
 Date::DATE_FORMATS[:standard] = "%m/%d/%Y"

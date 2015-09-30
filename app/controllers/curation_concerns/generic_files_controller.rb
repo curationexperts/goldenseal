@@ -16,7 +16,7 @@ module CurationConcerns
         if ['text/xml', 'application/xml'].include? file.mime_type
           render text: VTTService.create(file.content)
         else
-          raise ActiveFedora::ObjectNotFoundError
+          fail ActiveFedora::ObjectNotFoundError
         end
       end
   end

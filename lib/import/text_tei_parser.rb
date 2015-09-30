@@ -1,7 +1,6 @@
 module Import
   # Parse the TEI file for a text-type record (e.g. a novel).
   class TextTeiParser
-
     attr_reader :file
 
     def initialize(file)
@@ -15,7 +14,7 @@ module Import
       xpath_map.each do |attr_name, attr_path|
         attrs[attr_name] = text_for(attr_path, xml)
       end
-      attrs.reject {|key, value| value.blank? }
+      attrs.reject { |_key, value| value.blank? }
     end
 
     def xml
@@ -42,6 +41,5 @@ module Import
         element.text.strip
       end
     end
-
   end
 end

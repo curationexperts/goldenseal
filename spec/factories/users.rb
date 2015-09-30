@@ -8,7 +8,5 @@ FactoryGirl.define do
 
     # Prevent ldap from being called
     groups_list_expires_at { 1.day.from_now }
-
-
   end
 end

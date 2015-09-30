@@ -15,7 +15,7 @@ module WithLdapGroups
 
   # get the groups from LDAP and update the local cache
   def fetch_groups!
-    new_groups = ldap_groups.map do |dn|
+    ldap_groups.map do |dn|
       /^cn=([^,]+),/.match(dn)[1]
     end
   end
@@ -37,12 +37,12 @@ module WithLdapGroups
 
   private
 
-    def cached_groups(&block)
+    def cached_groups(&_block)
       update(group_list: yield, groups_list_expires_at: 1.day.from_now) if groups_need_update?
       group_list
     end
 
     def groups_need_update?
-      groups_list_expires_at.blank? || groups_list_expires_at < Time.now
+      groups_list_expires_at.blank? || groups_list_expires_at < Time.now.utc
     end
 end

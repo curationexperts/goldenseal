@@ -4,7 +4,7 @@ describe 'Visit the show page for a record:' do
   let(:attrs) {{ title: ['Front Cover Image'],
                  note: ['Note'],
                  extent: ['25 pages'],
-                 date_issued: DateTime.parse('2015-01-02'),
+                 date_issued: DateTime.parse('2015-01-02').utc,
                  identifier: ['ident 123'],
                  series: ['ser AAA'],
                  publication_place: ['NYC'],
@@ -12,7 +12,7 @@ describe 'Visit the show page for a record:' do
                  sponsor: ['Company XYZ'],
                  funder: ['Fund Person 1'],
                  researcher: ['Some research team'],
-                 description_standard: ['Some standard'],
+                 description_standard: ['Some standard']
   }}
 
   let(:image) { create(:image, :public, attrs) }

@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 describe OptionsHelper do
-
   describe '#tei_select_options' do
     subject { helper.tei_select_options(obj) }
 
@@ -54,5 +53,4 @@ describe OptionsHelper do
       end
     end
   end
-
 end

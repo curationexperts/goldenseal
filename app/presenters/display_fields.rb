@@ -7,5 +7,4 @@ module DisplayFields
              :funder, :researcher, :height, :width, :mime_type, :filename,
              to: :solr_document
   end
-
 end

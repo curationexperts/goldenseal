@@ -2,7 +2,6 @@ require 'rails_helper'
 require 'import'
 
 describe Import::TextTeiParser do
-
   let(:lewald_tei) { File.join(fixture_path, 'text_importer', 'sample_import_files', 'lew1864.0001.001.xml') }
 
   describe 'initialize' do
@@ -38,5 +37,4 @@ describe Import::TextTeiParser do
       end
     end
   end
-
 end

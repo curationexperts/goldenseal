@@ -11,15 +11,15 @@ describe CurationConcerns::ImageActor do
     before { actor.transform_dates }
 
     context 'with a String value for the date' do
-      let(:attrs) {{ 'date_issued' => '2015-11-03' }}
+      let(:attrs) { { 'date_issued' => '2015-11-03' } }
 
       it 'casts the String to a DateTime' do
-        expect(subject).to eq DateTime.parse('2015-11-03')
+        expect(subject).to eq DateTime.parse('2015-11-03').utc
       end
     end
 
     context 'with a blank String for the date' do
-      let(:attrs) {{ 'date_issued' => '' }}
+      let(:attrs) { { 'date_issued' => '' } }
 
       it 'returns without transforming the value' do
         expect(subject).to eq ''
@@ -27,21 +27,19 @@ describe CurationConcerns::ImageActor do
     end
 
     context 'with a DateTime value for the date' do
-      let(:attrs) {{ 'date_issued' => DateTime.parse('2015-11-03') }}
+      let(:attrs) { { 'date_issued' => DateTime.parse('2015-11-03').utc } }
 
       it 'returns without transforming the value' do
-        expect(subject).to eq DateTime.parse('2015-11-03')
+        expect(subject).to eq DateTime.parse('2015-11-03').utc
       end
     end
 
     context 'with a symbol for the key' do
-      let(:attrs) {{ date_issued: '2015-11-03' }}
+      let(:attrs) { { date_issued: '2015-11-03' } }
 
       it 'casts the String to a DateTime' do
-        expect(subject).to eq DateTime.parse('2015-11-03')
+        expect(subject).to eq DateTime.parse('2015-11-03').utc
       end
     end
-
   end
-
 end

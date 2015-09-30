@@ -22,11 +22,10 @@ describe Import::Importer do
       let(:file) { lew_file }
 
       it 'raises an error' do
-        expect{ subject }.to raise_error(InvalidWorkTypeError, 'Invalid work type: bad input')
+        expect { subject }.to raise_error(InvalidWorkTypeError, 'Invalid work type: bad input')
       end
     end
   end
-
 
   describe '#run' do
     subject { described_class.new(type, file).run }
@@ -90,9 +89,8 @@ describe Import::Importer do
       let(:file) { 'bad/file/path' }
 
       it 'raises an error' do
-        expect{ subject }.to raise_error(/No such file or directory/)
+        expect { subject }.to raise_error(/No such file or directory/)
       end
     end
-  end  # describe run
-
+  end # describe run
 end

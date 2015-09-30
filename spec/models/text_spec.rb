@@ -1,11 +1,11 @@
 require 'rails_helper'
 
 describe Text do
-  before { Text.find('ccr1815.00757.018').destroy(eradicate: true) if Text.exists?('ccr1815.00757.018') }
+  before { described_class.find('ccr1815.00757.018').destroy(eradicate: true) if described_class.exists?('ccr1815.00757.018') }
 
   context "with TEI" do
     let(:document) do
-      Text.new(id: 'ccr1815.00757.018', title: ['test text']) do |t|
+      described_class.new(id: 'ccr1815.00757.018', title: ['test text']) do |t|
         t.apply_depositor_metadata('jcoyne')
       end
     end
@@ -29,7 +29,6 @@ describe Text do
         document.save(validate: false)
         conn.add(id: '1j92g7448', has_model_ssim: ['GenericFile'], generic_work_ids_ssim: [document.id], label_ssi: 'anoabo00-00001.jp2')
         conn.commit
-
       end
 
       it "returns the path of the file" do
@@ -41,7 +40,7 @@ describe Text do
   describe "#save" do
     context "when there is one attached file, but no TEI specified" do
       let(:document) do
-        Text.new(id: 'ccr1815.00757.018', title: ['test text']) do |t|
+        described_class.new(id: 'ccr1815.00757.018', title: ['test text']) do |t|
           t.apply_depositor_metadata('jcoyne')
         end
       end

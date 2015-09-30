@@ -22,7 +22,7 @@ describe Import::TextImporter do
       expect(subject.warnings).to eq []
       expect(subject.successful_imports).to eq []
       expect(subject.skipped_imports).to eq []
-      expect(subject.status.kind_of?(Import::ImportResults)).to be true
+      expect(subject.status.is_a?(Import::ImportResults)).to be true
     end
 
     it 'allows you to add status messages' do
@@ -61,7 +61,7 @@ describe Import::TextImporter do
       let(:dir) { File.join(fixture_path, 'some_bad_path') }
 
       it 'raises an error' do
-        expect{ subject }.to raise_error("Directory not found: #{dir}")
+        expect { subject }.to raise_error("Directory not found: #{dir}")
       end
     end
 
@@ -133,36 +133,35 @@ describe Import::TextImporter do
     end
   end
 
-
   describe '#record_exists?' do
     let(:dir) { File.join(fixture_path, 'text_importer', 'sample_import_files') }
     subject { importer.record_exists?(attrs) }
 
     context 'when identifier field is missing' do
-      let(:attrs) {{ title: ["Some Title"], :files=>[] }}
+      let(:attrs) { { title: ["Some Title"], files: [] } }
       it { is_expected.to be_falsey }
     end
 
     context 'when identifier field is empty' do
-      let(:attrs) {{ identifier: [], title: ["Some Title"], :files=>[] }}
+      let(:attrs) { { identifier: [], title: ["Some Title"], files: [] } }
       it { is_expected.to be_falsey }
     end
 
     context 'when identifier field has more than one value' do
       let(:attrs) {{ identifier: ['id1', 'id2'],
-                     title: ["Some Title"], :files=>[] }}
+                     title: ["Some Title"], files: [] }}
 
       it 'raises an error' do
-        expect{ subject }.to raise_error('Unable to determine identifier for record: ["id1", "id2"]')
+        expect { subject }.to raise_error('Unable to determine identifier for record: ["id1", "id2"]')
       end
     end
 
     context 'when the record already exists' do
       let(:attrs) {{ identifier: ['id1'],
-                     title: ["Some Title"], :files=>[] }}
+                     title: ["Some Title"], files: [] }}
 
       before do
-        allow_any_instance_of(ActiveFedora::Relation).to receive(:where).with({ "identifier_tesim" => 'id1' }).and_return(['something'])
+        allow_any_instance_of(ActiveFedora::Relation).to receive(:where).with("identifier_tesim" => 'id1').and_return(['something'])
       end
 
       it { is_expected.to be_truthy }
@@ -170,24 +169,23 @@ describe Import::TextImporter do
 
     context "when the record doesn't exist" do
       let(:attrs) {{ identifier: ['id1'],
-                     title: ["Some Title"], :files=>[] }}
+                     title: ["Some Title"], files: [] }}
       it { is_expected.to be_falsey }
     end
 
     context 'when more than one matching record exists' do
       let(:attrs) {{ identifier: ['id1'],
-                     title: ["Some Title"], :files=>[] }}
+                     title: ["Some Title"], files: [] }}
 
       before do
-        allow_any_instance_of(ActiveFedora::Relation).to receive(:where).with({ "identifier_tesim" => 'id1' }).and_return(['something', 'two things'])
+        allow_any_instance_of(ActiveFedora::Relation).to receive(:where).with("identifier_tesim" => 'id1').and_return(['something', 'two things'])
       end
 
       it 'raises an error' do
-        expect{ subject }.to raise_error('Too many matches found for record: id1')
+        expect { subject }.to raise_error('Too many matches found for record: id1')
       end
     end
   end
-
 
   describe '#run' do
     before { ActiveFedora::Cleaner.clean! }
@@ -206,7 +204,7 @@ describe Import::TextImporter do
         expect { importer.run }
           .to(change { Text.count }.by(2)
           .and(change { GenericFile.count }.by(4)),
-          lambda { importer.status.inspect })
+              lambda { importer.status.inspect })
 
         record = Text.where('identifier_tesim' => 'lew1864.0001.001').first
         expect(record.tei.label).to eq File.join('lew1864.0001.001.xml')
@@ -224,5 +222,4 @@ describe Import::TextImporter do
       end
     end
   end
-
 end

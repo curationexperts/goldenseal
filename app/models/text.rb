@@ -3,7 +3,7 @@ class Text < ActiveFedora::Base
   include CurationConcerns::BasicMetadata
   include Metadata
 
-  validates_presence_of :title,  message: 'Your work must have a title.'
+  validates :title, presence: { message: 'Your work must have a title.' }
 
   include WithTEI
 

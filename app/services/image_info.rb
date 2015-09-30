@@ -28,4 +28,3 @@ class ImageInfo
       CatalogController.blacklight_config
     end
 end
-

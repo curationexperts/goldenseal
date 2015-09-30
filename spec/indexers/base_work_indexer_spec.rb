@@ -12,5 +12,4 @@ describe BaseWorkIndexer do
       expect(subject['rights_label_ss']).to eq 'Public Domain Mark 1.0'
     end
   end
-
 end

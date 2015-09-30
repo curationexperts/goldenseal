@@ -12,15 +12,13 @@ describe Import::DcXmlParser do
     end
   end
 
-
   describe '#records' do
     subject { described_class.new(lew_file).records }
 
     it 'returns attributes for the records' do
-      expect(subject.map{|r| r[:id]}).to eq ['lew1873.0001.003', 'lew1880.0001.008']
+      expect(subject.map { |r| r[:id] }).to eq ['lew1873.0001.003', 'lew1880.0001.008']
     end
   end
-
 
   describe '#attributes_for_record' do
     let(:parser) { described_class.new(lew_file) }
@@ -39,9 +37,7 @@ describe Import::DcXmlParser do
       expect(subject[:language]).to eq ['German']
     end
   end
-
 end
-
 
 def sample_record_node
   Nokogiri::XML(<<-END_XML)

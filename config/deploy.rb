@@ -39,8 +39,7 @@ set :resque_kill_signal, "QUIT"
 require "resque"
 
 namespace :deploy do
-
-before :restart, "resque:pool:stop"
+  before :restart, "resque:pool:stop"
 
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
@@ -51,6 +50,5 @@ before :restart, "resque:pool:stop"
     end
   end
 
-after :clear_cache, "resque:pool:start"
-
+  after :clear_cache, "resque:pool:start"
 end

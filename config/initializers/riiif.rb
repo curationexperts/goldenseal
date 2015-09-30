@@ -1,5 +1,5 @@
 Riiif::Image.file_resolver = Riiif::HTTPFileResolver.new
-Riiif::Image.info_service = lambda do |id, file|
+Riiif::Image.info_service = lambda do |id, _file|
   ImageInfo.new(id).dimensions
 end
 

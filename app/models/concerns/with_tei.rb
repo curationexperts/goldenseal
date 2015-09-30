@@ -9,8 +9,7 @@ module WithTEI
 
   # if tei isn't set and there are generic_files, then set the first one
   def assign_default_tei
-    unless tei_id || generic_file_ids.empty?
-      self.tei_id = generic_file_ids.first
-    end
+    return if tei_id || generic_file_ids.empty?
+    self.tei_id = generic_file_ids.first
   end
 end

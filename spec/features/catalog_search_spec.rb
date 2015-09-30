@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 describe 'Searching the catalog:' do
-
   describe 'search all fields for the word "blue"' do
     before { ActiveFedora::Cleaner.clean! }
 
@@ -38,5 +37,4 @@ describe 'Searching the catalog:' do
       expect(page).to have_selector('#documents .document', count: 5)
     end
   end
-
 end

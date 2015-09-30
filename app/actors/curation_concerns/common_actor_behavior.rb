@@ -18,6 +18,5 @@ module CurationConcerns
       return if attributes['date_issued'].is_a?(DateTime)
       attributes['date_issued'] = DateTime.parse(attributes['date_issued']).utc
     end
-
   end
 end

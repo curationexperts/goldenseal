@@ -9,7 +9,6 @@ describe ImageIndexer do
     end
   end
 
-
   describe "#generate_solr_document" do
     before do
       allow(ImageInfo).to receive(:new).with('12345').and_return(info)
