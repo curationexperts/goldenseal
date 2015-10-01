@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/projecthydra-labs/curation_concerns.git
-  revision: ee5cd321018f5674f8a6c81c7a585fdb6ef78e4c
-  ref: ee5cd32
+  revision: 856e59a2e0e738b76ef5cb621dc7b1f3315ac89a
+  ref: 856e59a
   specs:
     curation_concerns (0.1.0)
       blacklight_advanced_search (>= 5.1.4, < 6.0)
