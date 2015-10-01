@@ -10,6 +10,18 @@ Rails.application.routes.draw do
   curation_concerns_basic_routes
   curation_concerns_embargo_management
 
+  # Eager load: https://github.com/resque/resque-web/issues/76
+  ResqueWeb::Engine.eager_load!
+
+  resque_web_constraint = lambda do |request|
+    current_user = request.env['warden'].user
+    current_user.present? && current_user.respond_to?(:groups) && current_user.groups.include?('admin')
+  end
+
+  constraints resque_web_constraint do
+    mount ResqueWeb::Engine => "/resque"
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

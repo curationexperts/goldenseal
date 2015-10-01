@@ -6,8 +6,9 @@ gem 'rails', '4.2.4'
 group :production do
 # Use postgresql as the database for Active Record
   gem 'pg'
-  gem 'therubyracer', platforms: :ruby
 end
+
+gem 'therubyracer', platforms: :ruby
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -28,7 +29,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns', ref: '1d39808'
 
+# We need to pin resque-web to the master branch on github
+# because the most recent release is long out-of-date.
+# We need a newer version to get bootstrap 3 support:
+# https://github.com/resque/resque-web/issues/62
+gem 'resque-web', require: 'resque_web', github: 'resque/resque-web'
 gem 'resque'
+
 gem 'hydra-pcdm', '~> 0.2.0'
 gem 'hydra-works', '~> 0.2.0'
 gem 'hydra-collections', '~> 6.0.0.rc1'
