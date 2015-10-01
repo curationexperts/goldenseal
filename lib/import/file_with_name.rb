@@ -9,5 +9,9 @@ module Import
     def original_filename
       File.basename(self)
     end
+
+    def content_type
+      MIME::Types.type_for(File.extname(self)).first.content_type
+    end
   end
 end

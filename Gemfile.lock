@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/projecthydra-labs/curation_concerns.git
-  revision: 1d39808082d678577a9841866d7c00976bf55a1d
-  ref: 1d39808
+  revision: ee5cd321018f5674f8a6c81c7a585fdb6ef78e4c
+  ref: ee5cd32
   specs:
     curation_concerns (0.1.0)
       blacklight_advanced_search (>= 5.1.4, < 6.0)
@@ -24,11 +24,22 @@ GIT
       resque-pool (~> 0.3)
 
 GIT
-  remote: git://github.com/projecthydra/hydra-derivatives.git
-  revision: c9fc494748d63fb07c3a4e9da7b3333561808ec8
-  ref: c9fc494
+  remote: git://github.com/projecthydra-labs/hydra-works.git
+  revision: 5e640f7dfedc4d107c49fea580cc8f044548eb43
+  ref: 5e640f7
   specs:
-    hydra-derivatives (2.0.0)
+    hydra-works (0.2.0)
+      active-fedora (>= 9.4.1)
+      activefedora-aggregation (~> 0.4)
+      hydra-derivatives (~> 3.0.0.alpha)
+      hydra-pcdm (~> 0.2)
+
+GIT
+  remote: git://github.com/projecthydra/hydra-derivatives.git
+  revision: c98475b3238339904634c0c7c4a660438d443de0
+  ref: c98475b
+  specs:
+    hydra-derivatives (3.0.0.alpha)
       active-fedora (~> 9.0)
       activesupport (~> 4.0)
       deprecation
@@ -38,8 +49,8 @@ GIT
 
 GIT
   remote: git://github.com/projecthydra/hydra-editor.git
-  revision: 5deff2df324ed1424324ec6b3b694a085308172d
-  ref: 5deff2d
+  revision: 88f6a94d13074909af13304dd5b7dc7cc593fcd0
+  ref: 88f6a94
   specs:
     hydra-editor (1.0.4)
       active-fedora (>= 9.0.0)
@@ -256,11 +267,6 @@ GEM
       active-fedora (>= 9.4.1)
       activefedora-aggregation (~> 0.4)
       mime-types (>= 1)
-    hydra-works (0.2.0)
-      active-fedora (>= 9.4.1)
-      activefedora-aggregation (~> 0.4)
-      hydra-derivatives (~> 2.0)
-      hydra-pcdm (~> 0.2)
     i18n (0.7.0)
     jbuilder (2.3.1)
       activesupport (>= 3.0.0, < 5)
@@ -593,7 +599,7 @@ DEPENDENCIES
   hydra-editor!
   hydra-head!
   hydra-pcdm (~> 0.2.0)
-  hydra-works (~> 0.2.0)
+  hydra-works!
   jbuilder (~> 2.0)
   jettywrapper
   jquery-rails

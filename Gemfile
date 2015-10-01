@@ -27,7 +27,7 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns', ref: '1d39808'
+gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns', ref: 'ee5cd32'
 
 # We need to pin resque-web to the master branch on github
 # because the most recent release is long out-of-date.
@@ -37,13 +37,13 @@ gem 'resque-web', require: 'resque_web', github: 'resque/resque-web'
 gem 'resque'
 
 gem 'hydra-pcdm', '~> 0.2.0'
-gem 'hydra-works', '~> 0.2.0'
+gem 'hydra-works', github: 'projecthydra-labs/hydra-works', ref: '5e640f7'
 gem 'hydra-collections', '~> 6.0.0.rc1'
-# https://github.com/projecthydra/hydra-editor/pull/98
-gem 'hydra-editor', github: 'projecthydra/hydra-editor', ref: '5deff2d'
+gem 'hydra-editor', github: 'projecthydra/hydra-editor', ref: '88f6a94'
 # https://github.com/projecthydra/hydra-head/pull/285
 gem 'hydra-head', github: 'projecthydra/hydra-head', ref: '86e513d'
-gem 'hydra-derivatives', github: 'projecthydra/hydra-derivatives', ref: 'c9fc494'
+# https://github.com/projecthydra/hydra-derivatives/pull/88
+gem 'hydra-derivatives', github: 'projecthydra/hydra-derivatives', ref: 'c98475b'
 gem 'activefedora-aggregation', '~> 0.4.1'
 gem 'active-fedora', '~> 9.4.3'
 gem 'riiif', '0.1.0'
