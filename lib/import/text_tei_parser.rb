@@ -24,8 +24,13 @@ module Import
     # Map the name of the attribute to its xpath in the TEI file
     def xpath_map
       {
-        identifier: '/*/@xml:id',
+        identifier: '/*/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno',
         title: '/*/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title',
+        creator: '/*/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:author',
+        editor: '/*/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:author',
+        publisher: '/*/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:biblFull/tei:publicationStmt/tei:publisher',
+        language: '/*/tei:teiHeader/tei:profileDesc/tei:langUsage/tei:language',
+        extent: '/*/tei:teiHeader/tei:fileDesc/tei:extent',
         files: '//tei:text/tei:body//tei:pb/@facs'
       }
     end
