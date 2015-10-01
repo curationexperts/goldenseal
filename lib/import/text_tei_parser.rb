@@ -14,6 +14,7 @@ module Import
       xpath_map.each do |attr_name, attr_path|
         attrs[attr_name] = text_for(attr_path, xml)
       end
+      attrs = attrs.merge(date_issued: issue_date)
       attrs.reject { |_key, value| value.blank? }
     end
 
@@ -45,6 +46,11 @@ module Import
       node.xpath(xpath, namespaces).map do |element|
         element.text.strip
       end
+    end
+
+    def issue_date
+      date = xml.xpath('/*/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:biblFull/tei:publicationStmt/tei:date', namespaces).first
+      date.text.strip if date
     end
   end
 end
