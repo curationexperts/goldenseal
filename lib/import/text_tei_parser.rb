@@ -14,7 +14,8 @@ module Import
       xpath_map.each do |attr_name, attr_path|
         attrs[attr_name] = text_for(attr_path, xml)
       end
-      attrs = attrs.merge(date_issued: issue_date)
+      attrs = attrs.merge(date_issued: issue_date,
+                          identifier: identifier)
       attrs.reject { |_key, value| value.blank? }
     end
 
@@ -25,7 +26,6 @@ module Import
     # Map the name of the attribute to its xpath in the TEI file
     def xpath_map
       {
-        identifier: '/*/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno',
         title: '/*/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title',
         creator: '/*/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:author',
         editor: '/*/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:author',
@@ -52,6 +52,15 @@ module Import
     def issue_date
       date = xml.xpath('/*/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:biblFull/tei:publicationStmt/tei:date', namespaces).first
       date.text.strip if date
+    end
+
+    def identifier
+      id_node = xml.xpath('/*/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno', namespaces)
+      id_node.map do |node|
+        type = node.attribute('type') ? node.attribute('type').value : nil
+        type = nil if type == 'dls'
+        [type, node.text].compact.join(': ')
+      end
     end
   end
 end
