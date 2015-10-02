@@ -27,8 +27,8 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-# https://github.com/projecthydra-labs/curation_concerns/pull/360
-gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns', ref: '006a2417a'
+# https://github.com/projecthydra-labs/curation_concerns/pull/362
+gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns', ref: 'f0677e6'
 
 # We need to pin resque-web to the master branch on github
 # because the most recent release is long out-of-date.
