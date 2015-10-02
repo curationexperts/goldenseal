@@ -5,6 +5,8 @@ describe Import::TextImporter do
   let(:visibility) { nil }
   let(:importer) { described_class.new(dir, visibility) }
 
+  let(:pub_dom_url) { 'http://creativecommons.org/publicdomain/mark/1.0/' }
+
   describe 'inititialize' do
     let(:dir) { File.join(fixture_path, 'tei') }
 
@@ -233,6 +235,18 @@ describe Import::TextImporter do
     end
   end
 
+  describe '#rights' do
+    let(:dir) { File.join(fixture_path, 'text_importer', 'sample_import_files') }
+    let(:rr_url) { 'http://www.europeana.eu/portal/rights/rr-r.html' }
+
+    subject { importer.transform_rights(rights:
+      ['work is in the public domain', 'any other string']) }
+
+    it 'transforms rights statement text to URLs' do
+      expect(subject).to eq [pub_dom_url, rr_url]
+    end
+  end
+
   describe '#run' do
     before { ActiveFedora::Cleaner.clean! }
 
@@ -256,6 +270,7 @@ describe Import::TextImporter do
         record = Text.where('identifier_tesim' => 'lew1864.0001.001').first
         expect(record.tei.label).to eq File.join('lew1864.0001.001.xml')
         expect(record.visibility).to eq visibility
+        expect(record.rights).to eq [pub_dom_url]
         expect(GenericFile.all.map(&:visibility).uniq).to eq [visibility]
 
         # The first TEI file lists 337 files and the other TEI

@@ -32,6 +32,7 @@ module Import
         publisher: '/*/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:biblFull/tei:publicationStmt/tei:publisher',
         language: '/*/tei:teiHeader/tei:profileDesc/tei:langUsage/tei:language',
         extent: '/*/tei:teiHeader/tei:fileDesc/tei:extent',
+        rights: '/*/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:availability',
         files: '//tei:text/tei:body//tei:pb/@facs'
       }
     end

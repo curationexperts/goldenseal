@@ -26,6 +26,7 @@ describe Import::TextTeiParser do
         expect(subject[:publisher]).to eq ['Otto Janke']
         expect(subject[:language]).to eq ['German']
         expect(subject[:extent]).to eq ['1 novel in 1 volume']
+        expect(subject[:rights]).to eq ['work is in the public domain']
         expect(subject[:date_issued]).to eq '1864'
 
         expect(subject[:files].first).to eq 'letz_01_0001_unm.jp2'
