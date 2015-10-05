@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/projecthydra-labs/curation_concerns.git
-  revision: f0677e6bf3fa6ffe934a8a7e7b31614097951261
-  ref: f0677e6
+  revision: ad09b4a9a76d93d03f1ffe786b05a1d3859df114
+  ref: ad09b4a
   specs:
     curation_concerns (0.1.0)
       blacklight_advanced_search (>= 5.1.4, < 6.0)
@@ -25,25 +25,25 @@ GIT
 
 GIT
   remote: git://github.com/projecthydra-labs/hydra-works.git
-  revision: 5e640f7dfedc4d107c49fea580cc8f044548eb43
-  ref: 5e640f7
+  revision: ecb7af5f8b873a6fd70a4de9d4d46a56cc4e9231
+  ref: ecb7af5
   specs:
     hydra-works (0.2.0)
       active-fedora (>= 9.4.1)
       activefedora-aggregation (~> 0.4)
       hydra-derivatives (~> 3.0.0.alpha)
+      hydra-file_characterization (~> 0.3)
       hydra-pcdm (~> 0.2)
 
 GIT
   remote: git://github.com/projecthydra/hydra-derivatives.git
-  revision: c98475b3238339904634c0c7c4a660438d443de0
-  ref: c98475b
+  revision: e94158c7aece56c0030c9314b0558f606409d3bb
+  ref: e94158c
   specs:
     hydra-derivatives (3.0.0.alpha)
       active-fedora (~> 9.0)
       activesupport (~> 4.0)
       deprecation
-      hydra-file_characterization (~> 0.3)
       mime-types (< 3)
       mini_magick (>= 3.2, < 5)
 
@@ -324,7 +324,7 @@ GEM
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     mime-types (2.6.2)
-    mini_magick (4.3.3)
+    mini_magick (4.3.5)
     mini_portile (0.6.2)
     minitest (5.8.1)
     mono_logger (1.1.0)
