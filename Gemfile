@@ -38,7 +38,7 @@ gem 'resque-web', require: 'resque_web', github: 'resque/resque-web'
 gem 'resque'
 
 gem 'hydra-pcdm', '~> 0.2.0'
-gem 'hydra-works', github: 'projecthydra-labs/hydra-works', ref: 'ecb7af5'
+gem 'hydra-works', github: 'projecthydra-labs/hydra-works', ref: '7c9a10d339fac2fdd05513928738914222ae2df7'
 gem 'hydra-collections', '~> 6.0.0.rc1'
 gem 'hydra-editor', github: 'projecthydra/hydra-editor', ref: '88f6a94'
 # https://github.com/projecthydra/hydra-head/pull/285

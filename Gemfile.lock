@@ -25,14 +25,13 @@ GIT
 
 GIT
   remote: git://github.com/projecthydra-labs/hydra-works.git
-  revision: ecb7af5f8b873a6fd70a4de9d4d46a56cc4e9231
-  ref: ecb7af5
+  revision: 7c9a10d339fac2fdd05513928738914222ae2df7
+  ref: 7c9a10d339fac2fdd05513928738914222ae2df7
   specs:
     hydra-works (0.2.0)
       active-fedora (>= 9.4.1)
       activefedora-aggregation (~> 0.4)
       hydra-derivatives (~> 3.0.0.alpha)
-      hydra-file_characterization (~> 0.3)
       hydra-pcdm (~> 0.2)
 
 GIT
@@ -261,8 +260,6 @@ GEM
       deprecation (~> 0.1)
       hydra-head (~> 9.1)
       hydra-works (~> 0.2)
-    hydra-file_characterization (0.3.2)
-      activesupport (>= 3.0.0)
     hydra-pcdm (0.2.0)
       active-fedora (>= 9.4.1)
       activefedora-aggregation (~> 0.4)
