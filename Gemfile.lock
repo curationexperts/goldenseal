@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/projecthydra-labs/curation_concerns.git
-  revision: ad09b4a9a76d93d03f1ffe786b05a1d3859df114
-  ref: ad09b4a
+  revision: d5464453225d5813a3dd4dee4aa6ccff18dfaf94
+  ref: d546445
   specs:
     curation_concerns (0.1.0)
       blacklight_advanced_search (>= 5.1.4, < 6.0)
@@ -231,7 +231,7 @@ GEM
       devise (>= 3.4.1)
       net-ldap (>= 0.6.0, <= 0.11)
     diff-lcs (1.2.5)
-    domain_name (0.5.24)
+    domain_name (0.5.25)
       unf (>= 0.0.5, < 1.0.0)
     ebnf (0.3.9)
       rdf (~> 1.1)

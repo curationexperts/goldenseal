@@ -28,7 +28,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # https://github.com/projecthydra-labs/curation_concerns/pull/363
-gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns', ref: 'ad09b4a'
+gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns', ref: 'd546445'
 
 # We need to pin resque-web to the master branch on github
 # because the most recent release is long out-of-date.
