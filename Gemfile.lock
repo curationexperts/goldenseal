@@ -260,6 +260,8 @@ GEM
       deprecation (~> 0.1)
       hydra-head (~> 9.1)
       hydra-works (~> 0.2)
+    hydra-file_characterization (0.3.2)
+      activesupport (>= 3.0.0)
     hydra-pcdm (0.2.0)
       active-fedora (>= 9.4.1)
       activefedora-aggregation (~> 0.4)
@@ -594,6 +596,7 @@ DEPENDENCIES
   hydra-collections (~> 6.0.0.rc1)
   hydra-derivatives!
   hydra-editor!
+  hydra-file_characterization
   hydra-head!
   hydra-pcdm (~> 0.2.0)
   hydra-works!
