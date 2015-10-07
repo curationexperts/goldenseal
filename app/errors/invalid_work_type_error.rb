@@ -1,2 +1,0 @@
-class InvalidWorkTypeError < StandardError
-end
