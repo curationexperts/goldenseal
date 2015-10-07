@@ -41,8 +41,7 @@ gem 'hydra-pcdm', '~> 0.2.0'
 gem 'hydra-works', github: 'projecthydra-labs/hydra-works', ref: '01f4d05'
 gem 'hydra-collections', '~> 6.0.0.rc1'
 gem 'hydra-editor', github: 'projecthydra/hydra-editor', ref: '88f6a94'
-# https://github.com/projecthydra/hydra-head/pull/285
-gem 'hydra-head', github: 'projecthydra/hydra-head', ref: '86e513d'
+gem 'hydra-head', '~> 9.3.0'
 # Prior to 3.0.0
 gem 'hydra-derivatives', github: 'projecthydra/hydra-derivatives', ref: '51d81e7'
 gem 'activefedora-aggregation', '~> 0.4.1'
