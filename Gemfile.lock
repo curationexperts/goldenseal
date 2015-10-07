@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/projecthydra-labs/curation_concerns.git
-  revision: d5464453225d5813a3dd4dee4aa6ccff18dfaf94
-  ref: d546445
+  revision: 7d7e0d67a94180ec55e86997de678f6fb86ae650
+  ref: 7d7e0d6
   specs:
     curation_concerns (0.1.0)
       blacklight_advanced_search (>= 5.1.4, < 6.0)
@@ -25,13 +25,14 @@ GIT
 
 GIT
   remote: git://github.com/projecthydra-labs/hydra-works.git
-  revision: 7c9a10d339fac2fdd05513928738914222ae2df7
-  ref: 7c9a10d339fac2fdd05513928738914222ae2df7
+  revision: d1f7cf285f0c75126e1034d658581f5595ba1517
+  ref: d1f7cf2
   specs:
     hydra-works (0.2.0)
       active-fedora (>= 9.4.1)
       activefedora-aggregation (~> 0.4)
       hydra-derivatives (~> 3.0.0.alpha)
+      hydra-file_characterization (~> 0.3)
       hydra-pcdm (~> 0.2)
 
 GIT

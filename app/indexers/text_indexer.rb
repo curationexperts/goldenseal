@@ -14,7 +14,7 @@ class TextIndexer < BaseWorkIndexer
   end
 
   def tei_as_json
-    # OPTIMIZE: this could be indexed on the GenericFile which
+    # OPTIMIZE: this could be indexed on the FileSet which
     # so that every index call wouldn't have to load the tei file.
     tei = object.tei.original_file.try(:content)
     return unless tei

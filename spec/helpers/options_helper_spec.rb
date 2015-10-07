@@ -24,31 +24,31 @@ describe OptionsHelper do
       end
 
       let(:xml_file) do
-        generic_file = GenericFile.new do |gf|
+        file_set = FileSet.new do |gf|
           gf.apply_depositor_metadata('jcoyne')
           gf.mime_type = 'application/xml'
           gf.label = 'xml file'
         end
         file_path = File.join(fixture_path, 'tei', xml_file_name)
-        Hydra::Works::AddFileToGenericFile.call(generic_file, File.open(file_path), :original_file)
-        generic_file
+        Hydra::Works::AddFileToFileSet.call(file_set, File.open(file_path), :original_file)
+        file_set
       end
 
       let(:pdf_file) do
-        generic_file = GenericFile.new do |gf|
+        file_set = FileSet.new do |gf|
           gf.apply_depositor_metadata('jcoyne')
           gf.mime_type = 'application/pdf'
           gf.label = 'pdf file'
         end
         file_path = File.join(fixture_path, pdf_file_name)
-        Hydra::Works::AddFileToGenericFile.call(generic_file, File.open(file_path), :original_file)
-        generic_file
+        Hydra::Works::AddFileToFileSet.call(file_set, File.open(file_path), :original_file)
+        file_set
       end
 
       it 'only returns XML files as options' do
         # Make sure the test is set up properly, with one XML
         # and one PDF file.
-        expect(obj.generic_files.map(&:mime_type)).to eq ['application/xml', 'application/pdf']
+        expect(obj.file_sets.map(&:mime_type)).to eq ['application/xml', 'application/pdf']
         expect(subject).to eq [['xml file', xml_file.id]]
       end
     end

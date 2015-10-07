@@ -12,14 +12,14 @@ describe Text do
     let(:file) { '/tei/ccr1815.00757.018.xml' }
 
     before do
-      generic_file = GenericFile.new do |gf|
+      file_set = FileSet.new do |gf|
         gf.apply_depositor_metadata('jcoyne')
       end
-      document.members << generic_file
+      document.members << file_set
       document.save!
-      Hydra::Works::AddFileToGenericFile.call(generic_file, File.open(fixture_path + file), :original_file)
+      Hydra::Works::AddFileToFileSet.call(file_set, File.open(fixture_path + file), :original_file)
       # It's important that we set TEI afterwards, so that the file is directly contained by the work.
-      document.update tei: generic_file
+      document.update tei: file_set
     end
 
     describe 'id_for_filename' do
@@ -27,7 +27,7 @@ describe Text do
       let(:record) { double(original_name: 'anoabo00-00001.jp2', read: 'some bytes', size: 10) }
       before do
         document.save(validate: false)
-        conn.add(id: '1j92g7448', has_model_ssim: ['GenericFile'], generic_work_ids_ssim: [document.id], label_ssi: 'anoabo00-00001.jp2')
+        conn.add(id: '1j92g7448', has_model_ssim: ['FileSet'], generic_work_ids_ssim: [document.id], label_ssi: 'anoabo00-00001.jp2')
         conn.commit
       end
 
@@ -46,22 +46,22 @@ describe Text do
       end
 
       let(:file) { '/tei/ccr1815.00757.018.xml' }
-      let(:generic_file) do
-        GenericFile.new do |gf|
+      let(:file_set) do
+        FileSet.new do |gf|
           gf.apply_depositor_metadata('jcoyne')
         end
       end
 
       before do
-        document.members << generic_file
+        document.members << file_set
         document.save!
-        Hydra::Works::AddFileToGenericFile.call(generic_file, File.open(fixture_path + file), :original_file)
+        Hydra::Works::AddFileToFileSet.call(file_set, File.open(fixture_path + file), :original_file)
       end
 
       it "default the tei file to the first file" do
         expect(document.tei).to be_nil
         document.save!
-        expect(document.reload.tei).to eq generic_file
+        expect(document.reload.tei).to eq file_set
       end
     end
   end

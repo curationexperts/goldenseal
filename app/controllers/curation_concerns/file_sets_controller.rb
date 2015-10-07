@@ -1,6 +1,6 @@
 module CurationConcerns
-  class GenericFilesController < ApplicationController
-    include CurationConcerns::GenericFilesControllerBehavior
+  class FileSetsController < ApplicationController
+    include CurationConcerns::FileSetsControllerBehavior
 
     # Called by show() in CurationConcerns
     def additional_response_formats(format)
@@ -10,7 +10,7 @@ module CurationConcerns
     protected
 
       def render_vtt
-        gf = ::GenericFile.find(params[:id])
+        gf = ::FileSet.find(params[:id])
         authorize! :show, gf
         file = gf.original_file
         if ['text/xml', 'application/xml'].include? file.mime_type

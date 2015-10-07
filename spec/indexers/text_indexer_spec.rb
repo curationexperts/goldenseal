@@ -25,8 +25,8 @@ describe TextIndexer do
       expect(subject.fetch('tei_json_ss')).to eq "{\"pages\":[\"1\",\"2\"]}"
     end
 
-    it "has generic_file_ids" do
-      expect(subject.fetch('generic_file_ids_ssim')).to eq ['23', '24']
+    it "has file_set_ids" do
+      expect(subject.fetch('file_set_ids_ssim')).to eq ['23', '24']
     end
   end
 
@@ -35,22 +35,22 @@ describe TextIndexer do
 
     let(:file) { '/tei/ccr1815.00757.018.xml' }
 
-    let(:generic_file) do
-      GenericFile.new do |gf|
+    let(:file_set) do
+      FileSet.new do |gf|
         gf.apply_depositor_metadata('jcoyne')
       end
     end
 
     before do
-      text.members << generic_file
+      text.members << file_set
       text.save!
     end
 
     context "with a file" do
       before do
-        Hydra::Works::AddFileToGenericFile.call(generic_file, File.open(fixture_path + file), :original_file)
+        Hydra::Works::AddFileToFileSet.call(file_set, File.open(fixture_path + file), :original_file)
         # It's important that we set TEI afterwards, so that the file is directly contained by the work.
-        text.update tei: generic_file
+        text.update tei: file_set
       end
 
       context "without a titlePage with an image" do
@@ -78,7 +78,7 @@ describe TextIndexer do
 
     context "when the original_file is missing" do
       before do
-        text.update tei: generic_file
+        text.update tei: file_set
       end
       it "returns nothing" do
         expect(subject).to be_nil

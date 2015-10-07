@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :generic_file do
+  factory :file_set do
     transient do
       depositor "archivist1@example.com"
     end
@@ -14,7 +14,7 @@ FactoryGirl.define do
         filename "spec/fixtures/tei/add14885.01250.032.xml"
       end
       after(:create) do |gf, evaluator|
-        Hydra::Works::AddFileToGenericFile.call(gf, File.open(evaluator.filename), :original_file)
+        Hydra::Works::AddFileToFileSet.call(gf, File.open(evaluator.filename), :original_file)
       end
     end
   end

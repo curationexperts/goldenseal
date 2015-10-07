@@ -103,13 +103,13 @@ module Import
 
     def create_file(record_id, matching_file)
       file = FileWithName.new(matching_file)
-      gf = GenericFile.new
-      actor = CurationConcerns::GenericFileActor.new(gf, user)
+      gf = FileSet.new
+      actor = CurationConcerns::FileSetActor.new(gf, user)
       actor.create_metadata(nil, record_id)
       fail 'Content creation failed' unless actor.create_content(file)
 
       gf.errors.each { |k, v| errors << "GF #{k}: #{v}" }
-      fail 'GenericFile had errors' unless gf.errors.blank?
+      fail 'FileSet had errors' unless gf.errors.blank?
     end
 
     def find_file(file_name, tei)

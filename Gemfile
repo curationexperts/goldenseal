@@ -28,7 +28,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # https://github.com/projecthydra-labs/curation_concerns/pull/363
-gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns', ref: 'd546445'
+gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns', ref: '7d7e0d6'
 
 # We need to pin resque-web to the master branch on github
 # because the most recent release is long out-of-date.
@@ -38,7 +38,7 @@ gem 'resque-web', require: 'resque_web', github: 'resque/resque-web'
 gem 'resque'
 
 gem 'hydra-pcdm', '~> 0.2.0'
-gem 'hydra-works', github: 'projecthydra-labs/hydra-works', ref: '7c9a10d339fac2fdd05513928738914222ae2df7'
+gem 'hydra-works', github: 'projecthydra-labs/hydra-works', ref: 'd1f7cf2'
 gem 'hydra-collections', '~> 6.0.0.rc1'
 gem 'hydra-file_characterization' # fix for https://github.com/projecthydra-labs/curation_concerns/issues/365
 gem 'hydra-editor', github: 'projecthydra/hydra-editor', ref: '88f6a94'

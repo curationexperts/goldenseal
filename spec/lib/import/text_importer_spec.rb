@@ -210,16 +210,16 @@ describe Import::TextImporter do
     subject { importer.create_file('123', file) }
 
     before do
-      allow(CurationConcerns::GenericFileActor).to receive(:new).and_return(actor)
-      allow(GenericFile).to receive(:new).and_return(gf)
+      allow(CurationConcerns::FileSetActor).to receive(:new).and_return(actor)
+      allow(FileSet).to receive(:new).and_return(gf)
     end
 
-    context 'when the GenericFile has errors' do
+    context 'when the FileSet has errors' do
       let(:actor) { double('actor', create_metadata: true, create_content: true) }
       let(:gf) { double('gf', errors: { base: 'base error', id: 'id error' }) }
 
       it 'raises an error' do
-        expect { subject }.to raise_error('GenericFile had errors')
+        expect { subject }.to raise_error('FileSet had errors')
         expect(importer.errors).to include('GF base: base error')
         expect(importer.errors).to include('GF id: id error')
       end
@@ -258,20 +258,20 @@ describe Import::TextImporter do
         # Stub out anything that requires a redis connection,
         # such as background jobs and lock management.
         allow(CharacterizeJob).to receive_messages(perform_later: nil, perform_now: nil)
-        allow_any_instance_of(CurationConcerns::GenericFileActor).to receive(:acquire_lock_for).and_yield
+        allow_any_instance_of(CurationConcerns::FileSetActor).to receive(:acquire_lock_for).and_yield
       end
 
       it 'it creates a record for each TEI and attaches files to it' do
         expect { importer.run }
           .to(change { Text.count }.by(2)
-          .and(change { GenericFile.count }.by(4)),
+          .and(change { FileSet.count }.by(4)),
               lambda { importer.status.inspect })
 
         record = Text.where('identifier_tesim' => 'lew1864.0001.001').first
         expect(record.tei.label).to eq File.join('lew1864.0001.001.xml')
         expect(record.visibility).to eq visibility
         expect(record.rights).to eq [pub_dom_url]
-        expect(GenericFile.all.map(&:visibility).uniq).to eq [visibility]
+        expect(FileSet.all.map(&:visibility).uniq).to eq [visibility]
 
         # The first TEI file lists 337 files and the other TEI
         # lists 13, for a total of 350 files.  For this test,

@@ -1,7 +1,7 @@
 # Generated via
 #  `rails generate curation_concerns:work Document`
 class Document < ActiveFedora::Base
-  include ::CurationConcerns::GenericWorkBehavior
+  include ::CurationConcerns::WorkBehavior
   include ::CurationConcerns::BasicMetadata
   include Metadata
 

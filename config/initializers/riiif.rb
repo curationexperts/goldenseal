@@ -5,7 +5,7 @@ end
 
 Riiif::Image.file_resolver.id_to_uri = lambda do |id|
   Rails.cache.fetch("#{id}/original_file", expires_in: 3.months) do
-    GenericFile.find(CGI.unescape(id)).original_file.uri
+    FileSet.find(CGI.unescape(id)).original_file.uri
   end
 end
 
