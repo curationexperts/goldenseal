@@ -1,4 +1,4 @@
-class TextPresenter < CurationConcerns::GenericWorkShowPresenter
+class TextPresenter < WorkShowPresenter
   include DisplayFields
 
   def tei?

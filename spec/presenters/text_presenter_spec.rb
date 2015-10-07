@@ -28,4 +28,10 @@ describe TextPresenter do
       it { is_expected.to eq json }
     end
   end
+
+  describe "tei_id" do
+    let(:attributes) { { 'hasEncodedText_ssim' => ['1234'] } }
+    subject { presenter.tei_id }
+    it { is_expected.to eq '1234' }
+  end
 end
