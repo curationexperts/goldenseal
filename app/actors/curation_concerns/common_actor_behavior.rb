@@ -12,11 +12,9 @@ module CurationConcerns
       super
     end
 
-    # If date is a String, cast it to a DateTime
+    # Format the date
     def transform_dates
-      return if attributes['date_issued'].blank?
-      return if attributes['date_issued'].is_a?(DateTime)
-      attributes['date_issued'] = DateTime.parse(attributes['date_issued']).utc
+      attributes['date_issued'] = DateService.parse(attributes['date_issued'])
     end
   end
 end
