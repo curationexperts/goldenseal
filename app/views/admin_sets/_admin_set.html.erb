@@ -1,0 +1,4 @@
+<li id="document_<%= admin_set.to_param %>" class="document <%= render_document_class admin_set %>" itemscope itemtype="<%= admin_set.itemtype %>">
+  <%= render_document_partials admin_set, blacklight_config.view_config(document_index_view_type).partials, document_counter: admin_set_counter %>
+</li>
+

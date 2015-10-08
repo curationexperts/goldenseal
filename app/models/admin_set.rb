@@ -1,12 +1,17 @@
 class AdminSet < ActiveFedora::Base
   include Hydra::AccessControls::Permissions
+  include CurationConcerns::HumanReadableType
+
+  self.human_readable_type = 'Administrative Collection'
 
   has_many :members, predicate: ActiveFedora::RDF::Fcrepo::RelsExt.hasCollectionMember, class_name: "ActiveFedora::Base"
 
   validates :title, presence: { message: 'Your collection must have a title.' }
   validates :identifier, presence: { message: 'Your collection must have an identifier.' }
 
-  property :title, predicate: ::RDF::DC.title, multiple: false
+  property :title, predicate: ::RDF::DC.title, multiple: false do |index|
+    index.as :stored_searchable
+  end
   property :identifier, predicate: ::RDF::DC.identifier, multiple: false
   property :description, predicate: ::RDF::DC.description, multiple: false
 
@@ -20,5 +25,9 @@ class AdminSet < ActiveFedora::Base
 
   def assign_access
     self.read_groups += ['public']
+  end
+
+  def self.indexer
+    AdminSetIndexer
   end
 end
