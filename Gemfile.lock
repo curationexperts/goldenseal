@@ -1,7 +1,6 @@
 GIT
   remote: git://github.com/projecthydra-labs/curation_concerns.git
-  revision: 4206ee6fddc21a830a745938deb609cc6c4c9dbc
-  ref: 4206ee6f
+  revision: d622ba4c07ab5074522068b9079177fcb72ca9e7
   specs:
     curation_concerns (0.1.0)
       blacklight_advanced_search (>= 5.1.4, < 6.0)
@@ -16,7 +15,7 @@ GIT
       active_attr
       active_fedora-noid (~> 1.0)
       hydra-collections (~> 6.0.0.rc1)
-      hydra-head (~> 9.2)
+      hydra-head (~> 9.3)
       hydra-works (~> 0.2)
       qa (~> 0.5)
       redlock (~> 0.1.2)

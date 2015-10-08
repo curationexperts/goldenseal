@@ -1,4 +1,4 @@
-class WorkShowPresenter < CurationConcerns::GenericWorkShowPresenter
+class WorkShowPresenter < CurationConcerns::WorkShowPresenter
   include DisplayFields
 
   def tei_id
