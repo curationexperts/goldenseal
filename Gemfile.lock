@@ -36,18 +36,6 @@ GIT
       hydra-pcdm (~> 0.2)
 
 GIT
-  remote: git://github.com/projecthydra/hydra-derivatives.git
-  revision: 51d81e75e8514f7dbdc4a1175115f3f3601e71a0
-  ref: 51d81e7
-  specs:
-    hydra-derivatives (3.0.0.alpha)
-      active-fedora (~> 9.0)
-      activesupport (~> 4.0)
-      deprecation
-      mime-types (< 3)
-      mini_magick (>= 3.2, < 5)
-
-GIT
   remote: git://github.com/projecthydra/hydra-editor.git
   revision: 88f6a94d13074909af13304dd5b7dc7cc593fcd0
   ref: 88f6a94
@@ -251,6 +239,12 @@ GEM
       hydra-access-controls (= 9.3.0)
       jettywrapper (>= 2.0.0)
       rails (~> 4.0)
+    hydra-derivatives (3.0.0)
+      active-fedora (~> 9.0)
+      activesupport (~> 4.0)
+      deprecation
+      mime-types (< 3)
+      mini_magick (>= 3.2, < 5)
     hydra-file_characterization (0.3.2)
       activesupport (>= 3.0.0)
     hydra-head (9.3.0)
@@ -589,7 +583,7 @@ DEPENDENCIES
   devise_ldap_authenticatable
   factory_girl_rails
   hydra-collections (~> 6.0.0.rc1)
-  hydra-derivatives!
+  hydra-derivatives (~> 3.0.0)
   hydra-editor!
   hydra-head (~> 9.3.0)
   hydra-pcdm (~> 0.2.0)

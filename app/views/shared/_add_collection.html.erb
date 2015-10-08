@@ -1,0 +1,10 @@
+        <strong class="menu-heading item-with-options">Add a Collection</strong>
+        <ul class="item-options quick-classify">
+        <% if can? :create, AdminSet %>
+          <li><%= link_to 'Administrative', new_admin_set_path, class: 'item-option contextual-quick-classify', role: 'menuitem' %></li>
+        <% end %>
+        <% if can? :create, ::Collection %>
+          <li><%= link_to 'Personal', collections.new_collection_path, class: 'item-option contextual-quick-classify', role: 'menuitem' %></li>
+        <% end %>
+        </ul>
+

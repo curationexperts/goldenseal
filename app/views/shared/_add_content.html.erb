@@ -1,0 +1,24 @@
+<% include_works_link ||= can_ever_create_works? %>
+<% include_collections_menu = can?(:create, ::Collection) || can?(:create, ::AdminSet) %>
+<% if include_works_link || include_collections_link %>
+  <div class="btn-group add-content">
+    <%= link_to curation_concerns.new_classify_concern_path, id: "add-content", class: "btn btn-primary dropdown-toggle", data: { toggle: "dropdown"} do %>
+      <span class="glyphicon glyphicon-plus"></span><span class="visuallyhidden">Add</span>
+    <% end %>
+    <ul class="dropdown-menu quick-create">
+      <% if include_works_link %>
+        <li>
+          <%= render 'shared/add_works' %>
+        </li>
+        <li class="divider"></li>
+      <% end %>
+
+      <% if include_collections_menu %>
+        <li>
+          <%= render 'shared/add_collection' %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
