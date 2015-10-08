@@ -206,8 +206,9 @@ describe Import::TextImporter do
   describe '#create_file' do
     let(:dir) { File.join(fixture_path, 'text_importer', 'dir_with_xml_files') }
     let(:file) { File.join(dir, 'file1.xml') }
+    let(:record) { double('text record', id: '123') }
 
-    subject { importer.create_file('123', file) }
+    subject { importer.create_file(record, file) }
 
     before do
       allow(CurationConcerns::FileSetActor).to receive(:new).and_return(actor)
@@ -265,13 +266,17 @@ describe Import::TextImporter do
         expect { importer.run }
           .to(change { Text.count }.by(2)
           .and(change { FileSet.count }.by(4)),
-              lambda { importer.status.inspect })
+              lambda { importer.status.inspect }) # if this spec fails, print importer status so that we can see errors
 
         record = Text.where('identifier_tesim' => 'lew1864.0001.001').first
         expect(record.tei.label).to eq File.join('lew1864.0001.001.xml')
         expect(record.visibility).to eq visibility
         expect(record.rights).to eq [pub_dom_url]
         expect(FileSet.all.map(&:visibility).uniq).to eq [visibility]
+
+        # Set the representative to the first page of the book
+        rep = FileSet.find(record.representative)
+        expect(rep.label).to eq 'letz_01_0001_unm.jp2'
 
         # The first TEI file lists 337 files and the other TEI
         # lists 13, for a total of 350 files.  For this test,

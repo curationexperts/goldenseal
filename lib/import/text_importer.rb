@@ -79,7 +79,15 @@ module Import
         r.apply_depositor_metadata(user)
       end
 
-      create_files(record.id, tei, files)
+      create_files(record, tei, files)
+      set_representative(record)
+    end
+
+    def set_representative(record)
+      first_page = record.file_sets[1]
+      return unless first_page && first_page.id
+      record.representative = first_page.id
+      record.save!
     end
 
     # TODO: Should we loosen up the regex to include examples
@@ -93,23 +101,26 @@ module Import
       end
     end
 
-    def create_files(record_id, tei, files)
+    def create_files(record, tei, files)
       files.each do |file_name|
         matching_file = find_file(file_name, tei)
         next unless matching_file
-        create_file(record_id, matching_file)
+        create_file(record, matching_file)
       end
     end
 
-    def create_file(record_id, matching_file)
+    def create_file(record, matching_file)
       file = FileWithName.new(matching_file)
       fs = FileSet.new
+
       actor = CurationConcerns::FileSetActor.new(fs, user)
-      actor.create_metadata(nil, record_id)
+      actor.create_metadata(nil, record.id)
       fail 'Content creation failed' unless actor.create_content(file)
 
       fs.errors.each { |k, v| errors << "FileSet #{k}: #{v}" }
       fail 'FileSet had errors' unless fs.errors.blank?
+
+      record.file_sets << fs
     end
 
     def find_file(file_name, tei)
