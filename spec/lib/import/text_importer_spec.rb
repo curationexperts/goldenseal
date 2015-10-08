@@ -220,8 +220,8 @@ describe Import::TextImporter do
 
       it 'raises an error' do
         expect { subject }.to raise_error('FileSet had errors')
-        expect(importer.errors).to include('GF base: base error')
-        expect(importer.errors).to include('GF id: id error')
+        expect(importer.errors).to include('FileSet base: base error')
+        expect(importer.errors).to include('FileSet id: id error')
       end
     end
 
