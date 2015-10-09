@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 # Import Text records using data from TEI files.
 
+require 'optparse'
+
 puts "Loading environment"
 require File.expand_path('../../config/environment',  __FILE__)
 require 'import'
@@ -13,26 +15,50 @@ def visibility_choices
     'private' => Hydra::AccessControls::AccessRight::VISIBILITY_TEXT_VALUE_PRIVATE }
 end
 
-def print_usage_and_exit
-  $stderr.puts "Usage: #{$PROGRAM_NAME} <path> <visibility>"
-  $stderr.puts "    <path>: The path to the directory where the TEI files are located."
-  $stderr.puts "    <visibility>: The visibility level that the imported records will have.  Valid options are #{visibility_choices.keys.inspect}."
+# Parse the the command line arguments
+def parse_inputs(args)
+  inputs = {}
+  opts = OptionParser.new
+  opts.banner = 'Usage: example.rb [options]'
+
+  opts.on('-p PATH', 'The path to the directory where the TEI files are located. (required)') do |path|
+    raise "path is required" unless path
+    inputs[:path] = path
+  end
+
+  opts.on("-v [VISIBILITY]", "The visibility level that the imported records will have.", "Valid options are: #{visibility_choices.keys.inspect}") do |vis|
+    vis = vis.downcase
+    inputs[:visibility] = vis
+
+    unless visibility_choices.include?(vis)
+      raise "Invalid value for visibility: #{vis}"
+    end
+  end
+
+  opts.parse!(args)
+
+  # All the arguments should have been read by now.
+  # If there are any left, abort the script.
+  raise "Can't parse arguments: #{args.inspect}" unless args.empty?
+
+  inputs
+rescue => e
+  puts e.message
+  puts opts
   exit 1
 end
 
+
 # Read and validate inputs
-dir = ARGV[0]  # Directory where TEI files are located
+options = parse_inputs(ARGV)
+
+dir = options[:path] # Directory where TEI files are located
 
 # Access rights for the imported records
-vis_input = (ARGV[1] || 'private').downcase
-visibility = visibility_choices.fetch(vis_input, 'private')
-
-unless dir && visibility_choices.include?(vis_input.downcase)
-  print_usage_and_exit
-end
+visibility = visibility_choices.fetch(options[:visibility], 'private')
 
 puts "Import Text records using TEI files in: #{dir}"
-puts "Visibility will be: #{vis_input} / #{visibility}"
+puts "Visibility will be: #{visibility}"
 
 puts "Starting import"
 importer = Import::TextImporter.new(dir, visibility)
