@@ -1,1 +1,8 @@
 <h2><%= @admin_set.title %></h2>
+
+<% if can? :edit, @admin_set %>
+  <div class="form-actions">
+    <%= link_to "Edit This #{@admin_set.human_readable_type}", [:edit, @admin_set], class: 'btn btn-primary' %>
+    <%= link_to "Delete This #{@admin_set.human_readable_type}", [:confirm_delete, @admin_set], class: 'btn btn-primary' %>
+  </div>
+<% end %>

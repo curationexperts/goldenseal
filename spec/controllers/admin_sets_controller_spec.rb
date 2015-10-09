@@ -25,7 +25,7 @@ describe AdminSetsController do
     let(:admin_set) { create(:admin_set) }
     context "a non-admin" do
       let(:user) { create(:user) }
-      it "redirects to home" do
+      it "is successful" do
         get :show, id: admin_set
         expect(response).to be_successful
       end
@@ -95,7 +95,7 @@ describe AdminSetsController do
 
     context "a non-admin" do
       let(:user) { create(:user) }
-      it "redirects to home" do
+      it "is unauthorized" do
         patch :update, id: admin_set, admin_set: { "title" => "Annie Leibovitz" }
         expect(response).to be_unauthorized
       end
@@ -107,6 +107,51 @@ describe AdminSetsController do
         patch :update, id: admin_set, admin_set: { "title" => "Buncha things" }
         expect(assigns[:admin_set].title).to eq 'Buncha things'
         expect(response).to be_redirect
+      end
+    end
+  end
+
+  describe "#confirm_delete" do
+    before { sign_in user }
+    let(:admin_set) { create(:admin_set) }
+
+    context "a non-admin" do
+      let(:user) { create(:user) }
+      it "redirects to home" do
+        get :confirm_delete, id: admin_set
+        expect(response).to redirect_to(root_path)
+      end
+    end
+
+    context "an admin" do
+      let(:user) { create(:admin) }
+      it "is successful" do
+        get :confirm_delete, id: admin_set
+        expect(assigns[:form]).to be_kind_of DeleteForm
+        expect(response).to be_successful
+      end
+    end
+  end
+
+  describe "#destroy" do
+    before { sign_in user }
+    let(:admin_set) { create(:admin_set) }
+
+    context "a non-admin" do
+      let(:user) { create(:user) }
+      it "is unauthorized" do
+        delete :destroy, id: admin_set
+        expect(response).to be_unauthorized
+      end
+    end
+
+    context "an admin" do
+      let(:user) { create(:admin) }
+      it "removes the admin set" do
+        expect(DestroyAdminSetJob).to receive(:perform_later).with(admin_set.id, '5')
+        delete :destroy, id: admin_set, admin_set: { admin_set_id: '5' }
+        expect(flash[:notice]).to eq "test admin set has been queued for removal. This may take several minutes."
+        expect(response).to redirect_to root_path
       end
     end
   end

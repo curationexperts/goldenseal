@@ -1,0 +1,9 @@
+<h2>Remove collection <%= @admin_set.title %></h2>
+
+<%= simple_form_for @form, method: :delete do |f| %>
+  Assign the records from this collection to:
+
+  <%= f.input :admin_set_id, collection: @form.alterative_admin_sets %>
+  <%= f.submit 'Delete', class: 'btn btn-danger', data: { confirm: 'I understand deleting this collection is permanent and wish to continue. NOTE: items contained in the collection will not be effected and will still be accessible in the repository.' } %>
+  <%= link_to "Cancel", @admin_set, class: "btn btn-link" %>
+<% end %>

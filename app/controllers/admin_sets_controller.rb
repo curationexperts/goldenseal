@@ -26,6 +26,15 @@ class AdminSetsController < ApplicationController
     end
   end
 
+  def confirm_delete
+    @form = DeleteForm.new(@admin_set)
+  end
+
+  def destroy
+    DestroyAdminSetJob.perform_later(@admin_set.id, params[:admin_set].fetch(:admin_set_id))
+    redirect_to root_path, notice: "#{@admin_set.title} has been queued for removal. This may take several minutes."
+  end
+
   private
 
     def admin_set_params
