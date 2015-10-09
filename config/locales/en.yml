@@ -25,6 +25,8 @@ en:
       fields:
         show:
           description: 'Description'
+        facet:
+          admin_set_ssi: 'Collection'
   simple_form:
     hints:
       defaults:
