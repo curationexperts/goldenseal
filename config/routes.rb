@@ -9,7 +9,11 @@ Rails.application.routes.draw do
   curation_concerns_collections
   curation_concerns_basic_routes
   curation_concerns_embargo_management
-  resources :admin_sets
+  resources :admin_sets do
+    member do
+      get :confirm_delete
+    end
+  end
 
   # Eager load: https://github.com/resque/resque-web/issues/76
   ResqueWeb::Engine.eager_load!

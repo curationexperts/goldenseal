@@ -67,4 +67,47 @@ describe AdminSetsController do
       end
     end
   end
+
+  describe "#edit" do
+    before { sign_in user }
+    let(:admin_set) { create(:admin_set) }
+
+    context "a non-admin" do
+      let(:user) { create(:user) }
+      it "redirects to home" do
+        get :edit, id: admin_set
+        expect(response).to be_unauthorized
+      end
+    end
+
+    context "an admin" do
+      let(:user) { create(:admin) }
+      it "is successful" do
+        get :edit, id: admin_set
+        expect(response).to be_successful
+      end
+    end
+  end
+
+  describe "#update" do
+    before { sign_in user }
+    let(:admin_set) { create(:admin_set) }
+
+    context "a non-admin" do
+      let(:user) { create(:user) }
+      it "redirects to home" do
+        patch :update, id: admin_set, admin_set: { "title" => "Annie Leibovitz" }
+        expect(response).to be_unauthorized
+      end
+    end
+
+    context "an admin" do
+      let(:user) { create(:admin) }
+      it "is successful" do
+        patch :update, id: admin_set, admin_set: { "title" => "Buncha things" }
+        expect(assigns[:admin_set].title).to eq 'Buncha things'
+        expect(response).to be_redirect
+      end
+    end
+  end
 end

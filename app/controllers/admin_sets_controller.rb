@@ -15,6 +15,17 @@ class AdminSetsController < ApplicationController
   def show
   end
 
+  def edit
+  end
+
+  def update
+    if @admin_set.update(admin_set_params)
+      redirect_to @admin_set
+    else
+      render :new
+    end
+  end
+
   private
 
     def admin_set_params
