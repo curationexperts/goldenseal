@@ -1,13 +1,13 @@
 GIT
   remote: git://github.com/projecthydra-labs/curation_concerns.git
-  revision: 52c1c8a4d74de1770739463f5ef21a6f57cde174
-  ref: 52c1c8a
+  revision: 73c41f08dec9ba280bc69d05065e48aea9a7c275
+  ref: 73c41f08
   specs:
     curation_concerns (0.1.0)
       blacklight_advanced_search (>= 5.1.4, < 6.0)
       breadcrumbs_on_rails (~> 2.3.0)
       curation_concerns-models (= 0.1.0)
-      hydra-editor (~> 1.1)
+      hydra-editor
       hydra-head (~> 9.0)
       jquery-ui-rails
       simple_form (~> 3.1.0)

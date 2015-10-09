@@ -12,9 +12,11 @@ describe 'Visit the show page for a record:' do
                  sponsor: ['Company XYZ'],
                  funder: ['Fund Person 1'],
                  researcher: ['Some research team'],
-                 description_standard: ['Some standard']
+                 description_standard: ['Some standard'],
+                 file_sets: [file]
   }}
 
+  let(:file) { build(:file_set) }
   let(:image) { create(:image, :public, attrs) }
 
   it 'displays the record correctly' do
