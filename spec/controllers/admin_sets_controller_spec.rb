@@ -27,6 +27,7 @@ describe AdminSetsController do
       let(:user) { create(:user) }
       it "is successful" do
         get :show, id: admin_set
+        expect(assigns[:presenter]).to be_kind_of AdminSetPresenter
         expect(response).to be_successful
       end
     end

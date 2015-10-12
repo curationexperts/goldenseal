@@ -12,14 +12,34 @@ class AdminSet < ActiveFedora::Base
   property :title, predicate: ::RDF::DC.title, multiple: false do |index|
     index.as :stored_searchable
   end
-  property :identifier, predicate: ::RDF::DC.identifier, multiple: false
-  property :description, predicate: ::RDF::DC.description, multiple: false
 
-  property :contributor, predicate: ::RDF::DC.contributor
-  property :creator, predicate: ::RDF::DC.creator
-  property :subject, predicate: ::RDF::DC.subject
-  property :publisher, predicate: ::RDF::DC.publisher
-  property :language, predicate: ::RDF::DC.language
+  property :identifier, predicate: ::RDF::DC.identifier, multiple: false do |index|
+    index.as :stored_sortable
+  end
+
+  property :description, predicate: ::RDF::DC.description, multiple: false do |index|
+    index.as :stored_searchable
+  end
+
+  property :contributor, predicate: ::RDF::DC.contributor do |index|
+    index.as :stored_searchable
+  end
+
+  property :creator, predicate: ::RDF::DC.creator do |index|
+    index.as :stored_searchable
+  end
+
+  property :subject, predicate: ::RDF::DC.subject do |index|
+    index.as :stored_searchable
+  end
+
+  property :publisher, predicate: ::RDF::DC.publisher do |index|
+    index.as :stored_searchable
+  end
+
+  property :language, predicate: ::RDF::DC.language do |index|
+    index.as :stored_searchable
+  end
 
   before_create :assign_access
 

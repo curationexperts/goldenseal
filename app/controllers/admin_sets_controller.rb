@@ -1,5 +1,8 @@
 class AdminSetsController < ApplicationController
-  load_and_authorize_resource
+  include Blacklight::Base
+  include Hydra::Controller::SearchBuilder
+  copy_blacklight_config_from(CatalogController)
+  load_and_authorize_resource except: :show
 
   def new
   end
@@ -13,6 +16,10 @@ class AdminSetsController < ApplicationController
   end
 
   def show
+    _, document_list = search_results(params, CatalogController.search_params_logic + [:find_one])
+    curation_concern = document_list.first
+    raise CanCan::AccessDenied.new(nil, :show) unless curation_concern
+    @presenter = AdminSetPresenter.new(curation_concern)
   end
 
   def edit
