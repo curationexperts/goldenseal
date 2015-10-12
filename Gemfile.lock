@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/projecthydra-labs/curation_concerns.git
-  revision: b937df5ea38885dfa58ec500308ce5a1c86fadc4
-  ref: b937df5
+  revision: 5e2cbab545f6df1cd34cade35478033265b61237
+  branch: lease_ui
   specs:
     curation_concerns (0.1.0)
       blacklight_advanced_search (>= 5.1.4, < 6.0)
