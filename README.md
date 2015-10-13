@@ -60,8 +60,8 @@ script/import_text -p PATH -v VISIBILITY
 
 | Argument | Description | Requirement |
 | --- | --- | --- |
-| -p PATH | The path to the directory where the TEI files are located | required |
-| -v VISIBILITY | The visibility level that the imported records will have.  Valid options are: ["open", "institution", "private"].  Default value will be "private" if no option is given. | optional |
+| -p | The path to the directory where the TEI files are located | required |
+| -v | The visibility level that the imported records will have.  Valid options are: ["open", "institution", "private"].  Default value will be "private" if no option is given. | optional |
 
 Note:  The TEI files must be at the top level of the directory and must have a `.xml` file extension.  The importer will assume that any XML files found in the top-level directory are TEI files, and try to parse them.
 
