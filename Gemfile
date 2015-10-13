@@ -35,7 +35,7 @@ gem 'resque-web', require: 'resque_web', github: 'resque/resque-web'
 gem 'resque'
 
 gem 'hydra-pcdm', '~> 0.2.0'
-gem 'hydra-works', github: 'projecthydra-labs/hydra-works', ref: '01f4d05'
+gem 'hydra-works', github: 'projecthydra-labs/hydra-works', ref: '8715f12'
 gem 'hydra-collections', '~> 6.0.0.rc1'
 gem 'hydra-head', '~> 9.3.0'
 gem 'activefedora-aggregation', '~> 0.4.1'
