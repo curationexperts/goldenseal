@@ -25,8 +25,8 @@ GIT
 
 GIT
   remote: git://github.com/projecthydra-labs/hydra-works.git
-  revision: 8715f129c06a3daeac73490519f78e00144c80b0
-  ref: 8715f12
+  revision: 1c3ffbb25d314bef6b28ca4b0a848cb02ec9fa8b
+  ref: 1c3ffbb
   specs:
     hydra-works (0.2.0)
       active-fedora (>= 9.4.1)
