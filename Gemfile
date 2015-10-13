@@ -26,7 +26,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns', branch: 'belongs_to_representative'
+gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns', ref: '58a6fe2'
 
 # because the most recent release of resque-web is long out-of-date.
 # We need a newer version to get bootstrap 3 support:
