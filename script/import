@@ -1,0 +1,108 @@
+#!/usr/bin/env ruby
+# Import Text, Video, or Audio records using data from TEI files.
+
+require 'optparse'
+puts "Loading environment"
+require File.expand_path('../../config/environment',  __FILE__)
+require 'import'
+
+# Valid selections for the type of record(s) to create
+def model_choices
+  ['Text', 'Video', 'Audio']
+end
+
+# Valid selections for access rights.
+# Note: This script doesn't handle the case of lease/embargo.
+def visibility_choices
+  { 'open' => Hydra::AccessControls::AccessRight::VISIBILITY_TEXT_VALUE_PUBLIC,
+    'institution' => Hydra::AccessControls::AccessRight::VISIBILITY_TEXT_VALUE_AUTHENTICATED,
+    'private' => Hydra::AccessControls::AccessRight::VISIBILITY_TEXT_VALUE_PRIVATE }
+end
+
+# Parse the the command line arguments
+def parse_inputs(args)
+  inputs = {}
+  opts = OptionParser.new
+  opts.banner = 'Usage: example.rb [options]'
+
+  opts.on('-t TYPE', 'The type of record to create. (required)', "   Valid options are #{model_choices}") do |type|
+    type = type.capitalize
+    raise "Invalid value for type: #{type}" unless model_choices.include?(type)
+    inputs[:model] = type
+  end
+
+  opts.on('-p PATH', 'The path to the directory where the metadata files are located. (required)') do |path|
+    raise "path is required" unless path
+    inputs[:path] = path
+  end
+
+  opts.on("-v [VISIBILITY]", "The visibility level that the imported records will have.", "   Valid options are: #{visibility_choices.keys.inspect}") do |vis|
+    vis = vis.downcase
+    raise "Invalid value for visibility: #{vis}" unless visibility_choices.include?(vis)
+    inputs[:visibility] = visibility_choices.fetch(vis)
+  end
+
+  opts.on('-a [ADMIN_SET_ID]', 'The ID for the AdminSet that the imported records will belong to.', '   To see the list of valid IDs, run:  rake admin_set:list') do |id|
+    inputs[:admin_set_id] = id
+  end
+
+  opts.on('-h', '--help', 'Print this help message') do
+    puts opts
+    exit 0
+  end
+
+  opts.parse!(args)
+
+  # All the arguments should have been read by now.
+  # If there are any left, abort the script.
+  raise "Can't parse arguments: #{args.inspect}" unless args.empty?
+
+  inputs
+rescue => e
+  puts e.message
+  puts opts
+  exit 1
+end
+
+def print_importer_results(importer)
+  puts "Printing import results"
+
+  unless importer.skipped_imports.empty?
+    puts "\nSkipped Imports:"
+    importer.skipped_imports.each { |msg| puts "  #{msg}" }
+  end
+
+  unless importer.warnings.empty?
+    puts "\nWarning messages:"
+    importer.warnings.each { |msg| puts msg }
+  end
+
+  unless importer.errors.empty?
+    puts "\nError messages:"
+    importer.errors.each { |msg| puts msg }
+  end
+
+  puts "\nImport finished:"
+  puts "   Records imported: #{importer.successful_imports.count}"
+  puts "   Records skipped:  #{importer.skipped_imports.count}"
+  puts "   Warnings:         #{importer.warnings.count}"
+  puts "   Errors:           #{importer.errors.count}"
+end
+
+def importer_class(model_string)
+  "Import::#{model_string}Importer".constantize
+end
+
+
+# Read and validate inputs
+options = parse_inputs(ARGV)
+
+model = options.delete(:model).capitalize
+dir = options.delete(:path)
+puts "Import #{model} records using metadata files in: #{dir}"
+
+puts "Starting import"
+importer = importer_class(model).new(dir, options)
+importer.run
+print_importer_results(importer)
+

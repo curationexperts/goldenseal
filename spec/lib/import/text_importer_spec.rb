@@ -15,7 +15,7 @@ describe Import::TextImporter do
       subject { described_class.new(dir) }
 
       it 'sets the TEI directory and default visibility' do
-        expect(subject.tei_dir).to eq dir
+        expect(subject.root_dir).to eq dir
         expect(subject.visibility).to eq Hydra::AccessControls::AccessRight::VISIBILITY_TEXT_VALUE_PRIVATE
       end
     end
@@ -26,7 +26,7 @@ describe Import::TextImporter do
       subject { importer }
 
       it 'initializes the instance variables' do
-        expect(subject.tei_dir).to eq dir
+        expect(subject.root_dir).to eq dir
         expect(subject.visibility).to eq Hydra::AccessControls::AccessRight::VISIBILITY_TEXT_VALUE_PUBLIC
         expect(subject.admin_set_id).to eq admin_set_id
       end
@@ -100,8 +100,8 @@ describe Import::TextImporter do
     end
   end
 
-  describe '#tei_files' do
-    subject { importer.tei_files }
+  describe '#metadata_files' do
+    subject { importer.metadata_files }
 
     context "when the directory can't be found" do
       let(:dir) { File.join(fixture_path, 'some_bad_path') }
@@ -128,15 +128,15 @@ describe Import::TextImporter do
     end
   end
 
-  describe '#parse_tei' do
+  describe '#parse_metadata' do
     context "when the TEI file can't be parsed" do
       let(:dir) { File.join(fixture_path, 'text_importer', 'dir_with_xml_files') }
       let(:file) { File.join(dir, 'file1.xml') }
 
       it 'records an error message' do
-        expect { importer.parse_tei(file) }.to change { Text.count }.by(0)
+        expect { importer.parse_metadata(file) }.to change { Text.count }.by(0)
 
-        expect(importer.errors).to eq ['Failed to parse TEI file: file1.xml']
+        expect(importer.errors).to eq ['Failed to parse file: file1.xml']
         expect(importer.warnings).to eq []
         expect(importer.successful_imports).to eq []
         expect(importer.skipped_imports).to eq []
@@ -154,7 +154,7 @@ describe Import::TextImporter do
       end
 
       it 'adds an error message' do
-        expect { importer.parse_tei(file) }.to change { Text.count }.by(0)
+        expect { importer.parse_metadata(file) }.to change { Text.count }.by(0)
         expect(importer.errors).to eq ["lew1864.0001.001.xml: Some kind of error"]
         expect(importer.successful_imports).to eq []
       end
@@ -169,7 +169,7 @@ describe Import::TextImporter do
       end
 
       it "doesn't import the record, marks it as skipped" do
-        expect { importer.parse_tei(file) }.to change { Text.count }.by(0)
+        expect { importer.parse_metadata(file) }.to change { Text.count }.by(0)
 
         expect(importer.errors).to eq []
         expect(importer.warnings).to eq []
@@ -288,7 +288,7 @@ describe Import::TextImporter do
       let(:admin_set_id) { 'some_bad_ID' }
 
       it 'aborts without trying to import anything' do
-        expect(importer).not_to receive(:parse_tei)
+        expect(importer).not_to receive(:parse_metadata)
         expect { importer.run }.to change { Text.count }.by(0)
       end
     end
@@ -297,21 +297,16 @@ describe Import::TextImporter do
       let!(:set) { create(:admin_set) }
       let(:admin_set_id) { set.id }
 
-      before do
-        # Stub out anything that requires a redis connection,
-        # such as background jobs and lock management.
-        allow(CharacterizeJob).to receive_messages(perform_later: nil, perform_now: nil)
-        allow_any_instance_of(CurationConcerns::FileSetActor).to receive(:acquire_lock_for).and_yield
-      end
+      before { stub_out_redis }
 
       it 'it creates a record for each TEI and attaches files to it' do
         expect { importer.run }
           .to(change { Text.count }.by(2)
           .and(change { FileSet.count }.by(4)),
-              lambda { importer.status.inspect }) # if this spec fails, print importer status so that we can see errors
+          lambda { importer.status.inspect }) # if this spec fails, print importer status so that we can see errors
 
         record = Text.where('identifier_tesim' => 'lew1864.0001.001').first
-        expect(record.tei.label).to eq File.join('lew1864.0001.001.xml')
+        expect(record.tei.label).to eq 'lew1864.0001.001.xml'
         expect(record.visibility).to eq visibility
         expect(record.rights).to eq [pub_dom_url]
         expect(FileSet.all.map(&:visibility).uniq).to eq [visibility]

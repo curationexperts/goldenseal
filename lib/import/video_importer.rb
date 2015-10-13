@@ -1,14 +1,14 @@
-# Import Text records using metadata from TEI files.
+# Import Video records using metadata from TEI files.
 module Import
-  class TextImporter < CommonImporter
+  class VideoImporter < CommonImporter
 
     # The type of record(s) this importer will create
     def record_class
-      Text
+      Video
     end
 
     def parser
-      TextTeiParser
+      VideoTeiParser
     end
 
   end
