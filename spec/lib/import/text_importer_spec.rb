@@ -2,14 +2,15 @@ require 'rails_helper'
 require 'import'
 
 describe Import::TextImporter do
+  let(:admin_set_id) { nil }
   let(:visibility) { nil }
-  let(:importer) { described_class.new(dir, visibility) }
+  let(:dir) { File.join(fixture_path, 'tei') }
+
+  let(:importer) { described_class.new(dir, { visibility: visibility, admin_set_id: admin_set_id }) }
 
   let(:pub_dom_url) { 'http://creativecommons.org/publicdomain/mark/1.0/' }
 
   describe 'inititialize' do
-    let(:dir) { File.join(fixture_path, 'tei') }
-
     context 'when visibility is not given' do
       subject { described_class.new(dir) }
 
@@ -19,18 +20,20 @@ describe Import::TextImporter do
       end
     end
 
-    context 'when visibility is given' do
-      subject { described_class.new(dir, 'open') }
+    context 'when visibility and admin_set_id are given' do
+      let(:visibility) { 'open' }
+      let(:admin_set_id) { '123' }
+      subject { importer }
 
-      it 'sets the TEI directory and visibility' do
+      it 'initializes the instance variables' do
         expect(subject.tei_dir).to eq dir
         expect(subject.visibility).to eq Hydra::AccessControls::AccessRight::VISIBILITY_TEXT_VALUE_PUBLIC
+        expect(subject.admin_set_id).to eq admin_set_id
       end
     end
   end
 
   describe '#status' do
-    let(:dir) { File.join(fixture_path, 'tei') }
     subject { described_class.new(dir) }
 
     it 'keeps track of the status of the importer' do
@@ -47,8 +50,35 @@ describe Import::TextImporter do
     end
   end
 
+  describe '#admin_set' do
+    context 'when admin_set_id is empty' do
+      subject { described_class.new(dir) }
+
+      it 'returns nil' do
+        expect(subject.admin_set).to be_nil
+      end
+    end
+
+    context 'for an existing AdminSet' do
+      let!(:set) { create(:admin_set) }
+      let(:admin_set_id) { set.id }
+
+      it 'sets the admin_set' do
+        expect(importer.admin_set).to eq set
+      end
+    end
+
+    context "when the AdminSet doesn't exist" do
+      let(:admin_set_id) { 'some_bad_ID' }
+
+      it 'records an error' do
+        expect(importer.admin_set).to be_nil
+        expect(importer.errors.first).to match /Unable to find AdminSet: #{admin_set_id}/
+      end
+    end
+  end
+
   describe '#user' do
-    let(:dir) { File.join(fixture_path, 'tei') }
     subject { described_class.new(dir).user }
 
     context 'when user already exists' do
@@ -251,9 +281,21 @@ describe Import::TextImporter do
   describe '#run' do
     before { ActiveFedora::Cleaner.clean! }
 
+    let(:dir) { File.join(fixture_path, 'text_importer', 'sample_import_files') }
+    let(:visibility) { Hydra::AccessControls::AccessRight::VISIBILITY_TEXT_VALUE_PUBLIC }
+
+    context 'when there is a problem with the AdminSet' do
+      let(:admin_set_id) { 'some_bad_ID' }
+
+      it 'aborts without trying to import anything' do
+        expect(importer).not_to receive(:parse_tei)
+        expect { importer.run }.to change { Text.count }.by(0)
+      end
+    end
+
     context 'when the importer runs successfully' do
-      let(:dir) { File.join(fixture_path, 'text_importer', 'sample_import_files') }
-      let(:visibility) { Hydra::AccessControls::AccessRight::VISIBILITY_TEXT_VALUE_PUBLIC }
+      let!(:set) { create(:admin_set) }
+      let(:admin_set_id) { set.id }
 
       before do
         # Stub out anything that requires a redis connection,
@@ -277,6 +319,9 @@ describe Import::TextImporter do
         # Set the representative to the first page of the book
         rep = FileSet.find(record.representative_id)
         expect(rep.label).to eq 'letz_01_0001_unm.jp2'
+
+        # The new record should belong to the AdminSet
+        expect(record.admin_set).to eq set
 
         # The first TEI file lists 337 files and the other TEI
         # lists 13, for a total of 350 files.  For this test,

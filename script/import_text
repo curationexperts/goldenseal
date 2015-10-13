@@ -35,6 +35,10 @@ def parse_inputs(args)
     end
   end
 
+  opts.on('-a [ADMIN_SET_ID]', 'The ID for the AdminSet that the imported records will belong to.', 'To see the list of valid IDs, run:  rake admin_set:list') do |id|
+    inputs[:admin_set_id] = id
+  end
+
   opts.parse!(args)
 
   # All the arguments should have been read by now.
@@ -52,16 +56,11 @@ end
 # Read and validate inputs
 options = parse_inputs(ARGV)
 
-dir = options[:path] # Directory where TEI files are located
-
-# Access rights for the imported records
-visibility = visibility_choices.fetch(options[:visibility], 'private')
-
+dir = options.delete(:path)
 puts "Import Text records using TEI files in: #{dir}"
-puts "Visibility will be: #{visibility}"
 
 puts "Starting import"
-importer = Import::TextImporter.new(dir, visibility)
+importer = Import::TextImporter.new(dir, options)
 importer.run
 
 puts "Printing import results"

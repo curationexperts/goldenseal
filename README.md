@@ -55,15 +55,22 @@ QUEUE=* VERBOSE=1 rake resque:work
 * From within the Rails root directory, run the import script:
 
 ```
-script/import_text -p PATH -v VISIBILITY
+script/import_text -p PATH -v [VISIBILITY] -a [ADMIN_SET_ID]
 ```
 
 | Argument | Description | Requirement |
 | --- | --- | --- |
-| -p | The path to the directory where the TEI files are located | required |
+| -p | The path to the directory where the TEI files are located. | required |
 | -v | The visibility level that the imported records will have.  Valid options are: ["open", "institution", "private"].  Default value will be "private" if no option is given. | optional |
+| -a | The ID for the AdminSet that the imported records will belong to.  If no option is given, the imported records will not belong to any AdminSet. | optional |
 
 Note:  The TEI files must be at the top level of the directory and must have a `.xml` file extension.  The importer will assume that any XML files found in the top-level directory are TEI files, and try to parse them.
 
 Note: Visibility cannot be set to `embargo` or `lease` using this script.  If you want to create a record with an embargo or lease, please import the record with `private` visibility, then edit the record using the UI to set the embargo manually.
+
+To see the list of IDs for all AdminSets, run the rake task:
+
+```
+rake admin_set:list
+```
 

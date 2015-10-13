@@ -11,12 +11,16 @@ module Import
     # The access rights visibility that will be applied
     attr_reader :visibility
 
+    # The AdminSet that imported records will be assigned to
+    attr_reader :admin_set_id
+
     delegate :errors, :warnings, to: :status
     delegate :successful_imports, :skipped_imports, to: :status
 
-    def initialize(dir, visibility=Hydra::AccessControls::AccessRight::VISIBILITY_TEXT_VALUE_PRIVATE)
+    def initialize(dir, options={})
       @tei_dir = dir
-      @visibility = visibility
+      @visibility = options[:visibility] || Hydra::AccessControls::AccessRight::VISIBILITY_TEXT_VALUE_PRIVATE
+      @admin_set_id = options[:admin_set_id]
     end
 
     def status
@@ -26,8 +30,19 @@ module Import
     # Parse all the TEI files that are found in the tei_dir,
     # and create a Text record for each one.
     def run
+      admin_set
+      return unless errors.empty?
+
       tei_files.each { |tei| parse_tei(tei) }
       puts "\n" unless Rails.env.test?
+    end
+
+    def admin_set
+      return unless admin_set_id
+      @admin_set ||= AdminSet.find(admin_set_id)
+    rescue ActiveFedora::ObjectNotFoundError => e
+      errors << "Unable to find AdminSet: #{admin_set_id}.  Please run 'rake admin_set:list' to see the list of valid IDs."
+      nil
     end
 
     def tei_files
@@ -49,7 +64,7 @@ module Import
         # exists in fedora.
         skipped_imports << file_name
       else
-        create_record(attrs.merge(tei: file_name, visibility: visibility))
+        create_record(attrs.merge(tei: file_name, visibility: visibility, admin_set: admin_set))
         successful_imports << file_name
       end
     rescue => e
