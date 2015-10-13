@@ -17,6 +17,7 @@ describe AdminSetIndexer do
       expect(subject.fetch('subject_tesim')).to eq ["People"]
       expect(subject.fetch('publisher_tesim')).to eq ["Rolling Stone Magazine"]
       expect(subject.fetch('language_tesim')).to eq ["English"]
+      expect(subject.fetch('thumbnail_path_ss')).to eq "/assets/default.png"
     end
   end
 end
