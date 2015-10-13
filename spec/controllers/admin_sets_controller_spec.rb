@@ -53,10 +53,16 @@ describe AdminSetsController do
 
     context "an admin" do
       let(:user) { create(:admin) }
+      let(:id) { 'lei' }
+
+      before do
+        AdminSet.find(id).destroy(eradicate: true) if AdminSet.exists?(id)
+      end
+
       it "is successful" do
         expect {
           post :create, admin_set: { "title" => "Annie Leibovitz",
-                                     "identifier" => "lei",
+                                     "identifier" => id,
                                      "description" => "Pictures by Annie Leibovitz",
                                      "creator" => ["Mark Bussey"],
                                      "contributor" => ["Justin Coyne", "Valerie Maher"],
@@ -65,6 +71,9 @@ describe AdminSetsController do
                                      "language" => ["English"] }
         }.to change { AdminSet.count }.by(1)
         expect(response).to be_redirect
+
+        # :id should be the same as :identifier
+        expect { AdminSet.find(id) }.to_not raise_error
       end
     end
   end

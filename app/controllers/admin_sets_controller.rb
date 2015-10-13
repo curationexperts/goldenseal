@@ -8,6 +8,7 @@ class AdminSetsController < ApplicationController
   end
 
   def create
+    @admin_set.id = Array(@admin_set.identifier).first
     if @admin_set.save
       redirect_to @admin_set
     else
