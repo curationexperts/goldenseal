@@ -28,11 +28,8 @@ def parse_inputs(args)
 
   opts.on("-v [VISIBILITY]", "The visibility level that the imported records will have.", "Valid options are: #{visibility_choices.keys.inspect}") do |vis|
     vis = vis.downcase
-    inputs[:visibility] = vis
-
-    unless visibility_choices.include?(vis)
-      raise "Invalid value for visibility: #{vis}"
-    end
+    raise "Invalid value for visibility: #{vis}" unless visibility_choices.include?(vis)
+    inputs[:visibility] = visibility_choices.fetch(vis)
   end
 
   opts.on('-a [ADMIN_SET_ID]', 'The ID for the AdminSet that the imported records will belong to.', 'To see the list of valid IDs, run:  rake admin_set:list') do |id|
