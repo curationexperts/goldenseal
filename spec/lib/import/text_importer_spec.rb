@@ -275,7 +275,7 @@ describe Import::TextImporter do
         expect(FileSet.all.map(&:visibility).uniq).to eq [visibility]
 
         # Set the representative to the first page of the book
-        rep = FileSet.find(record.representative)
+        rep = FileSet.find(record.representative_id)
         expect(rep.label).to eq 'letz_01_0001_unm.jp2'
 
         # The first TEI file lists 337 files and the other TEI

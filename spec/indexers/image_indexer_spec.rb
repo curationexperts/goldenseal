@@ -4,7 +4,7 @@ describe ImageIndexer do
   let(:indexer) { described_class.new(image) }
 
   let(:image) do
-    Image.new(title: ['test text'], representative: '12345') do |t|
+    Image.new(title: ['test text'], representative_id: '12345') do |t|
       t.apply_depositor_metadata('jcoyne')
     end
   end

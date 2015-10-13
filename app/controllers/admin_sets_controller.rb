@@ -5,6 +5,7 @@ class AdminSetsController < ApplicationController
   load_and_authorize_resource except: :show
 
   def new
+    @form = AdminSetForm.new(@admin_set)
   end
 
   def create
@@ -24,6 +25,7 @@ class AdminSetsController < ApplicationController
   end
 
   def edit
+    @form = AdminSetForm.new(@admin_set)
   end
 
   def update
@@ -35,7 +37,7 @@ class AdminSetsController < ApplicationController
   end
 
   def confirm_delete
-    @form = DeleteForm.new(@admin_set)
+    @form = DeleteAdminSetForm.new(@admin_set)
   end
 
   def destroy
@@ -46,8 +48,6 @@ class AdminSetsController < ApplicationController
   private
 
     def admin_set_params
-      params.require(:admin_set).permit(
-        :title, :identifier, :description, creator: [], contributor: [],
-        subject: [], publisher: [], language: [])
+      AdminSetForm.model_attributes(params[:admin_set])
     end
 end

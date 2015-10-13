@@ -5,6 +5,6 @@ module DisplayFields
     delegate :identifier, :series, :date_issued, :note, :extent,
              :description_standard, :publication_place, :editor, :sponsor,
              :funder, :researcher, :height, :width, :mime_type, :filename,
-             to: :solr_document
+             :representative_id, to: :solr_document
   end
 end

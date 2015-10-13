@@ -1,5 +1,6 @@
-<% if work.representative.present? && (gf = ::FileSet.load_instance_from_solr(work.representative)) %>
-  <%= media_display gf, transcript_id: work.tei_id %>
+<% if work.representative_id.present? && (gf = ::FileSet.load_instance_from_solr(work.representative_id)) %>
+  <%# AdminSetPresenter doesn't have tei_id %>
+  <%= media_display gf, transcript_id: work.try(:tei_id) %>
 <% else %>
   <%= image_tag 'nope.png', class: "canonical-image" %>
 <% end %>

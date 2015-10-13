@@ -86,7 +86,7 @@ module Import
     def set_representative(record)
       first_page = record.file_sets[1]
       return unless first_page && first_page.id
-      record.representative = first_page.id
+      record.representative = first_page
       record.save!
     end
 

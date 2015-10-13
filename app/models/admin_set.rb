@@ -4,7 +4,13 @@ class AdminSet < ActiveFedora::Base
 
   self.human_readable_type = 'Administrative Collection'
 
-  has_many :members, predicate: ActiveFedora::RDF::Fcrepo::RelsExt.hasCollectionMember, class_name: "ActiveFedora::Base"
+  has_many :members,
+    predicate: ActiveFedora::RDF::Fcrepo::RelsExt.hasCollectionMember,
+    class_name: "ActiveFedora::Base"
+
+  belongs_to :representative,
+    predicate: ::RDF::URI('http://opaquenamespace.org/ns/hydra/representative'),
+    class_name: 'ActiveFedora::Base'
 
   validates :title, presence: { message: 'Your collection must have a title.' }
   validates :identifier, presence: { message: 'Your collection must have an identifier.' }

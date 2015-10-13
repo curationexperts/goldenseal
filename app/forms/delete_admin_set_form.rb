@@ -1,4 +1,4 @@
-class DeleteForm
+class DeleteAdminSetForm
   include Hydra::Presenter
 
   attr_accessor :admin_set_id

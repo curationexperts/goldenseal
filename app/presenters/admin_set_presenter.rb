@@ -6,6 +6,7 @@ class AdminSetPresenter
   # Metadata Methods
   delegate :title, :description, :creator, :contributor, :subject, :publisher, :language,
            :embargo_release_date, :lease_expiration_date, :rights, :human_readable_type,
+           :representative_id,
            to: :solr_document
 
   # @param [SolrDocument] solr_document

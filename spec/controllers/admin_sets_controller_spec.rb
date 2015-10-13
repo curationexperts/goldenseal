@@ -112,10 +112,12 @@ describe AdminSetsController do
     end
 
     context "an admin" do
+      let(:representative) { create(:file_set) }
       let(:user) { create(:admin) }
       it "is successful" do
-        patch :update, id: admin_set, admin_set: { "title" => "Buncha things" }
+        patch :update, id: admin_set, admin_set: { "title" => "Buncha things", representative_id: representative.id }
         expect(assigns[:admin_set].title).to eq 'Buncha things'
+        expect(assigns[:admin_set].representative_id).to eq representative.id
         expect(response).to be_redirect
       end
     end
@@ -137,7 +139,7 @@ describe AdminSetsController do
       let(:user) { create(:admin) }
       it "is successful" do
         get :confirm_delete, id: admin_set
-        expect(assigns[:form]).to be_kind_of DeleteForm
+        expect(assigns[:form]).to be_kind_of DeleteAdminSetForm
         expect(response).to be_successful
       end
     end
