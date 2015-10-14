@@ -5,7 +5,7 @@ class AdminSet < ActiveFedora::Base
   self.human_readable_type = 'Administrative Collection'
 
   has_many :members,
-    predicate: ActiveFedora::RDF::Fcrepo::RelsExt.hasCollectionMember,
+    predicate: ::RDF::DC.isPartOf,
     class_name: "ActiveFedora::Base"
 
   belongs_to :representative,
