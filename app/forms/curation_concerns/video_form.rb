@@ -1,5 +1,5 @@
 module CurationConcerns
-  class VideoForm < CommonForm
+  class VideoForm < TeiForm
     self.model_class = ::Video
   end
 end

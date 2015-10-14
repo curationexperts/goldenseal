@@ -1,5 +1,5 @@
 module CurationConcerns
-  class AudioForm < CommonForm
+  class AudioForm < TeiForm
     self.model_class = ::Audio
   end
 end

@@ -1,7 +1,6 @@
 module CurationConcerns
-  class TextForm < CommonForm
+  class TextForm < TeiForm
     self.model_class = ::Text
-    self.terms += [:tei_id]
   end
 end
 
