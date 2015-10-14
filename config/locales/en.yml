@@ -31,3 +31,8 @@ en:
     hints:
       defaults:
         files: ''
+  helpers:
+    submit:
+      admin_set:
+        update: "Update Metadata"
+        create: "Create"
