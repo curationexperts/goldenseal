@@ -1,7 +1,18 @@
 GIT
+  remote: git://github.com/projecthydra-labs/activefedora-aggregation.git
+  revision: 2418c29321762275d023c7bcc7c11c205336343a
+  ref: 2418c29
+  specs:
+    activefedora-aggregation (0.4.2)
+      active-fedora
+      activesupport
+      rdf (~> 1.1.16.0)
+      rdf-vocab (~> 0.8.1)
+
+GIT
   remote: git://github.com/projecthydra-labs/curation_concerns.git
-  revision: 58a6fe2df61f921ac8964a5aa3d1e946f298e9c7
-  ref: 58a6fe2
+  revision: 878f8727a534460daab72e92ba222f594c39fe42
+  ref: 878f872
   specs:
     curation_concerns (0.1.0)
       blacklight_advanced_search (>= 5.1.4, < 6.0)
@@ -24,9 +35,19 @@ GIT
       resque-pool (~> 0.3)
 
 GIT
+  remote: git://github.com/projecthydra-labs/hydra-pcdm.git
+  revision: 463d73a2fd4ba26c1741fecf9c7265fb8770ac3c
+  ref: 463d73a
+  specs:
+    hydra-pcdm (0.2.0)
+      active-fedora (>= 9.4.1)
+      activefedora-aggregation (~> 0.4)
+      mime-types (>= 1)
+
+GIT
   remote: git://github.com/projecthydra-labs/hydra-works.git
-  revision: 1c3ffbb25d314bef6b28ca4b0a848cb02ec9fa8b
-  ref: 1c3ffbb
+  revision: b2f715f8c57ff635b3021b611d12f9e3763a70c2
+  ref: b2f715f
   specs:
     hydra-works (0.2.0)
       active-fedora (>= 9.4.1)
@@ -90,10 +111,6 @@ GEM
     active_fedora-noid (1.0.2)
       active-fedora (~> 9.0)
       noid (~> 0.7)
-    activefedora-aggregation (0.4.1)
-      active-fedora
-      activesupport
-      rdf-vocab (~> 0.8.1)
     activejob (4.2.4)
       activesupport (= 4.2.4)
       globalid (>= 0.3.0)
@@ -245,10 +262,6 @@ GEM
       hydra-access-controls (= 9.3.0)
       hydra-core (= 9.3.0)
       rails (>= 3.2.6)
-    hydra-pcdm (0.2.0)
-      active-fedora (>= 9.4.1)
-      activefedora-aggregation (~> 0.4)
-      mime-types (>= 1)
     i18n (0.7.0)
     jbuilder (2.3.1)
       activesupport (>= 3.0.0, < 5)
@@ -562,7 +575,7 @@ PLATFORMS
 
 DEPENDENCIES
   active-fedora (~> 9.4.3)
-  activefedora-aggregation (~> 0.4.1)
+  activefedora-aggregation!
   angularjs-rails (~> 1.4.4)
   byebug
   capistrano
@@ -578,7 +591,7 @@ DEPENDENCIES
   factory_girl_rails
   hydra-collections (~> 6.0.0.rc1)
   hydra-head (~> 9.3.0)
-  hydra-pcdm (~> 0.2.0)
+  hydra-pcdm!
   hydra-works!
   jbuilder (~> 2.0)
   jettywrapper
