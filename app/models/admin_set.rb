@@ -1,16 +1,13 @@
 class AdminSet < ActiveFedora::Base
   include Hydra::AccessControls::Permissions
   include CurationConcerns::HumanReadableType
+  include CurationConcerns::HasRepresentative
 
   self.human_readable_type = 'Administrative Collection'
 
   has_many :members,
     predicate: ::RDF::DC.isPartOf,
     class_name: "ActiveFedora::Base"
-
-  belongs_to :representative,
-    predicate: ::RDF::URI('http://opaquenamespace.org/ns/hydra/representative'),
-    class_name: 'ActiveFedora::Base'
 
   validates :title, presence: { message: 'Your collection must have a title.' }
   validates :identifier, presence: { message: 'Your collection must have an identifier.' }
