@@ -41,7 +41,7 @@ gem 'hydra-head', '~> 9.3.0'
 gem 'activefedora-aggregation', github: 'projecthydra-labs/activefedora-aggregation', ref: '2418c29'
 gem 'active-fedora', '~> 9.4.3'
 gem 'riiif', '0.1.0'
-gem 'openseadragon', '0.2.0'
+gem 'openseadragon', github: 'iiif/openseadragon-rails', branch: 'path_to_image'
 gem 'angularjs-rails', '~> 1.4.4'
 gem 'ldp', '~> 0.4.1'
 
