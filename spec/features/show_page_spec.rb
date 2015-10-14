@@ -13,7 +13,7 @@ describe 'Visit the show page for a record:' do
                  funder: ['Fund Person 1'],
                  researcher: ['Some research team'],
                  description_standard: ['Some standard'],
-                 file_sets: [file]
+                 members: [file]
   }}
 
   let(:file) { build(:file_set) }

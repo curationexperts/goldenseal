@@ -135,7 +135,7 @@ module Import
       fs.errors.each { |k, v| errors << "FileSet #{k}: #{v}" }
       fail 'FileSet had errors' unless fs.errors.blank?
 
-      record.file_sets << fs
+      record.members << fs
     end
 
     def find_file(file_name, tei)
