@@ -1,6 +1,6 @@
 class AdminSetForm
   include HydraEditor::Form
-  self.terms = [:title, :identifier, :description, :representative_id, :creator, :contributor,
+  self.terms = [:title, :identifier, :description, :thumbnail_id, :creator, :contributor,
                 :subject, :publisher, :language]
 
   self.model_class = ::AdminSet
@@ -13,7 +13,7 @@ class AdminSetForm
   private
 
     def member_thumbnails
-      member_presenters.map { |x| puts "*** #{x.inspect}"; [x.to_s, x.representative_id] }
+      member_presenters.map { |x| puts "*** #{x.inspect}"; [x.to_s, x.thumbnail_id] }
     end
 
     def member_presenters

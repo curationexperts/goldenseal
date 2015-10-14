@@ -1,6 +1,6 @@
 <h2><%= @presenter.title %></h2>
 
-<%= render 'curation_concerns/base/representative_media', work: @presenter %>
+<%= render_thumbnail_tag @presenter.solr_document %>
 
 <table class="table table-striped <%= dom_class(@presenter) %> attributes">
   <caption class="table-heading"><h2>Attributes</h2></caption>

@@ -62,4 +62,8 @@ class SolrDocument
   def filename
     self['label_ssi']
   end
+
+  def thumbnail_id
+    fetch('hasRelatedImage_ssim', []).first
+  end
 end

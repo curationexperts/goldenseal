@@ -12,6 +12,7 @@ describe 'admin_sets/show.html.erb' do
   before do
     assign(:presenter, AdminSetPresenter.new(solr_doc))
     allow(view).to receive(:can?).and_return(true)
+    expect(view).to receive(:render_thumbnail_tag).with(solr_doc)
     render
   end
 
