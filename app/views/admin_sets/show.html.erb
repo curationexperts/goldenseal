@@ -22,6 +22,7 @@
 <% if can? :edit, @presenter %>
   <div class="form-actions">
     <%= link_to "Edit Metadata", [:edit, @presenter], class: 'btn btn-default' %>
+    <%= link_to "View Members", catalog_index_path(q: @presenter.title, search_field: 'admin_set'), class: 'btn btn-default' %>
     <%= link_to "Delete Collection", [:confirm_delete, @presenter], class: 'btn btn-default pull-right' %>
   </div>
 <% end %>

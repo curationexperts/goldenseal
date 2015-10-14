@@ -3,6 +3,7 @@ require 'rails_helper'
 describe 'admin_sets/show.html.erb' do
   let(:attributes) do
     { id: '123',
+      title_tesim: ['All the things'],
       has_model_ssim: ['AdminSet']
     }
   end
@@ -16,5 +17,6 @@ describe 'admin_sets/show.html.erb' do
 
   it "displays metadata" do
     expect(rendered).to have_selector 'span.label.label-danger', text: 'Private'
+    expect(rendered).to have_link 'View Members', href: '/catalog?q=All+the+things&search_field=admin_set'
   end
 end
