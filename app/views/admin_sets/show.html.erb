@@ -21,7 +21,7 @@
 
 <% if can? :edit, @presenter %>
   <div class="form-actions">
-    <%= link_to "Edit Metadata", [:edit, @presenter], class: 'btn btn-primary' %>
+    <%= link_to "Edit Metadata", [:edit, @presenter], class: 'btn btn-default' %>
     <%= link_to "Delete Collection", [:confirm_delete, @presenter], class: 'btn btn-default pull-right' %>
   </div>
 <% end %>
