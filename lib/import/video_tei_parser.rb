@@ -8,5 +8,9 @@ module Import
       }
     end
 
+    def issue_date_xpath
+      '/*/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:date'
+    end
+
   end
 end

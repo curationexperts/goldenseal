@@ -14,7 +14,8 @@ module Import
       xpath_map.each do |attr_name, attr_path|
         attrs[attr_name] = text_for(attr_path, xml)
       end
-      attrs = attrs.merge(identifier: identifier)
+      attrs = attrs.merge(identifier: identifier,
+                          date_issued: issue_date)
       attrs.reject { |_key, value| value.blank? }
     end
 
@@ -34,10 +35,6 @@ module Import
       end
     end
 
-    def xpath_map
-      raise 'Please implement the xpath_map method'
-    end
-
     def identifier
       id_node = xml.xpath('/*/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno', namespaces)
       id_node.map do |node|
@@ -45,6 +42,19 @@ module Import
         type = nil if type.match(/dls/i)
         [type, node.text].compact.join(': ')
       end
+    end
+
+    def issue_date
+      date = xml.xpath(issue_date_xpath, namespaces).first
+      date.text.strip if date
+    end
+
+    def xpath_map
+      raise 'Please implement the xpath_map method'
+    end
+
+    def issue_date_xpath
+      raise 'Please implement the issue_date_xpath method'
     end
 
   end

@@ -2,14 +2,6 @@
 module Import
   class TextTeiParser < CommonTeiParser
 
-    # Return a ruby hash that contains all the interesting
-    # values from the TEI file.
-    def attributes
-      attrs = super
-      attrs = attrs.merge(date_issued: issue_date)
-      attrs.reject { |_key, value| value.blank? }
-    end
-
     # Map the name of the attribute to its xpath in the TEI file
     def xpath_map
       {
@@ -24,9 +16,8 @@ module Import
       }
     end
 
-    def issue_date
-      date = xml.xpath('/*/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:biblFull/tei:publicationStmt/tei:date', namespaces).first
-      date.text.strip if date
+    def issue_date_xpath
+      '/*/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:biblFull/tei:publicationStmt/tei:date'
     end
 
   end
