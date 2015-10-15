@@ -48,18 +48,19 @@ QUEUE=* VERBOSE=1 rake resque:work
 * `bin/rails s`
 
 ## Importing Records
-### Importing Text records with TEI files
+### Importing records with TEI files
 
 * Create a directory and add all the TEI files to that directory.
 * Add all the attached files to the same directory.  You can organize them in sub-directories if you wish; They don't need to be in the top-level directory.
 * From within the Rails root directory, run the import script:
 
 ```
-script/import_text -p PATH -v [VISIBILITY] -a [ADMIN_SET_ID]
+script/import -t TYPE -p PATH -v [VISIBILITY] -a [ADMIN_SET_ID]
 ```
 
 | Argument | Description | Requirement |
 | --- | --- | --- |
+| -t | The type of record(s) to create.  Valid options are: ["text", "video", "audio"]. | required |
 | -p | The path to the directory where the TEI files are located. | required |
 | -v | The visibility level that the imported records will have.  Valid options are: ["open", "institution", "private"].  Default value will be "private" if no option is given. | optional |
 | -a | The ID for the AdminSet that the imported records will belong to.  If no option is given, the imported records will not belong to any AdminSet. | optional |

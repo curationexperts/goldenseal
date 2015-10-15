@@ -1,0 +1,1089 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<TEI xml:id="add14885.01250.032" xmlns="http://www.tei-c.org/ns/1.0">
+<!--  HEADER 
+  --> 
+<teiHeader>
+<fileDesc>
+<titleStmt>
+<!--  add name of person being interviewed 
+  --> 
+<title>
+  Interview with 
+  <hi rend="bold">Frank Addonizio</hi> 
+  </title>
+  <title type="gmd">[electronic resource]</title> 
+<!--  add date of transcription 
+  --> 
+<respStmt>
+<resp>
+  Creation of machine-readable version (transcriptions of formal taped interviews): 
+  <date when="2014-06-03">June 3, 2014</date> 
+  </resp>
+  <name>The Film and Media Archive at Washington University Libraries</name> 
+  </respStmt>
+<respStmt>
+<resp>
+  Conversion to TEI-conformant markup: 
+  <date /> 
+  </resp>
+  <name>Digital Library Services at Washington University Libraries</name> 
+  </respStmt>
+  </titleStmt>
+  <extent /> 
+<publicationStmt>
+<!--  add file name per predetermined file naming conventions 
+  --> 
+  <idno type="DLS">add14885.01250.032</idno> 
+  <publisher>Washington University in St. Louis</publisher> 
+  <distributor>Washington University Libraries</distributor> 
+  <authority>Special Collections and Archives, Film and Media Archive</authority> 
+  <pubPlace>St. Louis, Missouri</pubPlace> 
+<address>
+  <addrLine>One Brookings Drive</addrLine> 
+  <addrLine>Campus Box 1061</addrLine> 
+  <addrLine>St. Louis MO 63130</addrLine> 
+  </address>
+<!--  add MAVIS Interview Record Number 
+  --> 
+  <idno type="MAVIS Interview Record">1250</idno> 
+<availability status="free">
+  <p>Material is free to use for research purposes only. If researcher intends to use transcripts for publication, please contact Washington University’s Film and Media Archive for permission to republish. Please use preferred citation given in the transcript.</p> 
+  <p>© Copyright Washington University Libraries 2014</p> 
+  </availability>
+  <date when="2014">2014</date> 
+  </publicationStmt>
+<sourceDesc>
+<recordingStmt>
+<!--  add "video" | "audio" as appropriate 
+  --> 
+<recording type="video" dur="TIME_process">
+<!--  change recording company or production team as appropriate 
+  --> 
+<respStmt>
+  <resp>Recording by</resp> 
+  <name>Blackside, Inc.</name> 
+  </respStmt>
+<!--    
+<respStmt>
+  <resp>Production Team</resp> 
+  <name>B</name> 
+  </respStmt>
+-->  
+<!--  edit equipment information and date of recording as appropriate 
+  --> 
+<equipment>
+  <p>Interviews were filmed on 16mm with audio recorded simultaneously on ¼ inch audio tape.</p> 
+  </equipment>
+  <date when="1994-06-15">June 15, 1994</date> 
+<broadcast>
+<!--  add xml:id in the format of "mMAVIS#" 
+  --> 
+<!--  change interview information as appropriate 
+  --> 
+<bibl xml:id="m1250">
+<title>
+  Interview with 
+  <hi rend="bold">Frank Addonizio</hi>  
+  </title>
+  <editor>Blackside, Inc. edited the filmed interviews for broadcast. Interviews were transcribed directly (unedited) from the digitized video files.</editor> 
+<respStmt>
+  <resp>Interviewer:</resp> 
+
+  <persName n="" key="n">
+
+  </persName>
+  </respStmt>
+<respStmt>
+  <resp>interviewee</resp> 
+  <persName n="Addonizio, Frank" key="n383-1">Frank Addonizio</persName> 
+  </respStmt>
+  <series>Interview gathered as part of America's War on Poverty.</series> 
+  <note>This interview recorded as formal filmed interview.</note> 
+  </bibl>
+  </broadcast>
+  </recording>
+  </recordingStmt>
+  </sourceDesc>
+  </fileDesc>
+
+<encodingDesc>
+<projectDesc>
+  <p>
+    This collection consists of 85 transcriptions of selected interviews filmed by Blackside, Inc. for America's War on Poverty documentary series that premiered January 16, 1995 on PBS. The transcripts are retrospective accounts of events that took place after President Lyndon Johnson chose to focus on poverty by declaring an "unconditional war on poverty," and launched a series of initiatives designed to end poverty forever, not through welfare or job creation, but by expanding opportunities for the poor through education and training.  
+  </p> 
+</projectDesc>
+<editorialDecl n="3">
+  <p>
+      Washington University Film &amp; Media Archive created the transcriptions from digitized videos of the interviews filmed by Blackside, Inc. and supervised the editing using Oxygen XML Developer. Grammatical errors made by speaker were left alone.
+  </p> 
+  <p>
+      Although these files represent transcriptions of speech, they have been encoded with the Tag Set for Drama, instead of Transcriptions of Speech.
+  </p> 
+  <p>
+      The rationale for this decision was that the more formal character of the interview had a structure closer to the drama than the speech tag set, and for ease of delivery of XML.
+  </p> 
+  </editorialDecl>
+<classDecl>
+<!--  ANY SUBJ HEADING CLASSIFICATION SYSTEMS DECLARED HERE 
+  --> 
+<taxonomy xml:id="lcsh">
+<bibl>
+  <title>Library of Congress Subject Headings,</title> 
+  <edition>21st edition, 1998</edition> 
+  </bibl>
+  </taxonomy>
+  </classDecl>
+  </encodingDesc>
+<!--  Edit date and language as appropriate 
+  --> 
+<profileDesc>
+<creation>
+  <date when="1994-06-15">June 15, 1994</date> 
+  </creation>
+<langUsage>
+  <language ident="eng">English</language> 
+  </langUsage>
+<textDesc n="formal interview">
+  <channel mode="s">formal taped interview</channel> 
+  <constitution type="single" /> 
+  <derivation type="traditional">for America's War on Poverty</derivation> 
+  <domain type="public" /> 
+  <factuality type="mixed" /> 
+  <interaction type="complete" active="plural" passive="world" /> 
+  <preparedness type="none" /> 
+  <purpose type="inform" /> 
+  </textDesc>
+<!--  biographical info on interviewer and interviewee 
+  --> 
+<!--  note, 1 = male, 2 = female 
+  --> 
+<particDesc>
+<listPerson>
+<person sex="" xml:id="p" n="">
+  
+<p>
+<ref target="">
+<!--  INTERVIEWER_BIO 
+  --> 
+  </ref>
+  </p>
+  </person>
+  <person sex="1" xml:id="p383-1" n="Frank Addonizio">
+<p>
+<ref target="">
+<!--  INTERVIEWEE_BIO 
+  --> 
+  </ref>
+  </p>
+  </person>
+  </listPerson>
+  </particDesc>
+<!--  groups information which describes the nature or topic of a text in terms of a standard classification scheme, thesaurus, etc. <catRef><classCode><keywords> 
+  --> 
+<!--  add informal keywords under fma scheme, add lcsh keywords under lcsh
+  --> 
+<!--  remove inapplicable terms
+  --> 
+<textClass>
+    <keywords scheme="fma">
+        <term>Addonizio, Frank</term>
+        <term>War on Poverty</term>
+        <term>Imperial, Tony</term>
+        <term>Urban Renewal Committee</term>
+        <term>Canine Corps</term>
+    </keywords>
+    <keywords scheme="lcsh">
+        <term>Social movements — United States — History — 20th century.</term>
+        <term>Poor -- United States.</term>
+        <term>Economic assistance, Domestic -- United States.</term>
+        <term>United States -- Social policy.</term>
+        <term>United States -- Politics and government -- 1963-1969.</term>
+        <term>Johnson, Lyndon B. (Lyndon Baines), 1908-1973.</term>
+        <term>United States -- Politics and government -- 1963-1969.</term>
+        <term>Johnson, Lyndon B. (Lyndon Baines), 1908-1973 -- Political and social views.</term>
+        <term>Poverty -- Government policy -- United States -- History.</term>
+        <term>United States -- Economic policy.</term>
+        <term>Poverty -- United States.</term>
+        <term>United States — Politics and government — 20th century.</term>
+        <term>United States — Social conditions — 20th century.</term>
+        <term>Political culture — United States — History — 20th century.</term>
+        <term>United States — Economic conditions — 20th century.</term>
+        <term>Oral history — United States.</term>
+        <term>Interviews — United States.</term>
+        <term>America's War on Poverty (Television program).</term>
+        <term>Hampton, Henry, 1940-1998.</term>
+        <term>Blackside, Inc.</term>
+        <term>Riots.</term>
+        <term>Racism.</term>
+        <term>Public welfare -- United States.</term>
+        <term>Newark (N.J.)</term>
+    </keywords>
+</textClass>
+</profileDesc>
+    
+<!--  If changes are made to a file, add date and initials of person making change and describe change made
+  --> 
+<revisionDesc>
+  <change when="2014-06-10" who="AC">added instructions</change> 
+  <change when="2015-01-27" who="AC">added subjects and text of transcript</change> 
+  <change when="" who="" /> 
+  <change when="" who="" /> 
+  </revisionDesc>
+  </teiHeader>
+<!--  TRANSCRIPTION STARTS HERE
+  --> 
+  <text xml:id="add14885.01250.032">
+<front>
+<!--  TRANSCRIPT HEADER HERE, AS FRONT MATTER 
+  --> 
+<!--  Edit as appropriate 
+  --> 
+<titlePage>
+<docTitle>
+<titlePart type="main">
+  Interview with 
+<hi rend="bold">
+  <name>Frank Addonizio</name> 
+  </hi>
+  </titlePart>
+  </docTitle>
+<byline>
+Interviewer: 
+  
+  <!--  
+  <lb /> 
+  Production Team: B   -->
+  </byline>
+  -->
+<docImprint>
+<docDate>
+  Interview Date: 
+  <date when="1994-06-15">June 15, 1994</date> 
+  </docDate>
+<pubPlace>
+<!--  Interview Place: someCity, someState 
+  --> 
+  </pubPlace>
+  <rs type="media">Camera Rolls: 403:24-27</rs> 
+  <rs type="media">Sound Rolls: 403:12-13</rs> 
+  
+  </docImprint>
+<!--  contains a formal statement authorizing the publication of a work 
+  --> 
+<imprimatur>
+  Interview gathered as part of 
+  <hi rend="italics-bold">America's War on Poverty</hi> 
+  . 
+  <lb /> 
+  Produced by Blackside, Inc. 
+  <lb /> 
+  Housed at the Washington University Film and Media Archive, Henry Hampton Collection. 
+  </imprimatur>
+  </titlePage>
+<div1 type="editorial">
+  <head>Editorial Notes:</head> 
+<!--  Edit Preferred citation as appropriate 
+  --> 
+<p>
+  <hi rend="bold">Preferred citation:</hi> 
+  <lb /> 
+  Interview with 
+<hi rend="bold">
+  <name>Frank Addonizio</name> 
+  </hi>
+  , conducted by Blackside, Inc. on June 15, 1994, for 
+  <hi rend="italics">America's War on Poverty</hi> 
+  . Washington University Libraries, Film and Media Archive, Henry Hampton Collection. 
+  </p>
+<p>
+  These transcripts contain material that did not appear in the final program. Only text appearing in 
+<hi rend="italic">
+  <hi rend="bold">bold italics</hi> 
+  </hi>
+  was used in the final version of 
+  <hi rend="italics">America's War on Poverty.</hi> 
+  </p>
+  </div1>
+  </front>
+<body>
+<div1 type="section">
+  <head>INTERVIEW</head> 
+<div2 type="tech">
+  <head /> 
+  <incident>
+    <desc>
+      [camera roll 403:24]
+    </desc>
+  </incident>
+  <incident>
+    <desc>
+      [sound roll 403:12]
+    </desc>
+  </incident>
+  <incident>
+    <desc>
+      [slate marker visible on screen]
+    </desc>
+  </incident>
+  </div2>
+
+  <div2 type="question" n="1" data-timecodebegin="00:00:33:00" data-timecodeend="00:06:01:00">
+  <head>QUESTION 1</head> 
+  
+  <sp>
+    <speaker n="interviewer">INTERVIEWER:</speaker> 
+    <p>
+      All right Mr. Addonizio.  You testified in favor of the War on Poverty I remember you telling me.  Would you tell me about that going on? <gap reason="inaudible"><desc>[inaudible]</desc></gap>
+    </p> 
+  </sp>
+  <sp>
+        <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+  <p>
+    Well, going back, it's a good many years now, but the, I was the fifth vote that made it possible for the anti-poverty program to be created in the city of Newark.  At the time, Monseigneur Duling, Rabbi Prince came before the city council, and the thinking at that time was that it was not a good program.  But I felt that it had a tremendous potential for the future.  It was a possibility of picking up millions of dollars from the federal government, and that it was an all around good program.  So, I, I voted for it, and I was the fifth vote that created the anti-poverty program. I also was the first one in the United States to withdraw from the program once it took a turn that I thought was never envisioned by the Congress of the United States. And that was that the organization would become a political base against the incumbents that were in office at the time.  So, here we had—
+  </p> 
+  </sp>
+ 
+<sp>
+  <speaker n="interviewer">INTERVIEWER:</speaker> 
+  <p>
+    Did you see that coming or did you, did it suddenly become evident?
+  </p> 
+  </sp>
+<sp>
+        <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+<p>
+  No, I thought, I didn't, I thought that it was going to be a program wherein we were created for the city of Newark and all those that met the criteria at the time, income limitations and such, would have an opportunity for job training, baby centers, all types of, of—they were going to set up schools, stenography schools.  It was excellent. Food programs, it was an excellent program.  But what actually happened, once the area boards were created around the town, the city of Newark, there at that time it was supposed to be nine area boards, each area board became the focal of a political group, that were on the outs, trying to get in.  And at that point in time I said to myself, well, this is not good, because then the whole scheme, the whole legislation started to be eroded, and while, while it was still in its infancy, I withdrew, because I said I could no longer go along with it. And time proved, it proved I was right. I was right 100 percent that those that were in the anti-poverty program at that time did use it as a political vehicle. Now, 
+  <cit>
+    <q>
+      <hi rend="italic">
+        <hi rend="bold">
+    I was not against the fact that they were using, they wanted to become part of the political structure. But I didn't think that it was right that they should use the telephones of the UCC, the mimeograph machines of the UCC, the loudspeaker systems of the UCC, the vehicles of the UCC, to campaign against us.  
+        </hi>
+      </hi>
+    </q>
+    <bibl/>
+  </cit>
+  <note target="n1" n="1">[1]</note>
+  <note xml:id="n1" n="1">[1] America's War on Poverty; Episode 403-32</note> 
+  And, my area, which was the West Ward—I represented a 100,000 people—was the only area in the city of Newark that did not have an area board. Because I felt that we didn't need one, 'cause one of the criteria at that time was the area had to be declared blighted, and as I told those that were trying to bring in the area board, as a matter of fact, I was testifying in Washington.  The day that I came back, it was Tuesday night I received a phone call at my house from, God rest her soul, Dorothy Riley, and she said, "Frank, you're going to be at the meeting tonight?" I said, "What are you talking about? What meeting?"  She says, "There's going to be a meeting to create an area board in Vailsburg."  I said, "That's the first I ever heard about it."  And I said, "Where will it be?" "It'll be on Boylan Street at 8:00."  Well here it is 7:00, I just got in, and I just washed and shaved immediately and went over to Boylan Street and the place was jam-packed with all the city of Newark employees. So, I'm in the back, and they won't let me go up to the stage until people started yelling, "He's our councilman! We want to hear from him," and so on and so forth. So when I went up to the front, I'm trying to remember who ran the meeting, I said, "Remember, that one of the criteria is the fact that you have to declare your area blighted." Now Vailsburg, at that time, was a very nice, middle-class, residential area, beautifully kept homes and so on.  What's going to happen when this area is declared blighted and you try and sell your house?  Am I going to buy a house in a blighted area, just so you can create an area board and give out the forty or fifty jobs? I'm against it, and then based on what I said, the vote, by the city employees that were there to support it, was against the area board, and the area board was never created in my area. And that was the only area in the city of Newark we didn't have an area board. But interestingly enough, years later I found out that in the UCC office they had a desk in the corner marked Area Board 9 where they must have funded it separately, but never through where it was supposed to be in my particular area.
+  </p>
+  </sp>
+</div2>
+  
+  <div2 type="question" n="2" data-timecodebegin="00:06:02:00" data-timecodeend="00:07:09:00">
+<head>QUESTION 2</head> 
+  <sp>
+    <speaker n="interviewer">INTERVIEWER:</speaker> 
+  <p>
+    Your area wasn't a blighted area, was it? 
+    </p>
+  </sp>
+<sp>
+        <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+  <p>
+  No, a beautiful area.  As a matter of fact, at that time, I represented the wealthiest and the poorest people in the city of Newark.  Because I represented everything from the South Orange Maplewood Irvington Line all the way down to High Street. So that I had many housing projects in my area, and I had very, not only influential people, but people that were of means. So that, within that ten minutes I could go to a place that was a mansion, a house party, down to a housing project where you had cramped quarters and so on at another meeting. So, I was conversant with all the problems in the area. And I felt that the anti-poverty program, doing what the legislation meant it to do, was excellent. But like everything else it gets sidetracked and the people that it's meant to help really don't get the full benefit of it. 
+    </p>
+</sp>   
+</div2>    
+  
+  <div2 type="question" n="3" data-timecodebegin="00:07:10:00" data-timecodeend="00:08:44:00">  
+  <head>QUESTION 3</head> 
+<sp>
+  <speaker n="interviewer">INTERVIEWER:</speaker> 
+<p>
+  You felt that you were representing the poor in your district?
+  </p>
+  </sp>
+  <sp>
+        <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+    <p>   
+      Oh, I was. Sure, because when I was, more schools were built during my term as a councilman than any had been built in the city of Newark in the previous twenty-five years, as a matter of fact. Councilman Tucker during our, one of our ceremonies at City Hall only a couple years ago when we had our pictures framed and so on, called me the Education Councilman for the period, so that I was very instrumental, not only in education. As a matter of fact, I was on the Board of School Estimate, and at that time Newark had 85,000 students. Today, we may have 45,000. The budget at that time was a couple hundred million. Now, it's over half a billion. We had probably one of the finest school systems in the United States. Weequahic High School in the South Ward graduated more doctors, more lawyers and more professional people than probably any other high school in the United States, so we had a, we had special education. We had Dr. Kelly, assistant superintendent of the school, ran the special education program for handicapped children. Why, we had children come in here from all over the state, and now I find it very disheartening that the educational system in Newark has gone downhill so bad.            
+    </p>
+  </sp>      
+  </div2>
+  
+  <div2 type="question" n="4" data-timecodebegin="00:08:45:00" data-timecodeend="00:11:30:00">
+  <head>QUESTION 4</head> 
+<sp>
+  <speaker n="interviewer">INTERVIEWER:</speaker> 
+  <p>
+    One of the controversies at that time seems to be that the poor needed a separate voice, it couldn't depend on its representatives.
+  </p> 
+  </sp>
+<sp>
+        <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+  <p>
+    Well, that was erroneous for various reasons. We had five wards in the city of Newark at that time we had four hundred and some odd thousand people. Today, we have maybe 240 or 260,000. So what happened after the riots people voted with their feet to move out, and, but my area—remember, it's 100,000 people, much larger than many communities in the state of New Jersey—did not have one political group organized, because they weren't represented. Now, in certain sections of the city interestingly enough it was the Central Ward and part of the South Ward, groups started to come together because they couldn't get from City Hall the things they felt they needed. So, the organizer came together. But in the north part of the city in Newark, the East Ward, there wasn't any appreciable number of dissenting groups. So that, at the time, it became a vehicle for people that said, well, we're not getting representation. Well, what do you mean by representation? Does that mean that you can't come up and talk to the elected officials? I maintained, as a matter of fact I was the first one in Newark to have an office, a local office that I pay for myself, my association, and every Thursday night we had open house, meaning that anyone who couldn't come down to City Hall could come down and talk to me, and I had volunteers. I had a volunteer secretary, volunteer aides and so on. Now, the councilman had five aides, you know. So we had all volunteers and any problem you had, why, we would take the information and then contact you in the next couple of days to finalize it. So that I never had a problem with people saying they weren't represented. The fact is, the fact is is that Baxter Terrace, which had, at the time, 80, 90 percent black voted for me, tremendous majority. And I had my leaders, my leaders were not white, so that I covered these areas and received a tremendous vote from all the areas so that by simply indicating by the vote, no, I gave the representation. But like everything else, those that are out, no matter what you do—
+    <incident>
+      <desc>
+        [camera cuts out, audio only] 
+      </desc>
+    </incident>
+    —you're wrong.
+  </p> 
+  </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        I'm sorry.
+      </p>
+    </sp>
+  </div2>
+  
+  <div2 type="question" n="5" data-timecodebegin="00:11:33:00" data-timecodeend="00:13:33:00">
+  <head>QUESTION 5</head> 
+    <incident>
+      <desc>
+        [slate marker visible on screen]
+      </desc>
+    </incident>
+    <incident>
+      <desc>
+        [change to camera roll 403:25]
+      </desc>
+    </incident>
+<sp>
+  <speaker n="interviewer">INTERVIEWER:</speaker> 
+   <p>
+     Can you tell me about that meeting with Powell? You told me about going there and excitement, and—  
+  </p>
+  </sp>
+<sp>
+        <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+  <p>
+    Well, Clayton Powell at that time was the Chairman of a Congressional Committee, and during that period we had different investigators from the different legislative committees come to the city of Newark to talk to us about various programs, and so on. And I was asked to testify before one of the committees that Clayton Powell chaired at the time.  And I was invited on a Monday to go down and testify before the committee on, on, I think it was concerning youth and the anti-poverty program and so on. So, he invited me down and I testified. And at the end of the day, which was Monday, Clayton Powell says, Geez, Frank, you mind coming back tomorrow?  Because there's a couple of odds and ends and we're going to have some other people here and I'd like you to refute what they say. I said, Congressman, fine. So I'm on a plane, on a shuttle, and I come back to Newark, because I had to attend meetings. The next day I go down to Washington again, and I testified again. Well to make a short story out of it, I went there every day. Back and forth like a shuttle service, and I paid for this out of my own pocket.  But, Clayton Powell was a dynamic personality. He was a very fine representative for the people that he represented in Harlem, and I have fond memories of his office, because one of the things that he had in his office, he had all young secretaries that were all models. And I can assure you, I looked at those girls and I said, everyone is a picture. And so it was a very worthwhile trip.
+  </p> 
+  </sp>
+  </div2>
+  
+  <div2 type="question" n="6" data-timecodebegin="00:13:34:00" data-timecodeend="00:14:04:00">
+    <head>QUESTION 6</head> 
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        [laughs] Do you remember what the testimony was about? About the War on Poverty? Was it about the problems you were having here?
+      </p>
+    </sp>
+    <sp>
+            <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+      <p>
+        I think the problems were discussed before Congressman Gardner who represented one of the states down south. But Congressman Powell was concerning I think food plans and youth programs and so on. 
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        Hmm.  
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+      <p>
+        Educational programs.
+      </p> 
+    </sp>
+  </div2>
+  
+  <div2 type="question" n="7" data-timecodebegin="00:14:05:00" data-timecodeend="00:15:38:00">
+    
+    <head>QUESTION 7</head> 
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        Yeah. Tell me about the Gardner testimony. What did you? Were you? Was that the one where you were complaining about what was going on here?   
+      </p>
+    </sp>
+    <sp>
+            <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+      <p>
+        Congressman Gardner had sent the investigators to Newark to interview, I believe, Lee Bernstein and myself. At the time, concerning what was going on with the anti-poverty program, and I related, reiterated to him that I, things that I felt were bad with the anti-poverty program. That is was becoming too political, and that the focus of the original legislation to help poor people was not being met. And although the federal government at that time was spending millions, which ultimately turned out to be hundreds of millions of dollars, and many, the joke at the time was that if we really want to help the people, all we should do is get basketfuls of hundred dollar bills, go up to the housing project and throw it over the side. And then we would know that the poor people would get it, but there was so much dissipation of money through hiring people that it never really filtered down to the people it should have been benefited by. And Congressman Gardner at that time felt that we were right, because I think it was his estimation that it was happening in other sections of the country where local groups were going in and taking over the anti-poverty groups and using it as a political structure against those that were in. 
+      </p> 
+    </sp>
+  </div2>
+
+  <div2 type="question" n="8" data-timecodebegin="00:15:39:00" data-timecodeend="00:20:09:00">
+    
+    <head>QUESTION 8</head> 
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        Could you recall the Martinez case?
+      </p>
+    </sp>
+    <sp>
+      <speaker n="cameracrew">CAMERA CREW MEMBER:</speaker>
+      <p>
+        Could we hold for a second?
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        Sure.
+      </p>
+    </sp>
+    <sp>
+    <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+      <p>
+        Martinez was—
+      </p> 
+    </sp>
+    <incident>
+      <desc>
+        [change to camera roll 403:25]
+      </desc>
+    </incident>
+    <incident>
+      <desc>
+        [slate marker visible on screen]
+      </desc>
+    </incident>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        <gap reason="inaudible"><desc>[inaudible]</desc></gap> Would you tell me about the special committee you created to investigate indecency?
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+      <p>
+        Well, at that time, see the city council, has, under the charter, investigatorial powers. And I knew about these investigatorial power, because I was instrumental in the change of government in Newark. And so I had requested the city council, by a vote, to give, to subpoena people to testify before our committee, so that we could finalize a report on the anti-poverty program. And, at that time, Councilman Bernstein who represented the South Ward, and Councilman Turner, who represented the Central Ward, and myself were designated as members of the committee. I was the chairman. And we held legislative hearings in the city council.  The same way as Congress holds legislative hearings in Washington, and we called members of the UCC members of the public, members of the diverse groups in the city. That was another incident where I smile when they say that poor people were blocked out, because the testimony at the time was voluminous. And everything they said, we passed on to the different federal organizations, federal groups so that they could have their problem answered.  And, that report, I don't, I may have a copy somewhere, but that report was very illuminating because the things that we projected at that time all came true.
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        Um-hum.
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+      <p>
+        And that was because it was really a consensus of the entire community. 
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        And what were the conclusions?
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+      <p>
+        Well the conclusions were at that time that—
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        I'm sorry. I walked over your sentence, so if you'll start again, I'll keep quiet. [laughs]
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+      <p>
+        All right.  The consensus you mean?
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        Yeah.  
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+      <p>
+        Well, the consensus of the report was that the UCC was not utilizing the monies that the federal government were, was pouring in, the millions of dollars, to help the poor, or those that were designated to be helped originally in the legislation. And the fact that many groups were using it as their own political base, so that they could organize and run against the incumbents, which they ultimately did, and then in the final analysis some of them became very successful and did win. But the fact remains that the people that were hurt were those poor people that the legislation was originally meant to help, and that's the sad part about it all.
+      </p> 
+    </sp> 
+  </div2>
+ 
+  <div2 type="question" n="9" data-timecodebegin="00:20:10:00" data-timecodeend="00:22:39:00">
+    
+    <head>QUESTION 9</head> 
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        Great. The, all the people that came into the city at that time, Tom Hayden, the STS. Do you want to talk about it all? It seemed to be a whole influx of—
+      </p>
+    </sp>
+    <sp>
+            <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+      <p>
+        Well, at that particular time, Tom Hayden, with the Students for Democratic Society were all focused in the South Ward of the city, because I was always proud of the fact that my area never, never had radical groups come in, and it was never a fertile ground for any of these people. So, for some reason or another they would gravitate to other sections where they would have been able to cultivate it. And one of the sections  was the South Ward of the city Newark. Tom Hayden came into the city of Newark and started to, the Students for Democratic Society and so on, we were contacted at that time by the FBI and different organizations, asking us questions whether or not they were subversive, or so on and so forth. And really, I didn't know whether or not they were subversive at the time. But other than the fact they knew that they were in that area, as a matter of fact, my mind, I remembered a time where they had a, they were selling liquor! In one of the buildings and so on, and it—
+      </p> 
+    </sp>
+    <incident>
+      <desc>
+        [camera cuts out; audio only]
+      </desc>
+    </incident>
+    <sp>
+      <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+      <p>
+        —was raided by the Newark police.
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        I'm sorry, we're going to have to—
+      </p>
+    </sp>
+    
+    <sp>
+      <speaker n="cameracrew">CAMERA CREW MEMBER:</speaker>
+      <p>
+        Oh hey, pick that up.
+      </p>
+    </sp>
+  </div2>
+  
+  <div2 type="question" n="10" data-timecodebegin="00:22:40:00" data-timecodeend="00:26:12:00">
+    
+    <head>QUESTION 10</head> 
+    <incident>
+      <desc>
+        [change to camera roll 403:26]
+      </desc>
+    </incident>
+    <incident>
+      <desc>
+        [slate marker visible on screen]
+      </desc>
+    </incident>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        Tell me about this, your reference to get the medical school here.
+      </p>
+    </sp>
+    <sp>
+            <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+      <p>
+        Well, I was the Chairman of the Urban Renewal Committee, that recommended the construction of the medical school and the Senator Rutgers University, which was, we had envisioned as being the center of education for the state of New Jersey.  
+        <hi rend="italic"><hi rend="bold">[America's War on Poverty; Episode 403-46]
+        And at that particular time, as far as the medical school is concerned, many buildings had to be knocked down.  
+        
+        And one of the problems was, as was reiterated by some groups, was that it was not urban renewal, it was negro removal, which that certainly was never my intent.  
+        
+        </hi></hi>
+          My intent was to pick up all this federal money and create one of the finest medical facilities in the country. 
+          
+          And again and again with a great deal of personal pride I look back and I go through Bergen Street and I see the medical school, and I see that it's the minority groups that use the very facility that at that time many of them criticized. So much so, that it became such a volatile issue that one minister, to my recollection, laid down in front of a bulldozer and was killed, to stop the construction of the program. So that time proved that his efforts unfortunately were wrong, because the medical college, as any person will, can estimate, has been a wonderful facility. The dental school has graduated thousands of dentists that have performed admirably around the country.  The fact that they have dental clinics where people can go to with a very minimal amount of money  and have their teeth taken care of, the fact that so many advances have been made in the medical school, it's just been an excellent facility for the city of Newark.  But of course, today everyone will agree.  But thirty years ago or so, it was not such. There were riots going on, and the issue became so clouted that the focus of what we were trying to do was almost being lost, and I, it was the credit of Mayor Addonizio, who was one of the prime movers of the medical center, because it got to the point that the state of New Jersey wanted to withdraw the medical school from Newark and put it in the suburbs!  It was Mayor Addonizio at the time with the help of the city council that we were able to prevail and have the state continue to put it where it is today, in the city of Newark.  And it came within the hair's breath of not being located in Newark, and this is something that people are not aware of, that it was Mayor Addonizio at that particular time, and the city council, and I was one of them as Chairman of the Urban Renewal Committee, that made it possible for the medical center, that tremendous medical center where you have thousands of employees and hundreds of thousands of patients being treated for every year, we made it possible for that structure to be in the city of Newark, and shame on all those people thirty years ago that tried to stop that program.  
+      </p> 
+    </sp>
+  </div2>
+
+  <div2 type="question" n="11" data-timecodebegin="00:26:13:00" data-timecodeend="00:28:28:00">
+    <head>QUESTION 11</head> 
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        When did you—
+      </p>
+    </sp>
+    <sp>
+      <speaker n="cameracrew">CAMERA CREW MEMBER:</speaker>
+      <p>
+        <gap reason="inaudible"><desc>[inaudible]</desc></gap> tape.
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        There's tape. Did you, just before the riots, did you expect this would happen, or did things reach such a pitch at that time? 
+      </p>
+    </sp>
+    <sp>
+     <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+      <p>
+        Again, no, no, I didn't envision that the—there was nothing that came across my desk that indicated that there was any volatility in the city for a riot. Because as I said, the area I represented was never really hit by the riot, and the riot focused mostly in the South Ward in the Springfield Avenue of the city of Newark or the old 4th Precinct, so that when it started and the excuse was at that time that a taxicab driver was pulled out and abused by the police. That's the old routine and then it scattered. But the interesting thing is this: that if this was a spontaneous reaction, how was it possible for cars and trucks to be equipped with chains ready to pull down the iron gates on Springfield Avenue? So that this was all pre-meditated, and it's interesting that, many of the people that were involved, that were formulating this problem, that the day the riot started they left the city of Newark. And the fact is, that one of the finest business sections in the United States, Springfield Avenue, was destroyed at that time, and never, never has come back as a business section. So if you riot up Springfield Avenue today, you will still see the remnants of burnt-out, burnt-out stores and so on, and this is a good number of years. So it was very sad that many people lost  their livelihoods. And the very people that, poor people, that would have been helped if nothing had happened, whether again, sadly so, were the greatest losers.  
+      </p> 
+    </sp>
+  </div2>
+
+  <div2 type="question" n="12" data-timecodebegin="00:28:29:00" data-timecodeend="00:30:33:00">
+    <head>QUESTION 12</head> 
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        Right after the riots you went and testified to Congress to a Congressional Committee. What did you say about what caused the riots?
+      </p>
+    </sp>
+    <sp>
+            <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+      <p>
+        Well, at the time I felt again that it was not the large number of people in the city that were, that brought the riots about, but rather—
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        Let's start again, because you were moving a little—
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+      <p>
+        I felt that it was never the people of the city that were interested in the riots, it was just a group of political opportunists that wanted to create and ferment the problems in the city and they were instrumental in doing so, because once the riots started, and the windows started to be busted in these store windows, and the vandalism went in, and you had people walking out of the liquor stores with the liquor and the shoes were being taken. As a matter of fact, the, one of the saddest sights I saw in Burgen Street was the fact that the only thing left in a clothing store was one hanger. One hanger, just you know, just shocking to see one hanger in a store. As a matter of fact, I was in the car  with Governor Hughes, going down Clinton Avenue. The National Guard, the state troopers and so on, when they were vandalizing the shoe, a shoe factory, and people coming out, laughing, and so on and so forth. So, that it, it started to develop a carnival atmosphere. And it was many, many tragedies that developed. Mrs. Spellman was shot, she was the mother of a large family, and you had many, many people that were hurt, that were innocent. Because those that were the culprits, those that were the tormentors of all this made it their business to be out of harm's way and unfortunately again, the poor, the innocent, got hurt.
+      </p> 
+    </sp>
+  </div2>
+
+  <div2 type="question" n="13" data-timecodebegin="00:30:34:00" data-timecodeend="00:32:57:00">
+    <head>QUESTION 13</head> 
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        You said in the committee, that the poverty program, the UCC bore some of the responsibility. 
+      </p>
+    </sp>
+    <sp>
+            <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+      <p>
+        Well, I would say that you have to remember there were many area boards, and that the area boards, not all the area boards, were involved, but certainly those that wanted to take, get political advantage. It paid them to give out misinformation, and that was one of the things I testified, that they were using the mimeograph machines, at that time it was mimeograph machines, within the UCC to put the propaganda out against the city and create the distorted views. Out of the rumors that went around about, that taxicab driver being beaten and so on, that wasn't true. It wasn't true at all. But now, actually what happens, once a lie is put out, it takes on a life of its own. And then there's no way you can stop these things. And then, Charlie [unintelligible] was captain of the Oak Fork precinct, and they were surrounded by people. It, it became bedlam.  I remember I was called on by the city clerk, Kerry Rochenstein, to come down to police headquarters so that I could poll the city council, so that the police could get the, the vests, bulletproof vests, and get heavier equipment and so on, because we didn't have it. Now if the city was aware that there was going to be some kind of a riot, certainly the, Director Spina at the time, would have prepared for it. But we were not prepared for it. Because we had no way of knowing that this was going to happen, and the snipers that were on the roofs at the time, they were not Newark people. And the fact remains that within a couple of days all these people disappeared, but they left the problem that Newark still suffers under. After all these years, the fact that over the last twenty-five or thirty years we have lost some of the best brains, both black and white, moved out of the city. And they created such pockets of additional poverty, that the whole piece of legislation, was so eroded and so circumvented, that really the taxpayers again paid the brunt and didn't get their dollars' worth.
+      </p> 
+    </sp>
+  </div2>
+ 
+  <div2 type="question" n="14" data-timecodebegin="00:32:58:00" data-timecodeend="00:35:29:00"> 
+    <head>QUESTION 14</head> 
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        OK.  About after, I think you—after, could you talk about who Baraka and Imperiale symbolized, the two extremes?
+      </p>
+    </sp>
+    <sp>
+      <speaker n="cameracrew">CAMERA CREW MEMBER:</speaker>
+      <p>
+        You're not going to get this question on the [unintelligible]
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        Want to cut?
+      </p>
+    </sp>
+    <sp>
+      <speaker n="cameracrew">CAMERA CREW MEMBER:</speaker>
+      <p>
+        Let's cut.
+      </p>
+    </sp>
+    <incident>
+      <desc>
+        [change to camera roll 403:27]                           
+      </desc>
+    </incident>
+    <incident>
+      <desc>
+        [slate marker visible on screen]
+      </desc>
+    </incident>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        [unintelligible] What happened after the riot? 
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+      <p>
+        Well, after the riots, what happened, people started to leave the city in droves, both black and white. And many of the areas that were middle-class went downhill. There were so many signs, for sale. Properties were de-valued, properties were not being maintained. And people voted with their feet, and the fact remains, that the city in Newark, from a 400,000 population last census down to 260,000. So all those people left, and the finer sections of the city of Newark were demolished. As a matter of fact, for a long time, Newark had nothing but demolition crews to knock down all the abandoned homes, because the abandoned homes became fire traps. And it was sad because, ultimately the city of Newark became a city where only those that didn't have the wherewithal to leave, remained. And that was sad, because at one time, Newark was a well-integrated, economic center. You can walk down Broad Street at any time of the night or day. Go down to Bamberger's, which no longer exist, Macy's took over and had to close it down. Kreski's, Hanes, all the stores, everything above the second, first floor, on Broad Street, are facilities that are not being utilized at all. And I don't see this changing in the foreseeable future because the key is, will the person take the money out of their pocket and invest it in the city of Newark? So far, the only money being invested in the city of Newark is federal money and state money. But when people start to invest their own money, that's when the city of Newark will truly come back.
+      </p> 
+    </sp>
+  </div2>
+  
+  <div2 type="question" n="15" data-timecodebegin="00:35:30:00" data-timecodeend="00:36:38:00">
+    <head>QUESTION 15</head> 
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        How about business? What happened to businesses? Not the little businesses, but the prudentials and the big business industry after the riot.
+      </p>
+    </sp>
+    <sp>
+            <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+      <p>
+        Well, the big businesses have a way of surviving because of the sheer amount of money that they have, but many of them diversified. Many of the businesses that were in Newark started to open up offices in the suburbs. Many of the attorneys that were formally in the city of Newark moved out because they, their secretaries or so on would no longer want to work in the city of Newark, so that part of that may have been negated with the construction of the program, Gateway project which I hope. But many, Newark, Newark at one time could say that over two, or three-hundred individual items were manufactured in Newark. That no longer can be said. And the fact that we have such a high unemployment rate for youth indicates that this is sad, because if Newark was the viable center that we had before the riots, all these people would be working now. 
+      </p> 
+    </sp>
+  </div2>
+  
+  <div2 type="question" n="16" data-timecodebegin="00:36:39:00" data-timecodeend="00:39:55:00">
+    <head>QUESTION 16</head> 
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        Could you tell me how Baraka and Imperiale came to kind of symbolize the extremes of the <gap reason="inaudible"><desc>[inaudible]</desc></gap>?
+      </p>
+    </sp>
+    <sp>
+            <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+      <p>
+        Well, Tony Imperiale at the time was a white supremacist. He came out of the North Ward, and many of the things that he articulated were those things that the whites felt were to be so. And Leroy [sic] Baraka,  certainly if you just covered his face, he would mirror Tony Imperiale.  So, both of them, standing behind a screen,not knowing who was black and who was white, you would hear the same thing. And Leroy Baraka represented a constituency that he felt certain things were wrong and he was articulating it, and Tony Imperiale naturally would say no. And this was part of the problem. 
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        Maybe I'll get you to start that again, because it's either we should call him Leroy Jones or— 
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+      <p>
+        That's right. He changed his name. Leroy Jones became O'Baraka—
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        Just Baraka.
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+      <p>
+        He calls himself now Baraka?
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="cameracrew">CAMERA CREW MEMBER:</speaker>
+      <p>
+        Amiri.
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        Amiri.
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+      <p>
+        Amiri now?
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="cameracrew">CAMERA CREW MEMBER:</speaker>
+      <p>
+        Amiri.
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        Oh, Amiri Baraka.
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+      <p>
+        As a matter of fact his son ran in the last election for mayor. 
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        Yeah. 
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+      <p>
+        Young fella.
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        Oh, would you just start that?
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+      <p>
+        Sure.
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        Go ahead.    
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+      <p>
+        Why don't you ask me the question so—
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        Oh yeah. Tell me how Baraka and Imperiale came to symbolize extremes in Newark.
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+      <p>
+        Well, Tony Imperiale reflected the thinking of the whites at that particular time, and Leroy, and Baraka—
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        We should start again.
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+      <p>
+        OK. Tony Imperiale reflected the thinking of the whites of that particular period and—
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        OK. Can we just start again? [laughs] You moved out of the—
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+      <p>
+        I'm sorry.
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        That's all right. Sorry.
+      </p>
+    </sp>
+    <sp>
+      <speaker n="cameracrew">CAMERA CREW MEMBER:</speaker>
+      <p>
+        Fine.
+      </p>
+    </sp>
+    
+    <sp>
+      <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+      <p>
+        All set? Tony Imperiale reflected the thinking of the whites at that particular period. And Baraka reflected the thinking of the blacks, so that if both Baraka and Tony Imperiale were behind a screen, and made the statements that they made, you wouldn't know who was black and who was white, because they were  opposite ends but saying the same things. And what was happening, they were both heating up a situation, rather than trying to cool it off and create an atmosphere where things could be developed. I was more in the center, so I could very comfortably campaign in all sections of the city. Never had a problem. Many a place that I walked into, when I walked in I was the only white and I never felt uncomfortable, because I would call the issues as I felt, and since I was born and raised in the city of Newark, I felt that the things that I was for would benefit everyone. But unfortunately, because of the, the extremes of both Baraka and Tony Imperiale at that period, it was, had a tendency to polarize groups, and not bring them together. And I, I feel that over the period of years, this still continued to a large degree. And unless we get rid of the polarization, the city of Newark will never really come back. 
+      </p> 
+    </sp>
+  </div2>
+  
+  <div2 type="question" n="17" data-timecodebegin="00:39:56:00" data-timecodeend="00:42:16:00">
+    <head>QUESTION 17</head> 
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        Will you tell me about the issue of the canine dogs after the—
+      </p>
+    </sp>
+    <sp>
+            <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+      <p>
+        Right. The canine issue became very volatile in the city of Newark because at that particular time, during the civil rights movement, it seemed that the dogs were being used against black, black activists down south. But my intention at that time was the police force needed an extra tool, and the fact that we could have a canine corps. And I felt that the dogs were safer than bullets. Because once a police officer fires a bullet, you can't recall the bullet, but you could recall the dogs. And Leroy, Lee Bernstein and I went to Baltimore, at our own expense. Baltimore had the oldest canine corps in the United States at that time. They had 200 dogs. We went to Washington and saw their canine corps. We went down to Miami and checked down there. So when we came back and we recommended the canine corps, all the law enforcement authorities were for it.  And many, many blacks, but again, those that have their own political hidden agendas were against it. And it's ironic that a former councilman, Councilman Harris later on, when I was there he was against the canine corps. Yet, when he became a councilman many years later, he did an excellent job. I liked it. He was a good man, but I had to smile, because he sponsored the canine corps for the city of Newark <vocal who="p383-1"><desc>[laughs]</desc></vocal>.  So, I felt it was good idea then. I think it's a good idea now, and I felt, I feel that any municipality that can should have a canine corps. Because one dog can go into a warehouse, and ferret out, ferret out a, an intruder faster than if you sent five or six police in there. And it seems that if you send a dog into a department store where somebody is hiding, he will get up and surrender, whereas if a police officer goes in, he's putting his life on the line. And I think that the years have indicated the number of communities that have adopted the canine corps, indicates that they are very useful as an additional police tool.  
+      </p> 
+    </sp>
+  </div2>
+ 
+  <div2 type="question" n="18" data-timecodebegin="00:42:17:00" data-timecodeend="00:43:40:00"> 
+    <head>QUESTION 18</head> 
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        A few years after the uprise in '68, the city had, when Martin Luther King was assassinated, the city had a big march, called The March For Understanding. It was kind of a time when both black and white got together. It seemed to be, indicate some hope for the city. Were there others? Did you participate in that?  
+      </p>
+    </sp>
+    <sp>
+            <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+      <p>
+        Yes. 
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        Yeah? Would you tell me about that? Was there a time of at least some kind of symbolic hope?
+      </p>
+    </sp>
+    <sp>
+      <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+      <p>
+        Well, it's unfortunate that when you have a tragedy, and it certainly, the assassination of Martin Luther King certainly was a tragedy, people come together. And we had a march, I participated. As a matter of fact, I believe once when Martin Luther King came to Newark, I met him. And anyone that's for peace, I was for, regardless of who or whatever label he is. If he's for peace, I think that's the type of man that we should respect. And it was a time of hope. But again, again you have people that have their own political agendas that chew away, and gnaw away at the fabric where they create chaos. And then after the emotion is over of that particular tragedy, things settle back, and they all score and they do what they want to do, which is sad.    
+      </p> 
+    </sp>
+    <sp>
+      <speaker n="interviewer">INTERVIEWER:</speaker> 
+      <p>
+        Great. I think that's it.     
+      </p>
+    </sp>
+  </div2>
+  
+  <div2 type="question" n="19" data-timecodebegin="00:43:41:00" data-timecodeend="00:44:18:00">
+    <head>QUESTION 19</head> 
+    <incident>
+      <desc>
+        [change to camera roll 403:27] 
+      </desc>
+    </incident>
+    <incident>
+      <desc>
+        [change to sound roll 403:13]
+      </desc>
+    </incident>
+    <incident>
+      <desc>
+        [slate marker visible on screen]
+      </desc>
+    </incident>
+    <sp>
+            <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+      <p>
+        Well, we had our hearings before the planning board, for concerning the medical school. It became such a political and volatile issue, that we would have hundreds of people attending our meetings, saying, go along with the medical school. Don't go along with the medical school. And it got to the point where people who would testify couldn't testify because of the noise and the arguing and the yelling and the screaming.  And complete bedlam used to break out—
+      </p>
+    </sp>
+    <incident>
+      <desc>
+        [camera roll cuts out; audio only]        
+      </desc>
+    </incident>
+    <sp>
+      <speaker n="interviewee">FRANK ADDONIZIO:</speaker> 
+      <p>
+        —at the, at the meetings. And we would have police come in to maintain order.
+      </p> 
+    </sp>
+    <incident>
+      <desc>
+        [cut]
+      </desc>
+    </incident>
+  </div2>
+  <p>
+    [end of interview]
+  </p>
+  <p>
+    Copyright 2014 Washington University Libraries
+  </p>
+</div1>
+</body>
+</text>
+</TEI>
+
+
+
+
+
