@@ -36,8 +36,15 @@ describe WorkShowPresenter do
   end
 
   describe "#admin_set" do
-    let(:attributes) { { 'isPartOf_ssim' => '123', 'admin_set_ssi' => 'Title' } }
     subject { presenter.admin_set }
-    it { is_expected.to eq '<tr><th>Collection</th><td><a href="/admin_sets/123">Title</a></td></tr>' }
+    context "in an admin_set" do
+      let(:attributes) { { 'isPartOf_ssim' => ['123'], 'admin_set_ssi' => 'Title' } }
+      it { is_expected.to eq '<tr><th>Collection</th><td><a href="/admin_sets/123">Title</a></td></tr>' }
+    end
+
+    context "not in an admin_set" do
+      let(:attributes) { {} }
+      it { is_expected.to be_nil }
+    end
   end
 end

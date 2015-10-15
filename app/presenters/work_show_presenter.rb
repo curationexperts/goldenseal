@@ -7,6 +7,7 @@ class WorkShowPresenter < CurationConcerns::WorkShowPresenter
   end
 
   def admin_set
+    return unless admin_set_id
     "<tr><th>Collection</th><td>#{admin_set_link}</td></tr>".html_safe
   end
 
