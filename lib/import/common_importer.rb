@@ -33,9 +33,7 @@ module Import
     def run
       admin_set
       return unless errors.empty?
-
       metadata_files.each { |file| parse_metadata(file) }
-      puts "\n" unless Rails.env.test?
     end
 
     def admin_set
@@ -54,7 +52,7 @@ module Import
     # Parse one metadata file
     def parse_metadata(file)
       file_name = File.basename(file)
-      puts "\nParsing #{file_name}" unless Rails.env.test?
+      puts "\n#{Time.now.strftime('%T')} Parsing #{file_name}" unless Rails.env.test?
       attrs = parser.new(file).attributes
 
       if attrs.blank?
@@ -107,7 +105,7 @@ module Import
     end
 
     def create_file(record, matching_file)
-      puts "    attaching file: #{File.basename(matching_file)}" unless Rails.env.test?
+      puts "    #{Time.now.strftime('%T')} attaching file: #{File.basename(matching_file)}" unless Rails.env.test?
       file = FileWithName.new(matching_file)
       fs = FileSet.new
 
