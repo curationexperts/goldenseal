@@ -193,21 +193,12 @@ describe Import::TextImporter do
       it { is_expected.to be_falsey }
     end
 
-    context 'when identifier field has more than one value' do
-      let(:attrs) {{ identifier: ['id1', 'id2'],
-                     title: ["Some Title"], files: [] }}
-
-      it 'raises an error' do
-        expect { subject }.to raise_error('Unable to determine identifier for record: ["id1", "id2"]')
-      end
-    end
-
     context 'when the record already exists' do
       let(:attrs) {{ identifier: ['id1'],
                      title: ["Some Title"], files: [] }}
 
       before do
-        allow_any_instance_of(ActiveFedora::Relation).to receive(:where).with("identifier_tesim" => 'id1').and_return(['something'])
+        allow_any_instance_of(ActiveFedora::Relation).to receive(:where).with("identifier_tesim" => ['id1']).and_return(['something'])
       end
 
       it { is_expected.to be_truthy }
@@ -224,11 +215,11 @@ describe Import::TextImporter do
                      title: ["Some Title"], files: [] }}
 
       before do
-        allow_any_instance_of(ActiveFedora::Relation).to receive(:where).with("identifier_tesim" => 'id1').and_return(['something', 'two things'])
+        allow_any_instance_of(ActiveFedora::Relation).to receive(:where).with("identifier_tesim" => ['id1']).and_return(['something', 'two things'])
       end
 
       it 'raises an error' do
-        expect { subject }.to raise_error('Too many matches found for record: id1')
+        expect { subject }.to raise_error('Too many matches found for record: ["id1"]')
       end
     end
   end

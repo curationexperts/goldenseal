@@ -6,8 +6,7 @@ module Import
     # values from the TEI file.
     def attributes
       attrs = super
-      attrs = attrs.merge(date_issued: issue_date,
-                          identifier: identifier)
+      attrs = attrs.merge(date_issued: issue_date)
       attrs.reject { |_key, value| value.blank? }
     end
 
@@ -30,13 +29,5 @@ module Import
       date.text.strip if date
     end
 
-    def identifier
-      id_node = xml.xpath('/*/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno', namespaces)
-      id_node.map do |node|
-        type = node.attribute('type') ? node.attribute('type').value : nil
-        type = nil if type == 'dls'
-        [type, node.text].compact.join(': ')
-      end
-    end
   end
 end

@@ -14,6 +14,7 @@ module Import
       xpath_map.each do |attr_name, attr_path|
         attrs[attr_name] = text_for(attr_path, xml)
       end
+      attrs = attrs.merge(identifier: identifier)
       attrs.reject { |_key, value| value.blank? }
     end
 
@@ -35,6 +36,15 @@ module Import
 
     def xpath_map
       raise 'Please implement the xpath_map method'
+    end
+
+    def identifier
+      id_node = xml.xpath('/*/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno', namespaces)
+      id_node.map do |node|
+        type = node.attribute('type') ? node.attribute('type').value : nil
+        type = nil if type.match(/dls/i)
+        [type, node.text].compact.join(': ')
+      end
     end
 
   end

@@ -72,8 +72,6 @@ module Import
     def record_exists?(attrs)
       ident = attrs[:identifier]
       return false if ident.blank?
-      fail "Unable to determine identifier for record: #{ident}" if ident.count > 1
-      ident = ident.first
 
       existing_records = ActiveFedora::Base.where("identifier_tesim" => ident)
       fail "Too many matches found for record: #{ident}" if existing_records.count > 1
