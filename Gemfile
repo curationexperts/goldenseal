@@ -37,6 +37,7 @@ gem 'resque'
 
 gem 'hydra-pcdm', github: 'projecthydra-labs/hydra-pcdm', ref: '463d73a'
 gem 'hydra-works', github: 'projecthydra-labs/hydra-works', ref: 'e28c49c'
+gem 'hydra-file_characterization', github: 'projecthydra-labs/hydra-file_characterization', ref: '441629a'
 gem 'hydra-collections', '~> 6.0.0.rc1'
 gem 'hydra-head', '~> 9.3.0'
 gem 'activefedora-aggregation', github: 'projecthydra-labs/activefedora-aggregation', ref: '24a2d14'

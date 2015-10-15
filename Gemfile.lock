@@ -43,6 +43,14 @@ GIT
       resque-pool (~> 0.3)
 
 GIT
+  remote: git://github.com/projecthydra-labs/hydra-file_characterization.git
+  revision: 441629af34c8b6eef4582666a8af2989098c5fbe
+  ref: 441629a
+  specs:
+    hydra-file_characterization (0.3.2)
+      activesupport (>= 3.0.0)
+
+GIT
   remote: git://github.com/projecthydra-labs/hydra-pcdm.git
   revision: 463d73a2fd4ba26c1741fecf9c7265fb8770ac3c
   ref: 463d73a
@@ -264,8 +272,6 @@ GEM
       cancancan (~> 1.8)
       rails (~> 4.1)
       simple_form (~> 3.1.0)
-    hydra-file_characterization (0.3.2)
-      activesupport (>= 3.0.0)
     hydra-head (9.3.0)
       hydra-access-controls (= 9.3.0)
       hydra-core (= 9.3.0)
@@ -594,6 +600,7 @@ DEPENDENCIES
   devise_ldap_authenticatable
   factory_girl_rails
   hydra-collections (~> 6.0.0.rc1)
+  hydra-file_characterization!
   hydra-head (~> 9.3.0)
   hydra-pcdm!
   hydra-works!
