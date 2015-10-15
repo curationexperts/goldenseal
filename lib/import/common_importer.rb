@@ -62,7 +62,7 @@ module Import
         # exists in fedora.
         skipped_imports << file_name
       else
-        create_record(attrs.merge(metadata_file: file_name, visibility: visibility, admin_set: admin_set))
+        create_record(attrs.merge(metadata_file: file, visibility: visibility, admin_set: admin_set))
         successful_imports << file_name
       end
     rescue => e
@@ -82,7 +82,6 @@ module Import
     def create_record(attributes)
       metadata_file = attributes.delete(:metadata_file)
       files = attributes.delete(:files) || []
-      files.unshift(metadata_file)
 
       attributes[:rights] = transform_rights(attributes) unless attributes[:rights].blank?
 
@@ -90,11 +89,12 @@ module Import
         r.apply_depositor_metadata(user)
       end
 
-      create_files(record, metadata_file, files)
+      create_file(record, metadata_file) # Attach metadata file
+      attach_files(record, File.basename(metadata_file), files)
       set_representative(record)
     end
 
-    def create_files(record, metadata_file, files)
+    def attach_files(record, metadata_file, files)
       files.each do |file_name|
         matching_file = find_file(file_name, metadata_file)
         next unless matching_file

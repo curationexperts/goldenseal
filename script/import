@@ -65,7 +65,7 @@ rescue => e
 end
 
 def print_importer_results(importer)
-  puts "Printing import results"
+  puts "\nPrinting import results"
 
   unless importer.skipped_imports.empty?
     puts "\nSkipped Imports:"
