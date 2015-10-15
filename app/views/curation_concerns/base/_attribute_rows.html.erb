@@ -19,5 +19,5 @@
     <%= @presenter.attribute_to_html(:width) %>
     <%= @presenter.attribute_to_html(:mime_type) %>
     <%= @presenter.attribute_to_html(:filename) %>
-    <%= @presenter.attribute_to_html(:admin_set, label: 'Administrative Collection', catalog_search_link: true) %>
+    <%= @presenter.admin_set unless @presenter.is_a? AdminSetPresenter %>
 

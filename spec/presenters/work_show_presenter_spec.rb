@@ -34,4 +34,10 @@ describe WorkShowPresenter do
     subject { presenter.filename }
     it { is_expected.to eq 'frog.png' }
   end
+
+  describe "#admin_set" do
+    let(:attributes) { { 'isPartOf_ssim' => '123', 'admin_set_ssi' => 'Title' } }
+    subject { presenter.admin_set }
+    it { is_expected.to eq '<tr><th>Collection</th><td><a href="/admin_sets/123">Title</a></td></tr>' }
+  end
 end

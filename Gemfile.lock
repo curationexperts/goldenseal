@@ -19,8 +19,8 @@ GIT
 
 GIT
   remote: git://github.com/projecthydra-labs/curation_concerns.git
-  revision: 2f0f7439f13db0e3855302b015b218170ca69c07
-  branch: thumbnail
+  revision: 31684a3eb773c830787acbb3b992e076d6f3c481
+  branch: link_to_facet
   specs:
     curation_concerns (0.1.0)
       blacklight_advanced_search (>= 5.1.4, < 6.0)
@@ -41,14 +41,6 @@ GIT
       redlock (~> 0.1.2)
       resque (~> 1.23)
       resque-pool (~> 0.3)
-
-GIT
-  remote: git://github.com/projecthydra-labs/hydra-file_characterization.git
-  revision: 441629af34c8b6eef4582666a8af2989098c5fbe
-  ref: 441629a
-  specs:
-    hydra-file_characterization (0.3.2)
-      activesupport (>= 3.0.0)
 
 GIT
   remote: git://github.com/projecthydra-labs/hydra-pcdm.git
@@ -272,6 +264,8 @@ GEM
       cancancan (~> 1.8)
       rails (~> 4.1)
       simple_form (~> 3.1.0)
+    hydra-file_characterization (0.3.3)
+      activesupport (>= 3.0.0)
     hydra-head (9.3.0)
       hydra-access-controls (= 9.3.0)
       hydra-core (= 9.3.0)
@@ -600,7 +594,7 @@ DEPENDENCIES
   devise_ldap_authenticatable
   factory_girl_rails
   hydra-collections (~> 6.0.0.rc1)
-  hydra-file_characterization!
+  hydra-file_characterization (= 0.3.3)
   hydra-head (~> 9.3.0)
   hydra-pcdm!
   hydra-works!
