@@ -305,6 +305,7 @@ describe Import::TextImporter do
         # Set the representative to the first page of the book
         rep = FileSet.find(record.representative_id)
         expect(rep.label).to eq 'letz_01_0001_unm.jp2'
+        expect(rep.generic_work_ids).to eq [record.id]
 
         # The new record should belong to the AdminSet
         expect(record.admin_set).to eq set

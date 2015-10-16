@@ -19,8 +19,8 @@ GIT
 
 GIT
   remote: git://github.com/projecthydra-labs/curation_concerns.git
-  revision: 31684a3eb773c830787acbb3b992e076d6f3c481
-  branch: link_to_facet
+  revision: 227318ecb609072712435bc01920ef4027f8f772
+  branch: avoid_extra_lookups
   specs:
     curation_concerns (0.1.0)
       blacklight_advanced_search (>= 5.1.4, < 6.0)

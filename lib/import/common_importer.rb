@@ -108,13 +108,11 @@ module Import
       fs = FileSet.new
 
       actor = CurationConcerns::FileSetActor.new(fs, user)
-      actor.create_metadata(nil, record.id)
+      actor.create_metadata(nil, record)
       fail 'Content creation failed' unless actor.create_content(file)
 
       fs.errors.each { |k, v| errors << "FileSet #{k}: #{v}" }
       fail 'FileSet had errors' unless fs.errors.blank?
-
-      record.members << fs
     end
 
     def find_file(file_name, metadata_file)
