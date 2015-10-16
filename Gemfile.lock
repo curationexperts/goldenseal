@@ -97,7 +97,7 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
-    active-fedora (9.4.3)
+    active-fedora (9.5.0)
       active-triples (~> 0.7.1)
       activesupport (>= 4.1.0)
       deprecation
@@ -578,7 +578,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  active-fedora (~> 9.4.3)
+  active-fedora (~> 9.5.0)
   activefedora-aggregation!
   angularjs-rails (~> 1.4.4)
   byebug
