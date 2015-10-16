@@ -35,16 +35,26 @@ describe WorkShowPresenter do
     it { is_expected.to eq 'frog.png' }
   end
 
-  describe "#admin_set" do
-    subject { presenter.admin_set }
+  describe "#attribute_to_html" do
+    let(:renderer) { double }
     context "in an admin_set" do
       let(:attributes) { { 'isPartOf_ssim' => ['123'], 'admin_set_ssi' => 'Title' } }
-      it { is_expected.to eq '<tr><th>Collection</th><td><a href="/admin_sets/123">Title</a></td></tr>' }
+      it "calls the renderer" do
+        expect(AdminSetRenderer).to receive(:new)
+          .with(:admin_set, ['Title'], link_path: '/admin_sets/123')
+          .and_return(renderer)
+
+        expect(renderer).to receive(:render)
+        presenter.attribute_to_html(:admin_set)
+      end
     end
 
     context "not in an admin_set" do
       let(:attributes) { {} }
-      it { is_expected.to be_nil }
+      it "doesn't calls the renderer" do
+        expect(AdminSetRenderer).not_to receive(:new)
+        presenter.attribute_to_html(:admin_set)
+      end
     end
   end
 end
