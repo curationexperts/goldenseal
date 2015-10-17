@@ -47,7 +47,7 @@ describe Text do
 
       let(:file) { '/tei/ccr1815.00757.018.xml' }
       let(:file_set) do
-        FileSet.new do |gf|
+        FileSet.new(mime_type: 'text/xml') do |gf|
           gf.apply_depositor_metadata('jcoyne')
         end
       end

@@ -1,8 +1,8 @@
   <div id="player" class="col-md-6">
-    <video width="480" height="360" preload="auto"  data-able-player data-transcript-div="transcript" data-use-transcript-button="false" data-translation-path="/" data-include-transcript="true">
+    <video width="480" height="360" preload="auto" data-able-player data-transcript-div="transcript" data-use-transcript-button="false" data-translation-path="/" data-include-transcript="true">
       <source src="<%= main_app.download_path(file_set, file: 'webm') %>" type="video/webm" />
       <source src="<%= main_app.download_path(file_set, file: 'mp4') %>" type="video/mp4" />
-      <% if defined? transcript_id %>
+      <% if defined?(transcript_id) && transcript_id %>
         <track kind="captions" src="<%= main_app.curation_concerns_file_set_path(transcript_id, format: :vtt) %>" srclang="en" label="English"  />
       <% end %>
       Your browser does not support the video tag.

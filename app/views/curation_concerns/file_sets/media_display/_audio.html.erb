@@ -1,8 +1,8 @@
   <div id="player" class="col-md-6">
-    <audio preload="auto"  data-able-player data-transcript-div="transcript" data-use-transcript-button="false" data-debug="true" data-translation-path="/" data-include-transcript="true">
+    <audio preload="auto" data-able-player data-transcript-div="transcript" data-use-transcript-button="false" data-translation-path="/" data-include-transcript="true">
       <source src="<%= main_app.download_path(file_set, file: 'ogg') %>" type="audio/ogg" />
       <source src="<%= main_app.download_path(file_set, file: 'mp3') %>" type="audio/mpeg" />
-      <% if defined? transcript_id %>
+      <% if defined?(transcript_id) && transcript_id %>
         <track kind="captions" src="<%= main_app.curation_concerns_file_set_path(transcript_id, format: :vtt) %>" srclang="en" label="English"  />
       <% end %>
       Your browser does not support the audio tag.
