@@ -89,7 +89,7 @@ module Import
         r.apply_depositor_metadata(user)
       end
 
-      create_file(record, metadata_file) # Attach metadata file
+      create_file(record, metadata_file, 'text/xml') # Attach metadata file
       attach_files(record, File.basename(metadata_file), files)
       set_representative(record)
     end
@@ -102,10 +102,10 @@ module Import
       end
     end
 
-    def create_file(record, matching_file)
+    def create_file(record, matching_file, mime_type = nil)
       puts "    #{Time.now.strftime('%T')} attaching file: #{File.basename(matching_file)}" unless Rails.env.test?
       file = FileWithName.new(matching_file)
-      fs = FileSet.new
+      fs = FileSet.new(mime_type: mime_type)
 
       actor = CurationConcerns::FileSetActor.new(fs, user)
       actor.create_metadata(nil, record)

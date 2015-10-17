@@ -6,6 +6,6 @@ class CurationConcerns::AudiosController < ApplicationController
   set_curation_concern_type Audio
 
   def show_presenter
-    WorkShowPresenter
+    ::WorkShowPresenter
   end
 end
