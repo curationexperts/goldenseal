@@ -3,7 +3,7 @@ class WorkShowPresenter < CurationConcerns::WorkShowPresenter
   include ActionView::Helpers::UrlHelper
 
   def tei_id
-    Array(solr_document['hasEncodedText_ssim']).first
+    Array(solr_document['hasTranscript_ssim']).first
   end
 
   def attribute_to_html(field, options = {})

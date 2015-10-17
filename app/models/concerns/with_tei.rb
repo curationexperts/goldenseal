@@ -2,7 +2,7 @@ module WithTEI
   extend ActiveSupport::Concern
 
   included do
-    belongs_to :tei, predicate: ::RDF::URI('http://opaquenamespace.org/ns/hasEncodedText'), class_name: 'FileSet'
+    belongs_to :tei, predicate: ::RDF::URI('http://data.press.net/ontology/asset/hasTranscript'), class_name: 'FileSet'
 
     before_save :assign_default_tei
   end

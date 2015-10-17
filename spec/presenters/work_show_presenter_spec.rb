@@ -6,7 +6,7 @@ describe WorkShowPresenter do
   let(:solr_doc) { SolrDocument.new(attributes) }
 
   describe "tei_id" do
-    let(:attributes) { { 'hasEncodedText_ssim' => ['1234'] } }
+    let(:attributes) { { 'hasTranscript_ssim' => ['1234'] } }
     subject { presenter.tei_id }
     it { is_expected.to eq '1234' }
   end
