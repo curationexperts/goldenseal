@@ -19,12 +19,20 @@
 </table>
 
 
-<% if can? :edit, @presenter %>
-  <div class="form-actions">
-    <%= link_to "Edit Metadata", [:edit, @presenter], class: 'btn btn-default' %>
-    <%= link_to "View Members",
-      catalog_index_path(add_facet_params('admin_set_ssi', @presenter.title)),
-      class: 'btn btn-default' %>
-    <%= link_to "Delete Collection", [:confirm_delete, @presenter], class: 'btn btn-default pull-right' %>
-  </div>
-<% end %>
+<div class="form-actions">
+  <% if can? :edit, @presenter %>
+    <%= link_to "Edit Metadata",
+                [:edit, @presenter],
+                class: 'btn btn-default' %>
+  <% end %>
+
+  <%= link_to "View Members",
+              catalog_index_path(add_facet_params('admin_set_ssi', @presenter.title)),
+              class: 'btn btn-default' %>
+
+  <% if can? :edit, @presenter %>
+    <%= link_to "Delete Collection",
+                [:confirm_delete, @presenter],
+                class: 'btn btn-default pull-right' %>
+  <% end %>
+</div>
