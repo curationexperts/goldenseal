@@ -27,8 +27,7 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-# https://github.com/projecthydra-labs/curation_concerns/pull/407
-gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns', branch: 'avoid_extra_lookups'
+gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns', ref: 'bd71098'
 
 # because the most recent release of resque-web is long out-of-date.
 # We need a newer version to get bootstrap 3 support:
@@ -40,7 +39,7 @@ gem 'hydra-pcdm', github: 'projecthydra-labs/hydra-pcdm', ref: '463d73a'
 gem 'hydra-works', github: 'projecthydra-labs/hydra-works', ref: 'e28c49c'
 gem 'hydra-file_characterization', '0.3.3'
 gem 'hydra-collections', '~> 6.0.0.rc1'
-gem 'hydra-head', '~> 9.3.0'
+gem 'hydra-head', github: 'projecthydra/hydra-head', ref: 'ad890a4'
 gem 'activefedora-aggregation', github: 'projecthydra-labs/activefedora-aggregation', ref: '24a2d14'
 gem 'active-fedora', '~> 9.5.0'
 gem 'riiif', '0.1.0'

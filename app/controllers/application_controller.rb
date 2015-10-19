@@ -10,6 +10,9 @@ class ApplicationController < ActionController::Base
   include Hydra::Controller::ControllerBehavior
   include CurationConcerns::ApplicationControllerBehavior
   include CurationConcerns::ThemedLayoutController
+
+  include Hydra::Controller::IpBasedAbility
+
   with_themed_layout '1_column'
 
   # FIXME: move to curation_concerns#325
