@@ -19,7 +19,7 @@ GIT
 
 GIT
   remote: git://github.com/projecthydra-labs/curation_concerns.git
-  revision: e8ed3ec06e4b861da4c2808207e1f8f82758edb9
+  revision: b8b2cbbf097d016f56d077641f0a229c81253cbf
   branch: use_post
   specs:
     curation_concerns (0.1.0)
@@ -129,7 +129,7 @@ GEM
       om (~> 3.1)
       rdf-rdfxml (~> 1.1.0)
       rsolr (~> 1.0.10)
-    active-triples (0.7.1)
+    active-triples (0.7.2)
       activemodel (>= 3.0.0)
       activesupport (>= 3.0.0)
       deprecation (~> 0.1)
