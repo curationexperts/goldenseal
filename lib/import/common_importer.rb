@@ -22,6 +22,7 @@ module Import
       @root_dir = dir
       @visibility = options[:visibility] || Hydra::AccessControls::AccessRight::VISIBILITY_TEXT_VALUE_PRIVATE
       @admin_set_id = options[:admin_set_id]
+      $stdout.sync = true  # flush output immediately
     end
 
     def status
