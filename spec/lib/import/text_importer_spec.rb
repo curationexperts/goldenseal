@@ -302,10 +302,11 @@ describe Import::TextImporter do
         expect(record.rights).to eq [pub_dom_url]
         expect(FileSet.all.map(&:visibility).uniq).to eq [visibility]
 
-        # Set the representative to the first page of the book
+        # Set the representative and thumbnail to the first page of the book
         rep = FileSet.find(record.representative_id)
         expect(rep.label).to eq 'letz_01_0001_unm.jp2'
         expect(rep.generic_work_ids).to eq [record.id]
+        expect(record.thumbnail_id).to eq rep.id
 
         # The new record should belong to the AdminSet
         expect(record.admin_set).to eq set
