@@ -19,7 +19,7 @@ GIT
 
 GIT
   remote: git://github.com/projecthydra-labs/curation_concerns.git
-  revision: 69b6157722e9c1d0c9fc7abf874f7e0c5a29f7e2
+  revision: 1ba25259eb2ff4247c2b1605d8ea23c04e3161c2
   branch: use_post
   specs:
     curation_concerns (0.1.0)
