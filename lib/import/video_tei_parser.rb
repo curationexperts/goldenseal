@@ -7,6 +7,10 @@ module Import
       { title: '/*/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title',
         creator: '/*/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:recordingStmt/tei:recording/tei:respStmt/tei:name',
         contributor: '/*/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:recordingStmt/tei:recording/tei:respStmt/tei:name',
+        publisher: '/*/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:publisher',
+        description: '/*/tei:text/tei:front/tei:titlePage/tei:imprimatur',
+        rights: '/*/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:availability',
+        language: '/*/tei:teiHeader/tei:profileDesc/tei:langUsage/tei:language',
       }
     end
 
