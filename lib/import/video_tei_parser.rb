@@ -6,6 +6,7 @@ module Import
     def xpath_map
       { title: '/*/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title',
         creator: '/*/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:recordingStmt/tei:recording/tei:respStmt/tei:name',
+        contributor: '/*/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:recordingStmt/tei:recording/tei:respStmt/tei:name',
       }
     end
 

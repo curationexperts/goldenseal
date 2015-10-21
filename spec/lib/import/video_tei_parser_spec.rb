@@ -23,6 +23,7 @@ describe Import::VideoTeiParser do
         expect(subject[:title]).to eq ['Interview with Frank Addonizio', '[electronic resource]']
         expect(subject[:date_issued]).to eq '2014'
         expect(subject[:creator]).to eq ['Blackside, Inc.']
+        expect(subject[:contributor]).to eq ['Blackside, Inc.']
       end
     end
   end
