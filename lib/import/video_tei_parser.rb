@@ -11,6 +11,8 @@ module Import
         description: '/*/tei:text/tei:front/tei:titlePage/tei:imprimatur',
         rights: '/*/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:availability',
         language: '/*/tei:teiHeader/tei:profileDesc/tei:langUsage/tei:language',
+        date_created: '/*/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:recordingStmt/tei:recording/tei:date',
+        publication_place: '/*/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:pubPlace',
       }
     end
 
