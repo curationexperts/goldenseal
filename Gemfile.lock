@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/curationexperts/curation_concerns.git
-  revision: 2382dbf0676d54e5fb1e581d05ea9c87b1802036
+  revision: 53496d8450c99e42a2d75d0caf52d1a0dd581812
   branch: dce_dev
   specs:
     curation_concerns (0.1.0)
