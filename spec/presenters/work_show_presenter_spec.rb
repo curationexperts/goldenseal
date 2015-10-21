@@ -4,6 +4,12 @@ describe WorkShowPresenter do
   let(:presenter) { described_class.new(solr_doc, ability) }
   let(:ability) { nil }
   let(:solr_doc) { SolrDocument.new(attributes) }
+  let(:attributes) { {} }
+
+  describe "#permission_badge_class" do
+    subject { presenter.permission_badge_class }
+    it { is_expected.to eq PermissionBadge }
+  end
 
   describe "tei_id" do
     let(:attributes) { { 'hasTranscript_ssim' => ['1234'] } }

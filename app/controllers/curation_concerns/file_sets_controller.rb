@@ -9,6 +9,11 @@ module CurationConcerns
 
     protected
 
+      # Overridden to use a local presenter implementation
+      def show_presenter
+        ::FileSetPresenter
+      end
+
       def render_vtt
         gf = ::FileSet.find(params[:id])
         authorize! :show, gf

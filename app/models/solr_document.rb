@@ -66,4 +66,8 @@ class SolrDocument
   def thumbnail_id
     fetch('hasRelatedImage_ssim', []).first
   end
+
+  def on_campus?
+    read_groups.include? OnCampusAccess::OnCampus
+  end
 end
