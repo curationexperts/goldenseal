@@ -42,7 +42,7 @@ describe TextIndexer do
     end
 
     before do
-      text.members << file_set
+      text.ordered_members << file_set
       text.save!
     end
 

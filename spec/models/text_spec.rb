@@ -15,7 +15,7 @@ describe Text do
       file_set = FileSet.new do |gf|
         gf.apply_depositor_metadata('jcoyne')
       end
-      document.members << file_set
+      document.ordered_members << file_set
       document.save!
       Hydra::Works::AddFileToFileSet.call(file_set, File.open(fixture_path + file), :original_file)
       # It's important that we set TEI afterwards, so that the file is directly contained by the work.
@@ -53,7 +53,7 @@ describe Text do
       end
 
       before do
-        document.members << file_set
+        document.ordered_members << file_set
         document.save!
         Hydra::Works::AddFileToFileSet.call(file_set, File.open(fixture_path + file), :original_file)
       end

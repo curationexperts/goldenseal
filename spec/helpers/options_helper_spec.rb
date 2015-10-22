@@ -17,8 +17,8 @@ describe OptionsHelper do
         text = Text.new(id: id, title: ['test text']) do |t|
           t.apply_depositor_metadata('jcoyne')
         end
-        text.members << xml_file
-        text.members << pdf_file
+        text.ordered_members << xml_file
+        text.ordered_members << pdf_file
         text.save!
         text
       end
