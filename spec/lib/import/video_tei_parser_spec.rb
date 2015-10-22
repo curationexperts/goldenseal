@@ -31,6 +31,7 @@ describe Import::VideoTeiParser do
         expect(subject[:language]).to eq ['English']
         expect(subject[:publication_place]).to eq ['St. Louis, Missouri']
         expect(subject[:subject]).to eq ["Addonizio, Frank", "War on Poverty", "Imperial, Tony", "Urban Renewal Committee", "Canine Corps", "Social movements — United States — History — 20th century.", "Poor -- United States.", "Economic assistance, Domestic -- United States.", "United States -- Social policy.", "United States -- Politics and government -- 1963-1969.", "Johnson, Lyndon B. (Lyndon Baines), 1908-1973.", "United States -- Politics and government -- 1963-1969.", "Johnson, Lyndon B. (Lyndon Baines), 1908-1973 -- Political and social views.", "Poverty -- Government policy -- United States -- History.", "United States -- Economic policy.", "Poverty -- United States.", "United States — Politics and government — 20th century.", "United States — Social conditions — 20th century.", "Political culture — United States — History — 20th century.", "United States — Economic conditions — 20th century.", "Oral history — United States.", "Interviews — United States.", "America's War on Poverty (Television program).", "Hampton, Henry, 1940-1998.", "Blackside, Inc.", "Riots.", "Racism.", "Public welfare -- United States.", "Newark (N.J.)"]
+        expect(subject[:files]).to eq ['fma-2-78436-acc-20140424.mov']
       end
     end
   end

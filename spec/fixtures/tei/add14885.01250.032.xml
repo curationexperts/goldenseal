@@ -59,6 +59,7 @@
 <recording type="video" dur="TIME_process">
 <!--  change recording company or production team as appropriate 
   --> 
+  <media type="video/mov" url="fma-2-78436-acc-20140424.mov"></media>
 <respStmt>
   <resp>Recording by</resp> 
   <name>Blackside, Inc.</name> 
