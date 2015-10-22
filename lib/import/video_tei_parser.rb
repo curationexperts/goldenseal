@@ -12,12 +12,25 @@ module Import
         rights: '/*/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:availability',
         language: '/*/tei:teiHeader/tei:profileDesc/tei:langUsage/tei:language',
         date_created: '/*/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:recordingStmt/tei:recording/tei:date',
-        publication_place: '/*/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:pubPlace',
+        publication_place: '/*/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:pubPlace'
       }
     end
 
     def issue_date_xpath
       '/*/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:date'
+    end
+
+    def attributes
+      attrs = super
+      attrs = attrs.merge(subject: subject)
+      attrs.reject { |_key, value| value.blank? }
+    end
+
+    def subject
+      keywords = xml.xpath('/*/tei:teiHeader/tei:profileDesc/tei:textClass/tei:keywords', namespaces)
+      keywords.flat_map do |kw_node|
+        kw_node.children.map { |e| e.text.squish if e.text }
+      end.reject {|x| x.blank? }
     end
 
   end

@@ -31,7 +31,7 @@ module Import
     # the given node, and strip out extra whitespace.
     def text_for(xpath, node)
       node.xpath(xpath, namespaces).map do |element|
-        element.text.strip.gsub(/\s*\n\s*/, " ")
+        element.text.squish
       end
     end
 
