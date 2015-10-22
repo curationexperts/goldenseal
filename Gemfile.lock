@@ -1,68 +1,10 @@
 GIT
-  remote: git://github.com/curationexperts/curation_concerns.git
-  revision: 53496d8450c99e42a2d75d0caf52d1a0dd581812
-  branch: dce_dev
-  specs:
-    curation_concerns (0.1.0)
-      blacklight_advanced_search (>= 5.1.4, < 6.0)
-      breadcrumbs_on_rails (~> 2.3.0)
-      curation_concerns-models (= 0.1.0)
-      hydra-editor (~> 1.1)
-      hydra-head (~> 9.0)
-      jquery-ui-rails
-      simple_form (~> 3.1.0)
-    curation_concerns-models (0.1.0)
-      active-fedora (~> 9.3)
-      active_attr
-      active_fedora-noid (~> 1.0)
-      hydra-collections (~> 6.0.0.rc1)
-      hydra-head (~> 9.3)
-      hydra-works (~> 0.2)
-      qa (~> 0.5)
-      redlock (~> 0.1.2)
-      resque (~> 1.23)
-      resque-pool (~> 0.3)
-
-GIT
   remote: git://github.com/iiif/openseadragon-rails.git
   revision: dedb8bd3a493ad5e3a1edaa7c99edf66e4332455
   branch: path_to_image
   specs:
     openseadragon (0.2.0)
       rails (> 3.2.0)
-
-GIT
-  remote: git://github.com/projecthydra-labs/activefedora-aggregation.git
-  revision: 24a2d140ecb9b401e8ef0416ec92aa6f356479e3
-  ref: 24a2d14
-  specs:
-    activefedora-aggregation (0.4.2)
-      active-fedora
-      activesupport
-      rdf (~> 1.1.16.0)
-      rdf-vocab (~> 0.8.1)
-
-GIT
-  remote: git://github.com/projecthydra-labs/hydra-pcdm.git
-  revision: 463d73a2fd4ba26c1741fecf9c7265fb8770ac3c
-  ref: 463d73a
-  specs:
-    hydra-pcdm (0.2.0)
-      active-fedora (>= 9.4.1)
-      activefedora-aggregation (~> 0.4)
-      mime-types (>= 1)
-
-GIT
-  remote: git://github.com/projecthydra-labs/hydra-works.git
-  revision: e28c49c3c4d5f22dbf7d3378c0140493cf6a2ff3
-  ref: e28c49c
-  specs:
-    hydra-works (0.2.0)
-      active-fedora (>= 9.4.1)
-      activefedora-aggregation (~> 0.4)
-      hydra-derivatives (~> 3.0)
-      hydra-file_characterization (~> 0.3)
-      hydra-pcdm (~> 0.2)
 
 GIT
   remote: git://github.com/projecthydra/hydra-head.git
@@ -141,6 +83,11 @@ GEM
     active_fedora-noid (1.0.2)
       active-fedora (~> 9.0)
       noid (~> 0.7)
+    activefedora-aggregation (0.5.0)
+      active-fedora (~> 9.5)
+      activesupport
+      rdf (~> 1.1.16.0)
+      rdf-vocab (~> 0.8.1)
     activejob (4.2.4)
       activesupport (= 4.2.4)
       globalid (>= 0.3.0)
@@ -217,6 +164,24 @@ GEM
       execjs
     coffee-script-source (1.9.1.1)
     colorize (0.7.7)
+    curation_concerns (0.2.0)
+      blacklight_advanced_search (>= 5.1.4, < 6.0)
+      breadcrumbs_on_rails (~> 2.3.0)
+      curation_concerns-models (= 0.2.0)
+      hydra-editor (~> 1.1)
+      hydra-head (~> 9.0)
+      jquery-ui-rails
+      simple_form (~> 3.1.0)
+    curation_concerns-models (0.2.0)
+      active_attr
+      active_fedora-noid (~> 1.0)
+      hydra-collections (~> 6.0.0.rc1)
+      hydra-head (~> 9.3)
+      hydra-works (~> 0.3)
+      qa (~> 0.5)
+      redlock (~> 0.1.2)
+      resque (~> 1.23)
+      resque-pool (~> 0.3)
     daemons (1.2.3)
     deprecation (0.2.2)
       activesupport
@@ -276,6 +241,13 @@ GEM
       simple_form (~> 3.1.0)
     hydra-file_characterization (0.3.3)
       activesupport (>= 3.0.0)
+    hydra-pcdm (0.3.0)
+      activefedora-aggregation (~> 0.5)
+      mime-types (>= 1)
+    hydra-works (0.3.0)
+      hydra-derivatives (~> 3.0)
+      hydra-file_characterization (~> 0.3, >= 0.3.3)
+      hydra-pcdm (~> 0.3)
     i18n (0.7.0)
     jbuilder (2.3.1)
       activesupport (>= 3.0.0, < 5)
@@ -584,8 +556,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  active-fedora (~> 9.5.0)
-  activefedora-aggregation!
   angularjs-rails (~> 1.4.4)
   byebug
   capistrano
@@ -594,7 +564,7 @@ DEPENDENCIES
   capistrano-rails
   capybara
   coffee-rails (~> 4.1.0)
-  curation_concerns!
+  curation_concerns (= 0.2.0)
   devise
   devise-guests (~> 0.3)
   devise_ldap_authenticatable
@@ -602,8 +572,6 @@ DEPENDENCIES
   hydra-collections (~> 6.0.0.rc1)
   hydra-file_characterization (= 0.3.3)
   hydra-head!
-  hydra-pcdm!
-  hydra-works!
   jbuilder (~> 2.0)
   jettywrapper
   jquery-rails
