@@ -311,11 +311,13 @@ describe Import::TextImporter do
         # The new record should belong to the AdminSet
         expect(record.admin_set).to eq set
 
-        # The first TEI file lists 337 files and the other TEI
-        # lists 13, for a total of 350 files.  For this test,
-        # we'll only attach 2 of the files, so we expect to
-        # get warning messages for the remaining 348 files.
-        expect(importer.warnings.count).to eq 348
+        # The first TEI file lists 337 files, but has 5
+        # duplicate entries (0991_003.jp2 and 0991_004.jp2),
+        # and the other TEI lists 13, for a total of 345 files.
+        # For this test we'll only attach 2 of the files, so we
+        # expect to get warning messages for the remaining 343
+        # files.
+        expect(importer.warnings.count).to eq 343
         expect(importer.warnings).to include 'lew1864.0001.001.xml: File not found: letz_01_0002_ttl.jp2'
 
         expect(importer.errors.count).to eq 0

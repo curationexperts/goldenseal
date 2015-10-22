@@ -83,6 +83,7 @@ module Import
     def create_record(attributes)
       metadata_file = attributes.delete(:metadata_file)
       files = attributes.delete(:files) || []
+      files = files.uniq
 
       attributes[:rights] = transform_rights(attributes) unless attributes[:rights].blank?
 
