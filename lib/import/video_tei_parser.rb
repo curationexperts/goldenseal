@@ -1,6 +1,7 @@
 # Parse the TEI file for a video record
 module Import
-  class VideoTeiParser < CommonTeiParser
+  class VideoTeiParser < CommonXmlParser
+    include Import::ParseTei
 
     # Map the name of the attribute to its xpath in the TEI file
     def xpath_map

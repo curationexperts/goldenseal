@@ -1,6 +1,7 @@
 # Parse the TEI file for a text-type record (e.g. a novel).
 module Import
-  class TextTeiParser < CommonTeiParser
+  class TextTeiParser < CommonXmlParser
+    include Import::ParseTei
 
     # Map the name of the attribute to its xpath in the TEI file
     def xpath_map

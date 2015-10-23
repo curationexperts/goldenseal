@@ -1,8 +1,9 @@
 module Import
   extend ActiveSupport::Autoload
   autoload :FileWithName
+  autoload :ParseTei
 
-  autoload :CommonTeiParser
+  autoload :CommonXmlParser
   autoload :TextTeiParser
   autoload :VideoTeiParser
   autoload :AudioTeiParser
