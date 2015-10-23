@@ -13,7 +13,8 @@ module Import
         description: '/vra:vra/vra:collection/vra:work/vra:image/vra:relationSet/vra:display',
         contributor: '/vra:vra/vra:collection/vra:sourceSet/vra:source/vra:name',
         publisher: '/vra:vra/vra:collection/vra:locationSet/vra:location/vra:name[@type="other"]',
-        extent: '/vra:vra/vra:collection/vra:work/vra:image/vra:measurementsSet'
+        extent: '/vra:vra/vra:collection/vra:work/vra:image/vra:measurementsSet',
+        files: '/vra:vra/vra:collection/vra:work/vra:image/vra:titleSet/vra:title/@href'
       }
     end
 
