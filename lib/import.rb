@@ -13,4 +13,5 @@ module Import
   autoload :TextImporter
   autoload :VideoImporter
   autoload :AudioImporter
+  autoload :ImageImporter
 end

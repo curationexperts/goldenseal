@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# Import Text, Video, or Audio records using data from TEI files.
+# Import records using data from TEI or VRA files.
 
 require 'optparse'
 puts "Loading environment"
@@ -8,7 +8,7 @@ require 'import'
 
 # Valid selections for the type of record(s) to create
 def model_choices
-  ['Text', 'Video', 'Audio']
+  ['Text', 'Video', 'Audio', 'Image']
 end
 
 # Valid selections for access rights.
