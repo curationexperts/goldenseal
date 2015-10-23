@@ -28,6 +28,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'curation_concerns', '0.2.0'
+gem 'active-fedora', github: 'projecthydra/active_fedora', ref: '86c1be8'
+gem 'activefedora-aggregation', github: 'projecthydra-labs/activefedora-aggregation', branch: 'speedup2'
 
 # because the most recent release of resque-web is long out-of-date.
 # We need a newer version to get bootstrap 3 support:

@@ -7,6 +7,33 @@ GIT
       rails (> 3.2.0)
 
 GIT
+  remote: git://github.com/projecthydra-labs/activefedora-aggregation.git
+  revision: e4dbf86f20b4bc789481a43a3df3a82392b630fd
+  branch: speedup2
+  specs:
+    activefedora-aggregation (0.5.0)
+      active-fedora (~> 9.5)
+      activesupport
+      rdf (~> 1.1.16.0)
+      rdf-vocab (~> 0.8.1)
+
+GIT
+  remote: git://github.com/projecthydra/active_fedora.git
+  revision: 86c1be8ec0485dfebed8f0d9c2d1dafd4a63cfc2
+  ref: 86c1be8
+  specs:
+    active-fedora (9.5.0)
+      active-triples (~> 0.7.1)
+      activesupport (>= 4.1.0)
+      deprecation
+      ldp (~> 0.4.0)
+      linkeddata
+      nom-xml (>= 0.5.1)
+      om (~> 3.1)
+      rdf-rdfxml (~> 1.1.0)
+      rsolr (~> 1.0.10)
+
+GIT
   remote: git://github.com/projecthydra/hydra-head.git
   revision: ad890a479c815bec9cc19bf2877335ba86956528
   ref: ad890a4
@@ -61,16 +88,6 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
-    active-fedora (9.5.0)
-      active-triples (~> 0.7.1)
-      activesupport (>= 4.1.0)
-      deprecation
-      ldp (~> 0.4.0)
-      linkeddata
-      nom-xml (>= 0.5.1)
-      om (~> 3.1)
-      rdf-rdfxml (~> 1.1.0)
-      rsolr (~> 1.0.10)
     active-triples (0.7.2)
       activemodel (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -83,11 +100,6 @@ GEM
     active_fedora-noid (1.0.2)
       active-fedora (~> 9.0)
       noid (~> 0.7)
-    activefedora-aggregation (0.5.0)
-      active-fedora (~> 9.5)
-      activesupport
-      rdf (~> 1.1.16.0)
-      rdf-vocab (~> 0.8.1)
     activejob (4.2.4)
       activesupport (= 4.2.4)
       globalid (>= 0.3.0)
@@ -556,6 +568,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active-fedora!
+  activefedora-aggregation!
   angularjs-rails (~> 1.4.4)
   byebug
   capistrano
