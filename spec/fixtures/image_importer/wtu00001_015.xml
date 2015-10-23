@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vra xmlns="http://www.vraweb.org/vracore4.htm"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.vraweb.org/vracore4.htm http://www.vraweb.org/projects/vracore4/vra-4.0-restricted.xsd">
+<collection xml:lang="eng" id="WTU00001">
+<agentSet>
+<agent>
+<name type="personal">Lisa Williams</name>
+<role>EAD tagging, July 2007</role>
+</agent>
+</agentSet>
+<dateSet>
+<display>2007</display>
+<date>
+<earliestDate>2007</earliestDate>
+<latestDate>2007</latestDate>
+</date>
+</dateSet>
+<descriptionSet>
+<display>The James E. and Joan Singer Schiele Print Collection,
+1848-1876, consists of Civil War prints and other historical images. The
+prints include portraits, battle scenes, and political cartoons representing
+avariety of printing techniques from woodcut to chromolithograph. A highlight
+of the collection is a set of thirty-six Kurz &amp; Allison prints. The
+entire collection consists of over 160 artistic pieces.These prints make up
+a visual overview of historical events during one of the nation's most
+tumultuous times, and provide a strong background for cultural and historical
+studies. The prints are arranged by James E. Schiele and divided into seven
+series: Series 01: Kurz &amp; Allison, Series 02: Antebellum, Series 03:
+Civil War, Series 04: Slavery and Abolition, Series 05: Emancipation and
+Reconstruction, Series 06: Postbellum, Series 07: Print Material.
+Biographical Note: A native St. Louisan and active community volunteer,
+James Schiele, AB '52, MLA '85, acquired over several decades the historic
+images that constitute the Schiele Collection. He and his wife, Joan Singer
+Schiele, donated the collection to University Libraries and established
+an endowment to help support conservation and expansion of the
+collection. Fueled by his enthusiasm, Schiele has committed countless years
+to serving Washington University through membership on the Alumni Board
+of Governors, the Eliot Society Membership Committee, the W Club
+Executive Committee, his Class Reunion Committee, the International
+Advisory Council for Asia, the Scholars in Arts &amp; Sciences, and as a
+member of the Murray Wiedenbaum Center on the Economy, Government, and
+Public Policy.</display>
+<description>The James E. and Joan Singer Schiele Print Collection,
+1848-1876, consists of Civil War prints and other historical images. The
+prints include portraits, battle scenes, and political cartoons representing
+avariety of printing techniques from woodcut to chromolithograph. A highlight
+of the collection is a set of thirty-six Kurz &amp; Allison prints. The
+entire collection consists of over 160 artistic pieces.These prints make up
+a visual overview of historical events during one of the nation's most
+tumultuous times, and provide a strong background for cultural and historical
+studies. The prints are arranged by James E. Schiele and divided into seven
+series: Series 01: Kurz &amp; Allison, Series 02: Antebellum, Series 03:
+Civil War, Series 04: Slavery and Abolition, Series 05: Emancipation and
+Reconstruction, Series 06: Postbellum, Series 07: Print Material.
+Biographical Note: A native St. Louisan and active community volunteer,
+James Schiele, AB '52, MLA '85, acquired over several decades the historic
+images that constitute the Schiele Collection. He and his wife, Joan Singer
+Schiele, donated the collection to University Libraries and established
+an endowment to help support conservation and expansion of the
+collection. Fueled by his enthusiasm, Schiele has committed countless years
+to serving Washington University through membership on the Alumni Board
+of Governors, the Eliot Society Membership Committee, the W Club
+Executive Committee, his Class Reunion Committee, the International
+Advisory Council for Asia, the Scholars in Arts &amp; Sciences, and as a
+member of the Murray Wiedenbaum Center on the Economy, Government, and
+Public Policy.</description>
+</descriptionSet>
+<locationSet>
+<location type="repository">
+<name type="other">University Libraries, Washington University in St.Louis, Department of Special Collections, Olin Library</name>
+<name type="geographic">Campus Box 1061, 1 Brookings Drive, St. Louis, MO, 63130</name>
+</location>
+</locationSet>
+<measurementsSet>
+<measurements type="count" unit="other">ca. 200 items</measurements>
+</measurementsSet>
+<relationSet>
+<display>James E. and Joan Singer Schiele Print Collection, 1848-1876 includes 7 print series</display>
+<relation type="largerContextFor">Series 01: Kurz &amp; Allison</relation>
+<relation type="largerContextFor">Series 02: Antebellum</relation>
+<relation type="largerContextFor">Series 03: Civil War</relation>
+<relation type="largerContextFor">Series 04: Slavery and Abolition</relation>
+<relation type="largerContextFor">Series 05: Emancipation and Reconstruction</relation>
+<relation type="largerContextFor">Series 06: Postbellum</relation>
+<relation type="largerContextFor">Series 07: Print Material</relation>
+</relationSet>
+<rightsSet>
+<display>Access Restrictions: Open, Use Restriction:None.</display>
+<rights type="publicDomain">
+<rightsHolder>Schiele, James E. and Joan Singer</rightsHolder>
+<text>Access Restrictions: Open, Use Restriction:None. Users of the
+ collections must read and abide by the rulesfor the use of manuscript
+ collection materials. Users of the collections who wish to use items
+ from thiscollection, in whole or in part, in any form of publication
+ (asdefined in the form) must sign and submit to the Washington
+ UniversityDepartment of Special Collections a hard copy of the
+ notification of intent publish manuscript collection materialsform. All
+ publication not covered by fair use restricted to those whohave
+ permission of the copyright holder.</text>
+</rights>
+</rightsSet>
+<sourceSet>
+<source>
+<name type="donor">James E. Schiele</name>
+<name type="donor">Joan Singer Schiele</name>
+</source>
+</sourceSet>
+<titleSet>
+<title>James E. and Joan Singer Schiele Print Collection, 1848-1876</title>
+</titleSet>
+<work>
+<locationSet>
+<display>Reading Room</display>
+<location>
+<name>Reading Room</name>
+</location>
+</locationSet>
+ <materialSet>
+<material type="medium">chromolithograph prints</material>
+</materialSet>
+<measurementsSet>
+<measurements type="count" unit="other">42 Chromo-, Lithograph Prints</measurements>
+</measurementsSet>
+<titleSet>
+<display>I. Kurz &amp; Allison</display>
+<title>I. Kurz &amp; Allison</title>
+</titleSet>
+<image>
+<dateSet>
+<display>c1889.</display>
+<date>
+<earliestDate circa="true">1889</earliestDate>
+<latestDate circa="true">1889</latestDate>
+</date>
+</dateSet>
+<descriptionSet>
+<notes/>
+<description/>
+</descriptionSet>
+<locationSet>
+<location>
+<name>south-1 case-drawer</name>
+</location>
+</locationSet>
+<materialSet>
+<material type="medium">Chromolithograph.</material>
+<material type="support">matted</material>
+</materialSet>
+<measurementsSet>
+<display/>
+<measurements unit="inches">30-1/8 x 23-3/8 inches,matted.</measurements>
+<measurements type="count" unit="other">1 print.</measurements>
+</measurementsSet>
+<relationSet>
+<display>Battle Scenes. Consists of 36 chromolithographs, 1 facsimile. Arranged in battle order by James E. Schiele.</display>
+<relation type="partOf">Battle Scenes. Consists of 36 chromolithographs, 1 facsimile. Arranged in battle order by James E. Schiele.</relation>
+</relationSet>
+<titleSet>
+<notes href="Battle of Bull Run.tif"></notes>
+<title href="bull_ru_ku_001_015_0015.jp2">15.Battle of Bull Run</title>
+</titleSet>
+</image>
+</work>
+</collection>
+</vra>

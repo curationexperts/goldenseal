@@ -15,8 +15,6 @@ module Import
       xpath_map.each do |attr_name, attr_path|
         attrs[attr_name] = text_for(attr_path, xml)
       end
-      attrs = attrs.merge(identifier: identifier,
-                          date_issued: issue_date)
       attrs.reject { |_key, value| value.blank? }
     end
 
@@ -34,10 +32,6 @@ module Import
 
     def xpath_map
       raise 'Please implement the xpath_map method'
-    end
-
-    def issue_date_xpath
-      raise 'Please implement the issue_date_xpath method'
     end
 
     def namespaces

@@ -7,6 +7,7 @@ module Import
   autoload :TextTeiParser
   autoload :VideoTeiParser
   autoload :AudioTeiParser
+  autoload :ImageVraParser
 
   autoload :CommonImporter
   autoload :TextImporter
