@@ -257,17 +257,6 @@ describe Import::TextImporter do
     end
   end
 
-  describe '#rights' do
-    let(:dir) { File.join(fixture_path, 'text_importer', 'sample_import_files') }
-    let(:rr_url) { 'http://www.europeana.eu/portal/rights/rr-r.html' }
-
-    subject { importer.transform_rights(rights:
-      ['work is in the public domain', 'any other string']) }
-
-    it 'transforms rights statement text to URLs' do
-      expect(subject).to eq [pub_dom_url, rr_url]
-    end
-  end
 
   describe '#run' do
     before { ActiveFedora::Cleaner.clean! }

@@ -8,6 +8,8 @@ describe Import::ImageImporter do
 
   let(:importer) { described_class.new(dir, { visibility: visibility, admin_set_id: admin_set_id }) }
 
+  let(:pub_dom_url) { 'http://creativecommons.org/publicdomain/mark/1.0/' }
+
   describe '#run' do
     before { ActiveFedora::Cleaner.clean! }
 
@@ -23,6 +25,8 @@ describe Import::ImageImporter do
         record = Image.first
         rep = FileSet.find(record.representative_id)
         expect(rep.label).to eq 'bull_ru_ku_001_015_0015.jp2'
+
+        expect(record.rights).to eq [pub_dom_url]
 
         expect(importer.errors).to eq []
         expect(importer.warnings).to eq []

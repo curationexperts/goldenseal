@@ -2,6 +2,7 @@ module Import
   extend ActiveSupport::Autoload
   autoload :FileWithName
   autoload :ParseTei
+  autoload :Rights
 
   autoload :CommonXmlParser
   autoload :TextTeiParser

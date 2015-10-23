@@ -23,6 +23,7 @@ describe Import::ImageVraParser do
         expect(subject[:contributor]).to eq ['James E. Schiele', 'Joan Singer Schiele']
         expect(subject[:publisher]).to eq ['University Libraries, Washington University in St.Louis, Department of Special Collections, Olin Library']
         expect(subject[:extent]).to eq ['30-1/8 x 23-3/8 inches,matted. 1 print.']
+        expect(subject[:rights]).to eq ['publicDomain']
         expect(subject[:files]).to eq ['bull_ru_ku_001_015_0015.jp2']
       end
     end

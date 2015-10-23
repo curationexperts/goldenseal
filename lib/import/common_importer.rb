@@ -139,14 +139,9 @@ module Import
       record.save!
     end
 
-    # TODO: Should we loosen up the regex to include examples
-    # like this?: "Court records fall within the public domain"
     def transform_rights(attrs)
-      rr = 'http://www.europeana.eu/portal/rights/rr-r.html'.freeze
-      pub_dom = 'http://creativecommons.org/publicdomain/mark/1.0/'.freeze
-
       rights = attrs[:rights].map do |rights_text|
-        rights_text.match(/work is in the public domain/).nil? ? rr : pub_dom
+        Import::Rights.url_for(rights_text)
       end
     end
 
