@@ -26,7 +26,7 @@ GIT
 
 GIT
   remote: git://github.com/projecthydra/active_fedora.git
-  revision: 2e6cd9a2d90f5ab76ee247fb713630f30e7ac5c0
+  revision: 268f5a150973d26fc9c5c55632321fbf3a7e0477
   branch: performance_boost
   specs:
     active-fedora (9.5.0)
