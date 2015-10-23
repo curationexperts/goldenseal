@@ -54,8 +54,6 @@ describe Text do
 
       before do
         document.ordered_members << file_set
-        document.save!
-        Hydra::Works::AddFileToFileSet.call(file_set, File.open(fixture_path + file), :original_file)
       end
 
       it "default the tei file to the first file" do

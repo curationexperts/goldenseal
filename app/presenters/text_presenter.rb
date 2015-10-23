@@ -2,10 +2,11 @@ class TextPresenter < WorkShowPresenter
   include DisplayFields
 
   def tei?
-    solr_document.key?(TextIndexer::TEI_JSON)
+    tei_as_json.present?
   end
 
+  # TODO: this could be done as an AJAX call
   def tei_as_json
-    solr_document.fetch(TextIndexer::TEI_JSON)
+    @json ||= TeiForText.new(solr_document.to_model).to_json
   end
 end
