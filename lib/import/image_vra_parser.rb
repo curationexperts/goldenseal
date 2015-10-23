@@ -15,6 +15,7 @@ module Import
         publisher: '/vra:vra/vra:collection/vra:locationSet/vra:location/vra:name[@type="other"]',
         extent: '/vra:vra/vra:collection/vra:work/vra:image/vra:measurementsSet',
         rights: '/vra:vra/vra:collection/vra:rightsSet/vra:rights/@type',
+        date_created: '/vra:vra/vra:collection/vra:work/vra:image/vra:dateSet/vra:display',
         files: '/vra:vra/vra:collection/vra:work/vra:image/vra:titleSet/vra:title/@href'
       }
     end
