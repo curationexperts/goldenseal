@@ -8,12 +8,13 @@ GIT
 
 GIT
   remote: git://github.com/projecthydra-labs/activefedora-aggregation.git
-  revision: dfd4ff5a77e0daaccb6e237ee99d0db3d79bc4cf
+  revision: f1d2d9f79338fb75c7d91026d05b7ef9827dd120
+  branch: update_gemspec
   specs:
     activefedora-aggregation (0.5.0)
       active-fedora (~> 9.5)
       activesupport
-      rdf (~> 1.1.16.0)
+      rdf (~> 1.1, >= 1.1.17.1)
       rdf-vocab (~> 0.8.1)
 
 GIT
@@ -389,7 +390,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rainbow (2.0.0)
     rake (10.4.2)
-    rdf (1.1.16.1)
+    rdf (1.1.17.1)
       link_header (~> 0.0, >= 0.0.8)
     rdf-aggregate-repo (1.1.0)
       rdf (>= 1.1)
