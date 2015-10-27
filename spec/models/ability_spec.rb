@@ -20,6 +20,8 @@ describe Ability do
     it {
       is_expected.not_to be_able_to(:read, :resque)
       is_expected.not_to be_able_to(:create, AdminSet)
+      is_expected.not_to be_able_to(:create, Image)
+      is_expected.not_to be_able_to(:create, Collection)
       is_expected.to be_able_to(:read, admin_set)
       is_expected.not_to be_able_to(:update, admin_set)
       is_expected.not_to be_able_to(:destroy, admin_set)
@@ -33,6 +35,8 @@ describe Ability do
     it {
       is_expected.to be_able_to(:read, :resque)
       is_expected.to be_able_to(:create, AdminSet)
+      is_expected.to be_able_to(:create, Image)
+      is_expected.to be_able_to(:create, Collection)
       is_expected.to be_able_to(:read, admin_set)
       is_expected.to be_able_to(:update, admin_set)
       is_expected.to be_able_to(:destroy, admin_set)
