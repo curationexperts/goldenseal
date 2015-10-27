@@ -11,6 +11,7 @@ class AdminSet < ActiveFedora::Base
 
   validates :title, presence: { message: 'Your collection must have a title.' }
   validates :identifier, presence: { message: 'Your collection must have an identifier.' }
+  validates_format_of :identifier, with: /\A(\w|-|.)+\z/
 
   property :title, predicate: ::RDF::DC.title, multiple: false do |index|
     index.as :stored_searchable
