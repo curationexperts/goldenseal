@@ -16,7 +16,7 @@ module DisplayFields
   # TODO: this method can be removed when we upgrade to CurationConcerns 0.3.0 (not released)
   def file_presenters
     @file_sets ||= begin
-      ids = solr_document.fetch('file_set_ids_ssim', [])
+      ids = solr_document.fetch('member_ids_ssim', [])
       CurationConcerns::PresenterFactory.build_presenters(ids, file_presenter_class, current_ability)
     end
   end

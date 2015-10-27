@@ -18,6 +18,29 @@ GIT
       rdf-vocab (~> 0.8.1)
 
 GIT
+  remote: git://github.com/projecthydra-labs/curation_concerns.git
+  revision: 1c4e78809cf75ca54b4e9e254a07684049d17cf0
+  specs:
+    curation_concerns (0.2.0)
+      blacklight_advanced_search (>= 5.1.4, < 6.0)
+      breadcrumbs_on_rails (~> 2.3.0)
+      curation_concerns-models (= 0.2.0)
+      hydra-editor (~> 1.1)
+      hydra-head (~> 9.0)
+      jquery-ui-rails
+      simple_form (~> 3.1.0)
+    curation_concerns-models (0.2.0)
+      active_attr
+      active_fedora-noid (~> 1.0)
+      hydra-collections (~> 6.0.0.rc1)
+      hydra-head (~> 9.3)
+      hydra-works (~> 0.3)
+      qa (~> 0.5)
+      redlock (~> 0.1.2)
+      resque (~> 1.23)
+      resque-pool (~> 0.3)
+
+GIT
   remote: git://github.com/projecthydra-labs/hydra-pcdm.git
   revision: 5cba7f4ad55a76440fb736b007d467e354de7b22
   specs:
@@ -184,24 +207,6 @@ GEM
       execjs
     coffee-script-source (1.9.1.1)
     colorize (0.7.7)
-    curation_concerns (0.2.0)
-      blacklight_advanced_search (>= 5.1.4, < 6.0)
-      breadcrumbs_on_rails (~> 2.3.0)
-      curation_concerns-models (= 0.2.0)
-      hydra-editor (~> 1.1)
-      hydra-head (~> 9.0)
-      jquery-ui-rails
-      simple_form (~> 3.1.0)
-    curation_concerns-models (0.2.0)
-      active_attr
-      active_fedora-noid (~> 1.0)
-      hydra-collections (~> 6.0.0.rc1)
-      hydra-head (~> 9.3)
-      hydra-works (~> 0.3)
-      qa (~> 0.5)
-      redlock (~> 0.1.2)
-      resque (~> 1.23)
-      resque-pool (~> 0.3)
     daemons (1.2.3)
     deprecation (0.2.2)
       activesupport
@@ -583,7 +588,7 @@ DEPENDENCIES
   capistrano-rails
   capybara
   coffee-rails (~> 4.1.0)
-  curation_concerns (= 0.2.0)
+  curation_concerns!
   devise
   devise-guests (~> 0.3)
   devise_ldap_authenticatable
