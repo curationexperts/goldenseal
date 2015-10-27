@@ -1,3 +1,5 @@
+ALLOW_DOTS ||= /[^\/]+(?=\.(html|json|ttl)\z)|[^\/]+/
+
 Rails.application.routes.draw do
   blacklight_for :catalog
   devise_for :users
@@ -9,7 +11,7 @@ Rails.application.routes.draw do
   curation_concerns_collections
   curation_concerns_basic_routes
   curation_concerns_embargo_management
-  resources :admin_sets do
+  resources :admin_sets, constraints: { id: ALLOW_DOTS } do
     member do
       get :confirm_delete
     end
