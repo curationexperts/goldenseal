@@ -91,14 +91,18 @@ module Import
         r.apply_depositor_metadata(user)
       end
 
-      create_file(record, metadata_file, 'text/xml') # Attach metadata file
-      attach_files(record, File.basename(metadata_file), files)
+      file_sets = [create_file(record, metadata_file, 'text/xml')] # Attach metadata file
+      file_sets += attach_files(record, File.basename(metadata_file), files)
+      time = Benchmark.measure {
+        record.ordered_members.concat(file_sets.compact)
+      }
+      puts "    Adding in order took %0.2fms" % time.real
       set_representative(record)
       record.save!
     end
 
     def attach_files(record, metadata_file, files)
-      files.each do |file_name|
+      files.map do |file_name|
         matching_file = find_file(file_name, metadata_file)
         next unless matching_file
         create_file(record, matching_file)
@@ -116,6 +120,7 @@ module Import
 
       fs.errors.each { |k, v| errors << "FileSet #{k}: #{v}" }
       fail 'FileSet had errors' unless fs.errors.blank?
+      fs
     end
 
     def find_file(file_name, metadata_file)
