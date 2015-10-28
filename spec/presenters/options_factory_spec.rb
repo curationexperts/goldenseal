@@ -3,7 +3,7 @@ require 'rails_helper'
 describe OptionsFactory do
   let(:fs_options) { { 'id' => "0k225b14x", "label_tesim"=>"transcript.xml", "label_ssi"=>"transcript.xml", "mime_type_ssi"=>"application/xml"} }
 
-  let(:object) { double(ordered_member_ids: ['0k225b14x']) }
+  let(:object) { double(member_ids: ['0k225b14x']) }
   let(:factory) { OptionsFactory.new(object) }
 
   before do

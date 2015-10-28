@@ -48,8 +48,6 @@ describe OptionsHelper do
       it 'only returns XML files as options' do
         # Make sure the test is set up properly, with one XML
         # and one PDF file.
-        byebug
-        obj
         expect(obj.file_sets.map(&:mime_type)).to eq ['application/xml', 'application/pdf']
         expect(subject).to eq [['xml file', xml_file.id]]
       end

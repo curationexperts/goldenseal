@@ -14,7 +14,7 @@ class OptionsFactory
 
     # @return [Array<SolrDocument>] a list of solr documents in no particular order
     def file_sets(mime_types)
-      q = "_query_:\"{!terms f=id}#{ordered_ids.join(',')}\" AND " \
+      q = "_query_:\"{!terms f=id}#{@object.member_ids.join(',')}\" AND " \
         "_query_:\"{!terms f=mime_type_ssi}#{mime_types.join(',')}\""
       query(q, rows: 1000).map { |res| SolrDocument.new(res) }
     end
@@ -25,9 +25,5 @@ class OptionsFactory
       conn = ActiveFedora::SolrService.instance.conn
       result = conn.post('select', data: args)
       result.fetch('response').fetch('docs')
-    end
-
-    def ordered_ids
-      @object.ordered_member_ids
     end
 end
