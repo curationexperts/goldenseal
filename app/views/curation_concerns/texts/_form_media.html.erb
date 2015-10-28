@@ -1,0 +1,5 @@
+<% if f.object.persisted? && f.object.member_ids.present? %>
+  <%# overridden because the representative of the text is the book reader %>
+  <%= render 'form_thumbnail', f: f %>
+<% end %>
+

@@ -27,7 +27,7 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns'
+gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns', branch: 'split_representative'
 
 gem 'active-fedora', github: 'projecthydra/active_fedora', branch: 'performance_boost'
 gem 'activefedora-aggregation', github: 'projecthydra-labs/activefedora-aggregation', branch: 'without_previous_changes'

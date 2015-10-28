@@ -2,7 +2,7 @@
   <div class="row with-headroom">
     <div class="col-md-12">
       <fieldset id="representative-image">
-        <legend> Assign a TEI </legend>
+        <legend>Assign a Transcript</legend>
         <p>Select the transcript of this <%= curation_concern.human_readable_type %>.</p>
         <%= f.select(:tei_id, tei_select_options(curation_concern), {}, { class: 'form-control' } ) %>
       </fieldset>
