@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns', branch: 'split_representative'
+gem 'hydra-works', github: 'projecthydra-labs/hydra-works', branch: 'use_logger'
 
 gem 'active-fedora', github: 'projecthydra/active_fedora', branch: 'performance_boost'
 gem 'activefedora-aggregation', github: 'projecthydra-labs/activefedora-aggregation', branch: 'without_previous_changes'

@@ -50,6 +50,16 @@ GIT
       mime-types (>= 1)
 
 GIT
+  remote: git://github.com/projecthydra-labs/hydra-works.git
+  revision: 094f3e58109c2b6470d64e8d352bd2406b67d48c
+  branch: use_logger
+  specs:
+    hydra-works (0.3.0)
+      hydra-derivatives (~> 3.0)
+      hydra-file_characterization (~> 0.3, >= 0.3.3)
+      hydra-pcdm (~> 0.3)
+
+GIT
   remote: git://github.com/projecthydra/active_fedora.git
   revision: 268f5a150973d26fc9c5c55632321fbf3a7e0477
   branch: performance_boost
@@ -267,10 +277,6 @@ GEM
       simple_form (~> 3.1.0)
     hydra-file_characterization (0.3.3)
       activesupport (>= 3.0.0)
-    hydra-works (0.3.0)
-      hydra-derivatives (~> 3.0)
-      hydra-file_characterization (~> 0.3, >= 0.3.3)
-      hydra-pcdm (~> 0.3)
     i18n (0.7.0)
     jbuilder (2.3.1)
       activesupport (>= 3.0.0, < 5)
@@ -598,6 +604,7 @@ DEPENDENCIES
   hydra-file_characterization (= 0.3.3)
   hydra-head!
   hydra-pcdm!
+  hydra-works!
   jbuilder (~> 2.0)
   jettywrapper
   jquery-rails
