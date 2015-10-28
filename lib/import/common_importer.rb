@@ -94,6 +94,7 @@ module Import
       create_file(record, metadata_file, 'text/xml') # Attach metadata file
       attach_files(record, File.basename(metadata_file), files)
       set_representative(record)
+      record.save!
     end
 
     def attach_files(record, metadata_file, files)
@@ -136,7 +137,6 @@ module Import
       return unless first_page && first_page.id
       record.representative = first_page
       record.thumbnail = first_page
-      record.save!
     end
 
     def transform_rights(attrs)
