@@ -59,11 +59,15 @@ function TeiViewer($scope, $sce) {
 function TeiViewerDirective() {
     function linkingFunction(scope, element, attrs) {
         //expecting there is some json in this variable.
-        scope.build(tei);
-        scope.$watch("currentPage", scrollToPage);
-        scope.$watch("display", function() {
-          scrollToPage(scope.currentPage);
-        });
+        if(tei.error) {
+          alert("The supplied transcript is not formatted properly for playback")
+        } else {
+          scope.build(tei);
+          scope.$watch("currentPage", scrollToPage);
+          scope.$watch("display", function() {
+            scrollToPage(scope.currentPage);
+          });
+        }
     }
     function scrollToPage(pageNumber) {
         var firstOffset = document.querySelectorAll('#tei-container li.page:nth-child(1)')[0].offsetTop;
