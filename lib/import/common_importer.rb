@@ -114,7 +114,7 @@ module Import
       file = FileWithName.new(matching_file)
       fs = FileSet.new(mime_type: mime_type)
 
-      actor = CurationConcerns::FileSetActor.new(fs, user)
+      actor = CurationConcerns::ImportFileActor.new(fs, user)
       actor.create_metadata(nil, record)
       fail 'Content creation failed' unless actor.create_content(file)
 
