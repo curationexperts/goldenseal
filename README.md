@@ -54,7 +54,8 @@ TEI files can be parsed to create Audio, Video, or Text records.  VRA records ca
 
 * Create a directory and add all the TEI (or VRA) files to that directory.
 * Add all the attached files to the same directory.  You can organize them in sub-directories if you wish; They don't need to be in the top-level directory.
-* From within the Rails root directory, run the import script:
+* From within the Rails root directory, run the import script. (See notes below)
+* Log in to the application as an admin user, and click the "Jobs" link in the drop-down menu.  The importer will queue background jobs to ingest and characterize the files.  Monitor the "failed" jobs section to make sure there weren't any failures while processing the imported files.  If there are failed jobs, you may need to re-run the jobs, or if there's an issue that needs to be fixed, delete the newly-imported record(s), fix the issue, and re-run the importer.
 
 ```
 script/import -t TYPE -p PATH -v [VISIBILITY] -a [ADMIN_SET_ID]
