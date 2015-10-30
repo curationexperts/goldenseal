@@ -81,6 +81,8 @@ rake admin_set:list
 
 ## File System Cleanup
 
+### tmp/uploads under Rails root dir
+
 The `tmp/uploads` directory is where uploaded files are temporarily stored before they are ingested into fedora.  This directory will continue to grow forever, so we recommend that you write a cron job to periodically clean it out and/or set up disk space monitoring.
 
 You must be sure that all the background jobs have finished using the files before you delete them, so rather than deleting everything under `tmp/uploads`, we recommend that you only delete files and directories that are more than a few days old.
