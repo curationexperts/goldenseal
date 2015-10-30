@@ -3,37 +3,29 @@ require 'rails_helper'
 describe Text do
   before { described_class.find('ccr1815.00757.018').destroy(eradicate: true) if described_class.exists?('ccr1815.00757.018') }
 
-  context "with TEI" do
+  context "#id_for_filename" do
     let(:document) do
       described_class.new(id: 'ccr1815.00757.018', title: ['test text']) do |t|
         t.apply_depositor_metadata('jcoyne')
       end
     end
-    let(:file) { '/tei/ccr1815.00757.018.xml' }
-
-    before do
-      file_set = FileSet.new do |gf|
+    let(:file_path) { '/tei/ccr1815.00757.018.xml' }
+    let(:file) { File.open(fixture_path + file_path) }
+    let(:file_set) do
+      # CurationConcerns::FileSetActor#create_content set's the label in the wild
+      FileSet.new(label: File.basename(file_path)) do |gf|
         gf.apply_depositor_metadata('jcoyne')
       end
-      document.ordered_members << file_set
-      document.save!
-      Hydra::Works::AddFileToFileSet.call(file_set, File.open(fixture_path + file), :original_file)
-      # It's important that we set TEI afterwards, so that the file is directly contained by the work.
-      document.update tei: file_set
     end
 
-    describe 'id_for_filename' do
-      let(:conn) { ActiveFedora::SolrService.instance.conn }
-      let(:record) { double(original_name: 'anoabo00-00001.jp2', read: 'some bytes', size: 10) }
-      before do
-        document.save(validate: false)
-        conn.add(id: '1j92g7448', has_model_ssim: ['FileSet'], generic_work_ids_ssim: [document.id], label_ssi: 'anoabo00-00001.jp2')
-        conn.commit
-      end
+    before do
+      document.ordered_members << file_set
+      Hydra::Works::AddFileToFileSet.call(file_set, file, :original_file)
+      document.save!
+    end
 
-      it "returns the path of the file" do
-        expect(document.id_for_filename('anoabo00-00001.jp2')).to eq '1j92g7448'
-      end
+    it "returns the path of the file" do
+      expect(document.id_for_filename('ccr1815.00757.018.xml')).to eq file_set.id
     end
   end
 

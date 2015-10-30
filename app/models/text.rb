@@ -12,12 +12,21 @@ class Text < ActiveFedora::Base
   # Given a filename that appears in the TEI, return the id for the
   # corresponding FileSet that has the page image
   def id_for_filename(filename)
-    query = "_query_:\"{!raw f=has_model_ssim}FileSet\" AND _query_:\"{!raw f=generic_work_ids_ssim}#{id}\" AND _query_:\"{!raw f=label_ssi}#{filename}\""
-    result = ActiveFedora::SolrService.query(query).first
-    result && result.fetch('id')
+    filenames_to_filesets[filename]
   end
 
   def self.indexer
     TextIndexer
   end
+
+  private
+    def filenames_to_filesets
+      @filenames_to_filesets ||= begin
+        query = "{!join from=member_ids_ssim to=id}id:#{id}"
+        results = ActiveFedora::SolrService.query(query, fl: 'id,label_ssi', rows: 5000)
+        results.each_with_object({}) do |row, h|
+          h[row.fetch('label_ssi')] = row.fetch('id')
+        end
+      end
+    end
 end
