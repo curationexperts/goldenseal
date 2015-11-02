@@ -6,7 +6,7 @@ class AdminSet < ActiveFedora::Base
   self.human_readable_type = 'Administrative Collection'
 
   has_many :members,
-    predicate: ::RDF::DC.isPartOf,
+    predicate: ::RDF::Vocab::DC.isPartOf,
     class_name: "ActiveFedora::Base"
 
   validates :title, presence: { message: 'Your collection must have a title.' }
