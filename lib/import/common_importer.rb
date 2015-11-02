@@ -96,7 +96,7 @@ module Import
       time = Benchmark.measure {
         record.ordered_members.concat(file_sets.compact)
       }
-      puts "    Adding in order took %0.2fms" % time.real
+      puts "    Adding in order took %0.2fs" % time.real  unless Rails.env.test?
       set_representative(record)
       record.save!
     end
