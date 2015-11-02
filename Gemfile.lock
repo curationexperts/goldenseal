@@ -1,26 +1,7 @@
 GIT
-  remote: git://github.com/iiif/openseadragon-rails.git
-  revision: dedb8bd3a493ad5e3a1edaa7c99edf66e4332455
-  branch: path_to_image
-  specs:
-    openseadragon (0.2.0)
-      rails (> 3.2.0)
-
-GIT
-  remote: git://github.com/projecthydra-labs/activefedora-aggregation.git
-  revision: 94aac28dae911bb59189f1c20d9d6179364c709a
-  branch: without_previous_changes
-  specs:
-    activefedora-aggregation (0.5.0)
-      active-fedora (~> 9.5)
-      activesupport
-      rdf (~> 1.1, >= 1.1.17.1)
-      rdf-vocab (~> 0.8.1)
-
-GIT
-  remote: git://github.com/projecthydra-labs/curation_concerns.git
-  revision: eb27f1acde9c91c7d3a2884a0ba56558ec2e3a65
-  ref: eb27f1acde9c91c7d3a2884a0ba56558ec2e3a65
+  remote: git://github.com/curationexperts/curation_concerns.git
+  revision: 66aa92ed032e9e7a38415022ed7268bbd99f9dad
+  branch: dce_dev
   specs:
     curation_concerns (0.2.0)
       blacklight_advanced_search (>= 5.1.4, < 6.0)
@@ -40,6 +21,25 @@ GIT
       redlock (~> 0.1.2)
       resque (~> 1.23)
       resque-pool (~> 0.3)
+
+GIT
+  remote: git://github.com/iiif/openseadragon-rails.git
+  revision: dedb8bd3a493ad5e3a1edaa7c99edf66e4332455
+  branch: path_to_image
+  specs:
+    openseadragon (0.2.0)
+      rails (> 3.2.0)
+
+GIT
+  remote: git://github.com/projecthydra-labs/activefedora-aggregation.git
+  revision: 94aac28dae911bb59189f1c20d9d6179364c709a
+  branch: without_previous_changes
+  specs:
+    activefedora-aggregation (0.5.0)
+      active-fedora (~> 9.5)
+      activesupport
+      rdf (~> 1.1, >= 1.1.17.1)
+      rdf-vocab (~> 0.8.1)
 
 GIT
   remote: git://github.com/projecthydra-labs/hydra-pcdm.git

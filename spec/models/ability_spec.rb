@@ -26,6 +26,9 @@ describe Ability do
       is_expected.not_to be_able_to(:update, admin_set)
       is_expected.not_to be_able_to(:destroy, admin_set)
       is_expected.not_to be_able_to(:confirm_delete, admin_set)
+      # Since we can't create collections, it doesn't make sense to allow them
+      # to collect items. This keeps the widget from being displayed.
+      is_expected.not_to be_able_to(:collect, Image.new)
     }
   end
 
@@ -41,6 +44,7 @@ describe Ability do
       is_expected.to be_able_to(:update, admin_set)
       is_expected.to be_able_to(:destroy, admin_set)
       is_expected.to be_able_to(:confirm_delete, admin_set)
+      is_expected.to be_able_to(:collect, Image.new)
     }
   end
 end

@@ -14,4 +14,9 @@ class Ability
     #   can [:create], ActiveFedora::Base
     # end
   end
+
+  def add_to_collection
+    return unless admin?
+    can :collect, :all
+  end
 end
