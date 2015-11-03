@@ -31,22 +31,13 @@ GIT
       rails (> 3.2.0)
 
 GIT
-  remote: git://github.com/projecthydra-labs/activefedora-aggregation.git
-  revision: 94aac28dae911bb59189f1c20d9d6179364c709a
-  branch: without_previous_changes
-  specs:
-    activefedora-aggregation (0.5.0)
-      active-fedora (~> 9.5)
-      activesupport
-      rdf (~> 1.1, >= 1.1.17.1)
-      rdf-vocab (~> 0.8.1)
-
-GIT
   remote: git://github.com/projecthydra-labs/hydra-pcdm.git
-  revision: 5cba7f4ad55a76440fb736b007d467e354de7b22
+  revision: 3d4faf369a96bccaea2fa927829000e3b21ea18a
+  ref: 3d4faf3
   specs:
     hydra-pcdm (0.3.0)
-      activefedora-aggregation (~> 0.5)
+      active-fedora (~> 9.6)
+      activefedora-aggregation (~> 0.6)
       mime-types (>= 1)
 
 GIT
@@ -61,10 +52,10 @@ GIT
 
 GIT
   remote: git://github.com/projecthydra/active_fedora.git
-  revision: 268f5a150973d26fc9c5c55632321fbf3a7e0477
-  branch: performance_boost
+  revision: 9a69ffa89c66149319d42a5af82be237d9f97c68
+  branch: fix_nil_date
   specs:
-    active-fedora (9.5.0)
+    active-fedora (9.6.0)
       active-triples (~> 0.7.1)
       activesupport (>= 4.1.0)
       deprecation
@@ -72,29 +63,29 @@ GIT
       linkeddata
       nom-xml (>= 0.5.1)
       om (~> 3.1)
-      rdf-rdfxml (~> 1.1.0)
+      rdf-rdfxml (~> 1.1)
       rsolr (~> 1.0.10)
 
 GIT
   remote: git://github.com/projecthydra/hydra-head.git
-  revision: ad890a479c815bec9cc19bf2877335ba86956528
-  ref: ad890a4
+  revision: 92995200eeb32330f20aa1c0e1f77606c140632c
+  branch: represented_visibility
   specs:
-    hydra-access-controls (9.3.0)
+    hydra-access-controls (9.4.0)
       active-fedora (~> 9.0)
       activesupport (~> 4.0)
       blacklight (~> 5.10)
       cancancan (~> 1.8)
       deprecation (~> 0.1)
       sass-rails
-    hydra-core (9.3.0)
+    hydra-core (9.4.0)
       active-fedora (~> 9.1)
-      hydra-access-controls (= 9.3.0)
+      hydra-access-controls (= 9.4.0)
       jettywrapper (>= 2.0.0)
       rails (~> 4.0)
-    hydra-head (9.3.0)
-      hydra-access-controls (= 9.3.0)
-      hydra-core (= 9.3.0)
+    hydra-head (9.4.0)
+      hydra-access-controls (= 9.4.0)
+      hydra-core (= 9.4.0)
       rails (>= 3.2.6)
 
 GIT
@@ -142,6 +133,11 @@ GEM
     active_fedora-noid (1.0.2)
       active-fedora (~> 9.0)
       noid (~> 0.7)
+    activefedora-aggregation (0.6.0)
+      active-fedora (~> 9.5)
+      activesupport
+      rdf (~> 1.1, >= 1.1.17.1)
+      rdf-vocab (~> 0.8.1)
     activejob (4.2.4)
       activesupport (= 4.2.4)
       globalid (>= 0.3.0)
@@ -587,7 +583,6 @@ PLATFORMS
 
 DEPENDENCIES
   active-fedora!
-  activefedora-aggregation!
   angularjs-rails (~> 1.4.4)
   byebug
   capistrano

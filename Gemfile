@@ -29,10 +29,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'curation_concerns', github: 'curationexperts/curation_concerns', branch: 'dce_dev'
 gem 'hydra-works', github: 'projecthydra-labs/hydra-works', ref: '9e4b99f'
-
-gem 'active-fedora', github: 'projecthydra/active_fedora', branch: 'performance_boost'
-gem 'activefedora-aggregation', github: 'projecthydra-labs/activefedora-aggregation', branch: 'without_previous_changes'
-gem 'hydra-pcdm', github: 'projecthydra-labs/hydra-pcdm'
+gem 'active-fedora', github: 'projecthydra/active_fedora', branch: 'fix_nil_date'
+gem 'hydra-pcdm', github: 'projecthydra-labs/hydra-pcdm', ref: '3d4faf3'
 
 # because the most recent release of resque-web is long out-of-date.
 # We need a newer version to get bootstrap 3 support:
@@ -42,7 +40,7 @@ gem 'resque'
 
 gem 'hydra-file_characterization', '0.3.3'
 gem 'hydra-collections', '~> 6.0.0.rc1'
-gem 'hydra-head', github: 'projecthydra/hydra-head', ref: 'ad890a4'
+gem 'hydra-head', github: 'projecthydra/hydra-head', branch: 'represented_visibility'
 gem 'riiif', '0.1.0'
 gem 'openseadragon', github: 'iiif/openseadragon-rails', branch: 'path_to_image'
 gem 'angularjs-rails', '~> 1.4.4'
