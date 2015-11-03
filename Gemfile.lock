@@ -51,28 +51,6 @@ GIT
       hydra-pcdm (~> 0.3)
 
 GIT
-  remote: git://github.com/projecthydra/hydra-head.git
-  revision: 92995200eeb32330f20aa1c0e1f77606c140632c
-  branch: represented_visibility
-  specs:
-    hydra-access-controls (9.4.0)
-      active-fedora (~> 9.0)
-      activesupport (~> 4.0)
-      blacklight (~> 5.10)
-      cancancan (~> 1.8)
-      deprecation (~> 0.1)
-      sass-rails
-    hydra-core (9.4.0)
-      active-fedora (~> 9.1)
-      hydra-access-controls (= 9.4.0)
-      jettywrapper (>= 2.0.0)
-      rails (~> 4.0)
-    hydra-head (9.4.0)
-      hydra-access-controls (= 9.4.0)
-      hydra-core (= 9.4.0)
-      rails (>= 3.2.6)
-
-GIT
   remote: git://github.com/resque/resque-web.git
   revision: 389f448bdd60bdbec6399d3ee2e5adc9243d01b2
   specs:
@@ -198,7 +176,7 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    childprocess (0.5.6)
+    childprocess (0.5.7)
       ffi (~> 1.0, >= 1.0.11)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
@@ -249,11 +227,23 @@ GEM
     http-cookie (1.0.2)
       domain_name (~> 0.5)
     http_logger (0.5.1)
+    hydra-access-controls (9.4.1)
+      active-fedora (~> 9.0)
+      activesupport (~> 4.0)
+      blacklight (~> 5.10)
+      cancancan (~> 1.8)
+      deprecation (~> 0.1)
+      sass-rails
     hydra-collections (6.0.0.rc1)
       blacklight (~> 5.10)
       deprecation (~> 0.1)
       hydra-head (~> 9.1)
       hydra-works (~> 0.2)
+    hydra-core (9.4.1)
+      active-fedora (~> 9.1)
+      hydra-access-controls (= 9.4.1)
+      jettywrapper (>= 2.0.0)
+      rails (~> 4.0)
     hydra-derivatives (3.0.0)
       active-fedora (~> 9.0)
       activesupport (~> 4.0)
@@ -267,6 +257,10 @@ GEM
       simple_form (~> 3.1.0)
     hydra-file_characterization (0.3.3)
       activesupport (>= 3.0.0)
+    hydra-head (9.4.1)
+      hydra-access-controls (= 9.4.1)
+      hydra-core (= 9.4.1)
+      rails (>= 3.2.6)
     i18n (0.7.0)
     jbuilder (2.3.1)
       activesupport (>= 3.0.0, < 5)
@@ -591,7 +585,6 @@ DEPENDENCIES
   factory_girl_rails
   hydra-collections (~> 6.0.0.rc1)
   hydra-file_characterization (= 0.3.3)
-  hydra-head!
   hydra-pcdm!
   hydra-works!
   jbuilder (~> 2.0)
