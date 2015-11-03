@@ -29,7 +29,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'curation_concerns', github: 'curationexperts/curation_concerns', branch: 'dce_dev'
 gem 'hydra-works', github: 'projecthydra-labs/hydra-works', ref: '9e4b99f'
-gem 'active-fedora', github: 'projecthydra/active_fedora', branch: 'fix_nil_date'
 gem 'hydra-pcdm', github: 'projecthydra-labs/hydra-pcdm', ref: '3d4faf3'
 
 # because the most recent release of resque-web is long out-of-date.
