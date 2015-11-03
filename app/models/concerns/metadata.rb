@@ -2,11 +2,11 @@ module Metadata
   extend ActiveSupport::Concern
 
   included do
-    property :date_issued, predicate: ::RDF::DC.issued, multiple: false do |index|
+    property :date_issued, predicate: ::RDF::Vocab::DC.issued, multiple: false do |index|
       index.as :stored_sortable
     end
 
-    property :extent, predicate: ::RDF::DC.extent do |index|
+    property :extent, predicate: ::RDF::Vocab::DC.extent do |index|
       index.as :symbol
     end
 
