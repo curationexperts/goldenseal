@@ -1,7 +1,6 @@
 GIT
-  remote: git://github.com/curationexperts/curation_concerns.git
-  revision: 66aa92ed032e9e7a38415022ed7268bbd99f9dad
-  branch: dce_dev
+  remote: git://github.com/projecthydra-labs/curation_concerns.git
+  revision: 2899d53b8e63189883da6edbcb676085329a33f3
   specs:
     curation_concerns (0.2.0)
       blacklight_advanced_search (>= 5.1.4, < 6.0)
@@ -21,26 +20,6 @@ GIT
       redlock (~> 0.1.2)
       resque (~> 1.23)
       resque-pool (~> 0.3)
-
-GIT
-  remote: git://github.com/projecthydra-labs/hydra-pcdm.git
-  revision: 3d4faf369a96bccaea2fa927829000e3b21ea18a
-  ref: 3d4faf3
-  specs:
-    hydra-pcdm (0.3.0)
-      active-fedora (~> 9.6)
-      activefedora-aggregation (~> 0.6)
-      mime-types (>= 1)
-
-GIT
-  remote: git://github.com/projecthydra-labs/hydra-works.git
-  revision: 9e4b99f3c6efd3e97a9ae02063d0e52046e53a43
-  ref: 9e4b99f
-  specs:
-    hydra-works (0.3.0)
-      hydra-derivatives (~> 3.0)
-      hydra-file_characterization (~> 0.3, >= 0.3.3)
-      hydra-pcdm (~> 0.3)
 
 GIT
   remote: git://github.com/resque/resque-web.git
@@ -253,6 +232,14 @@ GEM
       hydra-access-controls (= 9.4.1)
       hydra-core (= 9.4.1)
       rails (>= 3.2.6)
+    hydra-pcdm (0.3.1)
+      active-fedora (~> 9.6)
+      activefedora-aggregation (~> 0.6)
+      mime-types (>= 1)
+    hydra-works (0.4.0)
+      hydra-derivatives (~> 3.0)
+      hydra-file_characterization (~> 0.3, >= 0.3.3)
+      hydra-pcdm (~> 0.3)
     i18n (0.7.0)
     jbuilder (2.3.1)
       activesupport (>= 3.0.0, < 5)
@@ -579,8 +566,6 @@ DEPENDENCIES
   factory_girl_rails
   hydra-collections (~> 6.0.0.rc1)
   hydra-file_characterization (= 0.3.3)
-  hydra-pcdm!
-  hydra-works!
   jbuilder (~> 2.0)
   jettywrapper
   jquery-rails
