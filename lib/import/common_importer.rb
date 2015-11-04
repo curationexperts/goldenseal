@@ -93,6 +93,7 @@ module Import
 
       file_sets = [create_file(record, metadata_file, 'text/xml')] # Attach metadata file
       file_sets += attach_files(record, File.basename(metadata_file), files)
+      puts "    Ordering attached files" unless Rails.env.test?
       time = Benchmark.measure {
         record.ordered_members.concat(file_sets.compact)
       }
