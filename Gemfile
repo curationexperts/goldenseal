@@ -40,7 +40,7 @@ gem 'resque'
 gem 'hydra-file_characterization', '0.3.3'
 gem 'hydra-collections', '~> 6.0.0.rc1'
 gem 'riiif', '0.1.0'
-gem 'openseadragon', github: 'iiif/openseadragon-rails', branch: 'path_to_image'
+gem 'openseadragon', '~> 0.2.1'
 gem 'angularjs-rails', '~> 1.4.4'
 gem 'ldp', '~> 0.4.1'
 
