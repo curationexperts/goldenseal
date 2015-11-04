@@ -1,6 +1,4 @@
 <% if work.representative_id.present? && (fs = ::FileSet.load_instance_from_solr(work.representative_id)) %>
   <%# AdminSetPresenter doesn't have tei_id %>
   <%= media_display fs, transcript_id: work.try(:tei_id) %>
-<% else %>
-  <%= image_tag 'nope.png', class: "canonical-image" %>
 <% end %>
