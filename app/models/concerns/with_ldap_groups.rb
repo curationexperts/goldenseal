@@ -16,7 +16,7 @@ module WithLdapGroups
   # get the groups from LDAP and update the local cache
   def fetch_groups!
     ldap_groups.map do |dn|
-      /^cn=([^,]+),/.match(dn)[1]
+      /^cn=([^,]+),/i.match(dn)[1]
     end
   end
 
