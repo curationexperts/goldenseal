@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/curationexperts/riiif.git
+  revision: b2f7345132d8c48a27c3ef759e7d664cc5530691
+  specs:
+    riiif (0.1.0)
+      rails (> 3.2.0)
+
+GIT
   remote: git://github.com/projecthydra-labs/curation_concerns.git
   revision: ba0e02d1885169057493b45b48edc4e5daf5ffcb
   specs:
@@ -440,8 +447,6 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
-    riiif (0.1.0)
-      rails (> 3.2.0)
     rsolr (1.0.13)
       builder (>= 2.1.2)
     rspec-core (3.3.2)
@@ -575,7 +580,7 @@ DEPENDENCIES
   rails (= 4.2.4)
   resque
   resque-web!
-  riiif (= 0.1.0)
+  riiif!
   rsolr (~> 1.0.6)
   rspec-rails
   rubocop
