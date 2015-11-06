@@ -1,0 +1,21 @@
+<% unless f.object.persisted? %>
+  <fieldset id="work-contents">
+    <div class="row with-headroom">
+      <div class="span12">
+        <legend> Add Your Content </legend>
+      </div>
+    </div>
+
+    <div class="row">
+      <fieldset class="col-md-6">
+        <%= f.input :tei, as: :multifile, label: 'Transcript' %>
+      </fieldset>
+    </div>
+
+    <div class="row">
+      <fieldset class="col-md-6">
+        <%= f.input :thumbnail, as: :multifile %>
+      </fieldset>
+    </div>
+  </fieldset>
+<% end %>
