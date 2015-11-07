@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/curationexperts/riiif.git
-  revision: 78b181751e011e5b4a0ad8a7110be8a92c92e04c
+  revision: 77003eafcb8a4e5c3379d8f588727b5b5466dae7
   specs:
     riiif (0.1.0)
       rails (> 3.2.0)
