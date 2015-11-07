@@ -29,7 +29,7 @@ describe TeiForText do
         expect(subject).to be_kind_of Hash
         expect(subject['pages'].size).to eq 26
         # expect(subject['pages'].first['html']).to be_html_safe
-        expect(subject['pages'].first['image']).to eq '<img src="/image-service/0001/full/,600/0/native.jpg" alt="Native" />'
+        expect(subject['pages'].first['image']).to eq '<img src="/image-service/0001/full/,600/0/default.jpg" alt="Default" />'
       end
 
       context "with errors" do
