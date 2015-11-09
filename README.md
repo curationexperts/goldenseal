@@ -1,6 +1,8 @@
 # Goldenseal -- _Hydrastis canadensis_
 [![Build Status](https://travis-ci.org/curationexperts/goldenseal.svg?branch=master)](https://travis-ci.org/curationexperts/goldenseal)
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Hydrastis_canadensis_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-209.jpg" height="300" style="float: right">
+
 ## Installation
 
 ### Prerequisites:
