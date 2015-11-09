@@ -61,7 +61,7 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
-    active-fedora (9.6.1)
+    active-fedora (9.6.2)
       active-triples (~> 0.7.1)
       activesupport (>= 4.1.0)
       deprecation
@@ -421,7 +421,7 @@ GEM
     rdf-turtle (1.99.0)
       ebnf (~> 1.0)
       rdf (~> 1.99)
-    rdf-vocab (0.8.6)
+    rdf-vocab (0.8.7.1)
       rdf (~> 1.1, >= 1.1.10)
     rdf-xsd (1.1.5)
       rdf (~> 1.1, >= 1.1.9)
