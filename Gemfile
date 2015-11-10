@@ -27,18 +27,17 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'curation_concerns', github: 'projecthydra-labs/curation_concerns'
+gem 'curation_concerns', '0.3.0' #github: 'projecthydra-labs/curation_concerns'
 
 # because the most recent release of resque-web is long out-of-date.
 # We need a newer version to get bootstrap 3 support:
 # https://github.com/resque/resque-web/issues/62
-gem 'resque-web', require: 'resque_web', github: 'resque/resque-web'
+gem 'resque-web', require: 'resque_web', github: 'resque/resque-web', ref: '389f448'
 gem 'resque'
 
 gem 'hydra-file_characterization', '0.3.3'
 gem 'hydra-collections', '~> 6.0.0.rc1'
-#gem 'riiif', '0.1.0'
-gem 'riiif', github: 'curationexperts/riiif'
+gem 'riiif', '0.2.0'
 gem 'openseadragon', '~> 0.2.1'
 gem 'angularjs-rails', '~> 1.4.4'
 gem 'ldp', '~> 0.4.1'
