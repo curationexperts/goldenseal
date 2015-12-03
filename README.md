@@ -3,12 +3,18 @@
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Hydrastis_canadensis_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-209.jpg" height="300" style="float: right">
 
-## Installation
+## Development Installation
 
 ### Prerequisites:
 
 * Goldenseal relies on [hydra-derivatives](https://github.com/projecthydra/hydra-derivatives) for derivative processing and needs the [required dependencies](https://github.com/projecthydra/hydra-derivatives#dependencies) installed
 * redis
+* java 8
+
+### Setup:
+
+* Clone the code from this repo (Note: if using a vagrant vm as a dev environment, clone the code into the vagrant user's home directory, /home/vagrant/)
+* Move into the root of the project (e.g. `cd ~/goldenseal`) and execute these four commands:
 
 ```
 bin/setup
@@ -19,7 +25,8 @@ rake jetty:start
 
 ### Config:
 
-* Configure ```config/initializers/curation_concerns.rb```
+* By default, goldenseal offers Text, Audio, Document, Image, and Video works. If you want different work types, configure those in ```config/initializers/curation_concerns.rb```
+* Goldenseal uses ldap for authentication and authorization. Set your config/ldap.yml to connect to an openldap or ActiveDirectory server. Admin users must be members of a group called "admin". 
 
 ## Background Jobs
 
@@ -48,6 +55,29 @@ QUEUE=* VERBOSE=1 rake resque:work
 * Make sure jetty is running
 * Make sure redis is running
 * `bin/rails s`
+
+## Production Installation
+
+We recommend using Ansible to create production instances of Goldenseal.
+
+### Versions:
+
+We have tested Goldenseal with the following versions of its dependencies:
+
+* CentOS 7.0
+* Ruby 2.2.3
+* Java 1.8.0_51
+* Tomcat 7.0.54-2.el7_1 (via yum)
+* Fedora (fcrepo) 4.4.0
+* Solr 4.10.4
+* Postgresql 9.2.13-1.el7_1 (via yum)
+* Apache (httpd) 2.4.6-31.el7.centos.1 (via yum)
+* Passenger 5.0.10 (as a gem)
+* FITS 0.8.4
+* ImageMagick 6.9.2-5 with
+	* libpng-1.6.18
+	* openjpeg-2.1.0
+	* tiff-4.0.5
 
 ## Importing Records
 ### Importing records with TEI or VRA files
