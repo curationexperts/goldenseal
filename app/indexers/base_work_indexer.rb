@@ -1,4 +1,4 @@
-class BaseWorkIndexer < CurationConcerns::WorkIndexingService
+class BaseWorkIndexer < CurationConcerns::WorkIndexer
   def generate_solr_document
     super do |solr_doc|
       solr_doc['rights_label_ss'] = rights_labels.first
