@@ -7,7 +7,7 @@ module ApplicationHelper
   def index_description(options)
     config = options.fetch(:config)
     # In Blacklight 6 this will work:
-    #value = presenter(options.fetch(:document)).render_values(options.fetch(:value), config)
+    # value = presenter(options.fetch(:document)).render_values(options.fetch(:value), config)
     value = presenter(options.fetch(:document)).render_field_value(options.fetch(:value), config)
     length = config.fetch(:length)
     result = truncate value, length: length, separator: ' '
