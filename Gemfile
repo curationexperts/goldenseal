@@ -33,10 +33,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'curation_concerns', '~> 0.4.0', github: 'projecthydra-labs/curation_concerns', branch: 'collection_work_show'
 
-# because the most recent release of resque-web is long out-of-date.
-# We need a newer version to get bootstrap 3 support:
-# https://github.com/resque/resque-web/issues/62
-gem 'resque-web', require: 'resque_web', github: 'resque/resque-web', ref: '389f448'
+gem 'resque-web', '~> 0.0.7'
 gem 'resque'
 
 gem 'hydra-file_characterization', '0.3.3'

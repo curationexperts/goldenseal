@@ -1,4 +1,5 @@
 ALLOW_DOTS ||= /[^\/]+(?=\.(html|json|ttl)\z)|[^\/]+/
+require 'resque_web'
 
 Rails.application.routes.draw do
   blacklight_for :catalog
@@ -16,9 +17,6 @@ Rails.application.routes.draw do
       get :confirm_delete
     end
   end
-
-  # Eager load: https://github.com/resque/resque-web/issues/76
-  ResqueWeb::Engine.eager_load!
 
   resque_web_constraint = lambda do |request|
     current_user = request.env['warden'].user
