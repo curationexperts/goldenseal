@@ -13,9 +13,6 @@ gem 'therubyracer', platforms: :ruby
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 
-# Avoiding sprockets-rails 3.0.0 until curation_concerns 0.4.1 is released
-gem 'sprockets-rails', '~> 2.3.3'
-
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -31,13 +28,12 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'curation_concerns', '~> 0.4.0', github: 'projecthydra-labs/curation_concerns', branch: 'collection_work_show'
+gem 'curation_concerns', '~> 0.5.0'
 
 gem 'resque-web', '~> 0.0.7'
 gem 'resque'
 
 gem 'hydra-file_characterization', '0.3.3'
-gem 'hydra-collections', '~> 6.0.0.rc2'
 gem 'riiif', '0.2.0'
 gem 'openseadragon', '~> 0.2.1'
 gem 'angularjs-rails', '~> 1.4.4'
