@@ -1,5 +1,4 @@
 ALLOW_DOTS ||= /[^\/]+(?=\.(html|json|ttl)\z)|[^\/]+/
-require 'resque_web'
 
 Rails.application.routes.draw do
   blacklight_for :catalog

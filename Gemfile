@@ -30,7 +30,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'curation_concerns', '~> 0.5.0'
 
-gem 'resque-web', '~> 0.0.7'
+gem 'resque-web', '~> 0.0.7', require: 'resque_web'
 gem 'resque'
 
 gem 'hydra-file_characterization', '0.3.3'
