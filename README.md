@@ -58,7 +58,14 @@ QUEUE=* VERBOSE=1 rake resque:work
 
 ## Production Installation
 
-We recommend using Ansible to create production instances of Goldenseal.
+We recommend using Ansible to create production instances of Goldenseal. Download https://github.com/acozine/sufia-centos/releases/tag/0.1 and symlink the roles subdirectory of the sufia-centos code into the ansible subudirectory of the Goldenseal code:
+```
+sudo ln -s /path/to/sufia-centos/roles /path/to/goldenseal/ansible/roles
+```
+Review/modify ansible/ansible_vars.yml. If you're not creating your server on EC2, comment out the launch_ec2 and ec2 roles in ansible/ansible-ec2.yml, boot your server, add your public key to the centos user's authorized_keys file, add a disk at /opt if desired, then run the ansible scripts with:
+```
+ansible-playbook ansible/ansible-ec2.yml --private-key=/path/to/private/half/of/your/key
+```
 
 ### Versions:
 
