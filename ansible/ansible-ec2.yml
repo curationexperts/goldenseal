@@ -10,6 +10,8 @@
 - hosts: localhost
   connection: local
   gather_facts: False
+  vars_files:
+    - ansible_vars.yml
   roles:
     - launch_ec2
 
