@@ -32,6 +32,7 @@ gem 'curation_concerns', '~> 0.5.0'
 
 gem 'resque-web', '~> 0.0.7', require: 'resque_web'
 gem 'resque'
+gem 'posix-spawn'
 
 gem 'hydra-file_characterization', '0.3.3'
 gem 'riiif', '0.2.0'
