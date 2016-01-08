@@ -7,6 +7,7 @@
 # ec2_zone: # default is us-east-1d
 # ec2_instance_type: # default is m3.medium, a moderate instance size
 # ec2_image: # default is ami-96a818fe, CentOS 7 64-bit
+# ec2_opt_vol_size: # default is 40
 # ec2_vol_1: # default is "{{ hostvars['localhost'].ec2_vol }}"
 #
 ## private ec2-specific variables
@@ -20,6 +21,10 @@ ec2_key:
 ## NO default - the key from EC2 that will authenticate your ssh connection
 ec2_security_group: 
 ## NO default - looks like sg-xxxxxxx - the security group your instance will start in
+ec2_vpc: 
+## NO default - the VPC your instance will start in
+## if using EC2 Classic, comment out this variable and remove the line "assign_public_ip: yes" 
+## from the launch_ec2 role's tasks/main.yml
 #
 ## project-specific variables
 project_name: goldenseal 
