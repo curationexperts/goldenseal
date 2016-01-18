@@ -39,3 +39,5 @@ en:
         create: "Create"
   curation_concerns:
     product_name: "Digital Gateway"
+    institution:
+    name: "Washington University"
