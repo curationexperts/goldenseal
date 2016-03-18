@@ -8,10 +8,6 @@ jdk:
 before_script:
   - "bin/setup"
 
-notifications:
-  email:
-    - justin@curationexperts.com
-
 env:
   global:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
