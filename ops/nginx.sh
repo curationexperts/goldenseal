@@ -7,21 +7,16 @@ if [[ ! -e /var/log/nginx/error.log ]]; then
         (sleep 1 && sv restart /etc/service/nginx-log-forwarder)
 fi
 
+/sbin/setuser app /bin/bash -l -c 'cd /home/app/webapp && ./bin/setup'
+
 if [ -z $PASSENGER_APP_ENV ]
 then
     export PASSENGER_APP_ENV=development
 fi
 
-if [[ $PASSENGER_APP_ENV == "production" ]]
-then
-  /sbin/setuser app /bin/bash -l -c 'cd /home/app/webapp && whenever --update-crontab'
-fi
-
 if [[ $PASSENGER_APP_ENV == "production" ]] || [[ $PASSENGER_APP_ENV == "staging" ]]
 then
-    # TODO bad node module
-    rm -f /home/app/refinerycms-forms/app/javascript/glassformvalidations/node_modules/jquery-mask-plugin/deploy.rb
-    /sbin/setuser app /bin/bash -l -c 'cd /home/app/webapp && bundle exec rake db:migrate'
+  /sbin/setuser app /bin/bash -l -c 'cd /home/app/webapp && bundle exec rake db:migrate'
 fi
 
 exec /usr/sbin/nginx
