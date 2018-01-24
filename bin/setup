@@ -4,14 +4,17 @@ require 'pathname'
 # path to your application root.
 APP_ROOT = Pathname.new File.expand_path('../../', __FILE__)
 
-Dir.chdir APP_ROOT do
+
+def bundle
   # This script is a starting point to setup your application.
   # Add necessary setup steps to this file:
 
   puts "== Installing dependencies =="
   system "gem install bundler --conservative"
   system "bundle check || bundle install"
+end
 
+def copy_configs
   puts "\n== Copying sample files =="
   unless File.exist?("config/database.yml")
     system "cp config/database.yml.template config/database.yml"
@@ -23,14 +26,32 @@ Dir.chdir APP_ROOT do
     system "cp config/resque-pool.yml.template config/resque-pool.yml"
     system "cp config/ldap.yml.template config/ldap.yml"
   end
+end
 
+def prep_db
   puts "\n== Preparing database =="
   system "bin/rake db:setup"
+end
 
+def remove_logs
   puts "\n== Removing old logs and tempfiles =="
   system "rm -f log/*"
   system "rm -rf tmp/cache"
+end
 
+def restart
   puts "\n== Restarting application server =="
   system "touch tmp/restart.txt"
+end
+
+Dir.chdir APP_ROOT do
+  if ARGV[0] && ARGV[0].length > 1
+    send(ARGV[0])
+  else
+    bundle
+    copy_configs
+    prep_db
+    remove_logs
+    restart
+  end
 end

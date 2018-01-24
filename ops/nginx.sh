@@ -7,11 +7,14 @@ if [[ ! -e /var/log/nginx/error.log ]]; then
         (sleep 1 && sv restart /etc/service/nginx-log-forwarder)
 fi
 
-/sbin/setuser app /bin/bash -l -c 'cd /home/app/webapp && ./bin/setup'
-
 if [ -z $PASSENGER_APP_ENV ]
 then
     export PASSENGER_APP_ENV=development
+fi
+
+if [[ $PASSENGER_APP_ENV == "development" ]]
+then
+  /sbin/setuser app /bin/bash -l -c 'cd /home/app/webapp && ./bin/setup copy_configs'
 fi
 
 if [[ $PASSENGER_APP_ENV == "production" ]] || [[ $PASSENGER_APP_ENV == "staging" ]]

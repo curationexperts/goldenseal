@@ -29,17 +29,17 @@ WORKDIR $APP_HOME
 ENV BUNDLE_GEMFILE=$APP_HOME/Gemfile \
   BUNDLE_JOBS=4
 
-ADD Gemfile* $APP_HOME/
+COPY Gemfile* $APP_HOME/
 RUN bundle check || bundle install
 #RUN yarn install
 
 RUN touch /var/log/worker.log && chmod 666 /var/log/worker.log
 RUN mkdir /etc/service/worker
-ADD ops/worker.sh /etc/service/worker/run
+COPY ops/worker.sh /etc/service/worker/run
 RUN chmod +x /etc/service/worker/run
 
 RUN mkdir /etc/service/redis
-ADD ops/redis.sh /etc/service/redis/run
+COPY ops/redis.sh /etc/service/redis/run
 RUN chmod +x /etc/service/redis/run
 
 
@@ -51,12 +51,12 @@ RUN /sbin/setuser app ./bin/setup && \
     /sbin/setuser app rake curation_concerns:jetty:config
 RUN touch /var/log/jetty.log && chmod 666 /var/log/jetty.log
 RUN mkdir /etc/service/jetty
-ADD ops/jetty.sh /etc/service/jetty/run
+COPY ops/jetty.sh /etc/service/jetty/run
 RUN chmod +x /etc/service/jetty/run
 
 
 # Asset complie and migrate if prod, otherwise just start nginx
-ADD ops/nginx.sh /etc/service/nginx/run
+COPY ops/nginx.sh /etc/service/nginx/run
 RUN chmod +x /etc/service/nginx/run
 RUN rm -f /etc/service/nginx/down
 
