@@ -1,0 +1,14 @@
+---
+- name: Deploy
+  hosts: all
+  gather_facts: False
+  tasks:
+    - name: deploy app 
+      delegate_to: 127.0.0.1
+      uri: 
+        url: "{{ deploy_url }}"
+        method: POST
+        return_content: yes
+        body: { "push_data": { "tag": "{{ tag }}" }, "repository": { "repo_name":"registry.gitlab.com/notch8/ror-site/{{ app_name | regex_replace('-staging', '') }}" }}
+        body_format: json
+        status_code: 200

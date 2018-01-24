@@ -1,0 +1,26 @@
+version: '2'
+services:
+  base:
+    build:
+      context: ./
+      dockerfile: Dockerfile.base
+    image: "${REGISTRY_HOST}${REGISTRY_URI}/base:latest"
+    env_file:
+      - .env
+ 
+  web:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: "${REGISTRY_HOST}${REGISTRY_URI}:${TAG}"
+    volumes:
+      - .:/home/app/webapp
+    env_file:
+      - .env
+    # Keep the stdin open, so we can attach to our app container's process
+    # and do things such as byebug, etc:
+    stdin_open: true
+    # Enable sending signals (CTRL+C, CTRL+P + CTRL+Q) into the container:
+    tty: true
+    ports:
+      - "8080:80"
