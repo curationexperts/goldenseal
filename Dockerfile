@@ -6,5 +6,6 @@ COPY ops/env.conf /etc/nginx/main.d/env.conf
 
 COPY . $APP_HOME
 RUN bundle check || bundle install
+RUN /sbin/setuser app ./bin/setup
 
 CMD ["/sbin/my_init"]
