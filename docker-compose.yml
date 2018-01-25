@@ -24,3 +24,29 @@ services:
     tty: true
     ports:
       - "8080:80"
+    depends_on:
+      - ldap
+
+  ldap:
+    image: osixia/openldap
+    env_file:
+      - .env
+    volumes:
+      - 'ldap:/var/lib/ldap'
+      - 'slapd:/etc/ldap/slapd.d'
+    ports:
+      - '389:389'
+
+  ldapadmin:
+    image: osixia/phpldapadmin
+    env_file:
+      - .env
+    ports:
+      - 6080:80
+      - 6443:443
+    depends_on:
+      - ldap
+
+volumes:
+  ldap:
+  slapd:

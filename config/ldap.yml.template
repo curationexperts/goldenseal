@@ -1,13 +1,13 @@
 ## Environment
 default: &default
   attribute: uid
-  base: ou=people,dc=dce,dc=com
-  group_base: ou=groups,dc=dce,dc=com
+  base: ou=people,dc=notch8,dc=com
+  group_base: ou=groups,dc=notch8,dc=com
 
 development:
-  host: ldap.curationexperts.com
+  host: ldap
   port: 389
-  admin_user: cn=admin,dc=test,dc=com
+  admin_user: cn=admin,dc=notch8,dc=com
   admin_password: admin_password
   ssl: false
   <<: *default
@@ -15,7 +15,7 @@ development:
 test:
   host: ldap.curationexperts.com
   port: 3389
-  admin_user: cn=admin,dc=test,dc=com
+  admin_user: cn=admin,dc=notch8,dc=com
   admin_password: admin_password
   ssl: simple_tls
   <<: *default
@@ -23,7 +23,7 @@ test:
 production:
   host: ldap.curationexperts.com
   port: 636
-  admin_user: cn=admin,dc=test,dc=com
+  admin_user: cn=admin,dc=notch8,dc=com
   admin_password: admin_password
   ssl: start_tls
   <<: *default
