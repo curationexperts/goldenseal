@@ -37,16 +37,6 @@ services:
     ports:
       - '389:389'
 
-  ldapadmin:
-    image: osixia/phpldapadmin
-    env_file:
-      - .env
-    ports:
-      - 6080:80
-      - 6443:443
-    depends_on:
-      - ldap
-
 volumes:
   ldap:
   slapd:

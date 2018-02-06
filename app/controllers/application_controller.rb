@@ -1,4 +1,12 @@
 class ApplicationController < ActionController::Base
+  before_action :fake_sign_in
+
+  def fake_sign_in
+    if Rails.env.development? && ENV['SKIP_LDAP']
+      sign_in(:user, User.first)
+    end
+  end
+
   rescue_from DeviseLdapAuthenticatable::LdapException do |exception|
     render text: exception, status: 500
   end
