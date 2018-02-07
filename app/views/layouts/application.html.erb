@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <%= render :partial => 'layouts/google_analytics' if Rails.env == 'production' %>
+
   <title>Goldenseal</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <%= render :partial => 'layouts/google_analytics_body' if Rails.env == 'production' %>
 
 <%= yield %>
 
