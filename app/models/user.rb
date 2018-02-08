@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
 
   # Fetch groups from LDAP. Must come after `devise` call.
   if ENV['SKIP_LDAP'] && Rails.env.development?
-    def group_list
+    def groups
       ['admin']
     end
   else

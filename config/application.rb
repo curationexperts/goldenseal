@@ -29,3 +29,4 @@ module Goldenseal
     config.active_job.queue_adapter = :resque
   end
 end
+
