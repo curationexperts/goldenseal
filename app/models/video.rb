@@ -10,6 +10,10 @@ class Video < ActiveFedora::Base
 
   include WithTEI
 
+  property :downloadable, predicate: ::RDF::Value, multiple: false do |index|
+    index.as :stored_searchable
+  end
+
   def self.indexer
     BaseWorkIndexer
   end
