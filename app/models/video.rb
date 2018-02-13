@@ -10,7 +10,7 @@ class Video < ActiveFedora::Base
 
   include WithTEI
 
-  property :downloadable, predicate: ::RDF::Value, multiple: false do |index|
+  property :downloadable, predicate: ::RDF::Vocab::DC.Policy, multiple: false do |index|
     index.as :stored_searchable
   end
 

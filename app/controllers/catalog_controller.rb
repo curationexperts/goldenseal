@@ -29,6 +29,7 @@ class CatalogController < ApplicationController
     # solr field configuration for document/show views
     # config.show.title_field = solr_name("title", :stored_searchable)
     # config.show.display_type_field = solr_name("has_model", :symbol)
+    config.show.downloadable_field = solr_name("downloadable", :stored_searchable)
 
     # solr fields that will be treated as facets by the blacklight application
     #   The ordering of the field names is the order of the display
@@ -64,6 +65,7 @@ class CatalogController < ApplicationController
     config.add_index_field 'rights_label_ss', label: 'Content License'
     config.add_index_field solr_name('human_readable_type', :stored_searchable)
     config.add_index_field solr_name('format', :stored_searchable)
+    config.add_index_field solr_name('downloadable', :stored_searchable)
 
     # "fielded" search configuration. Used by pulldown among other places.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields
@@ -237,6 +239,15 @@ class CatalogController < ApplicationController
         pf: solr_name
       }
     end
+
+    # config.add_search_field('downloadable') do |field|
+    #   field.include_in_simple_select = false
+    #   solr_name = 'downloadable'
+    #   field.solr_local_parameters = {
+    #     qf: solr_name,
+    #     pf: solr_name
+    #   }
+    # end
 
     # "sort results by" select (pulldown)
     # label in pulldown is followed by the name of the SOLR field to sort by and

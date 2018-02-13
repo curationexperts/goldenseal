@@ -70,4 +70,8 @@ class SolrDocument
   def on_campus?
     read_groups.include? OnCampusAccess::OnCampus
   end
+
+  def downloadable
+    self[Solrizer.solr_name('downloadable')]
+  end
 end
