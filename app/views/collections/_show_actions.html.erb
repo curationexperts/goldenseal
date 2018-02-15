@@ -1,0 +1,12 @@
+
+<h1>this is collection actions partial</h1>
+<% if can? :edit, @presenter.id %>
+  <h2 class="non lower">Actions</h2>
+  <p>
+      <%= link_to "Edit", collections.edit_collection_path, class: 'btn btn-default' %> &nbsp;&nbsp;
+      <%= link_to "Add files from your dashboard",  search_path_for_my_works, class: 'btn btn-default' %>&nbsp;&nbsp;
+      <%= link_to "Enable Downloads for all items", enable_downloads_path(@presenter), class: 'btn btn-default' %>&nbsp;&nbsp;
+      <%= link_to "Disable Downloads for all items", disable_downloads_path(@presenter), class: 'btn btn-default' %> 
+ 
+  </p>
+<%end %>
