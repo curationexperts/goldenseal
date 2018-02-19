@@ -33,13 +33,13 @@ module CurationConcerns
 
     def enable_downloads
       collection = Collection.find(params[:id])
-      toggle_downloadable(collection, "1")
+      toggle_downloadable(collection, true)
       redirect_to collection_path(collection), notice: 'Collection was successfully updated.'
     end
 
     def disable_downloads
       collection = Collection.find(params[:id])
-      toggle_downloadable(collection, "0")
+      toggle_downloadable(collection, false)
       redirect_to collection_path(collection), notice: 'Collection was successfully updated.'
     end
 
