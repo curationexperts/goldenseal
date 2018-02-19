@@ -72,6 +72,6 @@ class SolrDocument
   end
 
   def downloadable
-    self[Solrizer.solr_name('downloadable')]
+    self['downloadable_bsi']
   end
 end

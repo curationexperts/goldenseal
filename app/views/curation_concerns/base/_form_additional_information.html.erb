@@ -15,7 +15,7 @@
   <%= f.input :description_standard, as: :multi_value, input_html: { class: 'form-control' } %>
   <%= f.input :publication_place,    as: :multi_value, input_html: { class: 'form-control' } %>
   <%= f.input :date_issued, input_html: { value: f.object.date_issued, class: 'datepicker' } %>
-  <%= f.check_box :downloadable, as: :boolean, checked_value: "1", unchecked_value: "0", input_html: { class: 'form-control' } %> &nbsp;Enable Video Downloads
+  <%= f.check_box :downloadable, { input_html: { class: 'form-control' }}, 'true', 'false' %> &nbsp;Enable Video Downloads
 
 </fieldset>
 
