@@ -21,7 +21,7 @@ module ApplicationHelper
   def advanced_search_params 
    
     if params.keys.include?('f') && params['f'].keys.include?('admin_set_ssi')
-      { f: { admin_set_ssi: params['f']['admin_set_ssi']} }
+      { f_inclusive: { admin_set_ssi: params['f']['admin_set_ssi']} }
     else 
       {}
     end
