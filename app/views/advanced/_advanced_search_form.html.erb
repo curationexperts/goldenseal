@@ -10,7 +10,7 @@
   <%= render_hash_as_hidden_fields(params_for_search(advanced_search_context, {})) %>
 
   <div class="input-criteria">
-
+    <div class="col-sm-7">
       <div class="query-criteria">
         <h3 class="query-criteria-heading">
           <%= t('blacklight_advanced_search.form.query_criteria_heading_html', :select_menu =>  select_menu_for_field_operator ) %> 
@@ -21,6 +21,8 @@
         </div>
       </div>
       
+      </div>
+      <div class="col-sm-5">
       <div class="limit-criteria">
         <h3 class="limit-criteria-heading"><%= t('blacklight_advanced_search.form.limit_criteria_heading_html')%></h3>
 
@@ -32,12 +34,14 @@
           <% end %>
         </div>
       </div>
+      </div>
   </div>
-
   <hr>
-
-  <div class="sort-submit-buttons clearfix">
-    <%= render 'advanced_search_submit_btns' %>
+  <div class="row ">
+    
+    <div class="col-sm-12 sort-submit-buttons clearfix">
+      <%= render 'advanced_search_submit_btns' %>
+    </div>
+    
   </div>
-
 <% end %>
