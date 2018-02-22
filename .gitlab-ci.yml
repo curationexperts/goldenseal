@@ -15,7 +15,7 @@ variables:
   REGISTRY_URI: /notch8/washington-goldenseal
   TEST_DB: test
   SECRET_KEY_BASE: 729ac8fd6f2ad97b45d9bdf6cbc6a83e01c53fcc0e7b3c2afac1dfb2906deccfd39b83e534938d4e2729e3787a72043794eb045568f089efddce51c17cc4160d
-  SKIP_LDAP: true
+  SKIP_LDAP: 'true'
 
 build:
   stage: build
@@ -28,17 +28,6 @@ build:
   tags:
     - docker
     
-#test:
-#  stage: test
-#  image: $CI_REGISTRY_IMAGE:$CI_PROJECT_NAME-$CI_BUILD_REF_SLUG
-#  script:
-#    - cd /home/app/webapp && bundle exec rake db:create spec
-#  tags:
-#    - docker
-#  variables:
-#    GIT_STRATEGY: none
-#    RAILS_ENV: test
-#    PASSENGER_APP_ENV: test
 review:
   stage: review
   type: deploy
@@ -61,6 +50,7 @@ review:
     GIT_STRATEGY: fetch
   tags:
     - docker
+
 stop_review:
   stage: review
   script:
