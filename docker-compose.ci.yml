@@ -1,0 +1,21 @@
+version: '2'
+services:
+  web:
+    image: "${REGISTRY_HOST}${REGISTRY_URI}:${TAG}"
+    environment:
+      - DOCKER_PORT
+      - PASSENGER_APP_ENV
+      - RAILS_ENV
+      - REGISTRY_HOST
+      - REGISTRY_URI
+      - TEST_DB
+      - SECRET_KEY_BASE
+      - SKIP_LDAP
+    #command: bash -c "mkdir -p /home/app/webapp/tmp && chmod -R 1777 /home/app/webapp/tmp && bundle exec rake db:load db:migrate assets:precompile && chown -R app /home/app/webapp && /sbin/my_init"
+    ports:
+      - "80"
+    labels:
+      rap.host: web.${TAG}.staging.notch8network.com
+      rap.le_host: web.${TAG}.staging.notch8network.com
+      rap.le_test: true
+      io.rancher.container.pull_image: always

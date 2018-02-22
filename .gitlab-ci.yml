@@ -1,0 +1,76 @@
+image: docker:17.04
+services:
+  - docker:dind
+
+stages:
+  - build
+  - review
+
+variables:
+  DOCKER_DRIVER: overlay
+  DOCKER_PORT: 80
+  PASSENGER_APP_ENV: development
+  RAILS_ENV: development
+  REGISTRY_HOST: registry.gitlab.com
+  REGISTRY_URI: /notch8/washington-goldenseal
+  TEST_DB: test
+  SECRET_KEY_BASE: 729ac8fd6f2ad97b45d9bdf6cbc6a83e01c53fcc0e7b3c2afac1dfb2906deccfd39b83e534938d4e2729e3787a72043794eb045568f089efddce51c17cc4160d
+  SKIP_LDAP: true
+
+build:
+  stage: build
+  script:
+    - docker login -u "gitlab-ci-token" -p "$CI_BUILD_TOKEN" $CI_REGISTRY
+    - docker build --pull -t "$CI_REGISTRY_IMAGE:$CI_PROJECT_NAME-$CI_BUILD_REF_SLUG" .
+    - docker push "$CI_REGISTRY_IMAGE:$CI_PROJECT_NAME-$CI_BUILD_REF_SLUG"
+  variables:
+    GIT_STRATEGY: fetch
+  tags:
+    - docker
+    
+#test:
+#  stage: test
+#  image: $CI_REGISTRY_IMAGE:$CI_PROJECT_NAME-$CI_BUILD_REF_SLUG
+#  script:
+#    - cd /home/app/webapp && bundle exec rake db:create spec
+#  tags:
+#    - docker
+#  variables:
+#    GIT_STRATEGY: none
+#    RAILS_ENV: test
+#    PASSENGER_APP_ENV: test
+review:
+  stage: review
+  type: deploy
+  environment:
+    name: review/$CI_PROJECT_NAME-$CI_BUILD_REF_SLUG
+    url: http://web.$CI_PROJECT_NAME-$CI_BUILD_REF_SLUG.staging.notch8network.com
+    on_stop: stop_review
+  only:
+    - branches
+  except:
+    - master
+  script:
+    - wget https://github.com/rancher/cli/releases/download/v0.4.1/rancher-linux-amd64-v0.4.1.tar.gz
+    - tar zxfv rancher-linux-amd64-v0.4.1.tar.gz
+    - export RANCHER_ENVIRONMENT=staging
+    - export TAG=$CI_PROJECT_NAME-$CI_BUILD_REF_SLUG
+    - export SITE_URI=web.$CI_PROJECT_NAME-$CI_BUILD_REF_SLUG.staging.notch8network.com
+    - ./rancher-v0.4.1/rancher up -p -d -u -c -s $TAG -f docker-compose.ci.yml
+  variables:
+    GIT_STRATEGY: fetch
+  tags:
+    - docker
+stop_review:
+  stage: review
+  script:
+    - wget https://github.com/rancher/cli/releases/download/v0.4.1/rancher-linux-amd64-v0.4.1.tar.gz
+    - tar zxfv rancher-linux-amd64-v0.4.1.tar.gz
+    - export RANCHER_ENVIRONMENT=staging
+    - ./rancher-v0.4.1/rancher rm $CI_PROJECT_NAME-$CI_BUILD_REF_SLUG
+  variables:
+    GIT_STRATEGY: none
+  when: manual
+  environment:
+    name: review/$CI_PROJECT_NAME-$CI_BUILD_REF_SLUG
+    action: stop
