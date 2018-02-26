@@ -83,7 +83,7 @@ class CatalogController < ApplicationController
     # This one uses all the defaults set by the solr request handler. Which
     # solr request handler? The one set in config[:default_solr_parameters][:qt],
     # since we aren't specifying it otherwise.
-    config.add_search_field('all_fields', label: 'All Fields', include_in_advanced_search: true)
+    config.add_search_field('all_fields', label: 'All Fields', include_in_advanced_search: false)
 
     # Now we see how to over-ride Solr request handler defaults, in this
     # case for a BL "search field", which is really a dismax aggregate
