@@ -89,6 +89,8 @@ We have tested Goldenseal with the following versions of its dependencies:
 ## Importing Records
 ### Importing records with TEI or VRA files
 
+NOTE: This happens automatically on staging servers
+
 TEI files can be parsed to create Audio, Video, or Text records.  VRA records can be parsed to produce Image records.  The instructions are basically the same either way.
 
 * Create a directory and add all the TEI (or VRA) files to that directory.
