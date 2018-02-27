@@ -197,5 +197,43 @@ body {
 	a:hover {
 	    text-decoration: none;
 	}
-    }
+	
+	}
+	span.label-and-count>label {
+    display: inline;
+    font-weight: normal;
+    overflow: hidden;
+  }
+  
+  span.facet-count {
+    float: right;
+  }
+
+  .facet-values .facet-label  {
+    padding-left: 5px !important;
+    text-indent: 0 !important;
+    display:inline;
+  }
+	.submit-buttons {
+		padding-top: 30px;
+  }
+  ul.advanced-help {
+    padding-left: 20px;
+  }
+  .advanced-help-panel {
+    background-color: #eee;
+    padding: 10px;
+  }
+  h3.limit-criteria-heading, h3.query-criteria-heading {
+    margin-top: 0;
+    font-size: 20px;
+  }
+  h5.panel-title a {
+    color: #002b5b
+  }
+  .sort-submit-buttons {
+    border-top: 1px solid #eeeeee;
+  }
 }
+
+
