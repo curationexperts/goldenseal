@@ -6,6 +6,7 @@ class CatalogController < ApplicationController
                             contributor_tesim
                             description_tesim
                             subject_tesim
+                            tei_json_tesim
                             id ))
   end
 
@@ -238,6 +239,16 @@ class CatalogController < ApplicationController
     config.add_search_field('admin_set') do |field|
       field.include_in_simple_select = false
       solr_name = 'admin_set_ssi'
+      field.solr_local_parameters = {
+        qf: solr_name,
+        pf: solr_name
+      }
+    end
+
+    config.add_search_field('tei_json') do |field|
+      # field.include_in_simple_select = false
+      field.label = 'Content'
+      solr_name = 'tei_json_tesim'
       field.solr_local_parameters = {
         qf: solr_name,
         pf: solr_name
