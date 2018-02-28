@@ -11,7 +11,7 @@
   )%>
 <% end %>
 <% if can?(:read, file_set.id) %>
-  <% if @presenter.human_readable_type != "Video" || (@presenter.human_readable_type == "Video" && @presenter.downloadable) %>
+  <% if @presenter.downloadable %>
     <%= link_to 'Download', main_app.download_path(file_set),
     class: 'btn btn-default', title: "Download #{file_set.to_s.inspect}", target: "_blank" %>
   <% end %>

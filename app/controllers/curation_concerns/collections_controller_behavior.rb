@@ -32,24 +32,38 @@ module CurationConcerns
     end
 
     def enable_downloads
+      file_type = params[:file_type]
       collection = Collection.find(params[:id])
-      toggle_downloadable(collection, true)
+      toggle_downloadable(collection, true, file_type)
       redirect_to collection_path(collection), notice: 'Collection was successfully updated.'
     end
 
     def disable_downloads
+      file_type = params[:file_type]
       collection = Collection.find(params[:id])
-      toggle_downloadable(collection, false)
+      toggle_downloadable(collection, false, file_type)
       redirect_to collection_path(collection), notice: 'Collection was successfully updated.'
     end
 
     protected
 
-      def toggle_downloadable(collection, value)
-        authorize! :edit, collection 
-        videos = collection.works.select{ |work| work.class == Video }
-        videos.each do |video|
-          actor = CurationConcerns::CurationConcern.actor(video, current_user, { downloadable: value }) 
+      def toggle_downloadable(collection, value, file_type)
+        authorize! :edit, collection
+        case file_type
+        when 'video'
+          works = collection.works.select{ |work| work.class == Video }
+        when 'text'
+          works = collection.works.select{ |work| work.class == Text }
+        when 'audio' 
+          works = collection.works.select{ |work| work.class == Audio }
+        when 'image'
+          works = collection.works.select{ |work| work.class == Image }
+        when 'all'
+          works = collection.works
+        end
+
+        works.each do |work|
+          actor = CurationConcerns::CurationConcern.actor(work, current_user, { downloadable: value }) 
           actor.update 
         end
       end

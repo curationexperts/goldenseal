@@ -1,11 +1,31 @@
 
 <% if can? :edit, @presenter.id %>
   <h2 class="non lower">Actions</h2>
-  <p>
+  <div class="btn-group" role="group">
       <%= link_to "Edit", collections.edit_collection_path, class: 'btn btn-default' %> &nbsp;&nbsp;
       <%= link_to "Add files from your dashboard",  search_path_for_my_works, class: 'btn btn-default' %>&nbsp;&nbsp;
-      <%= link_to "Enable Downloads for all items", enable_downloads_path(@presenter), class: 'btn btn-default' %>&nbsp;&nbsp;
-      <%= link_to "Disable Downloads for all items", disable_downloads_path(@presenter), class: 'btn btn-default' %> 
- 
-  </p>
+      <div class="btn-group dropdown" role="group">
+      
+        <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="enable" href="#">Enable Downloads<span class="caret"></span></a>
+        <ul class="dropdown-menu" aria-labelledby="enable">
+          <li><%= link_to "Enable downloads for all items", enable_downloads_path(@presenter, :file_type => 'all'), role: 'menuitem' %></li>
+          <li><%= link_to "Enable downloads for videos only", enable_downloads_path(@presenter, :file_type => 'video'), role: 'menuitem' %></li>
+          <li><%= link_to "Enable downloads for audios only", enable_downloads_path(@presenter, :file_type => 'audio'), role: 'menuitem' %></li>
+          <li><%= link_to "Enable downloads for images only", enable_downloads_path(@presenter, :file_type => 'image'), role: 'menuitem' %></li>
+          <li><%= link_to "Enable downloads for texts only", enable_downloads_path(@presenter, :file_type => 'text'), role: 'menuitem' %></li>
+        </ul>
+      </div>
+
+      <div class="btn-group dropdown" role="group">
+      <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="disable" href="#">Disable Downloads<span class="caret"></span></a>
+        <ul class="dropdown-menu" aria-labelledby="disable">
+          <li><%= link_to "Disable downloads for all items", disable_downloads_path(@presenter, :file_type => 'all'), role: 'menuitem' %></li>
+          <li><%= link_to "Disable downloads for videos only", disable_downloads_path(@presenter, :file_type => 'video'), role: 'menuitem' %></li>
+          <li><%= link_to "Disable downloads for audios only", disable_downloads_path(@presenter, :file_type => 'audio'), role: 'menuitem' %></li>
+          <li><%= link_to "Disable downloads for images only", disable_downloads_path(@presenter, :file_type => 'image'), role: 'menuitem' %></li>
+          <li><%= link_to "Disable downloads for texts only", disable_downloads_path(@presenter, :file_type => 'text'), role: 'menuitem' %></li>
+        </ul>
+      </div>
+
+  </div>
 <%end %>

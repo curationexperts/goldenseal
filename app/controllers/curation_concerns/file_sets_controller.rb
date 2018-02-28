@@ -24,5 +24,7 @@ module CurationConcerns
           fail ActiveFedora::ObjectNotFoundError
         end
       end
+
+      delegate :downloadable, to: :solr_document
   end
 end
