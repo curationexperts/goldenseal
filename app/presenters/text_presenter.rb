@@ -9,4 +9,6 @@ class TextPresenter < WorkShowPresenter
   def tei_as_json
     @json ||= TeiForText.new(solr_document.to_model).to_json
   end
+
+  delegate :downloadable, to: :solr_document
 end

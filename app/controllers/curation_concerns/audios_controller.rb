@@ -10,6 +10,8 @@ class CurationConcerns::AudiosController < ApplicationController
   set_curation_concern_type Audio
 
   def show_presenter
-    ::WorkShowPresenter
+    ::AudioPresenter
   end
+
+  delegate :downloadable, to: :solr_document
 end
