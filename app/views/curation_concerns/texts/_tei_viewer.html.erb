@@ -16,7 +16,7 @@
   <div id="tei-container" class="row">
     <ol id="pages" class="{{display}}">
       <li ng-repeat="page in pages" class="page">
-        <div ng-bind-html="to_trusted(page.image)" class="image"></div>
+        <div ng-if="page.image" ng-bind-html="to_trusted(page.image)" class="image"></div>
         <div ng-bind-html="to_trusted(page.html)" class="text"></div>
       </li>
     </ol>
