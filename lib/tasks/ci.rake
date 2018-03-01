@@ -11,7 +11,6 @@
 namespace :ci do
   desc 'loads some sample data for review branches'
   task :load_sample do
-    sh('[ -e sample-assets.tgz ] && rm sample-assets.tgz')
     sh('wget https://s3-us-west-2.amazonaws.com/washington-u/sample-assets.tgz')
     sh('tar zxfv sample-assets.tgz')
     sh('su -c "script/import -t text -p sample-assets/text" app')
