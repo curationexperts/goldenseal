@@ -247,9 +247,9 @@ body {
   }
   body header#banner hgroup div#product-bar-wrapper div.container div#product-bar {
     font-size: 32px;
-	padding:0 20px;
-	height: 90px;
-	line-height: 100px;
+    padding:0 20px;
+    height: 90px;
+    line-height: 100px;
   }
   body header#banner hgroup div#title-bar-wrapper {
     padding: 10px;
@@ -307,7 +307,19 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  body {
-    background: orange;
+    body {
+    width:101%;
   }
+  body div#main {
+    padding:0 15px;
+  }
+  body header#banner hgroup div#product-bar-wrapper div.container div#product-bar {
+    height: 90px;
+    line-height: 90px;
+    font-size: 32px;
+  }
+  tr.file_set.attributes > td.thumbnail {
+    width: 80px;
+    }
+
 }
