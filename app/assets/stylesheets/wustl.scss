@@ -1,5 +1,5 @@
 body {
-    padding: 0px;
+    padding: 0;
     font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     h1, h2, h3, h4, h5, h6 {
 	font-family: 'Libre Baskerville', 'Times New Roman', serif;
@@ -236,4 +236,57 @@ body {
   }
 }
 
+@media screen and (max-width: 767px) {
+  body header#banner hgroup div#brand-bar-wrapper {
+    padding: 0 15px 5px 15px;
+  }
+  body header#banner hgroup div#product-bar-wrapper div.container {
+    padding:0;
+    right: 0;
+    max-width: 100%;
+  }
+  body header#banner hgroup div#product-bar-wrapper div.container div#product-bar {
+    font-size: 44px;
+    text-align: center;
+  }
+  body header#banner hgroup div#title-bar-wrapper {
+    padding: 10px;
+  }
+  body header#banner hgroup div#title-bar-wrapper div.container div#title-bar div#site-search form select,
+  body header#banner hgroup div#title-bar-wrapper div.container div#title-bar div#site-search form input {
+    margin-bottom: 5px;
+  }
+  body header#banner hgroup div#title-bar-wrapper div.container div#title-bar div#site-search form {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  #site-actions  {
+    text-align: center;
+  }
+  body div#main {
+    padding:0 15px;
+  }
+  
+  body footer#footer div#footer-top-wrapper div#footer-top div.col-md-3,
+  body footer#footer div#footer-top-wrapper div#footer-top div.col-md-3:first-of-type {
+    padding:0 20px 20px 20px;
+  }
 
+  body footer#footer div#footer-top-wrapper div#footer-top div.col-md-3 iframe {
+    
+  }
+
+  body footer#footer div#footer-top-wrapper div#footer-top div.col-md-3 div.social {
+    text-align: center;
+  }
+
+  body footer#footer div#footer-bottom-wrapper div#footer-bottom {
+    padding: 10px 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background: orange;
+  }
+}
