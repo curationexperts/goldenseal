@@ -275,9 +275,39 @@ body {
   }
   body footer#footer div#footer-top-wrapper div#footer-top div.col-md-3 div.social {
     text-align: left;
+    
   }
   body footer#footer div#footer-bottom-wrapper div#footer-bottom {
     padding: 10px 20px;
+  }
+  body footer#footer a.fa-icon {
+    
+    margin: 4px 4px 2px 0;
+    font-size: 16px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 40px;
+    border: 1px solid #777;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  body footer#footer ul {
+    list-style-type: none;
+    padding:0;
+  }
+  body footer#footer div#footer-bottom-wrapper div#footer-bottom div.back-to-top a.fa-icon {
+    display: block;
+    font-size: 16px;
+    height: 40px;
+    width: 40px;
+    float:right;
+    text-align: center;
+    line-height: 40px;
+    box-shadow: inset 0px 0px 0px 1px #b5202a;
+    text-decoration: none;
+    border:none;
   }
   .row.no-neg-margin {
     margin-left:0;
@@ -321,5 +351,49 @@ body {
   tr.file_set.attributes > td.thumbnail {
     width: 80px;
     }
-
+  body footer#footer h3 {
+    font-size: 20px;
+  }
+  body footer#footer a.fa-icon {
+    
+    margin: 4px 4px 2px 0;
+    font-size: 16px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 40px;
+    border: 1px solid #777;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  body footer#footer ul {
+    list-style-type: none;
+    padding:0;
+  }
+  body footer#footer ul li {
+    margin-bottom: 10px;
+  }
+  body footer#footer div#footer-bottom-wrapper div#footer-bottom {
+    padding: 0 15px 15px;
+  }
+  body footer#footer div#footer-bottom-wrapper div#footer-bottom div.copyright {
+    margin-top: 10px;
+  }
+  body footer#footer div#footer-bottom-wrapper div#footer-bottom div.back-to-top {
+    line-height: 40px;
+    margin-top: 10px;
+  }
+  body footer#footer div#footer-bottom-wrapper div#footer-bottom div.back-to-top a.fa-icon {
+    display: block;
+    font-size: 16px;
+    height: 40px;
+    width: 40px;
+    float:right;
+    text-align: center;
+    line-height: 40px;
+    box-shadow: inset 0px 0px 0px 1px #b5202a;
+    text-decoration: none;
+    border:none;
+  }
 }
