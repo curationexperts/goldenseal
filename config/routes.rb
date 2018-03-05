@@ -26,6 +26,6 @@ Rails.application.routes.draw do
     mount ResqueWeb::Engine => "/resque"
   end
 
-  get 'collections/:id/enable_downloads' => 'collections#enable_downloads', as: :enable_downloads
-  get 'collections/:id/disable_downloads' => 'collections#disable_downloads', as: :disable_downloads
+  get 'collections/:id/allow_downloads' => 'collections#allow_downloads', as: :allow_downloads
+  get 'collections/:id/prevent_downloads' => 'collections#prevent_downloads', as: :prevent_downloads
 end

@@ -11,7 +11,7 @@
   )%>
 <% end %>
 <% if can?(:read, file_set.id) %>
-  <% if @presenter.downloadable %>
+  <% unless @presenter.prevent_download.present? && @presenter.prevent_download == true %>
     <%= link_to 'Download', main_app.download_path(file_set),
     class: 'btn btn-default', title: "Download #{file_set.to_s.inspect}", target: "_blank" %>
   <% end %>

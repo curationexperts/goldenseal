@@ -20,11 +20,11 @@ class Text < ActiveFedora::Base
     TextIndexer
   end
 
-  property :downloadable, predicate: ::RDF::Vocab::DC.Policy, multiple: false do |index|
+  property :prevent_download, predicate: ::RDF::Vocab::DC.Policy, multiple: false do |index|
     index.as :stored_searchable
   end
 
-  def downloadable= value
+  def prevent_download= value
     super value.to_s.downcase == "true" 
   end
 

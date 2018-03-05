@@ -15,5 +15,5 @@ class CurationConcerns::TextsController < ApplicationController
     TextPresenter
   end
 
-  delegate :downloadable, to: :solr_document
+  delegate :prevent_download, to: :solr_document
 end

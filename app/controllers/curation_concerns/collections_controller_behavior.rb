@@ -5,10 +5,10 @@ module CurationConcerns
     include Hydra::Controller::SearchBuilder
 
     included do
-      before_action :filter_docs_with_read_access!, except: [:show, :enable_downloads, :disable_downloads]
+      before_action :filter_docs_with_read_access!, except: [:show, :prevent_downloads, :allow_downloads]
       self.search_params_logic += [:add_access_controls_to_solr_params, :add_advanced_parse_q_to_solr]
       layout 'curation_concerns/1_column'
-      skip_load_and_authorize_resource only: [:show, :enable_downloads, :disable_downloads]
+      skip_load_and_authorize_resource only: [:show, :prevent_downloads, :allow_downloads]
     end
 
     def new
@@ -31,23 +31,23 @@ module CurationConcerns
       action_name == 'show' ? @presenter : @collection
     end
 
-    def enable_downloads
+    def allow_downloads
       file_type = params[:file_type]
       collection = Collection.find(params[:id])
-      toggle_downloadable(collection, true, file_type)
+      toggle_prevent_download(collection, false, file_type)
       redirect_to collection_path(collection), notice: 'Collection was successfully updated.'
     end
 
-    def disable_downloads
+    def prevent_downloads
       file_type = params[:file_type]
       collection = Collection.find(params[:id])
-      toggle_downloadable(collection, false, file_type)
+      toggle_prevent_download(collection, true, file_type)
       redirect_to collection_path(collection), notice: 'Collection was successfully updated.'
     end
 
     protected
 
-      def toggle_downloadable(collection, value, file_type)
+      def toggle_prevent_download(collection, value, file_type)
         authorize! :edit, collection
         case file_type
         when 'video'
@@ -63,7 +63,7 @@ module CurationConcerns
         end
 
         works.each do |work|
-          actor = CurationConcerns::CurationConcern.actor(work, current_user, { downloadable: value }) 
+          actor = CurationConcerns::CurationConcern.actor(work, current_user, { prevent_download: value }) 
           actor.update 
         end
       end

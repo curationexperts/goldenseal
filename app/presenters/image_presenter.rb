@@ -1,5 +1,5 @@
 class ImagePresenter < WorkShowPresenter
   include DisplayFields
 
-  delegate :downloadable, to: :solr_document
+  delegate :prevent_download, to: :solr_document
 end

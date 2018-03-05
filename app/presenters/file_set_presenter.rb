@@ -3,5 +3,5 @@ class FileSetPresenter < CurationConcerns::FileSetPresenter
     ::PermissionBadge
   end
 
-  delegate :downloadable, to: :solr_document
+  delegate :prevent_download, to: :solr_document
 end
