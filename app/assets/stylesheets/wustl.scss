@@ -234,6 +234,9 @@ body {
   .sort-submit-buttons {
     border-top: 1px solid #eeeeee;
   }
+  #set-access-controls .form-group .radio {
+	  margin-left: 15px;
+  }
 }
 
 @media screen and (max-width: 767px) {
