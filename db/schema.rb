@@ -77,7 +77,7 @@ ActiveRecord::Schema.define(version: 20180306025848) do
   end
 
   add_index "qa_local_authority_entries", ["local_authority_id"], name: "index_qa_local_authority_entries_on_local_authority_id"
-  add_index "qa_local_authority_entries", ["uri"], name: "index_qa_local_authority_entries_on_uri", unique: true
+  add_index "qa_local_authority_entries", ["uri"], name: "index_qa_local_authority_entries_on_uri"
 
   create_table "searches", force: :cascade do |t|
     t.text     "query_params"

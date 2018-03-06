@@ -9,6 +9,7 @@ module RightsService
   end
 
   def self.label(id)
-    authority.find(id).fetch(:label)
+    record = authority.find(id)
+    record.fetch(:label) if record
   end
 end

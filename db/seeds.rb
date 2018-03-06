@@ -20,6 +20,6 @@ authority = Qa::LocalAuthority.where(name: 'rights').first_or_create
 ["http://creativecommons.org/publicdomain/zero/1.0/","CC0 1.0 Universal"],
 ["http://www.europeana.eu/portal/rights/rr-r.html","All rights reserved"]].each do |record|
   Qa::LocalAuthorityEntry.where(local_authority: authority,
-                                 label: record[0],
-                                 uri: record[1]).first_or_create
+                                 label: record[1],
+                                 uri: record[0]).first_or_create
 end
