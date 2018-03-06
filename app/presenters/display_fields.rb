@@ -5,7 +5,7 @@ module DisplayFields
     delegate :identifier, :series, :date_issued, :note, :extent,
              :description_standard, :publication_place, :editor, :sponsor,
              :funder, :researcher, :height, :width, :mime_type, :filename,
-             :representative_id, :thumbnail_id, to: :solr_document
+             :representative_id, :thumbnail_id, :source, to: :solr_document
   end
 
   def permission_badge_class

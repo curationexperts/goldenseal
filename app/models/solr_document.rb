@@ -70,4 +70,8 @@ class SolrDocument
   def on_campus?
     read_groups.include? OnCampusAccess::OnCampus
   end
+
+  def source
+    self['source_tesim']
+  end
 end
