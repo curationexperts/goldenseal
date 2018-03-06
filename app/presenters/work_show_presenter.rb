@@ -29,5 +29,5 @@ class WorkShowPresenter < CurationConcerns::WorkShowPresenter
       Rails.application.routes.url_helpers.admin_set_path(admin_set_id)
     end
 
-    delegate :downloadable, to: :solr_document
+    delegate :prevent_download, to: :solr_document
 end

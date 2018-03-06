@@ -1,5 +1,5 @@
 <% if work.representative_id.present? && (fs = ::FileSet.load_instance_from_solr(work.representative_id)) %>
-  <% if work.downloadable.present? && work.downloadable == true %> 
+  <% unless work.prevent_download.present? && work.prevent_download == true %> 
     <%# AdminSetPresenter doesn't have tei_id %>
     <%= media_display fs, transcript_id: work.try(:tei_id) %>
   <% end %>

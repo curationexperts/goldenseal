@@ -3,7 +3,7 @@
   <div class="panel-heading">
     <h2>Files</h2>
   </div>
-  <% if @presenter.downloadable %>
+  <% unless @presenter.prevent_download.present? && @presenter.prevent_download == true %>
     <table class="table table-striped">
       <thead>
         <tr>
@@ -18,9 +18,10 @@
         <%= render presenter.file_presenters %>
       </tbody>
     </table>
-    <% elsif %>
-      <p class="center"><em>This <%= presenter.human_readable_type %> is not available for download</em></p>
-    <% end %>
+  <% end %>
+  <% if @presenter.prevent_download.present? && @presenter.prevent_download == true %>
+    <p class="center"><em>This <%= presenter.human_readable_type %> is not available for download</em></p>
+  <% end %>
 </div>
 <% elsif can? :edit, presenter.id %>
   <h2>Files</h2>

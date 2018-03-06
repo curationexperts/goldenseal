@@ -1,6 +1,6 @@
 module CurationConcerns
   class ImageForm < CommonForm
     self.model_class = ::Image
-    self.terms += [:downloadable]
+    self.terms += [:prevent_download]
   end
 end
