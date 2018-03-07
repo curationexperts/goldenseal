@@ -248,16 +248,6 @@ class CatalogController < ApplicationController
       }
     end
 
-    config.add_search_field('tei_json') do |field|
-      # field.include_in_simple_select = false
-      field.label = 'Content'
-      solr_name = 'tei_json_tesim'
-      field.solr_local_parameters = {
-        qf: solr_name,
-        pf: solr_name
-      }
-    end
-
     # "sort results by" select (pulldown)
     # label in pulldown is followed by the name of the SOLR field to sort by and
     # whether the sort is ascending or descending (it must be asc or desc
