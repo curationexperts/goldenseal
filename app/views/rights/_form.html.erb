@@ -1,5 +1,5 @@
 <% url = @right.id.nil? ? rights_path : right_path(@right) %>
-<%= simple_form_for(@right, url: url) do |f| %>
+<%= simple_form_for(@right, url: url, html: {class: "form-horizontal"}) do |f| %>
   <% if @right.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@right.errors.count, "error") %> prohibited this right from being saved:</h2>
@@ -11,10 +11,20 @@
     </div>
   <% end %>
 
-  <%= f.input :label %>
-  <%= f.input :uri %>
-
+  <div class="col-sm-3">  
+    <%= f.label :label, "Rights Statement Label"%>
+  </div>
+  <div class="col-sm-9">
+    <%= f.input :label, label: false %>
+  </div>
+  <div class="col-sm-3">
+    <%= f.label :uri, "URI" %>
+  </div>
+  <div class="col-sm-9">
+    <%= f.input :uri, label: false, disabled: !f.object.uri_editable? %>
+  </div>
   <div class="actions">
-    <%= f.submit "Save" %>
+    <%= f.submit "Save", :class => 'btn btn-primary' %>&nbsp;
+    <%= link_to 'Back', rights_path, :class => 'btn btn-default' %>
   </div>
 <% end %>
