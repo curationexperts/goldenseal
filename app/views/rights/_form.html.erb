@@ -1,0 +1,20 @@
+<% url = @right.id.nil? ? rights_path : right_path(@right) %>
+<%= simple_form_for(@right, url: url) do |f| %>
+  <% if @right.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@right.errors.count, "error") %> prohibited this right from being saved:</h2>
+      <ul>
+      <% @right.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.input :label %>
+  <%= f.input :uri %>
+
+  <div class="actions">
+    <%= f.submit "Save" %>
+  </div>
+<% end %>

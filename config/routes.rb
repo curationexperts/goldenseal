@@ -1,6 +1,7 @@
 ALLOW_DOTS ||= /[^\/]+(?=\.(html|json|ttl)\z)|[^\/]+/
 
 Rails.application.routes.draw do
+  resources :rights
   blacklight_for :catalog
   devise_for :users
   mount Hydra::Collections::Engine => '/'

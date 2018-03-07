@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151007130042) do
+ActiveRecord::Schema.define(version: 20180306163029) do
 
   create_table "bookmarks", force: :cascade do |t|
     t.integer  "user_id",       null: false
@@ -38,6 +38,47 @@ ActiveRecord::Schema.define(version: 20151007130042) do
 
   add_index "checksum_audit_logs", ["file_set_id", "file_id"], name: "by_generic_file_id_and_file_id"
 
+  create_table "curation_concerns_operations", force: :cascade do |t|
+    t.string   "status"
+    t.string   "operation_type"
+    t.string   "job_class"
+    t.string   "job_id"
+    t.string   "type"
+    t.text     "message"
+    t.integer  "user_id"
+    t.integer  "parent_id"
+    t.integer  "lft",                        null: false
+    t.integer  "rgt",                        null: false
+    t.integer  "depth",          default: 0, null: false
+    t.integer  "children_count", default: 0, null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
+  add_index "curation_concerns_operations", ["lft"], name: "index_curation_concerns_operations_on_lft"
+  add_index "curation_concerns_operations", ["parent_id"], name: "index_curation_concerns_operations_on_parent_id"
+  add_index "curation_concerns_operations", ["rgt"], name: "index_curation_concerns_operations_on_rgt"
+  add_index "curation_concerns_operations", ["user_id"], name: "index_curation_concerns_operations_on_user_id"
+
+  create_table "qa_local_authorities", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "qa_local_authorities", ["name"], name: "index_qa_local_authorities_on_name", unique: true
+
+  create_table "qa_local_authority_entries", force: :cascade do |t|
+    t.integer  "local_authority_id"
+    t.string   "label"
+    t.string   "uri"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
+
+  add_index "qa_local_authority_entries", ["local_authority_id"], name: "index_qa_local_authority_entries_on_local_authority_id"
+  add_index "qa_local_authority_entries", ["uri"], name: "index_qa_local_authority_entries_on_uri"
+
   create_table "searches", force: :cascade do |t|
     t.text     "query_params"
     t.integer  "user_id"
@@ -47,6 +88,15 @@ ActiveRecord::Schema.define(version: 20151007130042) do
   end
 
   add_index "searches", ["user_id"], name: "index_searches_on_user_id"
+
+  create_table "single_use_links", force: :cascade do |t|
+    t.string   "downloadKey"
+    t.string   "path"
+    t.string   "itemId"
+    t.datetime "expires"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "username",               default: "",    null: false
