@@ -26,3 +26,4 @@ config/ldap.yml
 
 sample_assets
 sample_assets.tgz
+**.swp
