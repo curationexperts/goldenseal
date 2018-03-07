@@ -102,7 +102,7 @@ model = options.delete(:model).capitalize
 dir = options.delete(:path)
 puts "Import #{model} records using metadata files in: #{dir}"
 
-puts "Starting import"
+puts "Starting import with #{importer_class(model)}"
 importer = importer_class(model).new(dir, options)
 importer.run
 print_importer_results(importer)
