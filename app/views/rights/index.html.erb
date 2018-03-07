@@ -1,9 +1,9 @@
-<h1>Listing Rights</h1>
+<h1 class="page-header">Rights Statements</h1>
 
-<table>
+<table class="table table-condensed table-responsive">
   <thead>
     <tr>
-      <th>Label</th>
+      <th>Rights Statement Label</th>
       <th>URI</th>
       <th colspan="2"></th>
     </tr>
@@ -14,8 +14,8 @@
       <tr>
         <td><%= right.label %></td>
         <td><%= right.uri %></td>
-        <td><%= link_to 'Edit', edit_right_path(right) %></td>
-        <td><%= link_to 'Destroy', right_path(right), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_right_path(right), :class => "btn btn-xs btn-primary" %></td>
+        <td><%= link_to 'Destroy', right_path(right), method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-xs btn-default" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -23,4 +23,4 @@
 
 <br>
 
-<%= link_to 'New Right', new_right_path %>
+<%= link_to 'Add New Rights Statement', new_right_path, :class => 'btn btn-primary' %>
