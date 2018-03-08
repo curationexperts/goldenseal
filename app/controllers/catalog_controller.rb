@@ -118,7 +118,6 @@ class CatalogController < ApplicationController
     end
 
     config.add_search_field('tei_json') do |field|
-      # field.include_in_simple_select = false
       field.label = 'Content'
       solr_name = 'tei_json_tesim'
       field.solr_local_parameters = {
