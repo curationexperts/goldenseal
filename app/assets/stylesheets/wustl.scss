@@ -224,9 +224,12 @@ body {
     background-color: #eee;
     padding: 10px;
   }
-  h3.limit-criteria-heading, h3.query-criteria-heading {
+  h3.query-criteria-heading {
     margin-top: 0;
     font-size: 20px;
+  }
+  h3.limit-criteria-heading {
+	  margin-top: 2px;
   }
   h5.panel-title a {
     color: #002b5b
