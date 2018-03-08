@@ -1,0 +1,11 @@
+sample-assets*
+.bundle
+.convox
+.env
+.git
+!.git/logs/HEAD
+db/*.sqlite3
+db/*.sqlite3-journal
+log/*
+tmp/*
+!tmp/.gitkeep
