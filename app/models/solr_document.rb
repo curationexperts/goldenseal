@@ -70,4 +70,9 @@ class SolrDocument
   def on_campus?
     read_groups.include? OnCampusAccess::OnCampus
   end
+
+  def prevent_download
+    self['prevent_download_bsi']
+  end
+
 end
