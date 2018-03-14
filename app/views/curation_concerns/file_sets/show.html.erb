@@ -1,0 +1,17 @@
+<% provide :page_title, @presenter.page_title %>
+<% provide :page_header do %>
+  <h1>File Details <small><%= @presenter.title %></small></h1>
+<% end %>
+<%= media_display @presenter %>
+<%= render "attributes", curation_concern: @presenter %>
+
+  <div class="form-actions">
+    <% unless @presenter.prevent_download.present? && @presenter.prevent_download == true %>
+      <%= link_to "Download this File", main_app.download_path(@presenter), class: 'btn btn-default' %>
+    <% end %>
+    <% if can? :edit, @presenter.id %>
+      <%= link_to "Edit this File", edit_polymorphic_path([main_app, @presenter]), class: 'btn btn-default'  %>
+    <% end %>
+
+    <%= link_to "Back to #{parent.human_readable_type}", parent_path(parent), class: 'btn btn-default' %>
+  </div>
