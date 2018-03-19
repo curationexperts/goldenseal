@@ -25,3 +25,4 @@ config/resque-pool.yml
 config/ldap.yml
 
 public/uploads
+**/*.swp
