@@ -1,12 +1,16 @@
 ALLOW_DOTS ||= /[^\/]+(?=\.(html|json|ttl)\z)|[^\/]+/
 
 Rails.application.routes.draw do
+  mount Blacklight::Oembed::Engine, at: 'oembed'
+  root to: 'spotlight/exhibits#index'
+  mount Spotlight::Engine, at: 'spotlight'
+#  root to: 'spotlight/exhibits#index' # replaced by spotlight root path
   blacklight_for :catalog
   devise_for :users
   mount Hydra::Collections::Engine => '/'
   mount CurationConcerns::Engine, at: '/'
   resources :welcome, only: :index
-  root to: "welcome#index"
+#  root to: "welcome#index" # replaced by spotlight root path
   iiif_for 'riiif/image', at: '/image-service'
   curation_concerns_collections
   curation_concerns_basic_routes
