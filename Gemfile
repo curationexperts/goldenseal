@@ -39,6 +39,7 @@ gem 'riiif', '0.2.0'
 gem 'openseadragon', '~> 0.2.1'
 gem 'angularjs-rails', '~> 1.4.4'
 gem 'ldp', '~> 0.4.1'
+gem 'blacklight-spotlight', path: './tmp/spotlight'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -73,3 +74,10 @@ gem 'devise_ldap_authenticatable'
 gem 'devise-guests', '~> 0.3'
 
 gem 'font-awesome-rails'
+
+gem 'friendly_id'
+gem 'sitemap_generator'
+gem 'blacklight-gallery', '>= 0.3.0'
+gem 'blacklight-oembed'
+gem 'social-share-button'
+gem 'devise_invitable'
