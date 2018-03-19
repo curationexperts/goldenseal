@@ -13,6 +13,8 @@ class ApplicationController < ActionController::Base
   helper Openseadragon::OpenseadragonHelper
   # Adds a few additional behaviors into the application controller
   include Blacklight::Controller
+  include Spotlight::Controller
+
 
   # Adds CurationConcerns behaviors to the application controller.
   include Hydra::Controller::ControllerBehavior
