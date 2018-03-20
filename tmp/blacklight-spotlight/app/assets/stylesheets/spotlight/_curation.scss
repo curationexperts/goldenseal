@@ -1,0 +1,220 @@
+.page-links a {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.missing-description {
+  font-style: italic;
+}
+.expanded-add-button {
+  display: inline-block;
+  .input-field {
+    input[type='text'] {
+      @extend .input-sm;
+      height: auto;
+      padding: 0 5px;
+      width: 195px;
+      color: black;
+      border-color: white;
+    }
+    input[type='submit'] {
+      @extend .btn;
+      @extend .btn-default;
+      @extend .btn-xs;
+    }
+    display: none;
+  }
+  [data-expanded-add-button] {
+    text-align: left;
+  }
+}
+
+
+.panel-heading {
+  .pic.thumbnail {
+    width: 70px;
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  .checkbox {
+    width: 3%;
+    vertical-align: top;
+    display: inline-block;
+    padding-top: 0;
+  }
+
+  .publish-control {
+    display: inline;
+    .checkbox {
+      padding-top: 0;
+    }
+  }
+
+  .main {
+    display: inline-block;
+    vertical-align: text-bottom;
+  }
+
+  .btn-link.collapse-toggle {
+    // removing padding and margins to style this button as a simple link
+    // with the expected vertical alignment with the rest of the header.
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.panel-heading.page {
+  &:hover {
+    @include panel-hover-highlighting;
+  }
+  .panel-title {
+    font-size: 15px;
+    &[data-in-place-edit-target]:hover:after {
+      content: "\270f";
+      font-family: "Glyphicons Halflings";
+      line-height: 1;
+      margin-left: 6px;
+      display: inline-block;
+      color: #777;
+    }
+    &[data-in-place-edit-target].hide-edit-icon:after {
+      display: none;
+    }
+  }
+
+  .page-links, .contact-links {
+    text-align: right;
+    a {
+      padding: 0 2px;
+    }
+  }
+  .main {
+    width: 99%;
+    vertical-align: text-top;
+  }
+}
+
+.contacts_admin .panel-heading.page .main {
+  width: 95%;
+}
+
+.panel-heading.item-grid {
+  &:hover {
+    @include panel-hover-highlighting;
+  }
+  .main {
+    width: 65%;
+    vertical-align: top;
+    display: inline-block;
+    margin-left: $padding-base-horizontal;
+  }
+  .remove {
+    width: 10%;
+    vertical-align: top;
+    display: inline-block;
+    margin-left: $padding-base-horizontal;
+  }
+}
+
+.panel-heading.search {
+  &:hover {
+    @include panel-hover-highlighting;
+  }
+  /* widths don't add up to 100% because of padding of the container. */
+  .main {
+    width: 40%;
+    vertical-align: top;
+    display: inline-block;
+    margin-left: $padding-base-horizontal;
+  }
+  .description {
+    width: 30%;
+    vertical-align: top;
+    display: inline-block;
+  }
+  .panel-title {
+    font-size: 15px;
+  }
+}
+
+#edit-search {
+  .input-group-addon {
+    background: none;
+    border: none;
+  }
+  #preview {
+    height: 60px;
+    width: 60px;
+  }
+}
+
+h1,h2,h3,h4,h5,h6 {
+  & + .instructions {
+    border-top: 1px solid lightgray;
+    padding-top: 5px;
+  }
+}
+
+.label.curation-widget {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.7em 1em;
+  a {
+    color: white;
+    text-decoration: underline;
+  }
+}
+
+#content-header {
+  height: auto;
+  min-height: 0;
+}
+.spotlight-admin-thumbnail {
+  position: relative;
+  .label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.facet-metadata {
+  @extend .text-muted;
+  font-size: $font-size-base;
+  text-align: right;
+}
+
+table#exhibit-specific-fields {
+  margin-top: 1em;
+  .field-label {
+    min-width: 10em;
+    font-size: $font-size-h4;
+  }
+  .field-description {
+    font-size: $font-size-base;
+    vertical-align: middle;
+  }
+  .actions a {
+    padding: 0 2px;
+  }
+}
+
+#nested-navigation {
+  margin-bottom: 2 * $padding-large-vertical;
+}
+
+table.users {
+  td:nth-child(3), th:nth-child(3) {
+    text-align: center;
+  }
+}
+
+table.tags {
+  td:nth-child(2), th:nth-child(2) {
+    text-align: right;
+  }
+  td:nth-child(3), th:nth-child(3) {
+    text-align: center;
+  }
+}

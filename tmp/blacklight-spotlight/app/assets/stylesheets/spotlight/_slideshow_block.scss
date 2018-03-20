@@ -1,0 +1,84 @@
+.carousel-block {
+  
+  .carousel-inner > .item > a > img {
+    // center the image
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .carousel-caption {
+
+    // replace bottom margin with padding
+    bottom: 0;
+    padding-bottom: 40px;
+
+    // fill left + right
+    left: 0;
+    right: 0;
+    
+    // and add a nice background gradient to the captions
+    @include gradient-vertical($start-color: rgba(0,0,0,.0001), $end-color: rgba(0,0,0,.5));
+  }
+
+  // Scale up controls for tablets and up
+  @media screen and (min-width: $screen-sm-min) {
+    // Show and left align the captions
+    .carousel-caption {
+      left: 0;
+      right: 0;
+      padding-bottom: 50px;
+    }
+  }
+
+  &.carousel-height-small {
+    .carousel-inner > .item > a > img {
+      height: 350px;
+    }
+  }
+
+  &.carousel-height-medium {
+    .carousel-inner > .item > a > img {
+      height: 500px;
+    }
+  }
+
+  &.carousel-height-large {
+    .carousel-inner > .item > a > img {
+      height: 800px;
+    }
+  }
+}
+
+.item-features {
+  .carousel-indicators {
+    bottom: initial;
+    left: initial;
+    margin-left: 0;
+    text-align: left;
+
+    &.col-sm-6 {
+      @extend .col-sm-6;
+    }
+
+    li {
+      display: relative; 
+      width: 100%;
+      height: auto;
+      text-indent: 0;
+      margin: 0;
+      border: none;
+      border-radius: 0;
+
+      @extend .list-group-item;
+    }
+
+    .active, .active:hover {
+      @extend .list-group-item;
+
+      width: 100%;
+      height: auto;
+
+      a { color: #fff; }
+    }
+  }
+}

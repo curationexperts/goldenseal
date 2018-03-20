@@ -1,0 +1,118 @@
+#documents.table {
+  font-size: $font-size-base;
+
+  .document-thumbnail {
+    border: none;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .document-thumbnail a > img {
+    border: 1px solid $gray-light;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+  }
+
+  .document-counter {display: none;}
+
+  .index_title {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .checkbox.toggle_visibility {
+    padding-top: 0;
+  }
+}
+
+#document {
+  ul.tags {
+    text-align: center;
+    li {
+      @extend .label;
+      @extend .label-default;
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.document, tr.doc-row, li.dd-item, .autocomplete-item {
+  &.blacklight-private {
+    .index_title, h1, .panel-title, .autocomplete-title {
+      @include private-label;
+    }
+  }
+}
+
+.blacklight-catalog-admin {
+  .add-items-nav {
+    margin-bottom: $padding-large-vertical;
+  }
+}
+
+form.edit_solr_document {
+  .bootstrap-tagsinput {
+    display: block;
+  }
+  .bg-warning.help-block {
+    font-size: 0.9em;
+    padding: 3px 6px;
+  }
+}
+
+.bootstrap-tagsinput {
+  .twitter-typeahead {
+    width: auto;
+  }
+
+  .tt-input {
+    vertical-align: baseline !important;
+  }
+}
+
+.blacklight-catalog-edit, .blacklight-catalog-show {
+  .thumbnail {
+    @extend .col-md-6;
+  }
+
+  .edit_solr_document {
+    float: right;
+    @extend .col-md-6;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+  }
+
+  .tags, .dl-horizontal {
+    @extend .col-md-6;
+  }
+
+  #document {
+    @extend .clearfix;
+    @extend .row;
+  }
+}
+
+.edit_solr_document {
+  @extend .clearfix;
+}
+
+#save-this-search {
+  float:left;
+  margin-right: $padding-xs-horizontal;
+}
+
+#document {
+  dd.blacklight-exhibit_tags {
+    color: $body-bg;
+    line-height: 2em;
+  }
+
+  .blacklight-exhibit_tags a {
+    @extend .label;
+    @extend .label-default;
+  }
+}

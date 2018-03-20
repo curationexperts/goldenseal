@@ -1,0 +1,67 @@
+@mixin record-thubmnail-textarea {
+  color: #42474b;
+  border: 0.1em solid #d4d4d4;
+  padding: 0 .6em;
+}
+.item-text {
+  .image-block {
+    max-width: 30%;
+
+    .thumbnail {
+      margin-bottom: 5;
+    }
+    &.pull-left {
+      .thumbnail {
+        margin-right: 15px;
+      }
+    }
+    &.pull-right {
+      .thumbnail {
+        margin-left: 15px;
+      }
+    }
+    .primary-caption, .secondary-caption {
+      text-align: center;
+      font-style: italic;
+    }
+  }
+}
+
+.st-block input[type="text"] {
+    @extend .form-control;
+}
+.primary-caption, .secondary-caption, .auto-cyle-images {
+  select {
+    margin-left: 10px;
+  }
+}
+
+.max-heights {
+  label.carousel-size {
+    margin-left: 5px;
+    padding-right: 10px;
+    font-weight: normal;
+  }
+}
+
+.item-text-admin {
+  .text-align {
+    margin-top: 15px;
+  }
+  .dd3-content {
+    &.panel-default {
+      padding-left: 0;
+    }
+  }
+  #item-text {
+    @extend .form-control;
+
+    min-height: 7em;
+
+    &:hover, &:active {
+      @include record-thubmnail-textarea;
+    }
+    @include record-thubmnail-textarea;
+
+  }
+}

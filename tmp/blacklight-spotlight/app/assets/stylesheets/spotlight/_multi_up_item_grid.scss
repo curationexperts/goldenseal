@@ -1,0 +1,61 @@
+.item-grid-admin {
+  .field {
+    input[type='text'] {
+      width: 89%;
+    }
+
+    .twitter-typeahead {  
+      margin-bottom: 2*$padding-base-vertical;
+    }
+  }
+  .field-select {
+    margin-top: 2*$padding-base-vertical;
+    select {
+      display: inline;
+      width: auto;
+    }
+  }
+  .dd3-item {
+    margin-bottom: 2*$padding-base-vertical;
+  }
+}
+// Hide the secondary caption field
+// for the Features block so we can
+// re-use the rest from the generic
+// multi-up item grid.
+[data-type='item-features'] {
+  .secondary-caption {
+    display: none;
+  }
+}
+.spotlight-flexbox {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+
+  .box {
+    text-align: center;
+    padding: 1em;
+    min-width: 125px;
+
+    @media (max-width: $screen-xs-max) {
+      min-width: 200px;
+    }
+
+    .caption {
+      margin-top: 5px;
+      font-style: italic;
+    }
+    img {
+      max-width: 100%;
+    }
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+}

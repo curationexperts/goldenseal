@@ -1,0 +1,275 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+.blacklight-home_pages-show .edit-button {
+  margin-bottom: 2em;
+}
+
+.form-actions {
+  @extend .clearfix;
+}
+
+.primary-actions {
+  @extend .pull-right;
+}
+
+#nested-pages {
+  margin-bottom: 1em;
+}
+
+.st-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $panel-info-heading-bg;
+  padding: 3px 8px;
+  color: $panel-info-text;
+  font-weight: bold;
+}
+
+.st-block__inner {
+  div.field + div.field {
+    margin-top: 2 * $padding-large-vertical;
+  }
+
+  .field-select {
+    margin-bottom: $padding-large-vertical;
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+      margin-bottom: 2 * $padding-large-vertical;
+
+      > select {
+        margin-left: 2 * $padding-small-horizontal;
+      }
+    }
+  }
+}
+
+#sidebar {
+  li {
+    margin-top: $padding-small-vertical;
+  }
+  h4 {
+    line-height: $line-height-large;
+  }
+  .contacts-header {
+    margin-top: 4 * $padding-large-vertical;
+  }
+  ol.contacts {
+    li {
+      margin-bottom: 2 * $padding-large-vertical;
+      margin-top: $padding-small-vertical;
+      .name {
+        font-weight: bold;
+      }
+    }
+  }
+
+  ol.sidenav {
+    li {
+      color: $gray-darker;
+      a {
+        &:hover, &:focus {
+          @include link-highlighting();
+        }
+      }
+      > h4 {
+        font-size: ceil(($font-size-base * 1.05));
+        margin-top: 3 * $padding-large-vertical;
+        > a {
+          color: $text-color;
+          display: block;
+          font-weight: 400;
+        }
+      }
+    }
+    ol.subsection {
+      padding-left: 0;
+      li {
+        list-style: square;
+        margin-left: 18px;
+        > a {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.contacts_admin .name {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.contact-photo {
+  border: 1px solid #ccc;
+  border-radius: $border-radius-base;
+  float: left;
+  margin-right: 15px;
+  margin-top: 3px;
+}
+
+// Indent contact fields so they align evenly, only when there is a contact photo
+.sidenav.contacts .contact-photo + div[itemprop] ~ div[itemprop] {
+  margin-left: 87px;
+}
+
+.item-grid-block {
+  h3 {margin-top: 0;}
+  .items-col {
+    margin-bottom: 1em;
+    z-index: 1;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: stretch;
+
+    .box {
+      align-self: auto;
+      order: 1;
+      margin: auto;
+      flex: 0 1 25%;
+
+      .thumbnail {
+        border: 1px solid $gray-lighter;
+        padding: 0;
+        margin: 0;
+        border-radius: 0;
+
+        a {
+          & > img {
+            border: 1px solid $gray-light;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            overflow: hidden;
+          }
+        }
+
+      }
+
+      min-width: 25%;
+      height: 120px;
+      @media (min-width: $screen-lg-min) {
+        height: 170px; // default: no sidebar, no text column
+        // reduce height if on a page with a sidebar or text column, because will be less wide
+        .col-md-9 & {
+          height: 135px;
+        }
+      }
+      padding: 5px;
+    }
+
+    .item-0 {
+      flex: 3 1 41%;
+    }
+
+    .item-2 {
+      flex: 2 1 33%;
+    }
+
+    .item-0, .item-1, .item-2 {
+      height: 220px;
+      order: 0;
+      @media (min-width: $screen-lg-min) {
+        height: 280px; // default: no sidebar, no text column
+        // reduce height if on a page with a sidebar or text column, because will be less wide
+        .col-md-9 & {
+          height: 240px;
+        }
+      }
+    }
+  }
+  @media (max-width: $screen-sm-max) {
+    &.items-block .items-col {margin-bottom: $line-height-computed;}
+  }
+  @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    &.items-block .items-col .box {min-width: 128px;}
+  }
+}
+
+.preview-btn, .preview-exit-btn {
+  float: left;
+  width: 100px;
+}
+
+.missing-croppable {
+  display: none;
+}
+
+.item-input-field[disabled="disabled"] {
+  visibility: hidden;
+}
+
+.empty-page-block {
+  @extend .alert;
+  @extend .alert-info;
+  margin-top: $padding-large-vertical;
+  h2 {
+    margin-top: 0;
+  }
+  p, ol > li {
+    padding: $padding-small-vertical;
+  }
+  ol > li:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.oembed-block {
+  @media (max-width: $screen-sm-max) {
+    margin-bottom: $padding-base-horizontal;
+  }
+}
+
+.items-block {
+
+  .text-col {
+    float: none;
+    width: auto;
+  }
+  .items-col {
+    z-index: 1;
+
+    @media (max-width: $screen-sm-max) {
+      margin-bottom: 0;
+    }
+
+    .box {
+      min-width: 150px;
+    }
+
+    /* two items */
+    .box:first-child:nth-last-child(2),
+    .box:first-child:nth-last-child(2) ~ .box {
+        min-width: 250px;
+    }
+
+    /* only images, no text */
+    &:last-child {
+      .box {
+        padding: 0.25em;
+        img {
+          height: 250px;
+          object-fit: cover;
+          @media (max-width: $screen-sm-max) {
+            height: 175px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.item-features .carousel-indicators {
+  @media (max-width: $screen-xs-max) {
+    width: 100%;
+    margin-top: 2 * $padding-large-vertical;
+  }
+}
+
+.carousel-block .carousel-caption h3 {
+  padding-left: 2 * $padding-large-horizontal;
+  padding-right: 2 * $padding-large-horizontal;
+}

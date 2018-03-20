@@ -1,0 +1,166 @@
+@mixin masthead-background-containers() {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: block;
+  width: auto;
+  height: inherit;
+}
+
+@mixin transparent-masthead-navigation-menu() {
+  @extend .navbar-transparent;
+
+  border: 0;
+  border-radius: 0;
+
+  ul.nav.navbar-nav {
+    > li {
+      text-transform: uppercase;
+
+      a {
+        letter-spacing: 1.2px;
+      }
+    }
+
+    .dropdown-menu {
+      text-transform: none;
+    }
+  }
+}
+
+.navbar-static-top {
+  margin-bottom: 0;
+}
+
+.masthead {
+  background-color: $masthead-bg;
+  border-bottom: 1px solid $navbar-default-border;
+  margin-bottom: $padding-large-vertical * 2.5;
+  padding: 0;
+  position: relative;
+  // allow dropdowns in the top nav to stack above the masthead
+  z-index: $zindex-navbar - 1;
+
+
+  .site-title {
+    padding-bottom: $padding-base-vertical;
+    position: relative;
+    white-space: nowrap;
+  }
+
+  small {
+    @extend .hidden-xs;
+
+    display: block;
+    padding-bottom: $padding-base-vertical;
+    padding-top: $padding-base-vertical;
+  }
+
+  .navbar {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .navbar-form {
+    text-align: right;
+  }
+}
+
+.resource-masthead {
+  .site-title {
+    @extend .text-center;
+  }
+
+  .navbar {
+    border-bottom: 1px solid $navbar-transparent-border;
+    border-top: 0;
+    margin-bottom: 0;
+  }
+
+  .navbar-nav {
+    float: right;
+  }
+
+  .search-query-form {
+    display: none;
+  }
+}
+
+.site-title-container {
+  max-height: $masthead-height - $navbar-height;
+  padding-bottom: $padding-large-vertical;
+  padding-top: $padding-large-vertical;
+}
+
+.image-masthead {
+  .navbar {
+    @include transparent-masthead-navigation-menu();
+    background-color: $navbar-transparent-page-bg;
+  }
+
+  .h1 {
+    color: $white;
+    text-shadow: 1px 1px 0 $black;
+  }
+
+  small {
+    color: $white;
+  }
+
+  // This is to add a background image to the masthead, in a way that
+  // enables the site title and subtitle text to be visible above it.
+  .background-container {
+    @include masthead-background-containers();
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    // Add right border to image to hide lighter blurred edge
+    border-right: 1px solid $black;
+
+    // Add small amount of blur to help text stand out
+    //filter: url(masthead/blur.svg#blur); // for older versions of FF
+    -webkit-filter: blur($masthead-image-blur);
+    filter: blur($masthead-image-blur);
+
+    height: 100%;
+
+    // Shift image slightly to hide blurred edge of image
+    margin-left: -$masthead-image-blur;
+    margin-top: -$masthead-image-blur;
+    overflow: hidden;
+  }
+
+  // Include gradient to improve text legibility,
+  // especially on light background images.
+  .background-container-gradient {
+    @include masthead-background-containers();
+    background:
+     linear-gradient(
+       rgba(0, 0, 0, 0.0),
+       rgba(0, 0, 0, 0.4),
+       rgba(0, 0, 0, 0.5)
+     );
+
+    height: 100%;
+  }
+}
+
+.col-md-4 {
+  .submit-search-text {
+    // hide 'search' label
+    // copied from .sr-only, sadly can't seem to use @extend in a media
+    // query like this, have to copy.
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+  }
+
+  .glyphicon-search {
+    line-height: $line-height-computed;
+  }
+}

@@ -1,0 +1,16 @@
+@mixin jcrop-loading-background {
+  background-image: image-url('Jcrop.gif');
+  background-color: transparent !important;
+}
+.form-group.croppable-loading-area {
+  min-height: 100px;
+  margin: ($padding-large-vertical * 2) $padding-large-vertical;
+}
+
+.loading-jcrop {
+  @include jcrop-loading-background;
+  .jcrop-tracker {
+    @include jcrop-loading-background;
+  }
+}
+

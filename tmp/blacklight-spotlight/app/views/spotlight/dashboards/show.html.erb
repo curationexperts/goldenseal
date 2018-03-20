@@ -1,0 +1,13 @@
+<%= render 'spotlight/shared/exhibit_sidebar' %>
+
+<div id="content" class="col-md-9">
+  <%= curation_page_title %>
+
+  <div class="pageHistory clearfix">
+    <%= render 'page_activity' %>
+  </div>
+  
+  <div class="updatedItems clearfix">
+    <%= render 'solr_document_activity' %>
+  </div>
+</div>

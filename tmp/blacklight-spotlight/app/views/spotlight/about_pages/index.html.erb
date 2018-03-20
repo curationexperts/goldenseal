@@ -1,0 +1,7 @@
+<%= render 'spotlight/shared/exhibit_sidebar' %>
+<div id="content" class="col-md-9">
+  <%= render 'order_pages' %>
+  <% if can? :manage, Spotlight::Contact.new(exhibit: @exhibit) %>
+  <%= render 'contacts_form' %>
+  <% end %>
+</div>
