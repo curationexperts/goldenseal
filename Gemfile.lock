@@ -1,5 +1,5 @@
 PATH
-  remote: tmp/blacklight-spotlight
+  remote: vendor/blacklight-spotlight
   specs:
     blacklight-spotlight (0.17.1)
       acts-as-taggable-on (~> 3.5)

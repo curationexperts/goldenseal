@@ -39,7 +39,7 @@ gem 'riiif', '0.2.0'
 gem 'openseadragon', '~> 0.2.1'
 gem 'angularjs-rails', '~> 1.4.4'
 gem 'ldp', '~> 0.4.1'
-gem 'blacklight-spotlight', path: './tmp/blacklight-spotlight'
+gem 'blacklight-spotlight', path: './vendor/blacklight-spotlight'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
