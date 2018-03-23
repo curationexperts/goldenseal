@@ -207,6 +207,7 @@ class CatalogController < ApplicationController
 
     config.add_search_field('tag') do |field|
       field.include_in_simple_select = false
+      field.include_in_advanced_search = false
       solr_name = solr_name('tag', :stored_searchable, type: :string)
       field.solr_local_parameters = {
         qf: solr_name,
@@ -216,6 +217,7 @@ class CatalogController < ApplicationController
 
     config.add_search_field('contributor') do |field|
       field.include_in_simple_select = false
+      field.include_in_advanced_search = false
       # solr_parameters hash are sent to Solr as ordinary url query params.
 
       # :solr_local_parameters will be sent using Solr LocalParams
@@ -232,6 +234,7 @@ class CatalogController < ApplicationController
 
     config.add_search_field('depositor') do |field|
       field.include_in_simple_select = false
+      field.include_in_advanced_search = false
       solr_name = solr_name('depositor', :stored_searchable, type: :string)
       field.solr_local_parameters = {
         qf: solr_name,
