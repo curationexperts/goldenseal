@@ -1,10 +1,19 @@
 class ApplicationController < ActionController::Base
   before_action :fake_sign_in
+  before_action :set_default_url_options
 
   def fake_sign_in
     if Rails.env.development? && ENV['SKIP_LDAP']
       sign_in(:user, User.first)
     end
+  end
+
+  def set_default_url_options
+    ActionMailer::Base.default_url_options = {:host => request.host_with_port}
+    Rails.application.routes.default_url_options = {
+      host: request.host_with_port,
+      protocol: request.protocol
+    }
   end
 
   rescue_from DeviseLdapAuthenticatable::LdapException do |exception|
