@@ -17,13 +17,20 @@ class CatalogController < ApplicationController
     config.default_solr_params = {
       qf: search_config['qf'],
       qt: search_config['qt'],
-      rows: search_config['rows']
+      rows: search_config['rows'],
+      
+      "hl.simple.pre": '<mark><em>',
+      "hl.simple.post": '</em></mark>',
+      "hl.alternateField": "dd",
+      hl: true
     }
+
+    
 
     # solr field configuration for search results/index views
     config.index.title_field = solr_name('title', :stored_searchable)
     config.index.display_type_field = solr_name('has_model', :symbol)
-
+    
     config.index.thumbnail_field = 'thumbnail_path_ss'
     config.index.partials += [:action_menu]
 
@@ -51,20 +58,20 @@ class CatalogController < ApplicationController
 
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display
-    config.add_index_field solr_name('description', :stored_searchable), helper_method: :index_description, length: 300
-    config.add_index_field solr_name('tag', :stored_searchable)
-    config.add_index_field solr_name('subject', :stored_searchable)
-    config.add_index_field solr_name('creator', :stored_searchable)
-    config.add_index_field solr_name('contributor', :stored_searchable)
-    config.add_index_field solr_name('publisher', :stored_searchable)
-    config.add_index_field solr_name('based_near', :stored_searchable)
-    config.add_index_field solr_name('language', :stored_searchable)
+    config.add_index_field solr_name('description', :stored_searchable), helper_method: :index_description, length: 300, highlight: true
+    config.add_index_field solr_name('tag', :stored_searchable), highlight: true
+    config.add_index_field solr_name('subject', :stored_searchable), highlight: true
+    config.add_index_field solr_name('creator', :stored_searchable), highlight: true
+    config.add_index_field solr_name('contributor', :stored_searchable), highlight: true
+    config.add_index_field solr_name('publisher', :stored_searchable), highlight: true
+    config.add_index_field solr_name('based_near', :stored_searchable), highlight: true
+    config.add_index_field solr_name('language', :stored_searchable), highlight: true
     config.add_index_field uploaded_field, helper_method: :formatted_time, label: 'Date Uploaded'
     config.add_index_field modified_field, helper_method: :formatted_time, label: 'Date Modified'
     config.add_index_field 'date_issued_dtsi', helper_method: :formatted_time, label: 'Date Issued'
-    config.add_index_field 'rights_label_ss', label: 'Content License'
-    config.add_index_field solr_name('human_readable_type', :stored_searchable), label: 'Item Type'
-    config.add_index_field solr_name('format', :stored_searchable)
+    config.add_index_field 'rights_label_ss', label: 'Content License', highlight: true
+    config.add_index_field solr_name('human_readable_type', :stored_searchable), label: 'Item Type', highlight: true
+    config.add_index_field solr_name('format', :stored_searchable), highlight: true
 
     # "fielded" search configuration. Used by pulldown among other places.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields
@@ -265,5 +272,8 @@ class CatalogController < ApplicationController
     # If there are more than this many search results, no spelling ("did you
     # mean") suggestion is offered.
     config.spell_max = 5
+
+    config.add_field_configuration_to_solr_request!
+    
   end
 end
