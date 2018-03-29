@@ -127,3 +127,10 @@ The `tmp/uploads` directory is where uploaded files are temporarily stored befor
 You must be sure that all the background jobs have finished using the files before you delete them, so rather than deleting everything under `tmp/uploads`, we recommend that you only delete files and directories that are more than a few days old.
 
 For a little more background [see story #199](https://github.com/curationexperts/goldenseal/issues/199)
+
+## Spotlight Notes
+### Workflow
+- Create Spotlight Exhibits from all Admin Sets
+- Update search of index CC works to work with SL Exhibits
+- autocomplete
+  - Set autocmplete_default_param in new Spotlight initializer

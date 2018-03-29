@@ -1,11 +1,9 @@
 class User < ActiveRecord::Base
-  include Spotlight::User  # Connects this user object to Hydra behaviors.
-  include Hydra::User
-  # Connects this user object to Curation Concerns behaviors.
-  include CurationConcerns::User
 
-  # Connects this user object to Blacklights Bookmarks.
-  include Blacklight::User
+  include Blacklight::User # Connects this user object to Blacklights Bookmarks.
+  include CurationConcerns::User
+  include Hydra::User
+  include Spotlight::User  
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -18,6 +16,10 @@ class User < ActiveRecord::Base
     end
   else
     include WithLdapGroups
+  end
+
+  def email
+    "test@example.com"
   end
 
 

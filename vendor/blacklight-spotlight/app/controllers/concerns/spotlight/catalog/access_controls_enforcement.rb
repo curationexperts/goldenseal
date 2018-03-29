@@ -28,7 +28,6 @@ module Spotlight
 
         def apply_exhibit_resources_filter(solr_params)
           return unless current_exhibit
-
           current_exhibit.solr_data.each do |facet_field, values|
             Array(values).each do |value|
               solr_params.append_filter_query send(:facet_value_to_fq_string, facet_field, value)

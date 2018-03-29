@@ -33,7 +33,7 @@ module Spotlight
     has_many :feature_pages, extend: FriendlyId::FinderMethods
     has_many :main_navigations, dependent: :delete_all
     has_many :owned_taggings, class_name: 'ActsAsTaggableOn::Tagging', as: :tagger
-    has_many :resources
+    #has_many :resources
     has_many :roles, as: :resource, dependent: :delete_all
     has_many :searches, dependent: :destroy, extend: FriendlyId::FinderMethods
     has_many :solr_document_sidecars, dependent: :delete_all
@@ -48,14 +48,22 @@ module Spotlight
     belongs_to :masthead, dependent: :destroy
     belongs_to :thumbnail, class_name: 'Spotlight::FeaturedImage', dependent: :destroy
 
+    #accepts_nested_attributes_for :about_pages, :attachments, :contacts, :custom_fields, :feature_pages,
+    #                              :main_navigations, :owned_taggings, :resources, :searches, :solr_document_sidecars
     accepts_nested_attributes_for :about_pages, :attachments, :contacts, :custom_fields, :feature_pages,
-                                  :main_navigations, :owned_taggings, :resources, :searches, :solr_document_sidecars
+                                  :main_navigations, :owned_taggings, :searches, :solr_document_sidecars
+
     accepts_nested_attributes_for :blacklight_configuration, :home_page, :masthead, :thumbnail, :filters, update_only: true
     accepts_nested_attributes_for :contact_emails, reject_if: proc { |attr| attr['email'].blank? }
     accepts_nested_attributes_for :roles, allow_destroy: true, reject_if: proc { |attr| attr['user_key'].blank? && attr['id'].blank? }
 
     before_save :sanitize_description, if: :description_changed?
     include Spotlight::DefaultThumbnailable
+
+    def resources
+      #TODO: use search_results() instead, like in spotlight/catalog_controller
+      [Video, Text, Audio].collect{|klass| klass.where(exhibit_name_tesim: self.to_s)}.flatten
+    end
 
     def main_about_page
       @main_about_page ||= about_pages.published.first
@@ -101,6 +109,7 @@ module Spotlight
     end
 
     def reindex_progress
+      return nil
       @reindex_progress ||= ReindexProgress.new(resources.order('updated_at')) if resources
     end
 
