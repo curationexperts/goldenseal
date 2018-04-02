@@ -1,10 +1,6 @@
 # -*- encoding : utf-8 -*-
 class SolrDocument
   include Blacklight::Solr::Document
-  include Spotlight::SolrDocument
-
-  include Spotlight::SolrDocument::AtomicUpdates
-
   # Adds CurationConcerns behaviors to the SolrDocument.
   include CurationConcerns::SolrDocumentBehavior
   # Do content negotiation for AF models.
