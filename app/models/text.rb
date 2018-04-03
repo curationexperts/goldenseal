@@ -20,14 +20,6 @@ class Text < ActiveFedora::Base
     TextIndexer
   end
 
-  property :prevent_download, predicate: ::RDF::Vocab::DC.Policy, multiple: false do |index|
-    index.as :stored_searchable
-  end
-
-  def prevent_download= value
-    super value.to_s.downcase == "true" 
-  end
-
   private
     def filenames_to_filesets
       @filenames_to_filesets ||= begin

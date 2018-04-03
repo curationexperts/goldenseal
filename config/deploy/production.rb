@@ -1,7 +1,7 @@
 set :stage, :production
 set :rails_env, 'production'
 set :branch, ENV['BRANCH'] || 'master'
-server 'prod-goldenseal.wulib.wustl.edu', user: 'deploy', roles: [:web, :app, :db, :resque_pool]
+server 'hydraprod.wulib.wustl.edu', user: 'deploy', roles: [:web, :app, :db, :resque_pool]
 
 # server-based syntax
 # ======================

@@ -2,10 +2,8 @@
 <% provide :page_header do %>
   <h1>File Details <small><%= @presenter.title %></small></h1>
 <% end %>
-<% if @presenter.prevent_download.present? && @presenter.prevent_download == true %>
-  <%= media_display @presenter %>
-<% end %>
 
+<%= media_display @presenter %>
 <%= render "attributes", curation_concern: @presenter %>
   
   <div class="form-actions">

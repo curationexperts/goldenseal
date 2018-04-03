@@ -1,0 +1,8 @@
+<% unless file_set.prevent_download.present? && file_set.prevent_download == true %>
+  <%= link_to main_app.download_path(file_set), target: "_new", title: "Download the document" do %>
+    <figure>
+      <%= image_tag "default.png", alt: "No preview available", class: "img-responsive" %>
+      <figcaption>Download the document</figcaption>
+    </figure>
+  <% end %>
+<% end %>
