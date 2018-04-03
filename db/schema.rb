@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180319193652) do
+ActiveRecord::Schema.define(version: 20180402172808) do
 
   create_table "bookmarks", force: :cascade do |t|
     t.integer  "user_id",       null: false
@@ -38,6 +38,28 @@ ActiveRecord::Schema.define(version: 20180319193652) do
   end
 
   add_index "checksum_audit_logs", ["file_set_id", "file_id"], name: "by_generic_file_id_and_file_id"
+
+  create_table "curation_concerns_operations", force: :cascade do |t|
+    t.string   "status"
+    t.string   "operation_type"
+    t.string   "job_class"
+    t.string   "job_id"
+    t.string   "type"
+    t.text     "message"
+    t.integer  "user_id"
+    t.integer  "parent_id"
+    t.integer  "lft",                        null: false
+    t.integer  "rgt",                        null: false
+    t.integer  "depth",          default: 0, null: false
+    t.integer  "children_count", default: 0, null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
+  add_index "curation_concerns_operations", ["lft"], name: "index_curation_concerns_operations_on_lft"
+  add_index "curation_concerns_operations", ["parent_id"], name: "index_curation_concerns_operations_on_parent_id"
+  add_index "curation_concerns_operations", ["rgt"], name: "index_curation_concerns_operations_on_rgt"
+  add_index "curation_concerns_operations", ["user_id"], name: "index_curation_concerns_operations_on_user_id"
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -80,6 +102,15 @@ ActiveRecord::Schema.define(version: 20180319193652) do
   end
 
   add_index "searches", ["user_id"], name: "index_searches_on_user_id"
+
+  create_table "single_use_links", force: :cascade do |t|
+    t.string   "downloadKey"
+    t.string   "path"
+    t.string   "itemId"
+    t.datetime "expires"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "spotlight_attachments", force: :cascade do |t|
     t.string   "name"
@@ -168,6 +199,7 @@ ActiveRecord::Schema.define(version: 20180319193652) do
     t.integer  "thumbnail_id"
     t.integer  "weight",         default: 50
     t.integer  "site_id"
+    t.string   "admin_set_id"
   end
 
   add_index "spotlight_exhibits", ["site_id"], name: "index_spotlight_exhibits_on_site_id"

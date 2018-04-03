@@ -46,6 +46,8 @@ class AdminSet < ActiveFedora::Base
   end
 
   before_create :assign_access
+  after_create :create_spotlight_exhibit
+  before_save :update_spotlight_exhibit
 
   def assign_access
     self.read_groups += ['public']
@@ -53,5 +55,24 @@ class AdminSet < ActiveFedora::Base
 
   def self.indexer
     AdminSetIndexer
+  end
+
+  def spotlight_exhibit
+    @spotlight_exhibit ||= Spotlight::Exhibit.where(admin_set_id: self.id).first
+  end
+
+  private
+  def create_spotlight_exhibit
+    Spotlight::Exhibit.where(admin_set_id: self.id).first_or_create do |exhibit|
+      exhibit.title = self.title
+    end
+  end
+
+  def update_spotlight_exhibit
+    if self.valid? && self.title_changed? && spotlight_exhibit
+      spotlight_exhibit.update_attributes({
+        title: self.title
+      })
+    end
   end
 end

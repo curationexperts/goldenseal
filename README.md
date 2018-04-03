@@ -134,3 +134,5 @@ For a little more background [see story #199](https://github.com/curationexperts
 - Update search of index CC works to work with SL Exhibits
 - autocomplete
   - Set autocmplete_default_param in new Spotlight initializer
+- Associate AdminSet to Exhibit
+- Add "spotlight_exhibit_slug_xxxxxxx_bsi" to solr_params for works when associated to collection

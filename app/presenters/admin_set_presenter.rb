@@ -13,4 +13,25 @@ class AdminSetPresenter
   def initialize(solr_document)
     @solr_document = solr_document
   end
+
+  def attribute_to_html(field, options={})
+    case field
+    when :spotlight_exhibit
+      SpotlightExhibitRenderer.new(field, [spotlight_exhibit_title], link_path: edit_exhibit_path)
+    else
+      super
+    end
+  end
+
+  def spotlight_exhibit
+    @spotlight_exhibit ||= Spotlight::Exhibit.where(admin_set_id: @solr_document['identifier_ssi']).first
+  end
+
+  def edit_exhibit_path
+    Spotlight::Engine.routes.url_helpers.edit_exhibit_path(@spotlight_exhibit) if spotlight_exhibit 
+  end
+
+  def spotlight_exhibit_title
+    spotlight_exhibit.title if spotlight_exhibit
+  end
 end

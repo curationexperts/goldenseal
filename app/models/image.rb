@@ -5,6 +5,7 @@ class Image < ActiveFedora::Base
   include InAdminSet
   include OnCampusAccess
   include DrawTemplate
+  include SpotlightAttributes 
 
   validates :title, presence: { message: 'Your work must have a title.' }
 
