@@ -15,5 +15,4 @@ class CurationConcerns::TextsController < ApplicationController
     TextPresenter
   end
 
-  delegate :prevent_download, to: :solr_document
 end

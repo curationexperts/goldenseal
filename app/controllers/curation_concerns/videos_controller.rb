@@ -10,5 +10,4 @@ class CurationConcerns::VideosController < ApplicationController
     ::VideoPresenter
   end
 
-  delegate :prevent_download, to: :solr_document
 end

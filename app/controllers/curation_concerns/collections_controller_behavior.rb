@@ -65,7 +65,9 @@ module CurationConcerns
         works.each do |work|
           # map through the file set of each work and find the file set that is the representative media, update its prevent_download attribute
           rep_media = work.file_sets.select { |fs| fs.id == work.representative_id }.first
-          rep_media.update_attributes( prevent_download: value )
+          if rep_media.present?
+            rep_media.update_attributes( prevent_download: value )
+          end
         end
       end
 

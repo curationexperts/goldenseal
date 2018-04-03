@@ -6,5 +6,4 @@ class CurationConcerns::ImagesController < ApplicationController
     ::ImagePresenter
   end
 
-  delegate :prevent_download, to: :solr_document
 end
