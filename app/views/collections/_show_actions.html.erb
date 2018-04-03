@@ -1,0 +1,30 @@
+<% if can? :edit, @presenter.id %>
+  <h2 class="non lower">Actions</h2>
+  <div class="btn-group" role="group">
+      <%= link_to "Edit", collections.edit_collection_path, class: 'btn btn-default' %> &nbsp;&nbsp;
+      <%= link_to "Add files from your dashboard",  search_path_for_my_works, class: 'btn btn-default' %>&nbsp;&nbsp;
+      <div class="btn-group dropdown" role="group">
+      
+        <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="enable" href="#">Allow Downloads<span class="caret"></span></a>
+        <ul class="dropdown-menu" aria-labelledby="enable">
+          <li><%= link_to "Allow downloads for all items", allow_downloads_path(@presenter, :file_type => 'all'), role: 'menuitem' %></li>
+          <li><%= link_to "Allow downloads for videos only", allow_downloads_path(@presenter, :file_type => 'video'), role: 'menuitem' %></li>
+          <li><%= link_to "Allow downloads for audios only", allow_downloads_path(@presenter, :file_type => 'audio'), role: 'menuitem' %></li>
+          <li><%= link_to "Allow downloads for images only", allow_downloads_path(@presenter, :file_type => 'image'), role: 'menuitem' %></li>
+          <li><%= link_to "Allow downloads for texts only", allow_downloads_path(@presenter, :file_type => 'text'), role: 'menuitem' %></li>
+        </ul>
+      </div>
+
+      <div class="btn-group dropdown" role="group">
+      <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="disable" href="#">Prevent Downloads<span class="caret"></span></a>
+        <ul class="dropdown-menu" aria-labelledby="disable">
+          <li><%= link_to "Prevent downloads for all items", prevent_downloads_path(@presenter, :file_type => 'all'), role: 'menuitem' %></li>
+          <li><%= link_to "Prevent downloads for videos only", prevent_downloads_path(@presenter, :file_type => 'video'), role: 'menuitem' %></li>
+          <li><%= link_to "Prevent downloads for audios only", prevent_downloads_path(@presenter, :file_type => 'audio'), role: 'menuitem' %></li>
+          <li><%= link_to "Prevent downloads for images only", prevent_downloads_path(@presenter, :file_type => 'image'), role: 'menuitem' %></li>
+          <li><%= link_to "Prevent downloads for texts only", prevent_downloads_path(@presenter, :file_type => 'text'), role: 'menuitem' %></li>
+        </ul>
+      </div>
+
+  </div>
+<%end %>

@@ -25,4 +25,8 @@ Rails.application.routes.draw do
   constraints resque_web_constraint do
     mount ResqueWeb::Engine => "/resque"
   end
+
+  get 'collections/:id/allow_downloads' => 'collections#allow_downloads', as: :allow_downloads
+  get 'collections/:id/prevent_downloads' => 'collections#prevent_downloads', as: :prevent_downloads
+
 end
