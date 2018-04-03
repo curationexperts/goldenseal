@@ -31,7 +31,6 @@
     border-bottom: 1px solid $gray-light;
     list-style-type: none;
     .image, .text {
-      @include make-sm-column(6);
       min-height: 640px;
       padding-bottom: 20px;
       padding-top: 20px;
