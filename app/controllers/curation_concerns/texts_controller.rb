@@ -14,4 +14,5 @@ class CurationConcerns::TextsController < ApplicationController
   def show_presenter
     TextPresenter
   end
+
 end

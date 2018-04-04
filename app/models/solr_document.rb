@@ -74,4 +74,8 @@ class SolrDocument
   def source
     self['source_tesim']
   end
+
+  def prevent_download
+    self['prevent_download_bsi']
+  end
 end

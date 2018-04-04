@@ -11,4 +11,5 @@ class Image < ActiveFedora::Base
   def self.indexer
     ImageIndexer
   end
+
 end

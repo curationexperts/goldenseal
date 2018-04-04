@@ -1,6 +1,7 @@
 ALLOW_DOTS ||= /[^\/]+(?=\.(html|json|ttl)\z)|[^\/]+/
 
 Rails.application.routes.draw do
+  resources :rights
   blacklight_for :catalog
   devise_for :users
   mount Hydra::Collections::Engine => '/'
@@ -25,4 +26,7 @@ Rails.application.routes.draw do
   constraints resque_web_constraint do
     mount ResqueWeb::Engine => "/resque"
   end
+
+  get 'collections/:id/allow_downloads' => 'collections#allow_downloads', as: :allow_downloads
+  get 'collections/:id/prevent_downloads' => 'collections#prevent_downloads', as: :prevent_downloads
 end
