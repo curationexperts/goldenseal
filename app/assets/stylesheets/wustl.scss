@@ -272,6 +272,14 @@ body {
       }
     }
   }
+  #download-actions{
+    .dropdown-toggle{
+      img{
+        height: 1em;
+        display: none;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 767px) {
