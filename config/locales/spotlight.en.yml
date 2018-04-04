@@ -172,6 +172,8 @@ en:
       sidebar:
         header: Curation
         dashboard: Dashboard
+        my_collections: My Collections
+        my_works: My Works
         analytics: Analytics
         items: Items
         tags: Tags
@@ -355,9 +357,9 @@ en:
         user: Your exhibits
         unpublished: Unpublished exhibits
       delete:
-        heading: Delete exhibit
+        heading: Delete collection
         warning_html: >
-          This action is irreversible. Be sure to back up the exhibit settings and content using
+          This action is irreversible. Be sure to back up the collection settings and content using
           the %{export_link} feature before proceeding.
       edit:
         header: General
