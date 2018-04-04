@@ -13,5 +13,4 @@ class CurationConcerns::AudiosController < ApplicationController
     ::AudioPresenter
   end
 
-  delegate :prevent_download, to: :solr_document
 end

@@ -82,6 +82,10 @@
   margin-left: 20px;
 }
 
+.opener {
+  font-weight: bold; 
+}
+
 @media screen and (max-width: 767px) {
   #tei-container li.page .image, #tei-container li.page .text {
     min-height: 1px;
