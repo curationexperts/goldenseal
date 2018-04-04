@@ -12,4 +12,5 @@ module SpotlightAttributes
       index.as :stored_sortable
     end
   end
+
 end

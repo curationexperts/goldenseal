@@ -1,9 +1,0 @@
-.edit-in-place {
-  cursor: text;
-  color: inherit;
-  &:hover {
-    color: inherit;
-    text-decoration: none;
-    @include edit-in-place-highlighting;
-  }
-}

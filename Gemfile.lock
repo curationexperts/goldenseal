@@ -1,10 +1,12 @@
-PATH
-  remote: vendor/blacklight-spotlight
+GIT
+  remote: https://github.com/projectblacklight/spotlight.git
+  revision: 10713b6084b68e3af15d1418715149b66299cd60
+  tag: v0.17.1
   specs:
     blacklight-spotlight (0.17.1)
       acts-as-taggable-on (~> 3.5)
       autoprefixer-rails
-      blacklight (~> 5.17.1)
+      blacklight (~> 5.16)
       blacklight-gallery (>= 0.3.0)
       blacklight-oembed (>= 0.0.3)
       bootstrap_form (~> 2.2)
@@ -27,7 +29,7 @@ PATH
       oauth2
       openseadragon
       paper_trail (~> 4.0)
-      rails (~> 4.0, >= 4.2.5)
+      rails (~> 4.0, >= 4.2.0)
       roar-rails
       sir_trevor_rails (~> 0.5.0b1)
       social-share-button (~> 0.1.5)

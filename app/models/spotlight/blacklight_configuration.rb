@@ -213,7 +213,7 @@ module Spotlight
     def default_blacklight_config
       @default_blacklight_config ||= begin
         config = Spotlight::Engine.blacklight_config.deep_copy
-        #add_exhibit_specific_fields(config)
+        add_exhibit_specific_fields(config)
         config
       end
     end
@@ -250,7 +250,7 @@ module Spotlight
     protected
 
     def add_exhibit_specific_fields(config)
-      add_exhibit_tags_fields(config)
+      #add_exhibit_tags_fields(config)
       add_uploaded_resource_fields(config)
       add_autocomplete_field(config)
     end

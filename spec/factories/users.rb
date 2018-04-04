@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :user do
+  factory :myuser do
     sequence :username do |n|
       "person_#{n}"
     end

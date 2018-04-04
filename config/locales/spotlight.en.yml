@@ -246,7 +246,7 @@ en:
         header: "Metadata"
         order_header: "Display and Order Metadata Fields"
         exhibit_specific:
-          header: "Exhibit-Specific Fields"
+          header: "Collection-Specific Fields"
           instructions:
             "You can add metadata fields to supplement the metadata fields that are part of the repository item record."
         view:
