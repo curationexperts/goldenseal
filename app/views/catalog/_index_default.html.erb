@@ -3,8 +3,16 @@
 
   <% index_fields(document).each do |field_name, field| -%>
     <% if should_render_index_field? document, field %>
-	    <dt class="blacklight-<%= field_name.parameterize %>"><%= render_index_field_label document, field: field_name %></dt>
-	    <dd class="blacklight-<%= field_name.parameterize %>"><%= truncate(render_index_field_value(document, field: field_name), length: 120, separator: ' ') %></dd>
+      <% field_value = render_index_field_value(document, field: field_name) %>
+      <dt class="blacklight-<%= field_name.parameterize %>"><%= render_index_field_label document, field: field_name %></dt>
+      <dd class="<%= 'truncate' if field_value.length > 120 %> blacklight-<%= field_name.parameterize %>">
+        <% if field_value.length > 120 %>
+          <%= link_to_document document, "...more" %>
+        <% end %>
+        <div class='inner-value'>
+          <%= field_value %>
+        </div>
+      </dd>
     <% end -%>
   <% end -%>
 
