@@ -3,6 +3,7 @@ module CurationConcerns
     extend ActiveSupport::Concern
     include Hydra::CollectionsControllerBehavior
     include Hydra::Controller::SearchBuilder
+    include Downloads
 
     included do
       before_action :filter_docs_with_read_access!, except: [:show, :prevent_downloads, :allow_downloads]
@@ -46,31 +47,6 @@ module CurationConcerns
     end
 
     protected
-
-      def toggle_prevent_download(collection, value, file_type)
-        authorize! :edit, collection
-        case file_type
-        when 'video'
-          works = collection.works.select{ |work| work.class == Video }
-        when 'text'
-          works = collection.works.select{ |work| work.class == Text }
-        when 'audio' 
-          works = collection.works.select{ |work| work.class == Audio }
-        when 'image'
-          works = collection.works.select{ |work| work.class == Image }
-        when 'all'
-          works = collection.works
-        end
-
-        works.each do |work|
-          # map through the file set of each work and find the file set that is the representative media, update its prevent_download attribute
-          rep_media = work.file_sets.select { |fs| fs.id == work.representative_id }.first
-          if rep_media.present?
-            rep_media.update_attributes( prevent_download: value )
-          end
-        end
-      end
-
       def filter_docs_with_read_access!
         super
         flash.delete(:notice) if flash.notice == 'Select something first'

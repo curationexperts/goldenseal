@@ -1,6 +1,7 @@
 class AdminSetsController < ApplicationController
   include Blacklight::Base
   include Hydra::Controller::SearchBuilder
+  include Downloads
   copy_blacklight_config_from(CatalogController)
   load_and_authorize_resource except: :show
 
@@ -45,8 +46,17 @@ class AdminSetsController < ApplicationController
     redirect_to root_path, notice: "#{@admin_set.title} has been queued for removal. This may take several minutes."
   end
 
-  private
+  def allow_downloads
+    toggle_prevent_download(@admin_set, false, params[:file_type])
+    redirect_to @admin_set, notice: 'Collection was successfully updated.'
+  end
 
+  def prevent_downloads
+    toggle_prevent_download(@admin_set, true, params[:file_type])
+    redirect_to @admin_set, notice: 'Collection was successfully updated.'
+  end
+
+  private
     def admin_set_params
       AdminSetForm.model_attributes(params[:admin_set])
     end

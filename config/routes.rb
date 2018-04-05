@@ -29,4 +29,6 @@ Rails.application.routes.draw do
 
   get 'collections/:id/allow_downloads' => 'collections#allow_downloads', as: :allow_downloads
   get 'collections/:id/prevent_downloads' => 'collections#prevent_downloads', as: :prevent_downloads
+  get 'admin_sets/:id/allow_downloads' => 'admin_sets#allow_downloads', as: :admin_set_allow_downloads
+  get 'admin_sets/:id/prevent_downloads' => 'admin_sets#prevent_downloads', as: :admin_set_prevent_downloads
 end
