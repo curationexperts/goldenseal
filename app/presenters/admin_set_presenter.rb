@@ -24,11 +24,11 @@ class AdminSetPresenter
   end
 
   def spotlight_exhibit
-    @spotlight_exhibit ||= Spotlight::Exhibit.where(admin_set_id: @solr_document['identifier_ssi']).first
+    @spotlight_exhibit ||= Spotlight::Exhibit.where(admin_set_id: @solr_document['id']).first
   end
 
   def edit_exhibit_path
-    Spotlight::Engine.routes.url_helpers.edit_exhibit_path(@spotlight_exhibit) if spotlight_exhibit 
+    Spotlight::Engine.routes.url_helpers.edit_exhibit_path(spotlight_exhibit) if spotlight_exhibit 
   end
 
   def spotlight_exhibit_title

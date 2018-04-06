@@ -172,6 +172,7 @@ en:
       sidebar:
         header: Curation
         dashboard: Dashboard
+        collection: Collection
         my_collections: My Collections
         my_works: My Works
         analytics: Analytics

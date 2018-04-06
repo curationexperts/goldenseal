@@ -65,6 +65,7 @@ class AdminSet < ActiveFedora::Base
   def create_spotlight_exhibit
     Spotlight::Exhibit.where(admin_set_id: self.id).first_or_create do |exhibit|
       exhibit.title = self.title
+      exhibit.published = true
     end
   end
 

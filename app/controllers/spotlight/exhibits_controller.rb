@@ -4,7 +4,6 @@ module Spotlight
   class ExhibitsController < Spotlight::ApplicationController
     before_action :authenticate_user!, except: [:index]
     include Blacklight::SearchHelper
-
     load_and_authorize_resource except: [:index]
     load_resource only: :index
 
