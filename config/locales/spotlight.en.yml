@@ -383,7 +383,7 @@ en:
       exhibit_card_front:
         unpublished: Unpublished
       exhibit_card_back:
-        visit_exhibit: "Visit exhibit"
+        visit_exhibit: "Visit Collection"
       new:
         header: Create a new exhibit
       filter:

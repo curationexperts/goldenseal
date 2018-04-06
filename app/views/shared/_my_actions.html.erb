@@ -28,12 +28,6 @@
       </li>
     <% end %>
     
-    <% if can? :create, Spotlight::Exhibit %>
-      <li>
-        <%= link_to t(:'helpers.action.spotlight/exhibit.create'), spotlight.new_exhibit_path %>
-      </li>
-    <% end %>
-
     <% if include_works_link || include_collections_link %>
       <li class="divider"></li>
     <% end %>

@@ -23,6 +23,13 @@
     <%= link_to "Edit Metadata",
                 [:edit, @presenter],
                 class: 'btn btn-default' %>
+
+    <% if @presenter.edit_exhibit_path %>
+      <%= link_to "Edit Spotlight", 
+                @presenter.edit_exhibit_path,
+                class: 'btn btn-default' %>
+    <% end %>
+
   <% end %>
 
   <%= link_to "View Members",

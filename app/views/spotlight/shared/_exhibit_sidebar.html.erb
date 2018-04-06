@@ -4,5 +4,4 @@
     <li><%= link_to t(:'spotlight.curation.sidebar.my_works'), search_path_for_my_works %></li>
   </ul>
   <%= render 'spotlight/shared/configuration_sidebar' if can? :update, current_exhibit %>
-  <%= render 'spotlight/shared/curation_sidebar' %>
 </div>

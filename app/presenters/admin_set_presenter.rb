@@ -17,7 +17,7 @@ class AdminSetPresenter
   def attribute_to_html(field, options={})
     case field
     when :spotlight_exhibit
-      SpotlightExhibitRenderer.new(field, [spotlight_exhibit_title], link_path: edit_exhibit_path).render if spotlight_exhibit
+      SpotlightExhibitRenderer.new(:spotlight, [spotlight_exhibit_title], link_path: edit_exhibit_path).render if spotlight_exhibit
     else
       super
     end
