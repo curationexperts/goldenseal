@@ -7,9 +7,11 @@ class Image < ActiveFedora::Base
   include DrawTemplate
   include SpotlightAttributes 
 
+
   validates :title, presence: { message: 'Your work must have a title.' }
 
   def self.indexer
     ImageIndexer
   end
+
 end
