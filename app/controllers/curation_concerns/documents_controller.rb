@@ -3,6 +3,8 @@
 
 class CurationConcerns::DocumentsController < ApplicationController
   include CurationConcerns::CurationConcernController
+  include CustomMetadata
+
   set_curation_concern_type Document
 
   def show_presenter

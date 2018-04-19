@@ -3,6 +3,7 @@
 
 class CurationConcerns::TextsController < ApplicationController
   include CurationConcerns::CurationConcernController
+  include CustomMetadata
 
   include AttachFiles
   before_filter :add_attachments_to_files, only: :create
