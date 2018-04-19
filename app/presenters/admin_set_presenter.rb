@@ -34,4 +34,8 @@ class AdminSetPresenter
   def spotlight_exhibit_title
     spotlight_exhibit.title if spotlight_exhibit
   end
+
+  def custom_metadata_fields
+    []
+  end
 end

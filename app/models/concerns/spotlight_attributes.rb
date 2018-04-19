@@ -22,7 +22,5 @@ module SpotlightAttributes
       property :title, predicate: ::RDF::Vocab::DC.title, class_name: ::RDF::Literal, multiple: false
       property :value, predicate: ::RDF::Vocab::DC.description, class_name: ::RDF::Literal, multiple: false
     end
-
   end
-
 end

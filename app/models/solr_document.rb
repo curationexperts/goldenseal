@@ -64,6 +64,10 @@ class SolrDocument
     self['label_ssi']
   end
 
+  def custom_metadata_fields
+    self['custom_metadata_fields_ssm']
+  end
+
   def thumbnail_id
     fetch('hasRelatedImage_ssim', []).first
   end

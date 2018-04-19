@@ -15,8 +15,20 @@ class WorkShowPresenter < CurationConcerns::WorkShowPresenter
     end
   end
 
-  private
+  def respond_to?(method)
+    has_native = super
+    return true if has_native
 
+    # look for custom metadata
+    key = "#{method}_ssi"
+    return false unless solr_document.keys.include?(key)
+
+    self.class.send :define_method, method do
+      solr_document[key]
+    end
+  end
+
+  private
     def admin_set_title
       ERB::Util.h(solr_document['admin_set_ssi'])
     end
