@@ -20,7 +20,6 @@
     <%= @presenter.attribute_to_html(:mime_type) %>
     <%= @presenter.attribute_to_html(:filename) %>
     <%= @presenter.attribute_to_html(:admin_set) %>
-    <%= @presenter.attribute_to_html(:spotlight_exhibit) %>
     <%= @presenter.custom_metadata_fields.each do |field| %>
       <%= @presenter.attribute_to_html(field.intern) %>
     <% end %>

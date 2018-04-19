@@ -138,7 +138,7 @@ en:
         destroy: Remove from role
         save: Add role
         pending: pending
-    appearances:
+    exhibits:
       edit:
         header: Appearance
         exhibit_style:
@@ -351,61 +351,6 @@ en:
         pagetitle: "page title"
         pages:
           header: "Most popular pages"
-    exhibits:
-      breadcrumb: Home
-      index:
-        published: Published exhibits
-        user: Your exhibits
-        unpublished: Unpublished exhibits
-      delete:
-        heading: Delete collection
-        warning_html: >
-          This action is irreversible. Be sure to back up the collection settings and content using
-          the %{export_link} feature before proceeding.
-      edit:
-        header: General
-        basic_settings:
-          heading: Basic settings
-      form:
-        fields:
-          contact_emails:
-            help_block: Each contact email will receive feedback submissions
-          published:
-            label: "Published"
-            help_block: ""
-      new_exhibit_form:
-        fields:
-          title:
-            label: Title
-            help_block: This can be changed later.
-          slug:
-            label: URL slug
-            help_block: A hyphenated name to be displayed in the URL for the exhibit (e.g., "maps-of-africa").
-      exhibit_card_front:
-        unpublished: Unpublished
-      exhibit_card_back:
-        visit_exhibit: "Visit Collection"
-      new:
-        header: Create a new exhibit
-      filter:
-        heading: Filter items
-      import:
-        heading: Import data
-        instructions: You can import an exhibit JSON file exported from this application to use that data file to define this exhibit.
-        button: Import data
-      export:
-        heading: Export data
-        instructions: >
-          You can create a backup of this exhibit by exporting the data that defines it to a JSON file.
-          You can then import that JSON file into new exhibit to restore the exhibit data or to use as a starting point for a new exhibit.
-        download: Export data
-      confirmation_status:
-        confirmed: Confirmed.
-        confirmation_sent: Confirmation sent.
-        not_validated: Not validated.
-        resend: Resend confirmation?
-      tags:
-        all: All
     main_navigation:
       about: "About"
       browse: "Browse"
