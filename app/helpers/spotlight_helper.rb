@@ -5,8 +5,8 @@ module SpotlightHelper
   include Spotlight::MainAppHelpers
 
   def admin_set_link opts={}
-    if @exhibit && @exhibit.admin_set_id
-      link_to t(:'spotlight.curration.sidebar.collection'), admin_set_path(@exhibit.admin_set_id)
+    if @exhibit.exhibitable
+      link_to t(:'spotlight.curration.sidebar.collection'), @exhibit.exhibitable
     end
   end
 end

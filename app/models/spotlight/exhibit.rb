@@ -22,7 +22,6 @@ module Spotlight
     acts_as_tagger
     acts_as_taggable
     delegate :blacklight_config, to: :blacklight_configuration
-    delegate :title, to: :collection
     serialize :facets, Array
 
     # Note: friendly id associations need to be 'destroy'ed to reap the slug history
@@ -61,10 +60,13 @@ module Spotlight
     before_save :sanitize_description, if: :description_changed?
     include Spotlight::DefaultThumbnailable
 
-    def collection
-      if !self.admin_set_id.blank?
-        @collection ||= AdminSet.find self.admin_set_id
-      end
+    def title
+      exhibitable.title if exhibitable
+    end
+
+    def exhibitable
+      return nil if self.exhibitable_id.blank? || self.exhibitable_type.blank?
+      @exhibitable = self.exhibitable_type.constantize.find self.exhibitable_id
     end
 
     def main_about_page

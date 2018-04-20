@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180402172808) do
+ActiveRecord::Schema.define(version: 20180419170009) do
 
   create_table "bookmarks", force: :cascade do |t|
     t.integer  "user_id",       null: false
@@ -185,21 +185,22 @@ ActiveRecord::Schema.define(version: 20180402172808) do
   end
 
   create_table "spotlight_exhibits", force: :cascade do |t|
-    t.string   "title",                          null: false
+    t.string   "title",                            null: false
     t.string   "subtitle"
     t.string   "slug"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "layout"
-    t.boolean  "published",      default: false
+    t.boolean  "published",        default: false
     t.datetime "published_at"
     t.string   "featured_image"
     t.integer  "masthead_id"
     t.integer  "thumbnail_id"
-    t.integer  "weight",         default: 50
+    t.integer  "weight",           default: 50
     t.integer  "site_id"
-    t.string   "admin_set_id"
+    t.string   "exhibitable_id"
+    t.string   "exhibitable_type"
   end
 
   add_index "spotlight_exhibits", ["site_id"], name: "index_spotlight_exhibits_on_site_id"

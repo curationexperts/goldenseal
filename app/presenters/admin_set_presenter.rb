@@ -1,13 +1,23 @@
 class AdminSetPresenter
   include CurationConcerns::ModelProxy
   include CurationConcerns::PresentsAttributes
+  include ExhibitPresenter 
   attr_reader :solr_document
 
   # Metadata Methods
-  delegate :title, :description, :creator, :contributor, :subject, :publisher, :language,
-           :embargo_release_date, :lease_expiration_date, :rights, :human_readable_type,
-           :representative_id,
-           to: :solr_document
+  delegate :contributor,
+    :creator,
+    :description,
+    :embargo_release_date,
+    :human_readable_type,
+    :language,
+    :lease_expiration_date,
+    :publisher,
+    :representative_id,
+    :rights,
+    :subject,
+    :title,
+    to: :solr_document
 
   # @param [SolrDocument] solr_document
   def initialize(solr_document)
@@ -24,18 +34,10 @@ class AdminSetPresenter
   end
 
   def spotlight_exhibit
-    @spotlight_exhibit ||= Spotlight::Exhibit.where(admin_set_id: @solr_document['id']).first
+    @spotlight_exhibit ||= Spotlight::Exhibit
+      .where(exhibitable_id: @solr_document['id'])
+      .where(exhibitable_type: 'AdminSet')
+      .first
   end
 
-  def edit_exhibit_path
-    Spotlight::Engine.routes.url_helpers.edit_exhibit_path(spotlight_exhibit) if spotlight_exhibit 
-  end
-
-  def spotlight_exhibit_title
-    spotlight_exhibit.title if spotlight_exhibit
-  end
-
-  def custom_metadata_fields
-    []
-  end
 end

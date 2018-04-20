@@ -1,7 +1,16 @@
 class AdminSetForm
   include HydraEditor::Form
-  self.terms = [:title, :identifier, :description, :thumbnail_id, :creator, :contributor,
-                :subject, :publisher, :language]
+  self.terms = [
+    :contributor,
+    :creator,
+    :description,
+    :identifier,
+    :language,
+    :publisher,
+    :subject,
+    :thumbnail_id,
+    :title
+  ]
 
   self.model_class = ::AdminSet
 

@@ -42,12 +42,12 @@ module Spotlight
     end
 
     def default_filter_field
-      "isPartOf_ssim"
+      raise "This method should be implemented in class including this module"
     end
 
     # Return a string to work around any ActiveRecord type-casting
     def default_filter_value
-      self.admin_set_id
+      self.exhibitable_id
     end
 
     private

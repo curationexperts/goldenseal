@@ -38,9 +38,10 @@ module Spotlight
       if options['exhibit_id'] && @exhibit
         options = options.except('exhibit_id')
 
-        admin_set = AdminSet.find @exhibit.admin_set_id
-        if admin_set
-          options["f"].merge!({'admin_set_ssi' => [admin_set.title]})
+        exhibitable_klass = @exhibit.exhibitable_type.try(:constantize)
+        exhibitable = exhibitable_klass.find(@exhibit.exhibitable_id) if exhibitable_klass 
+        if exhibitable
+          options["f"].merge!({exhibitable.default_filter_field => [exhibitable.title]})
         end
       end
       main_app.catalog_index_url(options.except('format'))

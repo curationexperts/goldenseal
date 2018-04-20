@@ -2,6 +2,7 @@ class AdminSet < ActiveFedora::Base
   include Hydra::AccessControls::Permissions
   include CurationConcerns::HumanReadableType
   include CurationConcerns::HasRepresentative
+  include SpotlightExhibitable
 
   self.human_readable_type = 'Administrative Collection'
 
@@ -46,8 +47,6 @@ class AdminSet < ActiveFedora::Base
   end
 
   before_create :assign_access
-  after_create :create_spotlight_exhibit
-  before_save :update_spotlight_exhibit
 
   def assign_access
     self.read_groups += ['public']
@@ -57,23 +56,18 @@ class AdminSet < ActiveFedora::Base
     AdminSetIndexer
   end
 
-  def spotlight_exhibit
-    @spotlight_exhibit ||= Spotlight::Exhibit.where(admin_set_id: self.id).first
+  def default_filter_field
+    #"isPartOf_ssim"
+    byebug
+    "admin_set_ssi"
   end
 
   private
-  def create_spotlight_exhibit
-    Spotlight::Exhibit.where(admin_set_id: self.id).first_or_create do |exhibit|
-      exhibit.title = self.title
-      exhibit.published = true
-    end
+  def spotlight_exhibit_query
+    Spotlight::Exhibit
+      .where(exhibitable_id: self.id)
+      .where(exhibitable_type: 'AdminSet')
   end
 
-  def update_spotlight_exhibit
-    if self.valid? && self.title_changed? && spotlight_exhibit
-      spotlight_exhibit.update_attributes({
-        title: self.title
-      })
-    end
-  end
+
 end
