@@ -57,25 +57,28 @@ body {
 	    border: 0;
 	    margin: 0;
 	    div.container {
-		margin: auto;
-		padding: 0px;
-		max-width: 940px;
-		div#title-bar {
-		    max-width: 940px;
-		    margin: auto;
-		    div#site-search {
-			margin: 0px;
-			padding: 0px;
-			form {
-			    margin: 0px;
-			    padding: 0px;
-			}
-		    }
-		    nav#site-actions {
-			padding: 0px;
-			margin: 0px;
-		    }
-		}
+        margin: auto;
+        padding: 0px;
+        max-width: 940px;
+        div#title-bar {
+            max-width: 940px;
+            margin: auto;
+            div#site-search {
+              margin: 0px;
+              padding: 0px;
+              form {
+                  margin: 0px;
+                  padding: 0px;
+              }
+              .glyphicon {
+                line-height: 1.42857143;
+              }
+            }
+            nav#site-actions {
+          padding: 0px;
+          margin: 0px;
+            }
+        }
 	    }
 	}
     }
@@ -93,6 +96,9 @@ body {
 	padding: 0px;
 	margin: 20px 0px 0px 0px;
 	font-size: .866667em;
+	.fa {
+		line-height: 40px;
+	}
 	a.fa-icon {
 	    display: inline-block;
 	    height: 40px;
@@ -128,7 +134,7 @@ body {
 			}
 		    }
 		    div.social {
-			text-align: right;
+			
 			margin-top: 19px;
 			a {
 			    border: 1px solid #777;
@@ -229,7 +235,8 @@ body {
     font-size: 20px;
   }
   h5.panel-title a {
-    color: #002b5b
+    color: #002b5b;
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
   .sort-submit-buttons {
     border-top: 1px solid #eeeeee;
