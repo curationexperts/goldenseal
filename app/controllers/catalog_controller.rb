@@ -1,5 +1,6 @@
 class CatalogController < ApplicationController
   include CurationConcerns::CatalogController
+  include BlacklightOaiProvider::Controller
 
   def self.search_config
     super.merge('qf' => %w( title_tesim
@@ -269,5 +270,22 @@ class CatalogController < ApplicationController
     # If there are more than this many search results, no spelling ("did you
     # mean") suggestion is offered.
     config.spell_max = 5
+
+    # OAI
+    config.oai = {
+      provider: {
+        repository_name: 'Washington University Goldenseal',
+        repository_url: 'http://repository.wustl.edu/catalog/oai',
+        record_prefix: 'oai:goldenseal',
+        admin_email: 'library.webmaster@wumail.wustl.edu',
+        sample_id: 'f1881k888'
+      },
+      document: {
+        limit: 25,            # number of records returned with each request, default: 15
+        set_fields: [        # ability to define ListSets, optional, default: nil
+          { label: 'collection', solr_field: 'admin_set_ssi' }
+        ]
+      }
+    }
   end
 end

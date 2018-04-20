@@ -1,6 +1,9 @@
 # -*- encoding : utf-8 -*-
 class SolrDocument
   include Blacklight::Solr::Document
+  include Blacklight::Document::DublinCore
+  include BlacklightOaiProvider::SolrDocument
+
   # Adds CurationConcerns behaviors to the SolrDocument.
   include CurationConcerns::SolrDocumentBehavior
   # Do content negotiation for AF models.
@@ -70,4 +73,20 @@ class SolrDocument
   def on_campus?
     read_groups.include? OnCampusAccess::OnCampus
   end
+
+  field_semantics.merge!(
+    title: 'title_tesim',
+    contributor: 'contributor_tesim',
+    description: 'description_tesim',
+    subject: 'subject_tesim',
+    researcher: 'researcher_tesim',
+    filename: 'label_ssi',
+    thumbnail_id: 'hasRelatedImage_ssim'
+#    creator: "author_display",
+#    date: "pub_date",
+#    subject: "subject_topic_facet",
+#    title: "title_display",
+#    language: "language_facet",
+#    format: "format"
+  )
 end
