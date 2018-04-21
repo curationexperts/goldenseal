@@ -50,9 +50,6 @@ RUN /sbin/setuser app ./bin/setup && \
     /sbin/setuser app rake jetty:clean && \
     /sbin/setuser app rake curation_concerns:jetty:config
 RUN touch /var/log/jetty.log && chmod 666 /var/log/jetty.log
-RUN mkdir /etc/service/jetty
-COPY ops/jetty.sh /etc/service/jetty/run
-RUN chmod +x /etc/service/jetty/run
 
 
 # Asset complie and migrate if prod, otherwise just start nginx
