@@ -45,6 +45,22 @@ To start worker(s) to run the jobs:
 QUEUE=* VERBOSE=1 rake resque:work
 ```
 
+## Jetty and Solr
+Just like in production, Solr is run in the same container as the main app in dev and staging environments.  Consistency between environments trumps Docker best practices here, so it is what it is. 
+
+Jetty and Solr are started automatically by the container by my_init. See ```/etc/services/jetty/run``` for how this happens.  Blacklight, Curation Concerns, Spotlight, and Jetty all provide rake tasks to do this.  The one we use is Jetty: ```rake jetty:start```.  There are a few more rake tasks for managing the process that you can see by running ```rake --tasks```. Solr runs on port 8983.
+
+## Docker and the base image
+In development and the staging environments, we use the phusion/passenger-ruby Docker image.  ```Dockerfile.base``` is used to setup the container from scratch, including all the packages, assets, and startup scripts.  ```Dockerfile``` is used during deployment, pulling the cached base image, and loading the code for the application quickly.  
+
+### Some important file locations
+* Anything in /etc/services/**/run will be run by the ```/sbin/my_init``` script that phusion/passenger-ruby uses to boot
+* The home directory for the app is ```/home/app/webapp```
+* In the code base,  you'll find dev ops stuff in ```/ops```
+* ```docker-compose.yml``` is used to define your development environment
+* ```docker-compose-ci.yml``` is used to define review environment on staging
+* ```.gitlab-ci.yml``` defines the pipeline on gitlab to build and deploy test and staging environments
+
 ## Run the test suite
 
 * Make sure jetty is running

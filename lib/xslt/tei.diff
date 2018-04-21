@@ -1,0 +1,23 @@
+3a4
+>   xmlns:smil="http://www.w3.org/2001/SMIL20/"		
+10c11
+< <xsl:template match="tei:body">WEBVTT
+---
+>   <xsl:template match="tei:body">WEBVTT
+13d13
+< 
+30,37c30
+<         <xsl:with-param name="string" select="descendant-or-self::node()" />
+<     </xsl:call-template>
+<   </xsl:template>
+< 
+< <!--SSD edited so text in incident/desc would display-->
+< <xsl:template match="tei:incident/tei:desc">
+<     <xsl:call-template name="string-trim">
+<         <xsl:with-param name="string" select="node()" />
+---
+>         <xsl:with-param name="string" select="text()" />
+41d33
+< 
+101a94
+> 
