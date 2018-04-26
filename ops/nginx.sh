@@ -21,7 +21,12 @@ fi
 
 if [[ $PASSENGER_APP_ENV == "production" ]] || [[ $PASSENGER_APP_ENV == "staging" ]]
 then
-  /sbin/setuser app /bin/bash -l -c 'cd /home/app/webapp && bundle exec rake db:migrate'
+    /sbin/setuser app /bin/bash -l -c 'cd /home/app/webapp && bundle exec rake db:migrate'
+fi
+
+if [[ $PASSENGER_APP_ENV == "staging" ]]
+then
+    /sbin/setuser app /bin/bash -l -c 'cd /home/app/webapp && bundle exec rake db:seed ci:load_sample'
 fi
 
 exec /usr/sbin/nginx
