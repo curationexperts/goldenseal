@@ -21,7 +21,7 @@
     <%= @presenter.attribute_to_html(:filename) %>
     <%= @presenter.attribute_to_html(:admin_set) %>
     <% if @presenter.custom_metadata_fields.present? %>
-      <% @presenter.custom_metadata_fields.each do |field| %>
+      <% @presenter.custom_metadata_fields.uniq.each do |field| %>
         <%= @presenter.attribute_to_html(field.intern) %>
       <% end %>
     <% end %>

@@ -18,6 +18,6 @@
   <%= f.fields_for :custom_metadatas, f.object.custom_metadatas.to_a do |custom_metadata_fields| %>
     <%= custom_metadata_fields.hidden_field :id %>
     <%= custom_metadata_fields.hidden_field :title %>
-    <%= custom_metadata_fields.input :value, label: custom_metadata_fields.object.title, input_html: { class: 'form-control'} %>
+    <%= custom_metadata_fields.input :value, label: custom_metadata_fields.object.title.titleize, input_html: { class: 'form-control'} %>
   <% end %>
 </fieldset>

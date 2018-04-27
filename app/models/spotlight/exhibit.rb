@@ -22,6 +22,7 @@ module Spotlight
     acts_as_tagger
     acts_as_taggable
     delegate :blacklight_config, to: :blacklight_configuration
+    delegate :description, to: :exhibitable, allow_nil: true
     serialize :facets, Array
 
     # Note: friendly id associations need to be 'destroy'ed to reap the slug history
