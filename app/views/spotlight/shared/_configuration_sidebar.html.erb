@@ -2,6 +2,7 @@
 <ul class="nav sidenav">
   <% if can? :update, current_exhibit %>
     <li><%= link_to t(:'spotlight.configuration.sidebar.appearance'), spotlight.edit_exhibit_path(current_exhibit) %></li>
+    <li><%= link_to t(:'spotlight.configuration.sidebar.edit_homepage'), spotlight.edit_exhibit_home_page_path(current_exhibit) %></li>
   <% end %>
   <% if can? :update, current_exhibit.blacklight_configuration %>
     <li><%= link_to t(:'spotlight.configuration.sidebar.metadata'), spotlight.edit_exhibit_metadata_configuration_path(current_exhibit) %></li>

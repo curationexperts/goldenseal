@@ -119,6 +119,7 @@ en:
         users: Users
         metadata: Metadata
         search_configuration: Search
+        edit_homepage: Collection Homepage
       header: "Configuration"
       page_title: "Page title"
       settings:
