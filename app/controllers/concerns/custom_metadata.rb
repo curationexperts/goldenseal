@@ -12,5 +12,4 @@ module CustomMetadata
       end
     end
   end
-
 end
