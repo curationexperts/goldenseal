@@ -15,7 +15,7 @@ class TextIndexer < BaseWorkIndexer
   end
 
   def tei
-    @tei ||= object.tei.original_file.try(:content)
+    @tei ||= object.tei.try(:original_file).try(:content)
   end
   
   def tei_as_json
