@@ -118,6 +118,10 @@ module Spotlight
       @reindex_progress ||= ReindexProgress.new(resources.order('updated_at')) if resources
     end
 
+    def default_filter_field
+      exhibitable.default_filter_field if exhibitable
+    end
+
     protected
 
     def sanitize_description

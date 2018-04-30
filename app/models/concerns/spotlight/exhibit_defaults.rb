@@ -42,7 +42,7 @@ module Spotlight
     end
 
     def default_filter_field
-      raise "This method should be implemented in class including this module"
+      raise "'default_filter_field' should be implemented in class including this module"
     end
 
     # Return a string to work around any ActiveRecord type-casting
