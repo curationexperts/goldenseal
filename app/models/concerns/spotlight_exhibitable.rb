@@ -10,11 +10,6 @@ module SpotlightExhibitable
     @spotlight_exhibit ||= spotlight_exhibit_query.first
   end
 
-  private
-  def spotlight_exhibit_query 
-    raise "This method must be implimented when this module is included."
-  end
-
   def create_spotlight_exhibit
     spotlight_exhibit_query.first_or_create do |exhibit|
       exhibit.title = self.title
@@ -28,5 +23,9 @@ module SpotlightExhibitable
         title: self.title
       })
     end
+  end
+
+  def spotlight_exhibit_query 
+    raise "This method must be implimented when this module is included."
   end
 end
