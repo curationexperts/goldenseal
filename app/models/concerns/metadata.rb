@@ -6,6 +6,10 @@ module Metadata
       index.as :stored_sortable
     end
 
+    property :show_path, predicate: ::RDF::Vocat::DC.identifier do |index|
+      index.as :stored_searchable
+    end
+
     property :extent, predicate: ::RDF::Vocab::DC.extent do |index|
       index.as :symbol
     end
