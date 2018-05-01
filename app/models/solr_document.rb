@@ -75,18 +75,22 @@ class SolrDocument
   end
 
   field_semantics.merge!(
-    title: 'title_tesim',
     contributor: 'contributor_tesim',
+    creator: 'contributor_tesim',
+    coverage: 'default_empty',
+    date: 'date_issued_dtsi',
     description: 'description_tesim',
+    format: 'human_readable_type_tesim',
+    identifier:, #url to works page
+    identifier: 'thumbnail_path_ss',
+    identifier: 'identifier_tesim',
+    language: 'language_tesim',
+    publisher: 'publisher_tesim',
+    relation: 'default_empty',
+    rights: 'rights_label_ss',
+    source: 'default_empty',
     subject: 'subject_tesim',
-    researcher: 'researcher_tesim',
-    filename: 'label_ssi',
-    thumbnail_id: 'hasRelatedImage_ssim'
-#    creator: "author_display",
-#    date: "pub_date",
-#    subject: "subject_topic_facet",
-#    title: "title_display",
-#    language: "language_facet",
-#    format: "format"
+    title: 'title_tesim',
+    type: 'human_readable_type_tesim'
   )
 end
