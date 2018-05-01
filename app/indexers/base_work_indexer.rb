@@ -6,7 +6,7 @@ class BaseWorkIndexer < CurationConcerns::WorkIndexer
     super do |solr_doc|
       solr_doc['oai_identifier_ssm'] = [
         url_for(object),
-        "http://#{Rails.application.routes.default_url_options[:host]}/#{relative_thumb_path}",
+        "http://#{Rails.application.routes.default_url_options[:host]}#{relative_thumb_path}",
         object.identifier
       ]
       solr_doc['rights_label_ss'] = rights_labels.first
