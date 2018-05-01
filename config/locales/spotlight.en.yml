@@ -152,16 +152,6 @@ en:
             Click a menu item to change its display label. Drag and drop a menu item
             to change their order in the menu.
         restore_default: "Restore default"
-        site_masthead:
-          heading: Site masthead
-          help: >
-            You can select and crop an image to use as a background in your exhibit site's
-            masthead. To use an image as a masthead background, you should use an image that
-            is at least 120 pixels tall and 1200 pixels wide. For best results use an image at
-            least 1800 pixels wide. You can crop larger images using the cropping tool below.
-        site_thumbnail:
-          heading: Site thumbnail
-          help: "You can select and crop an image to visually represent this exhibit."
         thumbnail:
           small: Small
           medium: Medium
@@ -367,6 +357,17 @@ en:
         header: General
         basic_settings:
           heading: Basic settings
+        site_masthead:
+          heading: Site masthead
+          help: >
+            You can select and crop an image to use as a background in your exhibit site's
+            masthead. To use an image as a masthead background, you should use an image that
+            is at least 120 pixels tall and 1200 pixels wide. For best results use an image at
+            least 1800 pixels wide. You can crop larger images using the cropping tool below.
+        site_thumbnail:
+          heading: Site thumbnail
+          help: "You can select and crop an image to visually represent this exhibit."
+
       form:
         fields:
           contact_emails:
