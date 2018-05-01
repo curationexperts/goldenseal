@@ -78,6 +78,14 @@ class SolrDocument
     read_groups.include? OnCampusAccess::OnCampus
   end
 
+  def source
+    self['source_tesim']
+  end
+
+  def prevent_download
+    self['prevent_download_bsi']
+  end
+
   field_semantics.merge!(
     contributor: 'contributor_tesim',
     creator: 'creator_sim',

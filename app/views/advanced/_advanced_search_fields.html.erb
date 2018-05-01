@@ -1,8 +1,12 @@
 <%- search_fields_for_advanced_search.each do |key, field_def| -%>
   <div class="form-group advanced-search-field">
-      <%= label_tag key, "#{field_def.label }", :class => "col-sm-3 control-label" %>
-      <div class="col-sm-9">
+    <%= label_tag key, "#{field_def.label }", :class => "col-sm-3 control-label" %>
+    <div class="col-sm-9">
+      <% if key == "human_readable_type"%>
+        <%= select_tag key, raw("<option>Video</option><option>Text</option><option>Audio</option><option>Image</option><option>Personal Collection</option><option>Administrative Collection</option><option>Document</option>"), :include_blank => true, :class => 'form-control' %>
+      <% else %>
         <%= text_field_tag key, label_tag_default_for(key), :class => 'form-control' %>
-      </div>
+      <% end %>
+    </div>
   </div>
 <%- end -%>

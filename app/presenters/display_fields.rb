@@ -17,6 +17,7 @@ module DisplayFields
       :representative_id,
       :researcher, 
       :series,
+      :source,
       :sponsor,
       :thumbnail_id,
       :width, 
@@ -31,5 +32,4 @@ module DisplayFields
   def file_presenter_class
     ::FileSetPresenter
   end
-
 end

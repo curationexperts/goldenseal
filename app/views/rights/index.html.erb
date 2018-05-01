@@ -1,0 +1,26 @@
+<h1 class="page-header">Rights Statements</h1>
+
+<table class="table table-condensed table-responsive">
+  <thead>
+    <tr>
+      <th>Rights Statement Label</th>
+      <th>URI</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rights.each do |right| %>
+      <tr>
+        <td><%= right.label %></td>
+        <td><%= right.uri %></td>
+        <td><%= link_to 'Edit', edit_right_path(right), :class => "btn btn-xs btn-primary" %></td>
+        <td><%= link_to 'Destroy', right_path(right), method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-xs btn-default" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Add New Rights Statement', new_right_path, :class => 'btn btn-primary' %>

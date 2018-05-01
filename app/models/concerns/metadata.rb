@@ -45,5 +45,9 @@ module Metadata
     property :researcher, predicate: ::RDF::Vocab::MARCRelators.res do |index|
       index.as :stored_searchable
     end
+
+    property :source, predicate: ::RDF::Vocab::MARCRelators.org do |index| 
+      index.as :stored_searchable 
+    end
   end
 end

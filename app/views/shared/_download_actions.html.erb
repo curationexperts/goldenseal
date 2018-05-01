@@ -1,0 +1,34 @@
+<div id='download-actions' class="btn-group dropdown" role="group">
+  <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="enable" href="#">
+    Downloads<span class="caret"></span>
+    <%= image_tag 'loading' %>
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="enable">
+    <li class="dropdown-header">All</li>
+    <li><%= link_to "Allow", allow_download_link(@presenter, :file_type => 'all'), role: 'menuitem', class: 'dropdown-item' %>
+    <li><%= link_to "Prevent", prevent_download_link(@presenter, :file_type => 'all'), role: 'menuitem', class: 'dropdown-item' %></li>
+    <li class="dropdown-header">Videos</li>
+    <li><%= link_to "Allow", allow_download_link(@presenter, :file_type => 'video'), role: 'menuitem', class: 'dropdown-item' %></li>
+    <li><%= link_to "Prevent", prevent_download_link(@presenter, :file_type => 'video'), role: 'menuitem', class: 'dropdown-item' %></li>
+
+    <li class="dropdown-header">Audio</li>
+    <li><%= link_to "Allow", allow_download_link(@presenter, :file_type => 'audio'), role: 'menuitem', class: 'dropdown-item' %></li>
+    <li><%= link_to "Prevent", prevent_download_link(@presenter, :file_type => 'audio'), role: 'menuitem', class: 'dropdown-item' %></li>
+
+    <li class="dropdown-header">Images</li>
+    <li><%= link_to "Allow", allow_download_link(@presenter, :file_type => 'image'), role: 'menuitem', class: 'dropdown-item' %></li>
+    <li><%= link_to "Prevent", prevent_download_link(@presenter, :file_type => 'image'), role: 'menuitem', class: 'dropdown-item' %></li>
+
+    <li class="dropdown-header">Text</li>
+    <li><%= link_to "Allow", allow_download_link(@presenter, :file_type => 'text'), role: 'menuitem', class: 'dropdown-item' %>
+    <li><%= link_to "Prevent", prevent_download_link(@presenter, :file_type => 'text'), role: 'menuitem', class: 'dropdown-item' %><li>
+  </ul>
+</div>
+
+<script>
+  $('#download-actions .dropdown-menu a').click(function(){
+    $('#download-actions .dropdown-toggle').addClass('disabled');
+    $('#download-actions .dropdown-toggle img').show();
+  });
+</script>
+

@@ -6,6 +6,7 @@ class Ability
   def custom_permissions
     if admin?
       can [:confirm_delete], ActiveFedora::Base
+      can [:allow_downloads, :prevent_downloads], AdminSet
     end
 
     # Limits creating new objects to a specific group

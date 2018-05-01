@@ -14,10 +14,11 @@
   <%= f.input :note,                 as: :multi_value, input_html: { class: 'form-control' } %>
   <%= f.input :description_standard, as: :multi_value, input_html: { class: 'form-control' } %>
   <%= f.input :publication_place,    as: :multi_value, input_html: { class: 'form-control' } %>
-  <%= f.input :date_issued, wrapper: :inline, input_html: { value: f.object.date_issued, class: 'datepicker' } %>
+  <%= f.input :date_issued, input_html: { value: f.object.date_issued, class: 'datepicker' } %>
   <%= f.fields_for :custom_metadatas, f.object.custom_metadatas.to_a do |custom_metadata_fields| %>
     <%= custom_metadata_fields.hidden_field :id %>
     <%= custom_metadata_fields.hidden_field :title %>
     <%= custom_metadata_fields.input :value, label: custom_metadata_fields.object.title.titleize, input_html: { class: 'form-control'} %>
   <% end %>
 </fieldset>
+

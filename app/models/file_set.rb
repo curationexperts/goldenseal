@@ -6,4 +6,13 @@ class FileSet < ActiveFedora::Base
   def human_readable_type
     'File'
   end
+
+  property :prevent_download, predicate: ::RDF::Vocab::DC.Policy, multiple: false do |index|
+    index.as :stored_searchable
+  end
+
+  def prevent_download= value
+    super value.to_s.downcase == "true" 
+  end
+
 end

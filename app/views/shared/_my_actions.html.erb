@@ -28,6 +28,10 @@
       </li>
     <% end %>
     
+    <% if can? :discover, Hydra::AccessControls::Permission %>
+      <li><%= link_to 'Rights', main_app.rights_path, role: 'menuitem' %></li>
+    <% end %>
+
     <% if include_works_link || include_collections_link %>
       <li class="divider"></li>
     <% end %>

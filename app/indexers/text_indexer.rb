@@ -3,8 +3,7 @@ class TextIndexer < BaseWorkIndexer
 
   def generate_solr_document
     super do |solr_doc|
-      puts(ActionView::Base.full_sanitizer.sanitize(tei))
-      solr_doc[TEI_JSON] = ActionView::Base.full_sanitizer.sanitize(tei) if object.tei
+      solr_doc[TEI_JSON] = ActionView::Base.full_sanitizer.sanitize(tei) if tei
     end
   end
   
@@ -15,7 +14,7 @@ class TextIndexer < BaseWorkIndexer
   end
 
   def tei
-    @tei ||= object.tei.try(:original_file).try(:content)
+    @tei ||= object.try(:tei).try(:original_file).try(:content)
   end
   
   def tei_as_json
