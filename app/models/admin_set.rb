@@ -2,6 +2,7 @@ class AdminSet < ActiveFedora::Base
   include Hydra::AccessControls::Permissions
   include CurationConcerns::HumanReadableType
   include CurationConcerns::HasRepresentative
+  include SpotlightExhibitable
 
   self.human_readable_type = 'Administrative Collection'
 
@@ -54,4 +55,17 @@ class AdminSet < ActiveFedora::Base
   def self.indexer
     AdminSetIndexer
   end
+
+  def default_filter_field
+    "isPartOf_ssim"
+  end
+
+  private
+  def spotlight_exhibit_query
+    Spotlight::Exhibit
+      .where(exhibitable_id: self.id)
+      .where(exhibitable_type: 'AdminSet')
+  end
+
+
 end

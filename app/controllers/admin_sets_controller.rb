@@ -25,6 +25,7 @@ class AdminSetsController < ApplicationController
   end
 
   def edit
+    @spotlight_exhibit = Spotlight::Exhibit.where(admin_set_id: @admin_set.identifier)
     @form = AdminSetForm.new(@admin_set)
   end
 

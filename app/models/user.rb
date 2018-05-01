@@ -27,4 +27,8 @@ class User < ActiveRecord::Base
   def to_s
     username
   end
+
+  def exhibits
+    []
+  end
 end

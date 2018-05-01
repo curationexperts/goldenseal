@@ -1,5 +1,4 @@
 <h2><%= @presenter.title %></h2>
-
 <%= render_thumbnail_tag @presenter.solr_document %>
 
 <table class="table table-striped <%= dom_class(@presenter) %> attributes">
@@ -24,6 +23,13 @@
     <%= link_to "Edit Metadata",
                 [:edit, @presenter],
                 class: 'btn btn-default' %>
+
+    <% if @presenter.edit_exhibit_path %>
+      <%= link_to "Customize", 
+                @presenter.edit_exhibit_path,
+                class: 'btn btn-default' %>
+    <% end %>
+
   <% end %>
 
   <%= link_to "View Members",

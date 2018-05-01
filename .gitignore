@@ -23,3 +23,6 @@ config/solr.yml
 config/redis.yml
 config/resque-pool.yml
 config/ldap.yml
+
+public/uploads
+**/*.swp

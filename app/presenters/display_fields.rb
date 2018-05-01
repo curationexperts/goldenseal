@@ -2,10 +2,25 @@ module DisplayFields
   extend ActiveSupport::Concern
 
   included do
-    delegate :identifier, :series, :date_issued, :note, :extent,
-             :description_standard, :publication_place, :editor, :sponsor,
-             :funder, :researcher, :height, :width, :mime_type, :filename,
-             :representative_id, :thumbnail_id, to: :solr_document
+    delegate :identifier, 
+      :custom_metadata_fields,
+      :date_issued, 
+      :description_standard,
+      :editor, 
+      :extent,
+      :filename,
+      :funder,
+      :height, 
+      :mime_type, 
+      :note, 
+      :publication_place, 
+      :representative_id,
+      :researcher, 
+      :series,
+      :sponsor,
+      :thumbnail_id,
+      :width, 
+      to: :solr_document
   end
 
   def permission_badge_class
@@ -16,4 +31,5 @@ module DisplayFields
   def file_presenter_class
     ::FileSetPresenter
   end
+
 end

@@ -40,6 +40,8 @@ gem 'openseadragon', '~> 0.2.1'
 gem 'angularjs-rails', '~> 1.4.4'
 gem 'ldp', '~> 0.4.1'
 gem 'blacklight_oai_provider', git: 'https://github.com/projectblacklight/blacklight_oai_provider.git', branch: 'v5.1'
+gem 'blacklight-spotlight', git: 'https://github.com/projectblacklight/spotlight.git', tag: 'v0.17.1'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -73,3 +75,10 @@ gem 'devise_ldap_authenticatable'
 gem 'devise-guests', '~> 0.3'
 
 gem 'font-awesome-rails'
+
+gem 'friendly_id'
+gem 'sitemap_generator'
+gem 'blacklight-gallery', '>= 0.3.0'
+gem 'blacklight-oembed'
+gem 'social-share-button'
+gem 'devise_invitable'

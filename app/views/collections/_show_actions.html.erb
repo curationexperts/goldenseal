@@ -1,0 +1,15 @@
+<% if can? :edit, @presenter.id %>
+  <h2 class="non lower">Actions</h2>
+  <p>
+      <%= link_to "Edit", collections.edit_collection_path, class: 'btn btn-default' %> &nbsp;&nbsp;
+      <% if @presenter.edit_exhibit_path %>
+        <%= link_to "Customize", 
+                  @presenter.edit_exhibit_path,
+                  class: 'btn btn-default' %>
+      <% end %>
+
+
+      <%= link_to "Add files from your dashboard",  search_path_for_my_works, class: 'btn btn-default' %>
+  </p>
+<%end %>
+

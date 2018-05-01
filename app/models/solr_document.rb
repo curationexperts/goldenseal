@@ -3,7 +3,7 @@ class SolrDocument
   include Blacklight::Solr::Document
   include Blacklight::Document::DublinCore
   include BlacklightOaiProvider::SolrDocument
-
+  include Spotlight::SolrDocument
   # Adds CurationConcerns behaviors to the SolrDocument.
   include CurationConcerns::SolrDocumentBehavior
   # Do content negotiation for AF models.
@@ -64,6 +64,10 @@ class SolrDocument
 
   def filename
     self['label_ssi']
+  end
+
+  def custom_metadata_fields
+    self['custom_metadata_fields_ssm']
   end
 
   def thumbnail_id
