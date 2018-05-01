@@ -6,7 +6,11 @@ module Metadata
       index.as :stored_sortable
     end
 
-    property :show_path, predicate: ::RDF::Vocat::DC.identifier do |index|
+    property :show_url, predicate: ::RDF::Vocab::DC.identifier do |index|
+      index.as :stored_searchable
+    end
+
+    property :thumbnail_url, predicate: ::RDF::Vocab::DC.identifier do |index|
       index.as :stored_searchable
     end
 

@@ -81,7 +81,7 @@ class SolrDocument
     date: 'date_issued_dtsi',
     description: 'description_tesim',
     format: 'human_readable_type_tesim',
-    identifier: 'show_path_ss'
+    identifier: 'show_path_ss',
     identifier: 'thumbnail_path_ss',
     identifier: 'identifier_tesim',
     language: 'language_tesim',
