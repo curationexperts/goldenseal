@@ -76,19 +76,14 @@ class SolrDocument
 
   field_semantics.merge!(
     contributor: 'contributor_tesim',
-    creator: 'contributor_tesim',
-    coverage: 'default_empty',
+    creator: 'creator_sim',
     date: 'date_issued_dtsi',
     description: 'description_tesim',
     format: 'human_readable_type_tesim',
-    identifier: 'show_path_ss',
-    identifier: 'thumbnail_path_ss',
-    identifier: 'identifier_tesim',
+    identifier: 'oai_identifier_ssm',
     language: 'language_tesim',
     publisher: 'publisher_tesim',
-    relation: 'default_empty',
     rights: 'rights_label_ss',
-    source: 'default_empty',
     subject: 'subject_tesim',
     title: 'title_tesim',
     type: 'human_readable_type_tesim'
