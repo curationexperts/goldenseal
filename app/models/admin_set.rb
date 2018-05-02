@@ -57,7 +57,7 @@ class AdminSet < ActiveFedora::Base
   end
 
   def default_filter_field
-    "isPartOf_ssim"
+    "admin_set_ssi"
   end
 
   private
