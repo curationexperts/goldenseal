@@ -9,6 +9,16 @@ class SolrDocument
   # Do content negotiation for AF models.
 
   use_extension(Hydra::ContentNegotiation)
+  def to_openseadragon(*_args)
+    [self[Spotlight::Engine.config.full_image_field]].flatten.each_with_index.map do |image_url, index|
+      { Spotlight::SolrDocument::UploadedResource::LegacyImagePyramidTileSource.new(
+        image_url,
+        width: 300,
+        height: 300
+      ) => {}
+      }
+    end
+  end
 
   def height
     self['height_is']
@@ -68,6 +78,10 @@ class SolrDocument
 
   def custom_metadata_fields
     self['custom_metadata_fields_ssm']
+  end
+
+  def thumbnail_path
+    self['thumbnail_path_ss']
   end
 
   def thumbnail_id
