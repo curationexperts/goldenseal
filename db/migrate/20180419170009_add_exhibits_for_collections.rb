@@ -1,6 +1,8 @@
 class AddExhibitsForCollections < ActiveRecord::Migration
   def change
-    rename_column :spotlight_exhibits, :admin_set_id, :exhibitable_id
+    add_column :spotlight_exhibits, :exhibitable_id, :string
     add_column :spotlight_exhibits, :exhibitable_type, :string
+    add_index :spotlight_exhibits, :exhibitable_type
+    add_index :spotlight_exhibits, :exhibitable_id 
   end
 end

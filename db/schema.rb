@@ -61,7 +61,6 @@ ActiveRecord::Schema.define(version: 20180306163029) do
   add_index "curation_concerns_operations", ["rgt"], name: "index_curation_concerns_operations_on_rgt"
   add_index "curation_concerns_operations", ["user_id"], name: "index_curation_concerns_operations_on_user_id"
 
-<<<<<<< HEAD
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
     t.integer  "sluggable_id",              null: false
@@ -75,8 +74,6 @@ ActiveRecord::Schema.define(version: 20180306163029) do
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
 
-=======
->>>>>>> integration
   create_table "qa_local_authorities", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -115,7 +112,6 @@ ActiveRecord::Schema.define(version: 20180306163029) do
     t.datetime "updated_at",  null: false
   end
 
-<<<<<<< HEAD
   create_table "spotlight_attachments", force: :cascade do |t|
     t.string   "name"
     t.string   "file"
@@ -361,8 +357,6 @@ ActiveRecord::Schema.define(version: 20180306163029) do
 
   add_index "tags", ["name"], name: "index_tags_on_name", unique: true
 
-=======
->>>>>>> integration
   create_table "users", force: :cascade do |t|
     t.string   "username",               default: "",    null: false
     t.string   "encrypted_password",     default: "",    null: false

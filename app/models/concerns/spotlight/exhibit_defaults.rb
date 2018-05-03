@@ -47,7 +47,7 @@ module Spotlight
 
     # Return a string to work around any ActiveRecord type-casting
     def default_filter_value
-      self.exhibitable_id
+      self.exhibitable.title
     end
 
     private
