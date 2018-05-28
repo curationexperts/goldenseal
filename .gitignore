@@ -25,7 +25,9 @@ config/resque-pool.yml
 config/ldap.yml
 
 public/uploads
-**/*.swp
 sample_assets
 sample_assets.tgz
 **.swp
+**/*.swp
+**.swo
+**/*.swo
