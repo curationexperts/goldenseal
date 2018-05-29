@@ -9,6 +9,8 @@
 /db/*.sqlite3
 /db/*.sqlite3-journal
 
+public/uploads
+
 /log/*
 !/log/.keep
 /tmp
@@ -23,3 +25,6 @@ config/solr.yml
 config/redis.yml
 config/resque-pool.yml
 config/ldap.yml
+
+**/*.swo
+**/*.swp

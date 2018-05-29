@@ -87,7 +87,7 @@ module Import
 
       attributes[:rights] = transform_rights(attributes) unless attributes[:rights].blank?
 
-      record = record_class.create!(attributes) do |r|
+      record = record_class.new(attributes) do |r|
         r.apply_depositor_metadata(user)
       end
 
