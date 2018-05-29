@@ -9,6 +9,8 @@
 /db/*.sqlite3
 /db/*.sqlite3-journal
 
+public/uploads
+
 /log/*
 !/log/.keep
 /tmp
@@ -25,9 +27,7 @@ config/resque-pool.yml
 config/ldap.yml
 
 public/uploads
-sample_assets
+sample-assets
 sample_assets.tgz
-**.swp
-**/*.swp
-**.swo
 **/*.swo
+**/*.swp

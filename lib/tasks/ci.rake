@@ -15,9 +15,9 @@ namespace :ci do
       sh('wget https://s3-us-west-2.amazonaws.com/washington-u/sample-assets.tgz')
       sh('tar zxfv sample-assets.tgz')
     end
-    Text.destroy_all
-    Video.destroy_all
-    Image.destroy_all
+    #Text.destroy_all
+    #Video.destroy_all
+    #Image.destroy_all
     sh('script/import -t text -p sample-assets/text')
     sh('script/import -t video -p sample-assets/video')
     sh('script/import -t image -p sample-assets/image')
