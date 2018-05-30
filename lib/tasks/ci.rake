@@ -15,11 +15,11 @@ namespace :ci do
       sh('wget https://s3-us-west-2.amazonaws.com/washington-u/sample-assets.tgz')
       sh('tar zxfv sample-assets.tgz')
     end
-    #Text.destroy_all
-    #Video.destroy_all
-    #Image.destroy_all
-    sh('script/import -t text -p sample-assets/text')
-    sh('script/import -t video -p sample-assets/video')
-    sh('script/import -t image -p sample-assets/image')
+
+    set = AdminSet.last
+    set = AdminSet.create(title: 'sample', identifier: 'sample') unless set
+    sh("script/import -t text -a #{set.id} -p sample-assets/text")
+    sh("script/import -t video -a #{set.id} -p sample-assets/video")
+    sh("script/import -t image -a #{set.id} -p sample-assets/image")
   end
 end

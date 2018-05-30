@@ -99,6 +99,7 @@ module Import
       }
       puts "    Adding in order took %0.2fs" % time.real  unless Rails.env.test?
       set_representative(record)
+
       record.save!
       record.reload
       record.update_index
