@@ -19,3 +19,4 @@ services:
       rap.le_host: web.${TAG}.staging.notch8network.com
       rap.le_test: true
       io.rancher.container.pull_image: always
+      io.rancher.scheduler.affinity:host_label: target=moishe
