@@ -7,7 +7,8 @@ services:
     image: "${REGISTRY_HOST}${REGISTRY_URI}/base:latest"
     env_file:
       - .env
- 
+      - .env.development
+
   web:
     build:
       context: ./
@@ -17,6 +18,7 @@ services:
       - .:/home/app/webapp
     env_file:
       - .env
+      - .env.development
     # Keep the stdin open, so we can attach to our app container's process
     # and do things such as byebug, etc:
     stdin_open: true
@@ -33,6 +35,7 @@ services:
     command: "*:3389:lib-lswv125.wulib.wustl.edu:389 rob@old.notch8.com"
     env_file:
       - .env
+      - .env.development
     volumes:
       - "${HOME}/.ssh:/root/.ssh"
     ports:

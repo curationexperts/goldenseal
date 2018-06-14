@@ -4,7 +4,7 @@ default: &default
   attribute: sAMAccountName
   base: CN=Users,DC=wulib,DC=wustl,DC=edu
   admin_user: CN=ldap,CN=Users,DC=wulib,DC=wustl,DC=edu
-  admin_password: Abcdef1@
+  admin_password: <%= ENV['LDAP_PASSWORD'] %>
   ssl: false
 
 development:
