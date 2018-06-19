@@ -7,7 +7,7 @@ if [[ ! -e /var/log/nginx/error.log ]]; then
         (sleep 1 && sv restart /etc/service/nginx-log-forwarder)
 fi
 
-#/sbin/setuser app /bin/bash -l -c 'cd /home/app/webapp && bundle exec rake jetty:start'
+/sbin/setuser app /bin/bash -l -c 'cd /home/app/webapp && bundle exec rake jetty:start'
 
 if [ -z $PASSENGER_APP_ENV ]
 then
