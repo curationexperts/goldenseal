@@ -7,7 +7,8 @@ services:
     image: "${REGISTRY_HOST}${REGISTRY_URI}/base:latest"
     env_file:
       - .env
- 
+      - .env.development
+
   web:
     build:
       context: ./
@@ -17,9 +18,7 @@ services:
       - .:/home/app/webapp
     env_file:
       - .env
-    environment:
-      VIRTUAL_PORT: 80
-      VIRTUAL_HOST: goldenseal.docker
+      - .env.development
     # Keep the stdin open, so we can attach to our app container's process
     # and do things such as byebug, etc:
     stdin_open: true
@@ -32,14 +31,15 @@ services:
       - ldap
 
   ldap:
-    image: osixia/openldap
+    image: kingsquare/tunnel
+    command: "*:3389:lib-lswv125.wulib.wustl.edu:389 rob@old.notch8.com"
     env_file:
       - .env
+      - .env.development
     volumes:
-      - 'ldap:/var/lib/ldap'
-      - 'slapd:/etc/ldap/slapd.d'
+      - "${HOME}/.ssh:/root/.ssh"
     ports:
-      - '389:389'
+      - '3389:3389'
 
 volumes:
   ldap:

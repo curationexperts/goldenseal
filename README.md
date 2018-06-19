@@ -74,7 +74,7 @@ In development and the staging environments, we use the phusion/passenger-ruby D
 
 ## Production Installation
 
-We recommend using Ansible to create production instances of Goldenseal. Download https://github.com/acozine/sufia-centos/releases/tag/0.1 and symlink the roles subdirectory of the sufia-centos code into the ansible subudirectory of the Goldenseal code:
+We recommend using Ansible to create production instances of Goldenseal. Download https://github.com/acozine/sufia-centos and symlink the roles subdirectory of the sufia-centos code into the ansible subudirectory of the Goldenseal code:
 ```
 sudo ln -s /path/to/sufia-centos/roles /path/to/goldenseal/ansible/roles
 ```
