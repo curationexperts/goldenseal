@@ -2,6 +2,7 @@ class AdminSet < ActiveFedora::Base
   include Hydra::AccessControls::Permissions
   include CurationConcerns::HumanReadableType
   include CurationConcerns::HasRepresentative
+  include SpotlightExhibitable
 
   self.human_readable_type = 'Administrative Collection'
 
@@ -46,12 +47,28 @@ class AdminSet < ActiveFedora::Base
   end
 
   before_create :assign_access
+  before_destroy :destroy_spotlight_exhibit
 
   def assign_access
     self.read_groups += ['public']
   end
 
+  def destroy_spotlight_exhibit 
+    spotlight_exhibit_query.destroy_all
+  end
+
   def self.indexer
     AdminSetIndexer
+  end
+
+  def default_filter_field
+    "admin_set_ssi"
+  end
+
+  private
+  def spotlight_exhibit_query
+    Spotlight::Exhibit
+      .where(exhibitable_id: self.id)
+      .where(exhibitable_type: 'AdminSet')
   end
 end

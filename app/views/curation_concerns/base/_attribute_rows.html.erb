@@ -1,3 +1,4 @@
+    
     <%= @presenter.attribute_to_html(:description) %>
     <%= @presenter.attribute_to_html(:subject, catalog_search_link: true) %>
     <%= @presenter.attribute_to_html(:creator, catalog_search_link: true ) %>
@@ -7,6 +8,7 @@
     <%= @presenter.attribute_to_html(:funder) %>
     <%= @presenter.attribute_to_html(:researcher) %>
     <%= @presenter.attribute_to_html(:publisher) %>
+    <%= @presenter.attribute_to_html(:source) %>
     <%= @presenter.attribute_to_html(:language) %>
     <%= @presenter.attribute_to_html(:identifier) %>
     <%= @presenter.attribute_to_html(:series) %>
@@ -20,4 +22,8 @@
     <%= @presenter.attribute_to_html(:mime_type) %>
     <%= @presenter.attribute_to_html(:filename) %>
     <%= @presenter.attribute_to_html(:admin_set) %>
-
+    <% if @presenter.respond_to? :custom_metadata_fields %>
+      <% @presenter.custom_metadata_fields.to_a.uniq.each do |field| %>
+        <%= @presenter.attribute_to_html(field.intern) %>
+      <% end %>
+    <% end %>

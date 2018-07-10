@@ -7,6 +7,8 @@ module CurationConcerns
       format.vtt { render_vtt }
     end
 
+    delegate :prevent_download, to: :solr_document
+
     protected
 
       # Overridden to use a local presenter implementation
@@ -24,5 +26,7 @@ module CurationConcerns
           fail ActiveFedora::ObjectNotFoundError
         end
       end
+
+      delegate :prevent_download, to: :solr_document
   end
 end

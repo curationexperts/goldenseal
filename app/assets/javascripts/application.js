@@ -18,6 +18,7 @@
 //= require openseadragon
 //= require angular
 //= require tei_viewer
+//= require spotlight
 
 // ableplayer has a dependency on jquery.cookie
 //= require jquery.cookie

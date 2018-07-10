@@ -1,17 +1,19 @@
-<% if defined?(transcript_id) && transcript_id %>
-  <div id="player" class="col-md-6">
-    <video width="480" height="360" preload="auto" data-able-player data-transcript-div="transcript" data-use-transcript-button="false" data-translation-path="/" data-include-transcript="true">
+<% unless file_set.prevent_download.present? && file_set.prevent_download == true %>
+  <% if defined?(transcript_id) && transcript_id %>
+    <div id="player" class="col-md-6">
+      <video width="480" height="360" preload="auto" data-able-player data-transcript-div="transcript" data-use-transcript-button="false" data-translation-path="/" data-include-transcript="true">
+        <source src="<%= main_app.download_path(file_set, file: 'webm') %>" type="video/webm" />
+        <source src="<%= main_app.download_path(file_set, file: 'mp4') %>" type="video/mp4" />
+        <track kind="captions" src="<%= main_app.curation_concerns_file_set_path(transcript_id, format: :vtt) %>" srclang="en" label="English"  />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div id="transcript" class="col-md-6"></div>
+  <% else %>
+    <video width="480" height="360" controls="controls" class="video-js vjs-default-skin" data-setup="{}" preload="auto">
       <source src="<%= main_app.download_path(file_set, file: 'webm') %>" type="video/webm" />
       <source src="<%= main_app.download_path(file_set, file: 'mp4') %>" type="video/mp4" />
-      <track kind="captions" src="<%= main_app.curation_concerns_file_set_path(transcript_id, format: :vtt) %>" srclang="en" label="English"  />
       Your browser does not support the video tag.
     </video>
-  </div>
-  <div id="transcript" class="col-md-6"></div>
-<% else %>
-  <video width="480" height="360" controls="controls" class="video-js vjs-default-skin" data-setup="{}" preload="auto">
-    <source src="<%= main_app.download_path(file_set, file: 'webm') %>" type="video/webm" />
-    <source src="<%= main_app.download_path(file_set, file: 'mp4') %>" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
+  <% end %>
 <% end %>

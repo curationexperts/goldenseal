@@ -105,6 +105,8 @@ We have tested Goldenseal with the following versions of its dependencies:
 ## Importing Records
 ### Importing records with TEI or VRA files
 
+NOTE: This happens automatically on staging servers
+
 TEI files can be parsed to create Audio, Video, or Text records.  VRA records can be parsed to produce Image records.  The instructions are basically the same either way.
 
 * Create a directory and add all the TEI (or VRA) files to that directory.
@@ -143,3 +145,12 @@ The `tmp/uploads` directory is where uploaded files are temporarily stored befor
 You must be sure that all the background jobs have finished using the files before you delete them, so rather than deleting everything under `tmp/uploads`, we recommend that you only delete files and directories that are more than a few days old.
 
 For a little more background [see story #199](https://github.com/curationexperts/goldenseal/issues/199)
+
+## Spotlight Notes
+### Workflow
+- Create Spotlight Exhibits from all Admin Sets
+- Update search of index CC works to work with SL Exhibits
+- autocomplete
+  - Set autocmplete_default_param in new Spotlight initializer
+- Associate AdminSet to Exhibit
+- Add "spotlight_exhibit_slug_xxxxxxx_bsi" to solr_params for works when associated to collection
