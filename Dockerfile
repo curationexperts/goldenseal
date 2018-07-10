@@ -7,7 +7,6 @@ COPY ops/env.conf /etc/nginx/main.d/env.conf
 
 COPY . $APP_HOME
 
-RUN rm /opt/fits-1.0.5
 RUN unzip ops/fits-1.0.5.zip -d /opt
 RUN chmod a+x /opt/fits-1.0.5/fits.sh
 ENV PATH="/opt/fits-1.0.5:${PATH}"
