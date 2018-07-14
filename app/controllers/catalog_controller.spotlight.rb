@@ -19,9 +19,7 @@ class CatalogController < ApplicationController
 
     # solr field configuration for search results/index views
     config.index.title_field = 'full_title_tesim'
-
     config.add_sort_field 'relevance', sort: 'score desc', label: 'Relevance'
-
     config.add_field_configuration_to_solr_request!
   end
 end

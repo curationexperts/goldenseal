@@ -1,6 +1,27 @@
 <h2><%= @presenter.title %></h2>
-
 <%= render_thumbnail_tag @presenter.solr_document %>
+
+
+<h2 class="non lower">Actions</h2>
+<div class='btn-group' role='group'>
+  <% if can? :edit, @presenter %>
+    <%= link_to "Edit Metadata",
+                [:edit, @presenter],
+                class: 'btn btn-default' %>
+  <% end %>
+
+  <%= link_to "View Members",
+              catalog_index_path(add_facet_params('admin_set_ssi', @presenter.title)),
+              class: 'btn btn-default' %>
+
+  <% if can? :edit, @presenter %>
+    <%= render 'shared/download_actions' %>
+
+    <%= link_to "Delete Collection",
+                [:confirm_delete, @presenter],
+                class: 'btn btn-default pull-right' %>
+  <% end %>
+</div>
 
 <table class="table table-striped <%= dom_class(@presenter) %> attributes">
   <caption class="table-heading"><h2>Attributes</h2></caption>
@@ -24,6 +45,13 @@
     <%= link_to "Edit Metadata",
                 [:edit, @presenter],
                 class: 'btn btn-default' %>
+
+    <% if @presenter.edit_exhibit_path %>
+      <%= link_to "Customize", 
+                @presenter.edit_exhibit_path,
+                class: 'btn btn-default' %>
+    <% end %>
+
   <% end %>
 
   <%= link_to "View Members",

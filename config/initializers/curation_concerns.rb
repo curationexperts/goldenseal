@@ -99,7 +99,11 @@ CurationConcerns.configure do |config|
   # config.noid_template = ".reeddeeddk"
 
   # Store identifier minter's state in a file for later replayability
-  config.minter_statefile = '/opt/goldenseal/shared/minter-state' if Rails.env.production?
+  if Rails.env.production?
+    config.minter_statefile = '/opt/goldenseal/shared/minter-state' 
+  else
+    config.minter_statefile = './tmp/minter-state'
+  end
 
   # Specify the prefix for Redis keys:
   # config.redis_namespace = "curation_concerns"

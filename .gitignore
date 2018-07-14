@@ -26,5 +26,10 @@ config/redis.yml
 config/resque-pool.yml
 config/ldap.yml
 
+public/uploads
+sample-assets
+sample_assets.tgz
 **/*.swo
 **/*.swp
+
+ops/fits-1.0.5/*
