@@ -18,7 +18,6 @@ class CatalogController < ApplicationController
     config.document_unique_id_param = 'ids'
 
     # solr field configuration for search results/index views
-    config.add_search_field 'all_fields', label: 'Everything'
     config.index.title_field = 'full_title_tesim'
     config.add_sort_field 'relevance', sort: 'score desc', label: 'Relevance'
     config.add_field_configuration_to_solr_request!
