@@ -5,13 +5,6 @@ module CurationConcerns
     include Hydra::Controller::SearchBuilder
     include Downloads
 
-    included do
-      before_action :filter_docs_with_read_access!, except: [:show, :prevent_downloads, :allow_downloads]
-      self.search_params_logic += [:add_access_controls_to_solr_params, :add_advanced_parse_q_to_solr]
-      layout 'curation_concerns/1_column'
-      skip_load_and_authorize_resource only: [:show, :prevent_downloads, :allow_downloads]
-    end
-
     def new
       super
       form
@@ -32,21 +25,7 @@ module CurationConcerns
       action_name == 'show' ? @presenter : @collection
     end
 
-    def allow_downloads
-      file_type = params[:file_type]
-      collection = Collection.find(params[:id])
-      toggle_prevent_download(collection, false, file_type)
-      redirect_to collection_path(collection), notice: 'Collection was successfully updated.'
-    end
-
-    def prevent_downloads
-      file_type = params[:file_type]
-      collection = Collection.find(params[:id])
-      toggle_prevent_download(collection, true, file_type)
-      redirect_to collection_path(collection), notice: 'Collection was successfully updated.'
-    end
-
-    protected
+   protected
       def filter_docs_with_read_access!
         super
         flash.delete(:notice) if flash.notice == 'Select something first'
