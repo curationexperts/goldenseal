@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   mount CurationConcerns::Engine, at: '/'
   resources :welcome, only: :index
   root to: 'welcome#index'
-  #root to: "welcome#index" # replaced by spotlight root path
   iiif_for 'riiif/image', at: '/image-service'
   curation_concerns_collections
   curation_concerns_basic_routes
