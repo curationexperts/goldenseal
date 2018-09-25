@@ -9,6 +9,9 @@ class Ability
       can [:allow_downloads, :prevent_downloads], AdminSet
     end
 
+    can :read, Spotlight::HomePage
+    can :read, Spotlight::Exhibit
+
     # Limits creating new objects to a specific group
     #
     # if user_groups.include? 'special_group'
