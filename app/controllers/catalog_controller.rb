@@ -7,7 +7,7 @@ class CatalogController < ApplicationController
                             contributor_tesim
                             description_tesim
                             subject_tesim
-                            tei_json_tesim
+                            tei_json_tesi
                             id ))
   end
 
@@ -129,7 +129,7 @@ class CatalogController < ApplicationController
 
     config.add_search_field('tei_json') do |field|
       field.label = 'Content'
-      solr_name = 'tei_json_tesim'
+      solr_name = 'tei_json_tesi'
       field.solr_local_parameters = {
         qf: solr_name,
         pf: solr_name
