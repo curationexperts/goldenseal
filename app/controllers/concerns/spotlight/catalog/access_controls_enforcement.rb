@@ -1,6 +1,8 @@
 gem_dir = Gem::Specification.find_by_name("blacklight-spotlight").gem_dir
 require "#{gem_dir}/app/controllers/concerns/spotlight/catalog/access_controls_enforcement.rb"
 
+Spotlight::Catalog.send :remove_const, :AccessControlsEnforcement
+
 module Spotlight
   module Catalog
     ##
@@ -8,20 +10,20 @@ module Spotlight
     module AccessControlsEnforcement
       extend ActiveSupport::Concern
 
-      begin
-        #Fails when loaded as part of background tasks, required for app
-        included do
-          # access control handled by CC
-          #self.search_params_logic += [:apply_permissive_visibility_filter, :apply_exhibit_resources_filter]
-          self.search_params_logic += [:apply_exhibit_resources_filter]
-        end
-      rescue
+      included do
+        # access control handled by CC
+        #self.search_params_logic += [:apply_permissive_visibility_filter, :apply_exhibit_resources_filter]
+        self.search_params_logic += [:apply_exhibit_resources_filter]
       end
 
       ##
       # SearchBuilder mixin
       module SearchBuilder
         extend ActiveSupport::Concern
+
+        included do
+          self.default_processor_chain += [:apply_permissive_visibility_filter, :apply_exhibit_resources_filter]
+        end
 
         # Adds a filter that excludes resources that have been marked as not-visible
         def apply_permissive_visibility_filter(solr_params)
