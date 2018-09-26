@@ -1,9 +1,11 @@
 class BaseWorkIndexer < CurationConcerns::WorkIndexer
+  TEI_JSON = 'tei_json_tesi'
   include Rails.application.routes.url_helpers
 
   def generate_solr_document
     relative_thumb_path = CurationConcerns::ThumbnailPathService.call(object)
     super do |solr_doc|
+      solr_doc[TEI_JSON] = ActionView::Base.full_sanitizer.sanitize(tei) if tei
       solr_doc['oai_identifier_ssm'] = [
         url_for(object),
         "http://#{Rails.application.routes.default_url_options[:host]}#{relative_thumb_path}",
@@ -21,8 +23,24 @@ class BaseWorkIndexer < CurationConcerns::WorkIndexer
   end
 
   private
-
     def rights_labels
       object.rights.map { |r| RightsService.label(r) }
+    end
+
+    def tei_to_json
+      as_json = tei_as_json
+      return unless as_json
+      JSON.generate(as_json)
+    end
+
+    def tei
+      @tei ||= object.try(:tei).try(:original_file).try(:content)
+    end
+    
+    def tei_as_json
+      # OPTIMIZE: this could be indexed on the FileSet which
+      # so that every index call wouldn't have to load the tei file.
+      return unless tei
+      TEIConverter.new(tei, object).as_json
     end
 end
