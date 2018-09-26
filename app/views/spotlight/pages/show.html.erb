@@ -1,0 +1,26 @@
+<% set_html_page_title @page.title if @page.should_display_title? %>
+<% render 'tophat' %>
+<%= render 'sidebar' if @page.display_sidebar? %>
+
+<div class="<%= @page.display_sidebar? ? 'col-md-9' : 'col-md-12' %>">
+  <div class="clearfix">
+    <%= link_to "View Members", 
+      catalog_index_path("f[admin_set_ssi][]": @page.exhibit.title), 
+      class: 'btn btn-primary' %>
+
+    <%= render 'edit_page_link' if can? :edit, @page %>
+    <% if @page.should_display_title? %>
+      <h1 class="page-title">
+        <%= @page.title %>
+      </h1>
+    <% end %>
+  </div>
+  <div>
+    <% if @page.content? %>
+      <%= render @page.content %>
+    <% else %>
+      <%= render 'empty' %>
+    <% end %>
+  </div>
+</div>
+
