@@ -7,7 +7,13 @@ class Ability
     if admin?
       can [:confirm_delete], ActiveFedora::Base
       can [:allow_downloads, :prevent_downloads], AdminSet
+
+      can :manage, Spotlight::HomePage
+      can :manage, Spotlight::Exhibit
     end
+
+    can :read, Spotlight::HomePage
+    can :read, Spotlight::Exhibit
 
     # Limits creating new objects to a specific group
     #
