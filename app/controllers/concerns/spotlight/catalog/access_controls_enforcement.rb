@@ -6,6 +6,7 @@ module Spotlight
       extend ActiveSupport::Concern
 
       begin
+        #Fails when loaded as part of background tasks, required for app
         included do
           # access control handled by CC
           #self.search_params_logic += [:apply_permissive_visibility_filter, :apply_exhibit_resources_filter]
