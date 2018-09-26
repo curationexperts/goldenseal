@@ -5,21 +5,19 @@ module Spotlight
     module AccessControlsEnforcement
       extend ActiveSupport::Concern
 
-      # included do
-
-        # # access control handled by CC
-        # #self.search_params_logic += [:apply_permissive_visibility_filter, :apply_exhibit_resources_filter]
-        # self.search_params_logic += [:apply_exhibit_resources_filter]
-      # end
+      begin
+        included do
+          # access control handled by CC
+          #self.search_params_logic += [:apply_permissive_visibility_filter, :apply_exhibit_resources_filter]
+          self.search_params_logic += [:apply_exhibit_resources_filter]
+        end
+      rescue
+      end
 
       ##
       # SearchBuilder mixin
       module SearchBuilder
         extend ActiveSupport::Concern
-
-        # included do
-          # self.default_processor_chain += [:apply_permissive_visibility_filter, :apply_exhibit_resources_filter]
-        # end
 
         # Adds a filter that excludes resources that have been marked as not-visible
         def apply_permissive_visibility_filter(solr_params)
