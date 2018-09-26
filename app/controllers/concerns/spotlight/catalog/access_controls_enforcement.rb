@@ -1,3 +1,6 @@
+gem_dir = Gem::Specification.find_by_name("blacklight-spotlight").gem_dir
+require "#{gem_dir}/app/controllers/concerns/spotlight/catalog/access_controls_enforcement.rb"
+
 module Spotlight
   module Catalog
     ##
