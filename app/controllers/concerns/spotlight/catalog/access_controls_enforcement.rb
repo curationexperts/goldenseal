@@ -1,3 +1,8 @@
+gem_dir = Gem::Specification.find_by_name("blacklight-spotlight").gem_dir
+require "#{gem_dir}/app/controllers/concerns/spotlight/catalog/access_controls_enforcement.rb"
+
+Spotlight::Catalog.send :remove_const, :AccessControlsEnforcement
+
 module Spotlight
   module Catalog
     ##
@@ -6,7 +11,6 @@ module Spotlight
       extend ActiveSupport::Concern
 
       included do
-
         # access control handled by CC
         #self.search_params_logic += [:apply_permissive_visibility_filter, :apply_exhibit_resources_filter]
         self.search_params_logic += [:apply_exhibit_resources_filter]
