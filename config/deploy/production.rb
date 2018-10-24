@@ -1,3 +1,8 @@
+set :stage, :production
+set :rails_env, 'production'
+set :branch, ENV['BRANCH'] || 'master'
+server 'hydraprod.wulib.wustl.edu', user: 'deploy', roles: [:web, :app, :db, :resque_pool]
+
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.

@@ -1,0 +1,14 @@
+---
+- name: Provision
+  hosts: all
+  gather_facts: False
+  tasks:
+    - name: Provision via rancher
+      shell: "cd .. && rancher up -p -d -u -s {{ app_name }} -f docker-compose.{{ deploy_env }}.yml -e .env.{{ app_name | regex_replace('-staging', '') }}.{{ deploy_env }}"
+      register: result
+      delegate_to: 127.0.0.1
+      environment:
+        APP_NAME: "{{ app_name | regex_replace('-staging', '') }}"
+        TAG: "{{ tag }}"
+        RANCHER_ENVIRONMENT: "{{ rancher_env }}"
+    - debug: var=result.stdout_lines

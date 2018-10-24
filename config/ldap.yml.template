@@ -1,23 +1,20 @@
 ## Environment
 default: &default
-  attribute: uid
-  base: ou=people,dc=dce,dc=com
-  group_base: ou=groups,dc=dce,dc=com
+  group_base: OU=User-Groups,DC=wulib,DC=wustl,DC=edu
+  attribute: sAMAccountName
+  base: CN=Users,DC=wulib,DC=wustl,DC=edu
+  admin_user: CN=ldap,CN=Users,DC=wulib,DC=wustl,DC=edu
+  admin_password: <%= ENV['LDAP_PASSWORD'] %>
+  ssl: false
 
 development:
-  host: ldap.curationexperts.com
-  port: 389
-  admin_user: cn=admin,dc=test,dc=com
-  admin_password: admin_password
-  ssl: false
+  host: ldap 
+  port: 3389
   <<: *default
 
 test:
-  host: ldap.curationexperts.com
+  host: ldap
   port: 3389
-  admin_user: cn=admin,dc=test,dc=com
-  admin_password: admin_password
-  ssl: simple_tls
   <<: *default
 
 production:

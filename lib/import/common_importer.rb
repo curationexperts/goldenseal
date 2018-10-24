@@ -87,7 +87,7 @@ module Import
 
       attributes[:rights] = transform_rights(attributes) unless attributes[:rights].blank?
 
-      record = record_class.create!(attributes) do |r|
+      record = record_class.new(attributes) do |r|
         r.apply_depositor_metadata(user)
       end
 
@@ -99,7 +99,10 @@ module Import
       }
       puts "    Adding in order took %0.2fs" % time.real  unless Rails.env.test?
       set_representative(record)
+
       record.save!
+      record.reload
+      record.update_index
     end
 
     def attach_files(record, metadata_file, files)

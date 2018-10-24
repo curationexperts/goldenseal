@@ -1,0 +1,46 @@
+version: '2'
+services:
+  base:
+    build:
+      context: ./
+      dockerfile: Dockerfile.base
+    image: "${REGISTRY_HOST}${REGISTRY_URI}/base:latest"
+    env_file:
+      - .env
+      - .env.development
+
+  web:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: "${REGISTRY_HOST}${REGISTRY_URI}:${TAG}"
+    volumes:
+      - .:/home/app/webapp
+    env_file:
+      - .env
+      - .env.development
+    # Keep the stdin open, so we can attach to our app container's process
+    # and do things such as byebug, etc:
+    stdin_open: true
+    # Enable sending signals (CTRL+C, CTRL+P + CTRL+Q) into the container:
+    tty: true
+    ports:
+      - "8080:80"
+      - "3003:3000"
+    depends_on:
+      - ldap
+
+  ldap:
+    image: kingsquare/tunnel
+    command: "*:3389:lib-lswv125.wulib.wustl.edu:389 rob@old.notch8.com"
+    env_file:
+      - .env
+      - .env.development
+    volumes:
+      - "${HOME}/.ssh:/root/.ssh"
+    ports:
+      - '3389:3389'
+
+volumes:
+  ldap:
+  slapd:

@@ -45,6 +45,22 @@ To start worker(s) to run the jobs:
 QUEUE=* VERBOSE=1 rake resque:work
 ```
 
+## Jetty and Solr
+Just like in production, Solr is run in the same container as the main app in dev and staging environments.  Consistency between environments trumps Docker best practices here, so it is what it is. 
+
+Jetty and Solr are started automatically by the container by my_init. See ```/etc/services/jetty/run``` for how this happens.  Blacklight, Curation Concerns, Spotlight, and Jetty all provide rake tasks to do this.  The one we use is Jetty: ```rake jetty:start```.  There are a few more rake tasks for managing the process that you can see by running ```rake --tasks```. Solr runs on port 8983.
+
+## Docker and the base image
+In development and the staging environments, we use the phusion/passenger-ruby Docker image.  ```Dockerfile.base``` is used to setup the container from scratch, including all the packages, assets, and startup scripts.  ```Dockerfile``` is used during deployment, pulling the cached base image, and loading the code for the application quickly.  
+
+### Some important file locations
+* Anything in /etc/services/**/run will be run by the ```/sbin/my_init``` script that phusion/passenger-ruby uses to boot
+* The home directory for the app is ```/home/app/webapp```
+* In the code base,  you'll find dev ops stuff in ```/ops```
+* ```docker-compose.yml``` is used to define your development environment
+* ```docker-compose-ci.yml``` is used to define review environment on staging
+* ```.gitlab-ci.yml``` defines the pipeline on gitlab to build and deploy test and staging environments
+
 ## Run the test suite
 
 * Make sure jetty is running
@@ -58,7 +74,7 @@ QUEUE=* VERBOSE=1 rake resque:work
 
 ## Production Installation
 
-We recommend using Ansible to create production instances of Goldenseal. Download https://github.com/acozine/sufia-centos/releases/tag/0.1 and symlink the roles subdirectory of the sufia-centos code into the ansible subudirectory of the Goldenseal code:
+We recommend using Ansible to create production instances of Goldenseal. Download https://github.com/acozine/sufia-centos and symlink the roles subdirectory of the sufia-centos code into the ansible subudirectory of the Goldenseal code:
 ```
 sudo ln -s /path/to/sufia-centos/roles /path/to/goldenseal/ansible/roles
 ```
@@ -88,6 +104,8 @@ We have tested Goldenseal with the following versions of its dependencies:
 
 ## Importing Records
 ### Importing records with TEI or VRA files
+
+NOTE: This happens automatically on staging servers
 
 TEI files can be parsed to create Audio, Video, or Text records.  VRA records can be parsed to produce Image records.  The instructions are basically the same either way.
 
@@ -127,3 +145,12 @@ The `tmp/uploads` directory is where uploaded files are temporarily stored befor
 You must be sure that all the background jobs have finished using the files before you delete them, so rather than deleting everything under `tmp/uploads`, we recommend that you only delete files and directories that are more than a few days old.
 
 For a little more background [see story #199](https://github.com/curationexperts/goldenseal/issues/199)
+
+## Spotlight Notes
+### Workflow
+- Create Spotlight Exhibits from all Admin Sets
+- Update search of index CC works to work with SL Exhibits
+- autocomplete
+  - Set autocmplete_default_param in new Spotlight initializer
+- Associate AdminSet to Exhibit
+- Add "spotlight_exhibit_slug_xxxxxxx_bsi" to solr_params for works when associated to collection

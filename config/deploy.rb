@@ -2,7 +2,8 @@
 lock '3.4.0'
 
 set :application, 'goldenseal'
-set :repo_url, 'https://github.com/curationexperts/goldenseal.git'
+set :repo_url, 'https://github.com/wulib-wustl-edu/goldenseal.git'
+#set :repo_url, "git@gitlab.com:notch8/washington-goldenseal.git"
 set :passenger_restart_with_touch, true
 ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 set :deploy_to, '/opt/goldenseal'

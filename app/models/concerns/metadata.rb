@@ -6,6 +6,10 @@ module Metadata
       index.as :stored_sortable
     end
 
+    property :oai_identifier, predicate: ::RDF::Vocab::DC.identifier, multiple: true do |index|
+      index.as :stored_searchable
+    end
+
     property :extent, predicate: ::RDF::Vocab::DC.extent do |index|
       index.as :symbol
     end
@@ -40,6 +44,10 @@ module Metadata
 
     property :researcher, predicate: ::RDF::Vocab::MARCRelators.res do |index|
       index.as :stored_searchable
+    end
+
+    property :source, predicate: ::RDF::Vocab::MARCRelators.org do |index| 
+      index.as :stored_searchable 
     end
   end
 end

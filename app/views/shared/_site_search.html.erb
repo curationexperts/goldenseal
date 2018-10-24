@@ -10,8 +10,13 @@
     <%= render_hash_as_hidden_fields(params_for_search().except(:q, :search_field, :qt, :page, :utf8)) %>
     <%= text_field_tag(:q, params[:q], class: "q search-query form-control", id: "catalog_search",
                        placeholder: t('curation_concerns.search.form.q.placeholder'), tabindex: "1", type: "search") %>
-                      <button type="submit" class="search-submit btn btn-primary" id="keyword-search-submit" tabindex="2">
+    <button type="submit" class="search-submit btn btn-primary" id="keyword-search-submit" tabindex="2">
       <i class="glyphicon glyphicon-search icon-white"></i><span class="accessible-hidden">Search</span>
     </button>
+    <%= 
+      link_to_unless_current("Advanced Search", main_app.advanced_search_path(params), :class => "btn btn-primary") do
+        ""
+      end
+    %>
   </fieldset>
 <% end %>

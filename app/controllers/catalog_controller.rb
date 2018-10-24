@@ -1,11 +1,13 @@
 class CatalogController < ApplicationController
   include CurationConcerns::CatalogController
+  include BlacklightOaiProvider::Controller
 
   def self.search_config
     super.merge('qf' => %w( title_tesim
                             contributor_tesim
                             description_tesim
                             subject_tesim
+                            tei_json_tesi
                             id ))
   end
 
@@ -16,23 +18,31 @@ class CatalogController < ApplicationController
     config.default_solr_params = {
       qf: search_config['qf'],
       qt: search_config['qt'],
-      rows: search_config['rows']
+      rows: search_config['rows'],
+      
+      "hl.simple.pre": '<mark><em>',
+      "hl.simple.post": '</em></mark>',
+      "hl.alternateField": "dd",
+      hl: true
     }
+
+    
 
     # solr field configuration for search results/index views
     config.index.title_field = solr_name('title', :stored_searchable)
     config.index.display_type_field = solr_name('has_model', :symbol)
-
+    
     config.index.thumbnail_field = 'thumbnail_path_ss'
     config.index.partials += [:action_menu]
 
     # solr field configuration for document/show views
     # config.show.title_field = solr_name("title", :stored_searchable)
     # config.show.display_type_field = solr_name("has_model", :symbol)
+    config.show.prevent_download_field = solr_name("prevent_download_bsi", :stored_searchable)
 
     # solr fields that will be treated as facets by the blacklight application
     #   The ordering of the field names is the order of the display
-    config.add_facet_field solr_name('human_readable_type', :facetable)
+    config.add_facet_field solr_name('human_readable_type', :facetable), label: "Item Type"
     config.add_facet_field solr_name('creator', :facetable), limit: 5
     config.add_facet_field solr_name('tag', :facetable), limit: 10
     config.add_facet_field solr_name('subject', :facetable), limit: 10
@@ -50,20 +60,21 @@ class CatalogController < ApplicationController
 
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display
-    config.add_index_field solr_name('description', :stored_searchable), helper_method: :index_description, length: 300
-    config.add_index_field solr_name('tag', :stored_searchable)
-    config.add_index_field solr_name('subject', :stored_searchable)
-    config.add_index_field solr_name('creator', :stored_searchable)
-    config.add_index_field solr_name('contributor', :stored_searchable)
-    config.add_index_field solr_name('publisher', :stored_searchable)
-    config.add_index_field solr_name('based_near', :stored_searchable)
-    config.add_index_field solr_name('language', :stored_searchable)
+    config.add_index_field solr_name('description', :stored_searchable), helper_method: :index_description, length: 300, highlight: true
+    config.add_index_field solr_name('tag', :stored_searchable), highlight: true
+    config.add_index_field solr_name('subject', :stored_searchable), highlight: true
+    config.add_index_field solr_name('creator', :stored_searchable), highlight: true
+    config.add_index_field solr_name('contributor', :stored_searchable), highlight: true
+    config.add_index_field solr_name('publisher', :stored_searchable), highlight: true
+    config.add_index_field solr_name('based_near', :stored_searchable), highlight: true
+    config.add_index_field solr_name('language', :stored_searchable), highlight: true
     config.add_index_field uploaded_field, helper_method: :formatted_time, label: 'Date Uploaded'
     config.add_index_field modified_field, helper_method: :formatted_time, label: 'Date Modified'
     config.add_index_field 'date_issued_dtsi', helper_method: :formatted_time, label: 'Date Issued'
-    config.add_index_field 'rights_label_ss', label: 'Content License'
-    config.add_index_field solr_name('human_readable_type', :stored_searchable)
-    config.add_index_field solr_name('format', :stored_searchable)
+    config.add_index_field 'rights_label_ss', label: 'Content License', highlight: true
+    config.add_index_field solr_name('human_readable_type', :stored_searchable), label: 'Item Type', highlight: true
+    config.add_index_field solr_name('format', :stored_searchable), highlight: true
+    config.add_index_field solr_name('prevent_download_bsi', :stored_searchable), label: 'Prevent Downloads'
 
     # "fielded" search configuration. Used by pulldown among other places.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields
@@ -89,20 +100,6 @@ class CatalogController < ApplicationController
     # of Solr search fields.
     # creator, title, description, publisher, date_created,
     # subject, language, resource_type, format, identifier, based_near,
-    config.add_search_field('contributor') do |field|
-      field.include_in_simple_select = false
-      # solr_parameters hash are sent to Solr as ordinary url query params.
-
-      # :solr_local_parameters will be sent using Solr LocalParams
-      # syntax, as eg {! qf=$title_qf }. This is neccesary to use
-      # Solr parameter de-referencing like $title_qf.
-      # See: http://wiki.apache.org/solr/LocalParams
-      solr_name = solr_name('contributor', :stored_searchable, type: :string)
-      field.solr_local_parameters = {
-        qf: solr_name,
-        pf: solr_name
-      }
-    end
 
     config.add_search_field('title') do |field|
       solr_name = solr_name('title', :stored_searchable, type: :string)
@@ -113,6 +110,7 @@ class CatalogController < ApplicationController
     end
 
     config.add_search_field('creator') do |field|
+    field.include_in_advanced_search = false
       solr_name = solr_name('creator', :stored_searchable, type: :string)
       field.solr_local_parameters = {
         qf: solr_name,
@@ -129,7 +127,17 @@ class CatalogController < ApplicationController
       }
     end
 
+    config.add_search_field('tei_json') do |field|
+      field.label = 'Content'
+      solr_name = 'tei_json_tesi'
+      field.solr_local_parameters = {
+        qf: solr_name,
+        pf: solr_name
+      }
+    end
+
     config.add_search_field('publisher') do |field|
+      field.include_in_advanced_search = false
       field.include_in_simple_select = false
       solr_name = solr_name('publisher', :stored_searchable, type: :string)
       field.solr_local_parameters = {
@@ -140,6 +148,7 @@ class CatalogController < ApplicationController
 
     config.add_search_field('date_created') do |field|
       field.include_in_simple_select = false
+      field.include_in_advanced_search = false
       solr_name = solr_name('created', :stored_searchable, type: :string)
       field.solr_local_parameters = {
         qf: solr_name,
@@ -157,6 +166,7 @@ class CatalogController < ApplicationController
     end
 
     config.add_search_field('subject') do |field|
+      field.include_in_advanced_search = false
       solr_name = solr_name('subject', :stored_searchable, type: :string)
       field.solr_local_parameters = {
         qf: solr_name,
@@ -165,6 +175,7 @@ class CatalogController < ApplicationController
     end
 
     config.add_search_field('language') do |field|
+      field.include_in_advanced_search = false
       field.include_in_simple_select = false
       solr_name = solr_name('language', :stored_searchable, type: :string)
       field.solr_local_parameters = {
@@ -174,6 +185,8 @@ class CatalogController < ApplicationController
     end
 
     config.add_search_field('human_readable_type') do |field|
+      field.label = "Item Type"
+      # field.include_in_advanced_search = false
       field.include_in_simple_select = false
       solr_name = solr_name('human_readable_type', :stored_searchable, type: :string)
       field.solr_local_parameters = {
@@ -204,6 +217,7 @@ class CatalogController < ApplicationController
 
     config.add_search_field('tag') do |field|
       field.include_in_simple_select = false
+      field.include_in_advanced_search = false
       solr_name = solr_name('tag', :stored_searchable, type: :string)
       field.solr_local_parameters = {
         qf: solr_name,
@@ -211,18 +225,27 @@ class CatalogController < ApplicationController
       }
     end
 
-    config.add_search_field('depositor') do |field|
+    config.add_search_field('contributor') do |field|
       field.include_in_simple_select = false
-      solr_name = solr_name('depositor', :stored_searchable, type: :string)
+      field.include_in_advanced_search = false
+      # solr_parameters hash are sent to Solr as ordinary url query params.
+
+      # :solr_local_parameters will be sent using Solr LocalParams
+      # syntax, as eg {! qf=$title_qf }. This is neccesary to use
+      # Solr parameter de-referencing like $title_qf.
+      # See: http://wiki.apache.org/solr/LocalParams
+      solr_name = solr_name('contributor', :stored_searchable, type: :string)
       field.solr_local_parameters = {
         qf: solr_name,
         pf: solr_name
       }
     end
 
-    config.add_search_field('rights') do |field|
+
+    config.add_search_field('depositor') do |field|
       field.include_in_simple_select = false
-      solr_name = solr_name('rights', :stored_searchable, type: :string)
+      field.include_in_advanced_search = false
+      solr_name = solr_name('depositor', :stored_searchable, type: :string)
       field.solr_local_parameters = {
         qf: solr_name,
         pf: solr_name
@@ -252,5 +275,23 @@ class CatalogController < ApplicationController
     # If there are more than this many search results, no spelling ("did you
     # mean") suggestion is offered.
     config.spell_max = 5
+    config.add_field_configuration_to_solr_request!
+
+    # OAI
+    config.oai = {
+      provider: {
+        repository_name: 'Washington University Goldenseal',
+        repository_url: 'http://repository.wustl.edu/catalog/oai',
+        record_prefix: 'oai:goldenseal',
+        admin_email: 'library.webmaster@wumail.wustl.edu',
+        sample_id: 'f1881k888'
+      },
+      document: {
+        limit: 25,            # number of records returned with each request, default: 15
+        set_fields: [        # ability to define ListSets, optional, default: nil
+          { label: 'collection', solr_field: 'isPartOf_ssim' }
+        ]
+      }
+    }
   end
 end

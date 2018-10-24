@@ -1,0 +1,29 @@
+[staging]
+staging.tilma ansible_user=centos
+
+[production]
+tilma ansible_user=ubuntu
+
+[servers:children]
+staging
+production
+
+[servers:vars]
+registry_host=registry.gitlab.com
+compose_dir=/var/www
+project_name=ror-site
+
+[staging:vars]
+tag=staging-latest
+rancher_env=glass-canvas
+deploy_env=staging
+deploy_url=https://rancher.notch8.com/v1-webhooks/endpoint?key=6mNqSnMDJSR0KphZvEYbNhJ1jFwfKYChZv4bWFZs&projectId=1a17575
+app_name=tilma-staging
+
+[production:vars]
+tag=production-latest
+rancher_env=glass-canvas
+environment=production
+deploy_env=production
+deploy_url=https://rancher.notch8.com/v1-webhooks/endpoint?key=uo55jpIzYTMpZ4VctNFmL02yyW9D1d0ZLeA66nwa&projectId=1a17575
+app_name=tilma
