@@ -4,6 +4,7 @@ module SpotlightExhibitable
   included do
     after_create :create_spotlight_exhibit
     before_save :update_spotlight_exhibit
+    after_destroy :remove_spotlight_exhibit
   end
 
   def spotlight_exhibit
@@ -23,6 +24,10 @@ module SpotlightExhibitable
         title: self.title
       })
     end
+  end
+
+  def remove_spotlight_exhibit
+    spotlight_exhibit.destroy if spotlight_exhibit 
   end
 
   def spotlight_exhibit_query 

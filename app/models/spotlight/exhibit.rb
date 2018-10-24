@@ -68,6 +68,8 @@ module Spotlight
     def exhibitable
       return nil if self.exhibitable_id.blank? || self.exhibitable_type.blank?
       @exhibitable = self.exhibitable_type.constantize.find self.exhibitable_id
+    rescue
+      return nil
     end
 
     def main_about_page
