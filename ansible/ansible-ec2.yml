@@ -6,7 +6,7 @@
 # copy this file and ansible_vars.yml to sufia-centos directory
 # run the playbook with the command:
 # "ansible-playbook -i hosts ansible-ec2.yml"
-# 
+#
 - hosts: localhost
   connection: local
   gather_facts: False
@@ -20,7 +20,7 @@
   user: centos
   vars_files:
     - ansible_vars.yml
-  gather_facts: true  
+  gather_facts: true
   roles:
     - { role: ec2, sudo: yes }
     - { role: housekeeping, sudo: yes }
@@ -28,7 +28,7 @@
     - { role: services }
     - { role: hydra-stack }
     - { role: passenger, sudo: yes }
-    - { role: ffmpeg }
+    - { role: ffmpeg, sudo: yes }
     - { role: imagemagick }
     - { role: app-config, sudo: yes }
     - { role: ldap }
