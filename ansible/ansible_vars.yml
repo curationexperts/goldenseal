@@ -3,33 +3,33 @@
 ## uncomment and fill in other variables as desired
 #
 ## public ec2-specific variables
-ec2_region: us-west-2 # default is us-east-1
-ec2_zone: us-west-2b # default is us-east-1d
+ec2_region: us-east-2 # default is us-east-1
+ec2_zone: us-east-2b # default is us-east-1d
 ec2_instance_type: m4.large # default is m3.medium, a moderate instance size
-ec2_image: ami-a042f4d8 # default is ami-96a818fe, CentOS 7 64-bit
+ec2_image: ami-e1496384 # default is ami-96a818fe, CentOS 7 64-bit
 # ec2_opt_vol_size: # default is 40
 # ec2_vol_1: # default is "{{ hostvars['localhost'].ec2_vol }}"
 #
 ## private ec2-specific variables
 ## you can also pass these to Ansible on the command line
 ## with --extra vars "var1=content1 var2=content2"
-ec2_secret_key: 
+ec2_secret_key:
 ## NO default - the Secret Key from your IAM credentials - a random string
-ec2_access_key: 
+ec2_access_key:
 ## NO default - the Secret Access Key from your IAM credentials - starts with AKIA
-ec2_key: 
+ec2_key:
 ## NO default - the key name from EC2 that will authenticate your ssh connection
-ec2_security_group: 
+ec2_security_group:
 ## NO default - looks like sg-xxxxxxx - the security group your instance will start in
-ec2_vpc: 
+ec2_vpc:
 ## NO default - the VPC your instance will start in
 vpc_subnet_id:
 ## NO default - the subnet id starts with subnet-
-## if using EC2 Classic, comment out this variable and remove the line "assign_public_ip: yes" 
+## if using EC2 Classic, comment out this variable and remove the line "assign_public_ip: yes"
 ## from the launch_ec2 role's tasks/main.yml
 #
 ## project-specific variables
-project_name: goldenseal 
+project_name: goldenseal
 repo: https://github.com/curationexperts/goldenseal.git #https://gitlab.com/notch8/washington-goldenseal.git
 rails_env: production
 # server_name: # FQDN, for example: wustl.curationexperts.com; default is 127.0.0.1
@@ -44,18 +44,18 @@ rails_env: production
 # base_path: # fedora base, default is prod
 #
 # database variables
-pg_pass: 
+pg_pass:
 ## root admin password for Postgresql - insecure default
-hydra_db: 
+hydra_db:
 ## name of the Postgresql database for the Rails app - insecure default
-hydra_pg_user: 
+hydra_pg_user:
 ## name of the Postgresql user for the Rails app - insecure default
-hydra_pg_pass: 
+hydra_pg_pass:
 ## password for the Postgresql user for the Rails app - insecure default
 #
 ## fits variables
-# fits_url: # host site for fits changed from 0.6.x to 0.8.x 
-## default is http://projects.iq.harvard.edu/files/fits/files/fits-0.8.4.zip 
+# fits_url: # host site for fits changed from 0.6.x to 0.8.x
+## default is http://projects.iq.harvard.edu/files/fits/files/fits-0.8.4.zip
 ## for fits version 0.6.2 use https://fits.googlecode.com/files/fits-0.6.2.zip
 # fits_version: # default is 0.8.4
 #
@@ -70,11 +70,11 @@ hydra_pg_pass:
 # ldap_host: # default is ldap.curationexperts.com
 # ldap_port: # default is 389
 # ldap_admin_user: # default is cn=admin,dc=dce,dc=com
-ldap_admin_password: 
+ldap_admin_password:
 ## NO default - if you want to use the DCE LDAP server for testing, please contact us
 # ldap_ssl: # are you using ssl for your ldap connections; default is false
 #
 ## other variables
-rails_secret_key_base: 
-## insecure default 
+rails_secret_key_base:
+## insecure default
 ## using ansible to create the rails secret is on our roadmap
