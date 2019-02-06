@@ -1,0 +1,14 @@
+---
+- name: add groups
+  group: name={{ item.group }} state=present
+  with_items: "{{ accounts }}"
+  when: item.group is defined
+  no_log: true
+
+- name: add dev group
+  group: name=dev state=present
+
+# Ansible 1.9 with_subelements breaks on missing elements regardless of when
+# conditions. Resolved in Ansible 2.0 via implementation of block level
+# operations.
+...

@@ -1,0 +1,17 @@
+NameVirtualHost *:80
+<VirtualHost *:80>
+  ServerName {{ server_name }}
+  ServerAlias *
+  DocumentRoot /var/www/avalon/public/
+  <Directory /var/www/avalon/>
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+  </Directory>
+  ErrorLog /var/log/httpd/avalon.{{ rails_environment }}_error.log
+  LogLevel warn
+  CustomLog /var/log/httpd/avalon.{{ rails_environment }}_access.log combined
+  ServerSignature Off
+  RailsEnv {{ rails_environment }}
+</VirtualHost>

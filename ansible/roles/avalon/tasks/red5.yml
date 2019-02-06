@@ -1,0 +1,35 @@
+---
+- name: add red5 group
+  become: true
+  group: name=red5 state=present
+
+- name: add red5 user
+  become: true
+  user: name=red5 group=red5 state=present
+
+- name: download red5 # not vcs'ed, therefore crude install
+  get_url: url=http://yumrepo-public.library.northwestern.edu/red5-1.0.1.tar.gz dest={{ install_path }} force=no
+
+- name: unarchive red5
+  unarchive: src={{ install_path }}/red5-1.0.1.tar.gz dest={{ install_path }} creates={{ install_path }}/red5-server-1.0/license.txt copy=no
+
+- name: place red5
+  become: true
+  command: "mv {{ install_path }}/red5-server-1.0 /usr/share/red5"
+
+- name: place red5 init script
+  become: true
+  template: src=red5.sh.j2 dest=/etc/rc.d/init.d/red5
+
+- name: assign red5 permissions on red5 directory
+  become: true
+  command: chown -R red5:red5 /usr/share/red5
+
+- name: assign execute permission on red5 init script # create centos 7 service from init script: https://scottlinux.com/2014/12/08/how-to-create-a-systemd-service-in-linux-centos-7/
+  become: true
+  command: chmod +x /etc/rc.d/init.d/red5
+
+- name: start red5 server
+  become: true
+  command: /etc/rc.d/init.d/red5 start
+...

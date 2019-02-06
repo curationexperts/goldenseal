@@ -1,0 +1,64 @@
+---
+- name: add red5 group
+  become: true
+  group: name=red5 state=present
+
+- name: add red5 user
+  become: true
+  user: name=red5 group=red5 state=present
+
+- name: checkout red5-server repo
+  git: repo=https://github.com/Red5/red5-server.git dest={{ install_path }}/red5 version=v1.0.7-RELEASE
+
+- name: assemble red5-server from source
+  command: mvn -Dmaven.test.skip=true clean package -P assemble chdir={{ install_path }}/red5
+
+- name: untar / move red5-server directory
+  become: true
+  unarchive: src={{ install_path }}/red5/target/red5-server-1.0.7-RELEASE.tar.gz dest=/usr/share copy=no owner=red5
+
+- name: rename red5-server directory
+  become: true
+  command: mv /usr/share/red5-server /usr/share/red5
+
+- name: change permissions on red5 directory
+  become: true
+  file: path=/usr/share/red5 owner=red5 group=red5 recurse=yes
+
+- name: place red5 init file
+  become: true
+  template: src=red5_init.sh.j2 dest=/etc/rc.d/init.d/red5 mode=0755
+  
+- name: start red5 server
+  become: true
+  command: /etc/rc.d/init.d/red5 start
+
+- name: checkout red5-examples repo
+  git: repo=https://github.com/Red5/red5-examples.git dest={{ install_path }}/red5-examples
+
+- name: Perform Maven build of oflaDemo
+  become: true
+  command: mvn clean install
+  args:
+    chdir: "{{ install_path }}/red5-examples/oflaDemo"
+
+- name: Move oflaDemo war file to tomcat
+  become: true
+  copy: remote_src=true src=/home/install/red5-examples/oflaDemo/target/red5-example-oflaDemo-2.0.war dest=/usr/share/red5/webapps/oflaDemo.war owner=red5 group=red5
+
+- name: restart red5
+  become: true
+  command: /etc/rc.d/init.d/red5 restart
+
+- name: change owner:group of oflaDemo
+  become: true
+  command: chown -R red5:red5 /usr/share/red5/webapps/oflaDemo
+  
+- name: Open port 5080 for red5/tomcat
+  become: true
+  firewalld: port=5080/tcp permanent=true state=enabled
+
+- name: Restart firewalld
+  become: true
+  command: systemctl restart firewalld
+...

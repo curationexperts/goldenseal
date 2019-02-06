@@ -1,0 +1,12 @@
+---
+- name: configure services for automatic restart
+  become: true
+  command: chkconfig --level 345 {{ item }} on
+  with_items:
+    - tomcat
+#   - mysqld # is not found
+    - sshd
+    - red5
+    - httpd
+    - matterhorn
+...

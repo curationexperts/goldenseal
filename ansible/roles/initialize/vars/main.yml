@@ -1,0 +1,27 @@
+---
+accounts:
+
+  - user: "{{ vault.accounts.account2.user }}"
+    group: "{{ vault.accounts.account2.group }}"
+    groupz: "{{ vault.accounts.account2.groupz }}"
+    password: "{{ vault.accounts.password }}"
+    keyz:
+      - "{{ vault.accounts.account2.keyz.key1 }}"
+    lock: "{{ vault.accounts.account2.lock }}" # this disrupts use of boolean values
+
+  - user: "{{ vault.accounts.account3.user }}"
+    group: "{{ vault.accounts.account3.group }}"
+    groupz: "{{ vault.accounts.account3.groupz }}"
+    password: "{{ vault.accounts.password }}"
+    keyz:
+      - "{{ vault.accounts.account3.keyz.key1 }}"
+    lock: "{{ vault.accounts.account3.lock }}"
+    
+  - user: "{{ vault.accounts.account4.user }}"
+    group: "{{ vault.accounts.account4.group }}"
+    groupz: "{{ vault.accounts.account4.groupz }}"
+    password: "{{ vault.accounts.password }}"
+    keyz:
+      - "{{ vault.accounts.account4.keyz.key1 }}"
+    lock: "{{ vault.accounts.account4.lock }}"
+...

@@ -1,0 +1,16 @@
+---
+- name: start firewalld service
+  service: name=firewalld state=started
+  
+- name: assign network interface to zone
+  command: 'firewall-cmd --zone=public --change-interface={{ ansible_default_ipv4.interface }}'
+
+- name: allow traffic for specified services on public zone
+  firewalld: service=ssh permanent=true zone=public state=enabled
+
+- name: open port for the manager server
+  firewalld: zone=public rich_rule='rule family="ipv4" source address="{{ manager_server_address }}" port port="{{ manager_server_port }}" protocol="tcp" accept' permanent=yes state=enabled
+
+- name: restart firewalld service
+  service: name=firewalld state=restarted
+...

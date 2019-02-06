@@ -1,0 +1,40 @@
+---
+- name: create red5/avalon security webapp directories
+  become: true
+  become_user: red5
+  file: path=/usr/share/red5/webapps/avalon/META-INF state=directory mode=0755
+
+- name: create red5/avalon security webapp directories
+  become: true
+  become_user: red5
+  file: path=/usr/share/red5/webapps/avalon/WEB-INF/lib state=directory mode=0755
+
+- name: place red5/avalon MANIFEST.MF
+  become: true
+  become_user: red5
+  copy: src=MANIFEST.MF dest={{ system_home }}/red5/webapps/avalon/META-INF
+
+- name: place red5/avalon red5-web.properties
+  become: true
+  become_user: red5
+  copy: src=red5-web.properties dest={{ system_home }}/red5/webapps/avalon/WEB-INF
+
+- name: place red5/avalon red5-web.xml
+  become: true
+  become_user: red5
+  copy: src=red5-web.xml dest={{ system_home }}/red5/webapps/avalon/WEB-INF
+
+- name: place red5/avalon web.xml
+  become: true
+  become_user: red5
+  copy: src=web.xml dest={{ system_home }}/red5/webapps/avalon/WEB-INF
+
+- name: place red5-avalon.jar
+  become: true
+  become_user: red5
+  copy: src=red5-avalon.jar dest={{ system_home }}/red5/webapps/avalon/WEB-INF/lib
+
+- name: restart red5 service
+  become: true
+  service: name=red5 state=restarted
+...

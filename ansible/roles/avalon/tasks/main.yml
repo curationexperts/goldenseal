@@ -1,0 +1,26 @@
+---
+- include_vars: "{{ item }}"
+  with_items:
+    - main.yml
+    - vault.yml
+
+- include: environment.yml
+- include: java.yml
+- include: tomcat.yml
+- include: solr.yml
+- include: mysql.yml
+- include: fedora.yml
+- include: red5.yml
+- include: ffmpeg.yml
+- include: httpd.yml
+- include: matterhorn.yml
+- include: ruby.yml
+- include: passenger.yml
+- include: httpd_secure.yml
+- include: avalon1.yml
+- include: avalon2.yml
+- include: red5_avalon.yml
+- include: dropbox.yml
+- include: chkconfig.yml
+- include: finalize.yml
+...

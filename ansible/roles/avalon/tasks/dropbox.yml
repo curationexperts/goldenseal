@@ -1,0 +1,35 @@
+---
+- name: add dropbox group
+  become: true
+  group: name=dropbox state=present
+
+- name: add dropbox user
+  become: true
+  user: name=avalondrop group=dropbox state=present
+
+- name: add dropbox group to avalon user
+  become: true
+  command: usermod -G dropbox avalon
+
+- name: create dropbox directory
+  become: true
+  file: path=/var/avalon/dropbox state=directory owner=avalondrop group=dropbox mode=2775
+
+- name: edit sshd_config for dropbox 1
+  become: true
+  replace: dest=/etc/ssh/sshd_config regexp='^Subsystem	sftp	/usr/libexec/openssh/sftp-server' replace='Subsystem sftp internal-sftp' backup=yes
+
+- name: edit sshd_config for dropbox 2
+  become: true
+  lineinfile: dest=/etc/ssh/sshd_config insertafter="^#       ForceCommand cvs server" line="{{ item }}"
+  with_items:
+    - "Match Group dropbox"
+    - "ChrootDirectory /var/avalon"
+    - "X11Forwarding no"
+    - "AllowTcpForwarding no"
+    - "ForceCommand internal-sftp"
+
+- name: restart sshd service
+  become: true
+  service: name=sshd state=restarted
+...

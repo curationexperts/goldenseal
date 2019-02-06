@@ -1,0 +1,32 @@
+--- 
+- name: add users
+  user: name={{ item.user }} group={{ item.group }} groups={{ item.groupz }} state=present
+  with_items: "{{ accounts }}"
+  when: item.user is defined
+  no_log: true
+
+- name: assign user passwords
+  user: name={{ item.user }} password={{ item.password | password_hash('sha512') }}
+  with_items: "{{ accounts }}"
+  when: item.password is defined
+  no_log: true
+
+# - name: set password expirations
+#   command: chage -d 0 {{ item.user }}
+#   with_items: "{{ accounts }}"
+#   when: item.password is defined
+#   no_log: true
+
+- name: add user ssh keys
+  authorized_key: user="{{ item.0.user }}" key="{{ item.1 }}"
+  with_subelements:
+    - accounts
+    - keyz
+  no_log: true
+
+- name: lock unprivileged user accounts
+  command: passwd -l {{ item.user }}
+  with_items: "{{ accounts }}"
+  when: item.lock == 'true' # vars file disrupts use of boolean values
+  no_log: true
+...

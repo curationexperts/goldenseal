@@ -1,0 +1,66 @@
+---
+- name: clone avalon repository
+  git: repo=git://github.com/wulib-wustl-edu/avalon.git dest={{ install_path }}/avalon version=v4.0.1-themed accept_hostkey=yes
+
+- name: move git repo public files to avalon production public directory
+  become: true
+  shell: mv {{ install_path }}/avalon/public/* /var/www/avalon/public
+
+- name: remove old public directory
+  command: rmdir {{ install_path }}/avalon/public
+
+- name: move git repo non-public files to avalon production directory
+  become: true
+  shell: mv {{ install_path }}/avalon/* /var/www/avalon
+
+- name: remove extraneous directories pulled via github sub-projects
+  become: true
+  command: rm -rf {{ item }}
+  with_items:
+    - /var/www/avalon/felix
+    - /var/www/avalon/jetty
+    - /var/www/avalon/red5
+
+- name: change ownership of avalon home directory
+  become: true
+  command: chown -R avalon:avalon /var/www/avalon
+
+- name: create authentication file
+  become: true
+  become_user: avalon
+  command: cp /var/www/avalon/config/authentication.yml.example /var/www/avalon/config/authentication.yml
+
+- name: place database.yml file
+  become: true
+  become_user: avalon
+  template: src=database.yml.j2 dest=/var/www/avalon/config/database.yml
+
+- name: install mysql-devel
+  become: true
+  yum: name=mysql-devel state=present
+
+- name: install required mysql gems
+  become: true
+  gem: name={{ item }} state=present
+  with_items:
+    - activerecord-mysql2-adapter
+    - mysql2
+
+- name: place replacement Gemfile
+  become: true
+  become_user: avalon
+  copy: src=Gemfile dest=/var/www/avalon backup=yes
+
+- name: install bundler gem
+  become: true
+  gem: name=bundler state=present
+
+- name: install cmake for rugged gem
+  become: true
+  yum: name=cmake state=present
+
+- name: run bundle install
+  become: true
+  become_user: avalon
+  command: /usr/local/bin/bundle install --path vendor/bundle chdir=/var/www/avalon
+...

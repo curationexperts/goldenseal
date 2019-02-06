@@ -1,0 +1,29 @@
+---
+- name: place the avalon_auth file
+  become: true
+  copy: src=avalon_auth dest=/usr/local/sbin/avalon_auth
+  
+- name: change permissions on the avalon_auth file
+  become: true
+  command: chmod +x /usr/local/sbin/avalon_auth
+
+- name: place the avalon mod_rewrite file
+  become: true
+  copy: src=10-mod_rewrite.conf dest=/etc/httpd/conf.d
+
+- name: create apache RewriteLock directory
+  become: true
+  command: "{{ item }}"
+  with_items:
+    - mkdir /etc/httpd/RewriteLock
+    - chgrp apache /etc/httpd/RewriteLock
+    - chmod g+wx /etc/httpd/RewriteLock
+  
+- name: place the avalon apache virtual host file
+  become: true
+  template: src=20-avalon.conf.j2 dest=/etc/httpd/conf.d/20-avalon.conf
+
+- name: restart httpd service
+  become: true
+  service: name=httpd state=restarted
+...

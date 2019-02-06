@@ -1,0 +1,18 @@
+---
+tomcat_user: wulib_hydra
+tomcat_password: 'U8eGv^8w3joty8l'
+maria_root: root
+maria_pass: 'xGu#4J$I'
+# maria_avalon_fedora_user: avalon_fcrepo
+# maria_avalon_fedora_pass: '5xFhd^ks'
+maria_avalon_fedora_user: fedoraAdmin
+maria_avalon_fedora_pass: fedoraAdmin
+maria_avalon_fedora_db: fedora3 # not configurable
+maria_avalon_rails_user: avalon_rails
+maria_avalon_rails_pass: 'Tv37L^3e'
+maria_avalon_rails_db: avalon_rails_db
+# fedora_user: avalon_fedora
+# fedora_pass: 'hK^%9L%k'
+fedora_user: fedoraAdmin
+fedora_pass: fedoraAdmin
+...

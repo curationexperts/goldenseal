@@ -1,0 +1,9 @@
+---
+capistrano_user: deploy
+capistrano_group: deploy
+capistrano_keys:
+    - https://github.com/dewey4iv.keys
+    - https://github.com/orangewolf.keys
+    - https://github.com/downwriter.keys
+install_path: /opt/install
+project_name: sufia-project

@@ -1,0 +1,9 @@
+---
+user: "{{ vault.accounts.account1.user }}"
+group: "{{ vault.accounts.account1.group }}"
+groupz: "{{ vault.accounts.account1.groupz }}"
+password: "{{ vault.accounts.account1.password }}"
+keyz:
+  - "{{ vault.accounts.account1.keyz.key1 }}"
+color: '1;31m'
+...

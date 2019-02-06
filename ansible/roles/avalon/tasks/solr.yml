@@ -1,0 +1,58 @@
+---
+- name: download solr tarball
+  get_url: url=http://archive.apache.org/dist/lucene/solr/{{ solr_version }}/solr-{{ solr_version }}.tgz dest={{ install_path }}/solr-{{ solr_version }}.tgz force=no
+
+- name: unarchive solr tarball
+  unarchive: src={{ install_path }}/solr-{{ solr_version }}.tgz dest={{ install_path }} creates={{ install_path }}/solr-{{ solr_version }}/dist/solr-{{ solr_version }}.war copy=no
+
+- name: create solr directory
+  command: mkdir {{ solr_home }}
+  
+- name: copy solr war file
+  command: mv {{ install_path }}/solr-{{ solr_version }}/dist/solr-{{ solr_version }}.war {{ solr_home }}/solr.war
+
+- name: copy example tomcat context file to catalina directory
+  become: true
+  become_user: tomcat
+  command: cp {{ tomcat_conf }}/context.xml {{ tomcat_conf }}/Catalina/localhost/{{ solr_context }}.xml
+
+- name: replace tomcat solr context file with template
+  become: true
+  become_user: tomcat
+  template: src=context.xml.j2 dest={{ tomcat_conf }}/Catalina/localhost/{{ solr_context }}.xml backup=yes
+
+- name: symlink solr context file in tomcat conf
+  file: src={{ tomcat_conf }}/Catalina/localhost/{{ solr_context }}.xml dest={{ solr_home }}/{{ solr_context }}.xml state=link
+
+- name: copy example solr.xml to solr home
+  command: cp {{ install_path }}/solr-{{ solr_version }}/example/solr/solr.xml {{ solr_home }}
+
+- name: replace solr file with template
+  template: src=solr.xml.j2 dest={{ solr_home }}/solr.xml backup=yes
+
+- name: copy example collection directory to solr home
+  command: cp -R {{ install_path }}/solr-{{ solr_version }}/example/solr/collection1 {{ solr_home }}/{{ solr_context }}
+
+- name: replace solr file with avalon version
+  copy: src=schema.xml dest={{ solr_home }}/avalon/conf/schema.xml backup=yes
+
+- name: replace solr file with avalon version
+  copy: src=solrconfig.xml dest={{ solr_home }}/avalon/conf/solrconfig.xml backup=yes
+
+- name: create solr lib directory
+  command: mkdir {{ solr_home }}/lib
+
+- name: copy solr dist directory to solr home
+  command: cp -R {{ install_path }}/solr-{{ solr_version }}/dist {{ solr_home }}/lib
+
+- name: copy solr contrib directory to solr home
+  command: cp -R {{ install_path }}/solr-{{ solr_version }}/contrib {{ solr_home }}/lib
+
+- name: set ownership and group for solr
+  become: true
+  command: chown -R tomcat:tomcat {{ solr_home }}
+
+- name: restart tomcat service
+  become: true
+  service: name=tomcat state=restarted enabled=true
+...

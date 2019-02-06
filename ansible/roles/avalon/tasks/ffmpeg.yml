@@ -1,0 +1,76 @@
+---
+- name: install ffmpeg prequisites
+  become: yes
+  yum: name={{ item }} state=present
+  with_items:
+    - bzip2-devel
+    - freetype-devel
+    - gsm-devel
+    - libraw1394-devel
+    - libstdc++-devel
+    - libtheora-devel
+    - libvdpau-devel
+    - libvorbis-devel
+    - libvpx-devel
+    - opencv-devel
+    - openjpeg-devel
+    - openssl-devel
+    - SDL-devel
+    - speex-devel
+    - texi2html
+    - zlib-devel
+
+- name: install epel based ffmpeg prequisites
+  become: yes
+  yum: name={{ item }} state=present enablerepo=epel
+  with_items:
+    - imlib2-devel
+    - libdc1394-devel
+    - libva-devel
+    - mediainfo
+    - schroedinger-devel
+    - yasm
+
+- name: install nux-dextop based ffmpeg prequisites
+  become: yes
+  yum: name={{ item }} state=present enablerepo=nux-dextop
+  with_items:
+    - a52dec-devel
+    - faad2-devel
+    - lame-devel
+    - librtmp-devel
+    - opencore-amr-devel
+    - x264-devel
+    - xvidcore-devel
+
+- name: install nul-public based prequisites
+  become: yes
+  yum: name={{ item }} state=present enablerepo=nul-public
+  with_items:
+    - frei0r-plugins-devel
+    - libfaac-devel
+    - vo-aacenc-devel
+
+- name: install rpmdevtools
+  become: yes
+  yum: name=rpmdevtools state=present
+
+- name: run rpmdev-setuptree
+  become: true
+  become_user: red5
+  command: rpmdev-setuptree
+
+- name: run the ffmpeg installer?
+  become: true
+  become_user: red5
+  command: rpm -ivh https://github.com/avalonmediasystem/avalon-installer/blob/master/files/ffmpeg/ffmpeg-2.4.2-1.el6.src.rpm?raw=true
+
+- name: do this other thing
+  become: true
+  become_user: red5
+  command: rpmbuild -bb rpmbuild/SPECS/ffmpeg24.spec
+
+- name: finish install?
+  become: true
+  command: rpm -ivh /home/red5/rpmbuild/RPMS/x86_64/ffmpeg-*.rpm
+...

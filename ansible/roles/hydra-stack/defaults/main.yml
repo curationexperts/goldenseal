@@ -1,0 +1,6 @@
+---
+install_path: /opt/install
+solr_context: hydra
+base_path: prod
+capistrano_user: deploy
+capistrano_group: deploy

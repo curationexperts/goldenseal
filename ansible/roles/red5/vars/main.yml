@@ -1,0 +1,4 @@
+---
+install_path: /home/install
+red5_home: /usr/share/red5
+...

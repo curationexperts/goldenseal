@@ -1,0 +1,81 @@
+---
+- name: place avalon solr config file
+  become: true
+  become_user: avalon
+  template: src=solr.yml.j2 dest=/var/www/avalon/config/solr.yml
+
+- name: place avalon fedora config file
+  become: true
+  become_user: avalon
+  template: src=fedora.yml.j2 dest=/var/www/avalon/config/fedora.yml
+
+- name: place avalon solr config file
+  become: true
+  become_user: avalon
+  template: src=matterhorn.yml.j2 dest=/var/www/avalon/config/matterhorn.yml
+
+- name: copy avalon config file from example
+  become: true
+  become_user: avalon
+  command: cp /var/www/avalon/config/avalon.yml.example /var/www/avalon/config/avalon.yml
+
+- name: place avalon config file
+  become: true
+  become_user: avalon
+  template: src=avalon.yml.j2 dest=/var/www/avalon/config/avalon.yml backup=yes
+
+- name: place controlled vocabulary file
+  become: true
+  become_user: avalon
+  copy: src=controlled_vocabulary.yml dest=/var/www/avalon/config/controlled_vocabulary.yml owner=avalon group=avalon mode=664 backup=yes
+
+- name: copy rails secrets file
+  become: true
+  become_user: avalon
+  command: cp /var/www/avalon/config/secrets.yml.example /var/www/avalon/config/secrets.yml
+
+- name: place rails secrets file
+  become: true
+  become_user: avalon
+  template: src=secrets.yml.j2 dest=/var/www/avalon/config/secrets.yml backup=yes
+
+- name: modify application.rb for secret_key_base generation
+  become: true
+  become_user: avalon
+  replace: dest=/var/www/avalon/config/application.rb regexp='^    config.secret_key_base' replace='#    config.secret_key_base' backup=yes
+  
+- name: generate rails secret_key_base
+  become: true
+  become_user: avalon
+  command: /usr/local/bin/bundle exec rake secret chdir=/var/www/avalon
+  register: secret
+
+- name: write secret to secrets.yml file
+  become: true
+  become_user: avalon
+  replace: 'dest=/var/www/avalon/config/secrets.yml regexp="secret_key_base:" replace="secret_key_base: {{ secret.stdout }}" backup=yes'
+
+- name: unmodify application.rb for secret_key_base generation
+  become: true
+  become_user: avalon
+  replace: dest=/var/www/avalon/config/application.rb regexp='^#    config.secret_key_base' replace='    config.secret_key_base' backup=yes
+  
+- name: set rails environment
+  become: true
+  become_user: avalon
+  replace: dest=/var/www/avalon/config/environment.rb regexp="development" replace="production" backup=yes
+
+- name: create and migrate rails database
+  become: true
+  become_user: avalon
+  command: /usr/local/bin/bundle exec rake RAILS_ENV=production db:create db:migrate chdir=/var/www/avalon
+
+- name: start delayed_job
+  become: true
+  become_user: avalon
+  command: /usr/local/bin/bundle exec rake RAILS_ENV=production delayed_job:start chdir=/var/www/avalon
+
+- name: restart httpd service
+  become: true
+  service: name=httpd state=restarted
+...

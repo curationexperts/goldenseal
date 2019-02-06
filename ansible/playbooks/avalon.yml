@@ -1,0 +1,13 @@
+---
+# - name: run initialize playbook
+#   include: initialize.yml
+
+- name: Setup Avalon Instance
+  hosts: "{{ hosts }}"
+  gather_facts: true
+  remote_user: "{{ default_user }}"
+  vars:
+    ansible_become_pass: "{{ vault.accounts.account1.password }}"
+  roles:
+    - { role: avalon }
+...
