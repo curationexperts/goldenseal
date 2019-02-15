@@ -1,0 +1,44 @@
+---
+- name: install packages for building ruby
+  become: true
+  yum: name={{ item }} state=present
+  with_items:
+    - readline-devel
+    - zlib-devel
+    - libyaml-devel
+    - libffi-devel
+    - openssl-devel
+    - libxml2-devel
+    - libxslt-devel
+    - lsof
+    
+- name: download ruby
+  get_url: url=https://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.7.tar.bz2 dest={{ install_path }} validate_certs=no
+
+- name: unarchive ruby
+  unarchive: src={{ install_path }}/ruby-2.1.7.tar.bz2 dest={{ install_path }} copy=no
+
+- name: configure ruby
+  become: true
+  shell: cd {{ install_path }}/ruby-2.1.7 && ./configure --enable-shared creates={{ install_path }}/ruby-2.2.3/Makefile
+  
+- name: make ruby
+  become: true
+  shell: cd {{ install_path }}/ruby-2.1.7 && make 
+
+- name: install ruby
+  become: true
+  shell: cd {{ install_path }}/ruby-2.1.7 && make install creates=/usr/local/bin/ruby
+
+- name: symlink ruby for root
+  become: true
+  file: src=/usr/local/bin/ruby dest=/usr/bin/ruby state=link
+
+- name: symlink gem for root 
+  become: true
+  file: src=/usr/local/bin/gem dest=/usr/bin/gem state=link
+
+- name: install bundler
+  become: true
+  gem: name=bundler user_install=no state=present
+...

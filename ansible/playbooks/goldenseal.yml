@@ -1,0 +1,36 @@
+- name: provision vanilla centos 7 host via ssh
+  hosts: "{{ hosts }}"
+  remote_user: "{{ default_user }}"
+  vars:
+    nux_repofile_path: /etc/yum.repos.d/nux-dextop.repo
+    nux_repo_gpg_key_url: http://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro
+    nux_repo_url: http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
+    capistrano_user: deploy # user name for cap deployments
+    capistrano_group: deploy # group for cap deployments
+    capistrano_keys: # keys for any user who will cap deploy
+      # see http://docs.ansible.com/ansible/authorized_key_module.html
+      - https://github.com/informaticianme.keys
+      - https://github.com/acozine.keys
+      - https://github.com/mark-dce.keys
+    install_user: install # unix user that performs installation
+    install_group: install # group for install_user
+    become_user: install # MUST HAVE THE SAME CONTENT AS install_user
+    repo: https://github.com/wulib-wustl-edu/goldenseal.git
+    project_name: goldenseal #
+    rails_env: production #production|development|test|etc.
+    server_name: test-goldenseal.wulib.wustl.edu # FQDN of target machine, e.g. sandbox.ucsb.edu
+    pg_pass: a7ua@27ph # password for postgres admin user
+    hydra_db: goldenseal # name of hydra pg database
+    hydra_pg_user: gs_user # user that owns hydra pg database
+    hydra_pg_pass: 58syQ8fi@0 # password for hydra_pg_user
+    rails_secret_key_base: 79c1389c2fadc5a5a1918a518af7vads89en3a304ab34eb700c # run "rake secret" on a rails project, or use some other random string generator and paste result here
+  roles:
+    - { role: housekeeping, sudo: yes }
+    - { role: ruby, sudo: yes }
+    - { role: hydra-stack, sudo: yes }
+    - { role: services, sudo: yes }
+    - { role: passenger, sudo: yes }
+    - { role: ffmpeg, sudo: yes }
+    - { role: imagemagick, sudo: yes }
+    - { role: app-config, sudo: yes }
+

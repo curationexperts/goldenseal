@@ -1,0 +1,15 @@
+---
+- include_vars: main.yml
+
+- include: remote.yml
+# - include: ntp.yml
+# - include: epel.yml
+- include: packages_update.yml
+- include: packages_dev.yml
+- include: denyhosts.yml
+- include: etc_skel.yml
+- include: groups.yml
+- include: users.yml
+- include: security.yml
+- include: mlocate.yml
+...

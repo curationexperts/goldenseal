@@ -1,0 +1,13 @@
+---
+- name: install httpd service
+  become: true
+  yum: name=httpd state=present
+
+- name: disable PrivateTmp
+  become: true
+  lineinfile: dest=/usr/lib/systemd/system/httpd.service regexp='^PrivateTmp=true' line='PrivateTmp=false' state=present
+
+- name: start httpd service
+  become: true
+  service: name=httpd state=started
+...

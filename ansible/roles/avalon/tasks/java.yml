@@ -1,0 +1,25 @@
+---
+- name: install headless open java 1.8
+  become: true
+  yum: name=java-1.8.0-openjdk-headless state=present # use headless?
+
+###
+# What is the best practice for installing java for hydra on centos 7?
+# Should Hydra be using Oracle or Open Java?
+###
+
+# - name: place Oracle Java 8
+#   copy: src=jdk-8u60-linux-x64.tar.gz dest={{ install_path }}/
+
+# - name: unarchive Oracle Java 8
+#   become: true
+#   unarchive: src={{ install_path }}/jdk-8u60-linux-x64.tar.gz dest={{ system_home }}/ creates={{ system_home }}/jdk1.8.0_60 owner=root group=root copy=no
+
+# - name: build Oracle Java 8
+#   become: true
+#   alternatives: name={{ item }} link=/usr/bin/{{ item }} path={{ system_home }}/jdk1.8.0_60/bin/{{ item }}
+#   with_items:
+#     - java
+#     - jar
+#     - javac
+...

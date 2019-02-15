@@ -1,0 +1,10 @@
+---
+- name: install development tools and library packages
+  yum: name={{ item }} state=present
+  with_items:
+    - emacs-nox
+    - git
+    - python
+    - firewalld
+    - mlocate
+...

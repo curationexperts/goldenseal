@@ -1,0 +1,13 @@
+---
+# - name: run remote playbook
+#   include: remote.yml
+
+- name: initialize basic server configuration
+  hosts: "{{ hosts }}"
+  gather_facts: true
+  remote_user: "{{ default_user }}"
+  vars:
+    ansible_become_pass: "{{ vault.accounts.account1.password }}"
+  roles:
+    - { role: initialize, become: true}
+...

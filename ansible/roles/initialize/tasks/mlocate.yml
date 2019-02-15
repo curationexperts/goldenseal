@@ -1,0 +1,4 @@
+---
+- name: update mlocate database
+  command: updatedb
+...

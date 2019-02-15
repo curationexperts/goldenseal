@@ -1,0 +1,21 @@
+---
+- name: clone denyhosts github repo
+  git:
+    repo: https://github.com/denyhosts/denyhosts.git
+    dest: /usr/share/denyhosts
+    version: v3.0
+
+- name: install denyhosts
+  command: python setup.py install
+  args:
+    chdir: /usr/share/denyhosts
+
+- name: copy denyhosts.conf to etc
+  command: cp /usr/share/denyhosts/denyhosts.conf /etc/denyhosts.conf
+
+- name: log formats - disable debian, enable redhat
+  lineinfile: dest=/etc/denyhosts.conf regexp="{{ item.pattern }}" line="{{ item.replacement }}" state=present
+  with_items:
+    - { pattern: '^SECURE_LOG = /var/log/auth.log', replacement: '#SECURE_LOG = /var/log/auth.log' }
+    - { pattern: '^#SECURE_LOG = /var/log/secure', replacement: 'SECURE_LOG = /var/log/secure' }
+...

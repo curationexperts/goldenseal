@@ -1,0 +1,13 @@
+--- # not idempotent
+- name: download EPEL repository
+  get_url: url=http://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-5.noarch.rpm dest={{ install_path }}/ force=no
+
+- name: add EPEL repository
+  command: rpm -ivh epel-release-7-5.noarch.rpm
+
+- name: remove EPEL download
+  command: rm {{ install_path }}/epel-release-7-5.noarch.rpm
+
+- name: disable EPEL repository
+  replace: dest=/etc/yum.repos.d/epel.repo regexp="enabled=1" replace="enabled=0" backup=yes
+...

@@ -1,0 +1,20 @@
+---
+- name: install ntp & ntpdate
+  become: true
+  yum: name={{ item }} state=present
+  with_items:
+    - ntp
+    - ntpdate
+
+- name: sync ntp with external source
+  become: true
+  command: ntpdate 0.centos.pool.ntp.org
+
+- name: chkconfig ntpd
+  become: true
+  command: chkconfig --level 345 ntpd on
+
+- name: start ntpd service
+  become: true
+  command: systemctl start ntpd
+...

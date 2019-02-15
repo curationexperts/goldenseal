@@ -1,0 +1,31 @@
+---
+- name: install tomcat packages
+  become: true
+  yum: name={{ item }} state=present
+  with_items:
+    - tomcat
+    - tomcat-webapps
+    - tomcat-admin-webapps
+
+- name: adjust permissions on /etc/tomcat
+  become: true
+  command: chmod 0775 {{ tomcat_conf }}
+
+- name: change tomcat connector port
+  become: true
+  become_user: tomcat
+  template: src=server.xml.j2 dest={{ tomcat_conf }}/server.xml backup=yes
+
+- name: define tomcat user for manager-gui role
+  become: true
+  become_user: tomcat
+  template: src=tomcat-users.xml.j2 dest={{ tomcat_conf }}/tomcat-users.xml backup=yes
+
+- name: re-adjust permissions on /etc/tomcat
+  become: true
+  command: chmod 0755 {{ tomcat_conf }}
+
+- name: start tomcat service
+  become: true
+  service: name=tomcat state=started enabled=true # go back through and enable relevant services
+...

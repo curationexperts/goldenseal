@@ -1,0 +1,39 @@
+---
+- name: change root prompt colors
+  template: src=bashrc dest=/root/.bashrc mode=0644 backup=yes
+
+- name: add remote group
+  group: name={{ group }} state=present
+
+- name: add remote user
+  user: name={{ user }} group={{ group }} groups={{ groupz }} state=present
+  no_log: true
+
+- name: assign password to remote user
+  user: name={{ user }} password={{ password | password_hash('sha512') }}
+  no_log: true
+
+- name: add remote user ssh keys
+  authorized_key: user={{ user }} key="{{ item }}" # quoted because '=' signs in value
+  with_items: "{{ keyz }}"
+  no_log: true
+
+# - name: disable password authentication and root access
+#   lineinfile: dest=/etc/ssh/sshd_config regexp="{{ item.pattern }}" line="{{ item.replacement }}" state=present
+#   with_items:
+#     - { pattern: "PasswordAuthentication yes", replacement: 'PasswordAuthentication no' }
+#     - { pattern: '#PermitRootLogin yes', replacement: 'PermitRootLogin no' }
+
+# - name: remove default ssh keys
+#   file: src=/etc/ssh/{{ item }} state=absent
+#   with_items:
+#     - ssh_host_ecdsa_key
+#     - ssh_host_ecdsa_key.pub
+#     - ssh_host_ed25519_key
+#     - ssh_host_ed25519_key.pub
+#     - ssh_host_rsa_key
+#     - ssh_host_rsa_key.pub
+
+- name: restart sshd service
+  service: name=sshd state=restarted
+...

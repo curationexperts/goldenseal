@@ -1,0 +1,22 @@
+---
+- name: add ssh directory to skel
+  file: path=/etc/skel/.ssh state=directory mode=0755
+
+- name: create authorized_keys file
+  command: touch /etc/skel/.ssh/authorized_keys
+  
+- name: adjust mode on authorized_keys file
+  file: path=/etc/skel/.ssh/authorized_keys state=file mode=0600
+
+- name: create config file
+  command: touch /etc/skel/.ssh/config
+  
+- name: adjust mode on config file
+  file: path=/etc/skel/.ssh/config state=file mode=0644
+
+- name: create known_hosts file
+  command: touch /etc/skel/.ssh/known_hosts
+  
+- name: adjust mode on known_hosts file
+  file: path=/etc/skel/.ssh/known_hosts state=file mode=0644
+...

@@ -1,0 +1,9 @@
+---
+- include_vars: "{{ item }}"
+  with_items:
+    - main.yml
+    - vault.yml
+
+- include: environment.yml
+- include: red5.yml
+...

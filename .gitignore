@@ -33,3 +33,7 @@ sample_assets.tgz
 **/*.swp
 
 ops/fits-1.0.5/*
+.idea
+.ruby-version
+*.iml
+.vagrant

@@ -1,0 +1,50 @@
+---
+- name: update all yum packages
+  yum: name=* state=latest update_cache=yes
+
+- name: install dev tools and libraries
+  yum: name={{ item }} state=present update_cache=yes
+  with_items:
+    # Development Tools group - manual install would be:
+    # sudo yum -y groupinstall "Development Tools"
+    - autoconf
+    - automake
+    - binutils
+    - bison
+    - flex
+    - gcc
+    - gcc-c++
+    - gettext
+    - libtool
+    - make
+    - patch
+    - pkgconfig
+    - redhat-rpm-config
+    - rpm-build
+    - rpm-sign
+    # other packages
+    - java-1.8.0-openjdk
+    - screen
+    - wget
+    - curl-devel
+    - httpd-devel
+    - openssl-devel
+    - readline-devel
+    - sqlite-devel
+    - mysql-devel
+    - ImageMagick-devel
+    - nasm
+    - libxml2-devel
+    - libxslt-devel
+    - libyaml-devel
+    - libffi-devel
+    # - java-1.7.0-openjdk-devel
+    - gdbm-devel
+    # - redis
+    - git
+    - xfsprogs
+    # on centos mod_xsendfile is not in the main repos
+    # - mod_xsendfile
+    - libreoffice-headless
+    # this was in the ubuntu package list
+    #    - libxvidcore-dev

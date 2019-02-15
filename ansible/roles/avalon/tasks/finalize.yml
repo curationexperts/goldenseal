@@ -1,0 +1,25 @@
+---
+- name: revoke temporary permissions for {{ remote_user }} on opt directory
+  become: true
+  file: path=/opt owner=root group=root
+
+- name: Open port 80 for http
+  become: true
+  firewalld: port=80/tcp permanent=true state=enabled
+
+- name: Open port 8080 for tomcat
+  become: true
+  firewalld: port=8080/tcp permanent=true state=enabled
+
+- name: Open port 8983 for tomcat
+  become: true
+  firewalld: port=8983/tcp permanent=true state=enabled
+
+- name: Open port 18080 for matterhorn
+  become: true
+  firewalld: port=18080/tcp permanent=true state=enabled
+
+- name: Restart firewalld service
+  become: true
+  service: name=firewalld state=restarted
+...

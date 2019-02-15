@@ -1,0 +1,4 @@
+---
+repo: https://gitlab.com/notch8/washington-goldenseal.git
+capistrano_user: deploy
+project_name: sufia-project

@@ -1,0 +1,7 @@
+---
+- name: delete centos user
+  user: name=centos state=absent remove=yes
+
+- name: remove centos home directory
+  command: rm -rf /home/centos
+...

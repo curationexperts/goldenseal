@@ -1,0 +1,31 @@
+- name: provision an ec2 instance
+  ec2:
+    key_name: "{{ ec2_key }}"
+    region: "{{ ec2_region }}"
+    zone: "{{ ec2_zone }}"
+    aws_access_key: "{{ ec2_access_key }}"
+    aws_secret_key: "{{ ec2_secret_key }}"
+    group_id: "{{ ec2_security_group }}"
+    vpc_subnet_id: "{{ vpc_subnet_id }}"
+    instance_type: "{{ ec2_instance_type }}"
+    image: "{{ ec2_image }}"
+    wait: true
+    count: 1
+    assign_public_ip: yes
+    state: present
+    count_tag:
+      Name: ansible demo
+    instance_tags:
+      Name: ansible demo
+    volumes:
+      - device_name: /dev/sdf
+        volume_size: "{{ ec2_opt_vol_size }}"
+        delete_on_termination: true
+  register: ec2
+
+- name: Add all instance public IPs to host group
+  add_host: hostname={{ item.public_ip }} groups=ec2hosts
+  with_items: "{{ ec2.instances }}"
+
+- name: give ssh time to come up
+  pause: minutes=5

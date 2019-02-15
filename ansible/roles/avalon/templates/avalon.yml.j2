@@ -1,0 +1,39 @@
+---
+production:
+  controlled_vocabulary:
+    path: config/controlled_vocabulary.yml
+  domain:
+    host: {{ server_name }}.wulib.wustl.edu
+    port: 80
+  dropbox:
+    path: /var/avalon/dropbox/
+    upload_uri: sftp://{{ server_name }}.wulib.wustl.edu/var/avalon/dropbox
+  email:
+    comments: avalon-comments@example.edu
+    notification: avalon-notifications@example.edu
+    support: avalon-support@example.edu
+    mailer:
+      smtp:
+        address: smtp.example.edu
+        port: 587
+        enable_starttls_auto: false
+  ffmpeg:
+    path: /usr/bin/ffmpeg
+  groups:
+    system_groups:
+      - administrator
+      - group_manager
+      - manager
+  matterhorn:
+    baseApplication: avalon
+    cleanup_log: log/cleanup_jobs.log
+    root: http://{{ server_name }}.wulib.wustl.edu:18080/
+  mediainfo:
+    path: /usr/bin/mediainfo
+  streaming:
+    content_path: /var/avalon/rtmp_streams
+    http_base: http://{{ server_name }}.wulib.wustl.edu/streams
+    rtmp_base: rtmp://{{ server_name }}.wulib.wustl.edu/avalon
+    server: :generic
+    stream_token_ttl: 20
+...

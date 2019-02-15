@@ -1,0 +1,18 @@
+---
+install_path: /home/install
+system_home: /usr/share/
+tomcat_home: /usr/share/tomcat
+tomcat_conf: /etc/tomcat
+tomcat_port: 8983
+solr_home: /opt/solr
+solr_version: 4.2.0
+solr_context: avalon
+fedora_home: /opt/fedora
+fedora_context: fedora
+red5_home: /usr/share/red5
+matterhorn_home: /usr/share/matterhorn
+avalon_home: /var/www/avalon
+ruby_version: 2.1.7
+passenger_version: 5.0.17
+rails_environment: production
+...
