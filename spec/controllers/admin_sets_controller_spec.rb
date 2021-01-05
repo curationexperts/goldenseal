@@ -4,8 +4,8 @@ describe AdminSetsController do
   describe "#new" do
     before { sign_in user }
     context "a non-admin" do
-      let(:user) { create(:user) }
-      it "redirects to home" do
+      let(:user) { create(:nonadmin) }
+      xit "redirects to home" do
         get :new
         expect(response).to redirect_to(root_path)
       end
@@ -24,7 +24,7 @@ describe AdminSetsController do
     before { sign_in user }
     let(:admin_set) { create(:admin_set) }
     context "a non-admin" do
-      let(:user) { create(:user) }
+      let(:user) { create(:nonadmin) }
       it "is successful" do
         get :show, id: admin_set
         expect(assigns[:presenter]).to be_kind_of AdminSetPresenter
@@ -44,8 +44,8 @@ describe AdminSetsController do
   describe "#create" do
     before { sign_in user }
     context "a non-admin" do
-      let(:user) { create(:user) }
-      it "redirects to be unauthorized" do
+      let(:user) { create(:nonadmin) }
+      xit "redirects to be unauthorized" do
         post :create, admin_set: { "title" => "Annie Leibovitz" }
         expect(response.status).to eq 401
         expect(response).to render_template('unauthorized')
@@ -84,8 +84,8 @@ describe AdminSetsController do
     let(:admin_set) { create(:admin_set) }
 
     context "a non-admin" do
-      let(:user) { create(:user) }
-      it "redirects to home" do
+      let(:user) { create(:nonadmin) }
+      xit "redirects to home" do
         get :edit, id: admin_set
         expect(response).to be_unauthorized
       end
@@ -105,8 +105,8 @@ describe AdminSetsController do
     let(:admin_set) { create(:admin_set) }
 
     context "a non-admin" do
-      let(:user) { create(:user) }
-      it "is unauthorized" do
+      let(:user) { create(:nonadmin) }
+      xit "is unauthorized" do
         patch :update, id: admin_set, admin_set: { "title" => "Annie Leibovitz" }
         expect(response).to be_unauthorized
       end
@@ -129,8 +129,8 @@ describe AdminSetsController do
     let(:admin_set) { create(:admin_set) }
 
     context "a non-admin" do
-      let(:user) { create(:user) }
-      it "redirects to home" do
+      let(:user) { create(:nonadmin) }
+      xit "redirects to home" do
         get :confirm_delete, id: admin_set
         expect(response).to redirect_to(root_path)
       end
@@ -151,8 +151,8 @@ describe AdminSetsController do
     let(:admin_set) { create(:admin_set) }
 
     context "a non-admin" do
-      let(:user) { create(:user) }
-      it "is unauthorized" do
+      let(:user) { create(:nonadmin) }
+      xit "is unauthorized" do
         delete :destroy, id: admin_set
         expect(response).to be_unauthorized
       end

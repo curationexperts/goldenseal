@@ -1,17 +1,12 @@
 FactoryGirl.define do
-  factory :myuser do
-    sequence :username do |n|
-      "person_#{n}"
-    end
+  factory :admin, class: "User" do
+    username 'admin'
+    group_list ['admin']
+  end
 
+  factory :nonadmin, class: "User" do
+    username 'nonadmin'
     group_list []
-
-    # Prevent ldap from being called
-    groups_list_expires_at { 1.day.from_now }
-
-    factory :admin do
-      group_list ['admin']
-    end
   end
 
 end

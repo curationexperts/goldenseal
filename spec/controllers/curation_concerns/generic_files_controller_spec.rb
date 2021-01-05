@@ -1,8 +1,7 @@
 require 'rails_helper'
 
 describe CurationConcerns::FileSetsController do
-  let(:user) { create(:user) }
-
+  let(:user) { User.create(username: 'generic-files-controller-test') }
   describe "#show" do
     context "when vtt is requested" do
       before do
