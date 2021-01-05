@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'Creating a Work' do
-  let(:user) { create(:admin) }
+  let(:user) { User.create(username: 'create-work-test', group_list: ["admin"]) }
 
   before do
     stub_out_redis

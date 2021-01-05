@@ -1,13 +1,13 @@
 require 'rails_helper'
 
 describe Video do
-  let(:exhibit){ Spotlight::Exhibit.create(title: 'Exhibit', slug: 'my-exhibit') }
-  let(:user){ User.create username: 'testuser'}
-  let(:document) do
-    instance = described_class.create(exhibit_id: exhibit.id, title: ['my Video'])
-    instance.apply_depositor_metadata(user)
-    instance
-  end
+    let(:exhibit){ Spotlight::Exhibit.create(title: 'Exhibit', slug: 'my-exhibit') }
+    let(:user){ User.create username: 'testuser'}
+    let(:document) do
+      instance = described_class.create(title: ['my Video'])
+      instance.apply_depositor_metadata(user)
+      instance
+    end
 
   describe "tei" do
     subject { document.tei }
@@ -19,12 +19,8 @@ describe Video do
       expect(document.save).to eq true
     end
 
-    it "should persist exhibit_id" do
-      expect(document.exhibit_id).to eq 1
-    end
-
-    it "should reindex" do
-      document.reindex
+    it "should persist title" do
+      expect(document.title).to eq(['my Video'])
     end
   end
 end
