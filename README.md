@@ -7,6 +7,18 @@
 
 ### Prerequisites:
 
+1. Stack Car
+
+In root `~/` run
+```
+gem install stack_car
+```
+
+2. Docker
+
+[Docker Installation Instructions](https://docs.docker.com/get-docker/)
+
+
 * Goldenseal relies on [hydra-derivatives](https://github.com/projecthydra/hydra-derivatives) for derivative processing and needs the [required dependencies](https://github.com/projecthydra/hydra-derivatives#dependencies) installed
 * redis
 * java 8
@@ -14,19 +26,68 @@
 ### Setup:
 
 * Clone the code from this repo (Note: if using a vagrant vm as a dev environment, clone the code into the vagrant user's home directory, /home/vagrant/)
-* Move into the root of the project (e.g. `cd ~/goldenseal`) and execute these four commands:
+* Move into the root of the project (e.g. `cd ~/washington-goldenseal`) and execute the following command:
+
 
 ```
-bin/setup
-rake jetty:clean
-rake curation_concerns:jetty:config
-rake jetty:start
+sc build
+```
+* This will build the images that your dockerized app pulls down from the latest image in the docker registry for this app. `registry.gitlab.com/notch8/washington-goldenseal/base:latest`
+* Get coffee
+
+
+* Once this process completes you can spin up the project by entering this command:
+
+```
+sc up
 ```
 
-### Config:
+* In browser visit `0.0.0.0:8080`
 
-* By default, goldenseal offers Text, Audio, Document, Image, and Video works. If you want different work types, configure those in ```config/initializers/curation_concerns.rb```
-* Goldenseal uses ldap for authentication and authorization. Set your config/ldap.yml to connect to an openldap or ActiveDirectory server. Admin users must be members of a group called "admin". 
+* If this is the first time the project has been run or if there are pending migrations one should see a pending migration error upon loading the page.
+
+* To run migrations and finish initial setup: 
+- open new tab in terminal
+- move into root folder of project `washington-goldenseal`
+- bundle exec into the running container with the following 5 separate commands:
+
+```
+sc be bin/setup
+sc be rake jetty:clean
+sc be rake curation_concerns:jetty:config
+sc be rake db:seed
+sc be rake ci:load_sample
+```
+* Then restart the docker container in the other terminal tab 
+```
+cmd+c
+sc down
+sc up
+```
+
+* Finally, visit `0.0.0.0:8080` in your browser and you will have been logged in as user 'test' and you will have sample records loaded.
+
+## Run the test suite
+
+While application is running in docker, in another terminal tab move to the root folder of the project and run:
+```
+sc be rspec
+```
+
+## Get to Debugger
+
+Drop `byebug` into the method being debugged and hit the debugger by running a spec that will utilize that method.  For example: 
+
+- debugging index method
+- using spec that visits that or tests that index page 
+- run `sc be rspec spec/view/this_index_spec.rb`
+
+
+## Config:
+
+* By default, Goldenseal offers Text, Audio, Document, Image, and Video works. If you want different work types, configure those in ```config/initializers/curation_concerns.rb```
+* Goldenseal uses ldap for authentication and authorization. Set your config/ldap.yml to connect to an openldap or ActiveDirectory server. Admin users must be members of a group called "admin". There is a script to copy the ```ldap.yml.template``` to your local config that is the ```sc be bin/setup``` command from the setup section above.
+
 
 ## Background Jobs
 
@@ -60,17 +121,6 @@ In development and the staging environments, we use the phusion/passenger-ruby D
 * ```docker-compose.yml``` is used to define your development environment
 * ```docker-compose-ci.yml``` is used to define review environment on staging
 * ```.gitlab-ci.yml``` defines the pipeline on gitlab to build and deploy test and staging environments
-
-## Run the test suite
-
-* Make sure jetty is running
-* `bundle exec rake spec`
-
-## Run the rails server
-
-* Make sure jetty is running
-* Make sure redis is running
-* `bin/rails s`
 
 ## Production Installation
 
@@ -133,7 +183,7 @@ script/import -t TYPE -p PATH -v [VISIBILITY] -a [ADMIN_SET_ID]
 To see the list of IDs for all AdminSets, run the rake task:
 
 ```
-rake admin_set:list
+sc be rake admin_set:list
 ```
 
 ## File System Cleanup

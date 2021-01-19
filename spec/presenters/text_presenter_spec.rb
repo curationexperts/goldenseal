@@ -7,19 +7,24 @@ describe TextPresenter do
   let(:presenter)     { described_class.new(solr_document, nil) }
 
   describe "tei?" do
-    before do
-      allow(presenter).to receive(:tei_as_json).and_return(result)
-    end
+    let(:service) { double(to_json: result) }
     subject { presenter.tei? }
-
-    context "when the document has tei" do
-      let(:result) { 'something' }
-      it { is_expected.to be true }
+    let(:text) { double }
+    before do
+      allow(solr_document).to receive(:to_model).and_return(text)
+      allow(TeiForText).to receive(:new).with(text).and_return(service)
     end
-
-    context "when the document doesn't have tei" do
+    context "when document has tei" do
+      let(:result) { double }
+      it "is true" do
+        expect(subject).to eq true
+      end
+    end
+    context "when document does not have tei" do
       let(:result) { nil }
-      it { is_expected.to be false }
+      it "is false" do
+        expect(subject).to eq false
+      end
     end
   end
 

@@ -1,7 +1,8 @@
 require 'rails_helper'
 
 describe CurationConcerns::ImagesController do
-  let(:user) { create(:admin) }
+  let(:user) { User.create(username: 'images-controller-test', group_list: ["admin"]) }
+
   let(:admin_set) { create(:admin_set) }
   before { sign_in user }
   describe "#create" do

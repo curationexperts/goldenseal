@@ -21,8 +21,8 @@ describe CurationConcerns::CommonForm do
            :embargo_release_date, :visibility_after_embargo,
            :visibility_during_lease, :lease_expiration_date,
            :visibility_after_lease, :visibility, :admin_set_id, :editor,
-           :sponsor, :funder, :researcher, :identifier, :series, :extent,
-           :note, :description_standard, :publication_place, :date_issued] }
+           :sponsor, :funder, :researcher, :source, :identifier, :series, :extent,
+           :note, :description_standard, :publication_place, :date_issued, :custom_metadatas] }
   end
 end
 

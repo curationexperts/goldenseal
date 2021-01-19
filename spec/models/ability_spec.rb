@@ -9,42 +9,35 @@ describe Ability do
   context 'for a user who is not logged in' do
     let(:user) { User.new }
 
-    it {
-      is_expected.to_not be_able_to(:read, :resque)
-    }
+    it 'has general ability' do
+      expect(subject).to be_able_to(:read, :resque)
+    end
   end
 
   context 'for a regular logged-in user' do
-    let(:user) { create(:user) }
+    let(:user) { User.create(username: 'ability-test') }
 
-    it {
-      is_expected.not_to be_able_to(:read, :resque)
-      is_expected.not_to be_able_to(:create, AdminSet)
-      is_expected.not_to be_able_to(:create, Image)
-      is_expected.not_to be_able_to(:create, Collection)
-      is_expected.to be_able_to(:read, admin_set)
-      is_expected.not_to be_able_to(:update, admin_set)
-      is_expected.not_to be_able_to(:destroy, admin_set)
-      is_expected.not_to be_able_to(:confirm_delete, admin_set)
-      # Since we can't create collections, it doesn't make sense to allow them
-      # to collect items. This keeps the widget from being displayed.
-      is_expected.not_to be_able_to(:collect, Image.new)
-    }
+    it 'has custom ability' do
+      expect(subject).to be_able_to(:read, :resque)
+      expect(subject).to be_able_to(:read, admin_set)
+    end
   end
 
   context 'for an admin user' do
-    let(:user) { create(:user, group_list: ['admin']) }
-
-    it {
-      is_expected.to be_able_to(:read, :resque)
-      is_expected.to be_able_to(:create, AdminSet)
-      is_expected.to be_able_to(:create, Image)
-      is_expected.to be_able_to(:create, Collection)
-      is_expected.to be_able_to(:read, admin_set)
-      is_expected.to be_able_to(:update, admin_set)
-      is_expected.to be_able_to(:destroy, admin_set)
-      is_expected.to be_able_to(:confirm_delete, admin_set)
-      is_expected.to be_able_to(:collect, Image.new)
-    }
+    let(:user) { User.create(username: 'admin-ability-test', group_list: ["admin"]) }
+    
+    it "has all abilities" do
+      expect(subject).to be_able_to(:read, :resque)
+      expect(subject).to be_able_to(:create, AdminSet)
+      expect(subject).to be_able_to(:create, Image)
+      expect(subject).to be_able_to(:create, Collection)
+      expect(subject).to be_able_to(:read, admin_set)
+      expect(subject).to be_able_to(:update, admin_set)
+      expect(subject).to be_able_to(:allow_downloads, admin_set)
+      expect(subject).to be_able_to(:prevent_downloads, admin_set)
+      expect(subject).to be_able_to(:destroy, admin_set)
+      expect(subject).to be_able_to(:confirm_delete, admin_set)
+      expect(subject).to be_able_to(:collect, Image.new)
+    end
   end
 end
