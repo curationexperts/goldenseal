@@ -38,7 +38,7 @@ review:
   only:
     - branches
   except:
-    - master
+    - main
   script:
     - wget https://github.com/rancher/cli/releases/download/v0.4.1/rancher-linux-amd64-v0.4.1.tar.gz
     - tar zxfv rancher-linux-amd64-v0.4.1.tar.gz
